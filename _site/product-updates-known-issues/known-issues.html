@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- remember to remove the following line when the site is ready to go live -->
   <!-- <meta name="robots" content="noindex" /> -->
-  <title>404 - Page Not Found</title>
+  <title>Known Issues</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -86,7 +86,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item active" aria-current="page">404 - Page Not Found</li>
+      <li class="breadcrumb-item"><a href="/product-updates-known-issues/">References</a></li>
+      
+      <li class="breadcrumb-item active" aria-current="page">Known Issues</li>
     </ol>
   </nav>
 </header>
@@ -142,9 +144,24 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 </div>
 
 <article class="bcls-article">
-  <h1>404 - Page Not Found</h1>
-  <p>Sorry, the page you requested does not exist. Try going to <a href="/">Home page</a> and navigating to it or searching for it.</p>
-  <p>For additional help, <a href="mailto:training@brightcove.com">email us</a>.</p>
+
+  <h1>Brightcove Live Known Issues</h1>
+  <summary>This topic lists known issues for the Brightcove Live application.</summary>
+
+  <section class="bcls-section">
+    <h2 id="Advertising">Advertising</h2>
+    <ol>
+      <li>If advertisements are configured at the playlist level, when a video from that playlist is found and played via <em>Search</em>, <em>Recently Watched</em>, <em>Related</em> or <em>Favorites</em>, the adds will not play. Noe that if an ad
+        was assigned to the video directly, that ad will still play.</li>
+    </ol>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Parental_controls">Parental controls</h2>
+    <ol>
+      <li>All content is displayed to end users (in lists, carousels, etc), but when trying to play the video the parental pin will be requested.</li>
+    </ol>
+  </section>
 </article>
 
 <!-- complete bootstrap layout -->
@@ -162,7 +179,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 03 Feb 2020
+  Page last updated on 07 Feb 2020
 </div>
 
 <footer class="bcls-footer" role="contentinfo">

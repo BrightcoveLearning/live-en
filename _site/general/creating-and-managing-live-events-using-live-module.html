@@ -86,7 +86,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item"><a href="/general/">Managing Videos</a></li>
+      <li class="breadcrumb-item"><a href="/general/">general</a></li>
       
       <li class="breadcrumb-item active" aria-current="page">Creating and Managing Live Events using the Live Module</li>
     </ol>
@@ -154,7 +154,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="introduction">Introduction</h2>
     <p>The Live module can be used to help you broadcast a live event to both desktop and mobile devices. After entering your event information into the Live module, you will be provided with a set of encoder settings that you plug into your on-site encoder. All transcoding is done in the cloud so you don't need a hardware based transcoder.</p>
     <p>Depending on your Live subscription, you may have the ability to create events, channels or both. Typically, events are created to stream shorter length, one time or recurring events. Channels are typically used when delivering 24/7 live events.</p>
-    <p class="BCL-aside">Note: Live streaming support is available only for Video Cloud Pro and Enterprise publishers.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: Live streaming support is available only for Video Cloud Pro and Enterprise publishers.</aside>
   </section>
   <section class="bcls-section">
     <h2 id="prerequisites">Prerequisites</h2>
@@ -240,27 +240,28 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             <li class="language-editable">Tier 3 allows up to 20,000 Kbps and is charged at 2.0x hours</li>
           </ul>
         </aside>
-        <p>Note: For information on creating Live ingest profiles, see <a href="/node/18471">Creating Custom Live Ingest Profiles</a>.</p>
+        <aside class="bcls-aside bcls-aside--information"> For information on creating Live ingest profiles, see <a href="/node/18471">Creating Custom Live Ingest Profiles</a>.</aside>
+
       </li>
       <li class="language-editable">Select <strong>Convert event to video asset when complete</strong> to save a VOD version of the live video to your Video Cloud account. When this option is selected, the highest quality rendition from the selected <strong>Live Ingest Profile</strong> is used as the source for the VOD video. The default ingest profile for the account is used when creating renditions. <strong>Note that the VOD version is not available as soon as the live event ends, the video will be available once the ingestion process is complete.</strong>
-        <p>Note: This option is not supported when using a recurring event.</p>
+        <aside class="bcls-aside bcls-aside--information">This option is not supported when using a recurring event.</aside>
       </li>
       <li class="language-editable">Click <strong>ADVANCED OPTIONS</strong> and <a href="#advanced">configure the advanced options</a>.</li>
       <li class="language-editable">Click<strong> Create Event </strong>to start the live event. The <a href="#controlroom">Control Room page</a> will open with details about the live event including the <strong>Streaming Endpoint (RTMP URL)</strong> and <strong>Stream Name</strong> which will be used by your encoder.
-        <p>Note: It will take about a minute to process your streams.</p>
+        <aside class="bcls-aside bcls-aside--information"> It will take about a minute to process your streams.</aside>
         <p>By default, the encoder must be started within 30 minutes from when a new event is created.</p>
       </li>
     </ol>
     <p>Click the <strong>Stop Streaming</strong> button to end the event.</p>
-    <p>Note: Make sure the encoder is closed/stopped when the live stream is complete. Leaving a connection open between any encoder and Brightcove, even when no data is being sent, may result in unexpected connection charges.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: Make sure the encoder is closed/stopped when the live stream is complete. Leaving a connection open between any encoder and Brightcove, even when no data is being sent, may result in unexpected connection charges.</aside>
   </section>
   <section class="bcls-section">
     <h2 id="advanced">Configuring advanced options</h2>
     <p>When creating a new event, advanced options can be configured. To configure the advanced options, click the <strong>ADVANCED OPTIONS</strong> link when creating the event.</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="https://img.brightcove.com/node18470-advanced-options.png" /></figure>
     <p>The following options can be configured:</p>
-    <p class="BCL-aside">Note: For VOD clips, no notification will be sent.</p>
-    <p class="BCL-aside">Note: Please contact Brightcove Support in the case you are interested in a custom edge CDN hostname.</p>
+    <aside class="bcls-aside bcls-aside--information"> For VOD clips, no notification will be sent.</aside>
+    <aside class="bcls-aside bcls-aside--information">Please contact Brightcove Support in the case you are interested in a custom edge CDN hostname.</aside>
     <ul>
       <li class="language-editable"><strong>Reconnect Time</strong> - If the encoder is disconnected, this is the amount of time that the live stream will be kept available. This setting has no effect on how soon the encoder must be started when a new event is created.</li>
       <li class="language-editable"><strong>Enable Server Side Ad Insertion (SSAI)</strong> - Enables server side ad insertion. Ads are configured as part of the <a href="/node/18748">server-side ad settings</a>. For information on working with server-side ads in the Live module, see <a href="/node/18753">Implementing Server-Side Ads in the Live Module</a>.
@@ -300,7 +301,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <ul>
           <li class="language-editable"><strong>None</strong> - No encryption is applied</li>
           <li class="language-editable"><strong>AES-128</strong> - Secure the stream using AES-128 encryption. If this option is selected, you must enter your <strong>Encryption Key</strong>. The key must be 32 hexadecimal characters. For best results, use a <a href="https://www.allkeysgenerator.com/Random/Security-Encryption-Key-Generator.aspx">key generator</a>, choosing the <code>128-bit</code> and <code>Hex</code> options.
-            <p>&gt;Note: Clips can't be created from encrypted live streams.</p>
+            <aside class="bcls-aside bcls-aside--information">Clips can't be created from encrypted live streams.</aside>
           </li>
           <li class="language-editable"><strong>Digital Rights Management (DRM)</strong> - Secure Premium content stream with Digital Rights Management technologies. For details, see the <a href="node/18944">Live DRM</a> document.
             <ul>
@@ -449,7 +450,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <section class="bcls-section">
     <h2 id="monitor">Monitoring an event</h2>
     <p>Click the <strong>Monitoring</strong> tab below the preview player to view monitoring information. The monitoring information is available while an event is in progress and for up to 1 hour after the event ends.</p>
-    <p class="BCL-aside">Note: By default, the Monitor module will only display the Output and Input Drift graphs. If you would like the extended Monitor version, please contact your Brightcove account representative.</p>
+    <aside class="bcls-aside bcls-aside--information">By default, the Monitor module will only display the Output and Input Drift graphs. If you would like the extended Monitor version, please contact your Brightcove account representative.</aside>
     <p>Click <strong>Reporting</strong> in the left navigation to view <a href="/node/18843">Live analytics</a>.</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="https://img.brightcove.com/node18470-monitoring.png" /></figure>
     <p>Click <strong>Select Graphs</strong> to select which graphs appear and for a description of what each graph contains.</p>
@@ -476,7 +477,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li class="language-editable">Click on an event to open the Control Room page.</li>
       <li class="language-editable">Click<strong> Publish and Embed &gt; Player Configuration</strong> in the left navigation.</li>
       <li class="language-editable">Select a <strong>Player</strong>.
-        <p>Note: If the event is configured to enable server-side ads (SSAI), DVR or multi-CDN, Brightcove Player version 6.18.3 and above must be used. Only version 6.18.3 and above players will appear in the dropdown list.</p>
+        <aside class="bcls-aside bcls-aside--information">Note: If the event is configured to enable server-side ads (SSAI), DVR or multi-CDN, Brightcove Player version 6.18.3 and above must be used. Only version 6.18.3 and above players will appear in the dropdown list.</aside>
       </li>
       <li class="language-editable">When <strong>Allow DVR</strong> is checked, the player will request the DVR manifest instead of the live manifest. This option is only available if the event was created with the <strong>Create Cloud DVR</strong> option selected. If the event is published using a Brightcove Player version earlier than 6.33.0, the <a href="/node/18089">Live DVRUX Plugin</a> is required.
         <aside class="bcls-aside bcls-aside--information">Note:
@@ -569,7 +570,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 12 Feb 2020
+  Page last updated on 13 Feb 2020
 </div>
 
 <footer class="bcls-footer" role="contentinfo">

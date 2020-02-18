@@ -76,7 +76,7 @@
     </url>
     
     <url>
-        <loc>https://live.support.brightcove.com/support/</loc>
+        <loc>https://live.support.brightcove.com/live-api/code-samples/</loc>
         <lastmod>2020-02-17</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -97,7 +97,7 @@
     </url>
     
     <url>
-        <loc>https://live.support.brightcove.com/live-api/code-samples/</loc>
+        <loc>https://live.support.brightcove.com/support/</loc>
         <lastmod>2020-02-17</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -154,6 +154,13 @@
     
     <url>
         <loc>https://live.support.brightcove.com/general/publishing-live-event-facebook.html</loc>
+        <lastmod>2020-02-17</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://live.support.brightcove.com/general/reviewing-live-analytics.html</loc>
         <lastmod>2020-02-17</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>

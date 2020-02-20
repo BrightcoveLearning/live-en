@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="https://learning-services-media.brightcove.com/doc-assets/site-assets/css/site/sitemap.css"?>
-<?xml-stylesheet type="text/xsl" href="https://learning-services-media.brightcove.com/doc-assets/site-assets/css/site/sitemap.xsl"?>
+
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
@@ -48,7 +48,7 @@
     </url>
     
     <url>
-        <loc>https://live.support.brightcove.com/support/</loc>
+        <loc>https://live.support.brightcove.com/product-updates-known-issues/</loc>
         <lastmod>2020-02-20</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -69,6 +69,13 @@
     </url>
     
     <url>
+        <loc>https://live.support.brightcove.com/live-api/</loc>
+        <lastmod>2020-02-20</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://live.support.brightcove.com/live-module/</loc>
         <lastmod>2020-02-20</lastmod>
         <changefreq>daily</changefreq>
@@ -76,7 +83,7 @@
     </url>
     
     <url>
-        <loc>https://live.support.brightcove.com/product-updates-known-issues/</loc>
+        <loc>https://live.support.brightcove.com/support/</loc>
         <lastmod>2020-02-20</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -105,13 +112,6 @@
     
     <url>
         <loc>https://live.support.brightcove.com/live-api/ssai/</loc>
-        <lastmod>2020-02-20</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://live.support.brightcove.com/live-api/</loc>
         <lastmod>2020-02-20</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -175,6 +175,13 @@
     
     <url>
         <loc>https://live.support.brightcove.com/sitemap.xml</loc>
+        <lastmod>2020-02-20</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://live.support.brightcove.com/get-started/step-step-using-live-module-open-broadcaster-software-obs.html</loc>
         <lastmod>2020-02-20</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>

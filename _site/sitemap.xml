@@ -62,7 +62,7 @@
     </url>
     
     <url>
-        <loc>https://live.support.brightcove.com/live-api/</loc>
+        <loc>https://live.support.brightcove.com/get-started/</loc>
         <lastmod>2020-02-25</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -70,6 +70,13 @@
     
     <url>
         <loc>https://live.support.brightcove.com/</loc>
+        <lastmod>2020-02-25</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://live.support.brightcove.com/live-api/code-samples/</loc>
         <lastmod>2020-02-25</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -97,21 +104,14 @@
     </url>
     
     <url>
+        <loc>https://live.support.brightcove.com/live-api/</loc>
+        <lastmod>2020-02-25</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://live.support.brightcove.com/live-module/</loc>
-        <lastmod>2020-02-25</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://live.support.brightcove.com/support/</loc>
-        <lastmod>2020-02-25</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://live.support.brightcove.com/get-started/</loc>
         <lastmod>2020-02-25</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -125,7 +125,7 @@
     </url>
     
     <url>
-        <loc>https://live.support.brightcove.com/live-api/code-samples/</loc>
+        <loc>https://live.support.brightcove.com/support/</loc>
         <lastmod>2020-02-25</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -210,6 +210,13 @@
     
     <url>
         <loc>https://live.support.brightcove.com/sitemap.xml</loc>
+        <lastmod>2020-02-25</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://live.support.brightcove.com/live-admin/standard-live-ingest-profiles.html</loc>
         <lastmod>2020-02-25</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>

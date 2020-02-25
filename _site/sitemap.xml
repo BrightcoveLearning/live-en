@@ -13,6 +13,13 @@
     </url>
     
     <url>
+        <loc>https://live.support.brightcove.com/get-started/brightcove-live-training-videos.html</loc>
+        <lastmod>2020-02-25</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://live.support.brightcove.com/general/creating-and-managing-live-events-using-live-module.html</loc>
         <lastmod>2020-02-25</lastmod>
         <changefreq>daily</changefreq>

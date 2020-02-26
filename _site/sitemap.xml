@@ -27,6 +27,13 @@
     </url>
     
     <url>
+        <loc>https://live.support.brightcove.com/live-admin/creating-custom-live-ingest-profiles.html</loc>
+        <lastmod>2020-02-26</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://live.support.brightcove.com/general/creating-video-clip-using-live-module.html</loc>
         <lastmod>2020-02-26</lastmod>
         <changefreq>daily</changefreq>
@@ -62,7 +69,14 @@
     </url>
     
     <url>
-        <loc>https://live.support.brightcove.com/live-api/code-samples/</loc>
+        <loc>https://live.support.brightcove.com/</loc>
+        <lastmod>2020-02-26</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://live.support.brightcove.com/live-api/ssai/</loc>
         <lastmod>2020-02-26</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -90,7 +104,14 @@
     </url>
     
     <url>
-        <loc>https://live.support.brightcove.com/live-api/getting-started/</loc>
+        <loc>https://live.support.brightcove.com/live-api/</loc>
+        <lastmod>2020-02-26</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://live.support.brightcove.com/live-api/code-samples/</loc>
         <lastmod>2020-02-26</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -104,14 +125,7 @@
     </url>
     
     <url>
-        <loc>https://live.support.brightcove.com/live-api/ssai/</loc>
-        <lastmod>2020-02-26</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://live.support.brightcove.com/live-api/</loc>
+        <loc>https://live.support.brightcove.com/live-api/getting-started/</loc>
         <lastmod>2020-02-26</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -119,13 +133,6 @@
     
     <url>
         <loc>https://live.support.brightcove.com/get-started/</loc>
-        <lastmod>2020-02-26</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://live.support.brightcove.com/</loc>
         <lastmod>2020-02-26</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>

@@ -90,6 +90,13 @@
     </url>
     
     <url>
+        <loc>https://live.support.brightcove.com/product-updates-known-issues/</loc>
+        <lastmod>2020-02-27</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://live.support.brightcove.com/live-module/</loc>
         <lastmod>2020-02-27</lastmod>
         <changefreq>daily</changefreq>
@@ -132,13 +139,6 @@
     </url>
     
     <url>
-        <loc>https://live.support.brightcove.com/product-updates-known-issues/</loc>
-        <lastmod>2020-02-27</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
         <loc>https://live.support.brightcove.com/index_for_launch.html</loc>
         <lastmod>2020-02-27</lastmod>
         <changefreq>daily</changefreq>
@@ -154,6 +154,13 @@
     
     <url>
         <loc>https://live.support.brightcove.com/general/live-drm.html</loc>
+        <lastmod>2020-02-27</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://live.support.brightcove.com/get-started/live-module-guidelines-and-best-practices.html</loc>
         <lastmod>2020-02-27</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>

@@ -69,7 +69,7 @@
     </url>
     
     <url>
-        <loc>https://live.support.brightcove.com/live-api/guides/</loc>
+        <loc>https://live.support.brightcove.com/live-api/references/</loc>
         <lastmod>2020-03-02</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -84,6 +84,13 @@
     
     <url>
         <loc>https://live.support.brightcove.com/support/</loc>
+        <lastmod>2020-03-02</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://live.support.brightcove.com/product-updates-known-issues/</loc>
         <lastmod>2020-03-02</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -125,7 +132,7 @@
     </url>
     
     <url>
-        <loc>https://live.support.brightcove.com/live-api/references/</loc>
+        <loc>https://live.support.brightcove.com/live-api/guides/</loc>
         <lastmod>2020-03-02</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -133,13 +140,6 @@
     
     <url>
         <loc>https://live.support.brightcove.com/get-started/</loc>
-        <lastmod>2020-03-02</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://live.support.brightcove.com/product-updates-known-issues/</loc>
         <lastmod>2020-03-02</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -161,6 +161,13 @@
     
     <url>
         <loc>https://live.support.brightcove.com/live-api/references/live-api-error-messages.html</loc>
+        <lastmod>2020-03-02</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://live.support.brightcove.com/live-api/references/live-api-release-notes.html</loc>
         <lastmod>2020-03-02</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>

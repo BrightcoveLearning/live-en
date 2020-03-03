@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- remember to remove the following line when the site is ready to go live -->
   <!-- <meta name="robots" content="noindex" /> -->
-  <title>Live API Sample: Create a Live Job</title>
+  <title>Quick Start: Using RTMP Outputs for Live Events</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -87,7 +87,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       <li class="breadcrumb-item"><a href="/live-api/code-samples/">code-samples</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Live API Sample: Create a Live Job</li>
+      <li class="breadcrumb-item active" aria-current="page">Quick Start: Using RTMP Outputs for Live Events</li>
     </ol>
   </nav>
 </header>
@@ -177,154 +177,291 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 </div>
 
 <article class="bcls-article">
-  <h1>Live API Sample: Create a Live Job</h1>
-  <summary>In this sample, you will learn how to create a simple Live job.</summary>
+  <h1>Quick Start: Using RTMP Outputs for Live Events</h1>
+  <summary>This tutorial will walk you through creating RTMP outputs to set up live events on YouTube Live and Facebook Live.</summary>
+
+
+
 
 
 <section class="bcls-section">
-<h2 id="Introduction">Introduction</h2>
+<h2 id="Overview">Overview</h2>
 
-<p>This sample creates a simple Live job with three output renditions: 1080p, 720p, and 480p.</p>
+<figure class="bcls-figure"><img alt="general-block-diagram" title="Block diagram" src="/assets/images/live-api/18697/block-diagram-small.png" />
+<figcaption class="bcls-caption--image">Block Diagram</figcaption>
+</figure>
 
-<p>Because the <span class="”notranslate”">Live API</span> is not CORS-enabled and must be accessed from a server-side app, the API request is sent through a simple proxy written in PHP. You can reproduce this in any server-side language - all it does is collect the request parameters sent by the JavaScript, sends the request to the API, and returns the response to the JavaScript. All the code can be found in the <a href="#code">code section below</a>.</p>
+<p>This tutorial explains at the API level how to create a live streaming job in <a href="/node/18642">Brightcove live</a> and then create <a href="https://en.wikipedia.org/wiki/Real-Time_Messaging_Protocol">RTMP</a> outputs and re-stream them to YouTube Live and Facebook Live.</p>
+
+<aside class="BCL-bcls-aside bcls-aside--information">Notes:
+<ul>
+	<li>For information on how to use RTMP outputs in the Live module, see <a href="/node/18726">Using Live RTMP Outputs to Stream to Facebook and YouTube</a>.</li>
+	<li>RTMP Outputs <strong>does</strong> support <code>rtmps</code> urls - you should use <code>rtmps</code> if the social platform supports it.</li>
+	<li>Note that Facebook ended support for <code>rtmp</code>.streams as of 1 May 2019, for for Facebook, you <strong>MUST</strong> use <code>RTMPS</code>.</li>
+</ul>
+</aside>
+
+<p>This tutorial will use <a class="notranslate" href="/node/17908">curl</a> to make the API requests, but you can easily make them in <a class="notranslate" href="/node/18462">Insomnia</a>, <a class="notranslate" href="/node/17919">Postman</a> or other REST clients instead.</p>
 </section>
 
 <section class="bcls-section">
-<h2 id="create_live_job_app">Create Live job app</h2>
-Find all the code associated with this sample in this <a href="https://github.com/BrightcoveLearning/18519-live-api-sample-create-live-job">GitHub repository</a>.
+<h2 id="create_a_live_job">Create a live job</h2>
 
-<p data-height="1400" data-theme-id="dark" data-slug-hash="ZoYoVY" data-default-tab="result" data-user="rcrooks1969" data-embed-version="2" data-pen-title="Live API Sample: Create a Live Job" class="codepen">See the Pen <a href="https://codepen.io/team/rcrooks1969/pen/ZoYoVY/">Live API Sample: Create a Live Job</a> by Brightcove Learning Services (<a href="https://codepen.io/rcrooks1969">@rcrooks1969</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script></section>
+<p>First, we will create a live job. You will need an <code>API-KEY</code> for the Live API. If you do not, and are interested in obtaining access, please contact your account manager.</p>
+
+<ol class="bcls-tasklist-restart">
+	<li>
+	<p>Copy and paste the following <span class="notranslate">curl</span> command into a text editor:</p>
+
+	<pre class="line-numbers">
+<code class="language-bash">curl -X POST \
+  https://api.bcovlive.io/v1/jobs \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: ' \
+  -d '{
+    "live_stream": true,
+    "region": "",
+    "outputs": [{
+      "label": "hls360p",
+      "live_stream": true,
+      "height": 360,
+      "video_bitrate": 365,
+      "segment_seconds": 6,
+      "keyframe_interval": 60
+    },
+    {
+      "label": "hls432p",
+      "live_stream": true,
+      "height": 432,
+      "video_bitrate": 730,
+      "segment_seconds": 6,
+      "keyframe_interval": 60
+    },
+    {
+      "label": "hls540p",
+      "live_stream": true,
+      "height": 540,
+      "video_bitrate": 2000,
+      "segment_seconds": 6,
+      "keyframe_interval": 60
+    },
+    {
+      "label": "hls720p3M",
+      "live_stream": true,
+      "height": 540,
+      "video_bitrate": 2000,
+      "segment_seconds": 6,
+      "keyframe_interval": 60
+    },
+    {
+      "label": "hls720p4.5M",
+      "live_stream": true,
+      "height": 540,
+      "video_bitrate": 4500,
+      "segment_seconds": 6,
+      "keyframe_interval": 60
+    }]
+  }'
+</code></pre>
+	</li>
+	<li>
+	<p><strong>Replace:</strong></p>
+
+	<ul>
+		<li><code></code> with the closest available region to your encoder, see <a href="/node/17764#Support_aws_regions">closest available regions</a> to your encoder. For instance: <code>us-west-2</code></li>
+		<li><code></code> with your Brightcove live API key. For example: <code>abcdfeg-this-is-a-fake-api-key-FgJajjasd12hJHsZ</code></li>
+	</ul>
+	</li>
+	<li>After making those changes, copy and paste the code into Terminal or whatever command-line app you use and run it.</li>
+	<li>
+	<p>The response should be something like this:</p>
+
+	<pre class="line-numbers">
+<code class="language-json">{
+    "id": "3b6871bf2f344acaa6b397d09b476018",
+    "outputs": [... removed for simplicity ...],
+    "stream_url": "rtmp://ep1-usw2.bcovlive.io:1935/3b6871bf2f344acaa6b397d09b476018",
+    "stream_name": "alive",
+    "static": false,
+    "encryption": {},
+    "playback_url": "https://bcovlive-a.akamaihd.net/3b6871bf2f344acaa6b397d09b476018/us-west-2/NA/playlist.m3u8",
+    "playback_url_dvr": "https://bcovlive-a.akamaihd.net/3b6871bf2f344acaa6b397d09b476018/us-west-2/NA/playlist_dvr.m3u8"
+}</code></pre>
+	</li>
+</ol>
+
+<p>This jobs will create 5 renditions <strong>based</strong> on <a href="https://developer.apple.com/documentation/http_live_streaming/hls_authoring_specification_for_apple_devices">Apple recommendations</a>.</p>
+</section>
 
 <section class="bcls-section">
-<h2 id="Using_the_CodePen" class="bcls-expander-head">Using the CodePen</h2>
+<h2 id="Configure_your_encoder">Configure your encoder</h2>
 
-<div class="bcls-expander-content">
-<p>Here are some tips to effectively use the above CodePen:</p>
+<p>The steps shown here will assume an <a href="https://www.elemental.com/products/aws-elemental-live">Elemental live box</a> encoder, which was used in testing the steps for this tutorial. If you have a different encoder, the settings should be similar.</p>
+
+<p>The most important settings for this case are:</p>
 
 <ul>
-	<li>Toggle the actual display of the player by clicking the <strong>Result</strong> button.</li>
-	<li>Click the <strong>HTML/CSS/JS</strong> buttons to display ONE of the code types.</li>
-	<li>Click <strong>Edit on CodePen</strong> in the upper right corner to fork this CodePen into your own account.</li>
-	<li>Find all the code associated with this sample in this <a href="https://github.com/BrightcoveLearning/18519-live-api-sample-create-live-job">GitHub repository</a>.</li>
+	<li>Configure timecode source as "system clock"</li>
+	<li>Set "OnFi timecode frequency" to 1</li>
+	<li>Check "time code insertion" inside video</li>
+	<li>Strongly recommended: Framerate = follow source</li>
 </ul>
-</div>
+
+<p>This is the config we used for this experiment:</p>
+
+<figure class="bcls-figure"><img alt="elemental-live-job-config" title="Elemental live config" src="/assets/images/live-api/18697/elemental-live-job-config-v1-small.png" />
+<figcaption class="bcls-caption--image">Elemental live config</figcaption>
+</figure>
 </section>
 
 <section class="bcls-section">
-<h2 id="code">Proxy code</h2>
+<h2 id="test_playback">Test playback</h2>
 
-<p>In addition to the code found in CodePen (and associated GitHub repo), this sample requires a proxy to make the API request and return the response to the app. For this app we used PHP, and the code is shown below. You can use any server-side language to build the proxy.</p>
+<p>You can use this <a href="https://videojs.github.io/videojs-contrib-hls/">VideoJS HLS demo page</a> to test playback, just paste the value <code>playback_url</code> returned in the creation job response:</p>
 
-<pre class="line-numbers">
-<code class="language-php">&lt;?php
-/**
- * live-proxy.php - proxy for Brightcove Live APIs
- * makes the request, and returns the response
- * Accessing:
- *    (note you should *always* access the proxy via HTTPS)
- *    Method: POST
- *
- * @post {string} url - the URL for the API request
- * @post {string} [requestType=GET] - HTTP method for the request
- * @post {string} [requestBody] - JSON data to be sent with write requests
- * @post {string} apiKey - Live API key
- *
- * @returns {string} $response - JSON response received from the API
- */
-
-
-// CORS enablement and other headers
-header("Access-Control-Allow-Origin: *");
-header("Content-type: application/json");
-header("X-Content-Type-Options: nosniff");
-header("X-XSS-Protection");
-
-
-$requestData = json_decode(file_get_contents('php://input'));
-
-// set up the API call
-// get api key
-$apikey = $requestData-&gt;apiKey;
-// get request type or default to GET
-if ($requestData-&gt;requestType) {
-    $method = $requestData-&gt;requestType;
-} else {
-    $method = "GET";
-}
-// more security checks
-$needle = '.io';
-$endapi = strpos($requestData-&gt;url, $needle) + 3;
-
-$nextChar = substr($requestData-&gt;url, $endapi, 1);
-
-if (strpos($requestData-&gt;url, 'api.bcovlive.io') == false) {
-    exit('{"ERROR":"Only requests to Brightcove Live APIs are accepted by this proxy"}');
-} else if ($nextChar !== '/' &amp;&amp; $nextChar !== '?') {
-    exit('{"ERROR": "There was a problem with your API request - please check the URL"}');
-}
-// get the URL and authorization info from the form data
-$request = $requestData-&gt;url;
-//send the http request
-if ($requestData-&gt;requestBody) {
-  $ch = curl_init($request);
-  curl_setopt_array($ch, array(
-    CURLOPT_CUSTOMREQUEST  =&gt; $method,
-    CURLOPT_RETURNTRANSFER =&gt; TRUE,
-    CURLOPT_SSL_VERIFYPEER =&gt; FALSE,
-    CURLOPT_HTTPHEADER     =&gt; array(
-      'Content-type: application/json',
-      "X-API-KEY: {$apikey}",
-    ),
-    CURLOPT_POSTFIELDS =&gt; $requestData-&gt;requestBody
-  ));
-  $response = curl_exec($ch);
-  curl_close($ch);
-} else {
-  $ch = curl_init($request);
-  curl_setopt_array($ch, array(
-    CURLOPT_CUSTOMREQUEST  =&gt; $method,
-    CURLOPT_RETURNTRANSFER =&gt; TRUE,
-    CURLOPT_SSL_VERIFYPEER =&gt; FALSE,
-    CURLOPT_HTTPHEADER     =&gt; array(
-      'Content-type: application/json',
-      "X-API-KEY: {$apikey}",
-    )
-  ));
-  $response = curl_exec($ch);
-  curl_close($ch);
-}
-
-// Check for errors
-if ($response === FALSE) {
-    $logEntry = "\nError:\n".
-    "\n".date("Y-m-d H:i:s")." UTC \n"
-    .$response;
-    $logFileLocation = "log.txt";
-    $fileHandle      = fopen($logFileLocation, 'a') or die("-1");
-    fwrite($fileHandle, $logEntry);
-    fclose($fileHandle);
-    echo '{"ERROR": "There was a problem with your API call"}'+
-    die(curl_error($ch));
-}
-
-// Decode the response
-// $responseData = json_decode($response, TRUE);
-// return the response to the AJAX caller
-$responseDecoded = json_decode($response);
-// if (!isset($responseDecoded)) {
-// 	$response = '{null}';
-// }
-echo $response;
-?&gt;
-</code></pre>
+<figure class="bcls-figure"><img alt="videojs-hls-playback" title="VideoJS HLS playback demo page" src="/assets/images/live-api/18697/videojs-hls-playback-small.png" />
+<figcaption class="bcls-caption--image">VideoJS HLS playback demo page</figcaption>
+</figure>
 </section>
 
-<script src="//learning-services-media.brightcove.com/doc-assets/node/18519-live-api-sample-create-live-job/create-job.js">
+<section class="bcls-section">
+<h2 id="Youtube_live">Add the live stream to YouTube live</h2>
 
-</script>
+<p>We are assuming here that you have a YouTube account enabled for live streaming.</p>
 
+<ol class="bcls-tasklist-restart">
+	<li>
+	<p>Click <strong>go live</strong>, and you should see:</p>
+
+	<figure class="bcls-figure"><img alt="youtube-go-live" title="YouTube go live" src="/assets/images/live-api/18697/youtube-go-live-small.png" />
+	<figcaption class="bcls-caption--image">YouTube go live</figcaption>
+	</figure>
+	</li>
+	<li>
+	<p>Click on "Encoder live streaming":</p>
+
+	<figure class="bcls-figure"><img alt="youtube-encoder-live" title="YouTube encoder live source" src="/assets/images/live-api/18697/youtube-encoder-live-small.png" />
+	<figcaption class="bcls-caption--image">YouTube encoder live source</figcaption>
+	</figure>
+	</li>
+	<li>
+	<p>Configure your live event YouTube metadata and use the "Encoder set up" data to connect the Brightcove live stream to YouTube:</p>
+
+	<figure class="bcls-figure"><img alt="youtube-encoder-setup" title="YouTube encoder setup" src="/assets/images/live-api/18697/youtube-encoder-setup-small.png" />
+	<figcaption class="bcls-caption--image">YouTube encoder setup</figcaption>
+	</figure>
+	</li>
+	<li>
+	<p>Now that we have YouTube live set up, we will create the RTMP output for it from our Live job.</p>
+	</li>
+	<li>
+	<p>Copy the <span class="notranslate">curl</span> command below into a text editor:</p>
+
+	<pre class="line-numbers">
+<code class="language-bash">curl -X POST \
+  https://api.bcovlive.io/v1/jobs//rtmpouts \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: ' \
+  -d '{
+  "url": "rtmp://a.rtmp.youtube.com/live2/"
+}'</code></pre>
+	</li>
+	<li>
+	<p><strong>Replace:</strong></p>
+
+	<ul>
+		<li><code></code> with your Brightcove live job id. In our example this value would be <code>3b6871bf2f344acaa6b397d09b476018</code> - your value, from the response to your request to create the live job , will be different.</li>
+		<li><code></code> for your Brightcove live API key. For instance: <code>abcdfeg-this-is-a-fake-api-key-FgJajjasd12hJHsZ</code></li>
+		<li><code></code> for the stream name / key that YouTube provides</li>
+	</ul>
+	</li>
+	<li>Paste the edited code into your command-line app and run it.</li>
+	<li>
+	<p>The response should be something like this:</p>
+
+	<pre class="line-numbers">
+<code class="language-json">{
+          "connection_info": {
+            "host": "a.rtmp.youtube.com",
+            "port": 1935,
+            "application": "live2",
+            "streamName": ""
+          },
+          "duration_history": [],
+          "rtmp_out_id": "27aacdfa5bcf4436ade0519e6a748aba",
+          "stream_start": 1542902218238
+        }</code></pre>
+	</li>
+	<li>
+	<p>To test YouTube playback you can go to YouTube <strong>my channel</strong>:</p>
+
+	<figure class="bcls-figure"><img alt="youtube-my-channel-playback" title="YouTube my channel playback" src="/assets/images/live-api/18697/youtube-my-channel-playback-small.png" />
+	<figcaption class="bcls-caption--image">YouTube my channel playback</figcaption>
+	</figure>
+	</li>
+</ol>
+</section>
+
+<section class="bcls-section">
+<h2 id="facebook_live">Add the live stream to Facebook live</h2>
+
+<p>We are assuming here that you have a Facebook account enabled for live streaming.</p>
+
+<ol class="bcls-tasklist-restart">
+	<li>
+	<p>Click <strong>Live video</strong></p>
+	</li>
+	<li>
+	<p>Click <strong>connect</strong> and stream key to get the data needed to connect your Brightcove live job:</p>
+
+	<figure class="bcls-figure"><img alt="facebook-live-config" title="Facebook live config" src="/assets/images/live-api/18697/facebook-live-config-small.png" />
+	<figcaption class="bcls-caption--image">Facebook live config</figcaption>
+	</figure>
+	</li>
+	<li>
+	<p>Next, create live output for Brightcove live job using "server url" and "stream key" from Facebook. Copy the <span class="notranslate">curl</span> command below and paste it into a text editor:</p>
+
+	<pre class="line-numbers">
+<code class="language-bash">curl -X POST \
+  https://api.bcovlive.io/v1/jobs//rtmpouts \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: ' \
+  -d '{
+  "url": "rtmp://live-api-s.facebook.com:80/rtmp/"
+}'</code></pre>
+	</li>
+	<li>
+	<p><strong>Replace:</strong></p>
+
+	<ul>
+		<li><code></code> with your Brightcove live job id. In our example this value would be <code>3b6871bf2f344acaa6b397d09b476018</code> - your value, from the response to your request to create the live job , will be different.</li>
+		<li><code></code> with your Brightcove live API key. For instance: <code>abcdfeg-this-is-a-fake-api-key-FgJajjasd12hJHsZ</code></li>
+		<li><code></code> with you stream name that Facebook gives you</li>
+	</ul>
+	</li>
+	<li>
+	<p>The response should be something like this:</p>
+
+	<pre class="line-numbers">
+<code class="language-json">{
+  "connection_info": {
+      "host": "live-api-s.facebook.com",
+      "port": 80,
+      "application": "rtmp",
+      "streamName": ""
+  },
+  "duration_history": [],
+  "rtmp_out_id": "59323c3d1e2b44748755853193fb126c",
+  "stream_start": 1542904101097
+}</code></pre>
+	</li>
+	<li>
+	<p>To test your Facebook Live stream, click "Go Live" on your Facebook webpage.</p>
+	<img alt="facebook-playback" title="Facebook playback" src="/assets/images/live-api/18697/facebook-playback-small.png" /></li>
+</ol>
+</section>
 </article>
+
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">

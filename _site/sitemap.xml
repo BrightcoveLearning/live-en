@@ -69,7 +69,7 @@
     </url>
     
     <url>
-        <loc>https://live.support.brightcove.com/live-api/references/</loc>
+        <loc>https://live.support.brightcove.com/live-api/guides/</loc>
         <lastmod>2020-03-03</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -125,13 +125,6 @@
     </url>
     
     <url>
-        <loc>https://live.support.brightcove.com/live-api/getting-started/</loc>
-        <lastmod>2020-03-03</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
         <loc>https://live.support.brightcove.com/live-api/ssai/</loc>
         <lastmod>2020-03-03</lastmod>
         <changefreq>daily</changefreq>
@@ -139,7 +132,14 @@
     </url>
     
     <url>
-        <loc>https://live.support.brightcove.com/live-api/guides/</loc>
+        <loc>https://live.support.brightcove.com/live-api/getting-started/</loc>
+        <lastmod>2020-03-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://live.support.brightcove.com/live-api/references/</loc>
         <lastmod>2020-03-03</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -245,6 +245,13 @@
     
     <url>
         <loc>https://live.support.brightcove.com/live-api/getting-started/quick-start-create-live-stream-using-brightcove-live-api.html</loc>
+        <lastmod>2020-03-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://live.support.brightcove.com/live-api/code-samples/quick-start-using-rtmp-outputs-live-events.html</loc>
         <lastmod>2020-03-03</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>

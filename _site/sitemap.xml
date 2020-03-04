@@ -13,6 +13,13 @@
     </url>
     
     <url>
+        <loc>https://live.support.brightcove.com/live-api/guides/brightcove-live-best-practices.html</loc>
+        <lastmod>2020-03-04</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://live.support.brightcove.com/get-started/brightcove-live-training-videos.html</loc>
         <lastmod>2020-03-04</lastmod>
         <changefreq>daily</changefreq>
@@ -69,7 +76,7 @@
     </url>
     
     <url>
-        <loc>https://live.support.brightcove.com/live-api/references/</loc>
+        <loc>https://live.support.brightcove.com/live-api/guides/</loc>
         <lastmod>2020-03-04</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -139,7 +146,7 @@
     </url>
     
     <url>
-        <loc>https://live.support.brightcove.com/live-api/guides/</loc>
+        <loc>https://live.support.brightcove.com/live-api/references/</loc>
         <lastmod>2020-03-04</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>

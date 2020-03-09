@@ -419,6 +419,13 @@
     </url>
     
     <url>
+        <loc>https://live.support.brightcove.com/live-api/guides/supported-encoders-live-events.html</loc>
+        <lastmod>2020-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://live.support.brightcove.com/general/using-live-rtmp-outputs-stream-facebook-and-youtube.html</loc>
         <lastmod>2020-03-09</lastmod>
         <changefreq>daily</changefreq>

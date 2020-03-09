@@ -20,6 +20,13 @@
     </url>
     
     <url>
+        <loc>https://live.support.brightcove.com/live-api/guides/brightcove-live-program-ad-metadata-api.html</loc>
+        <lastmod>2020-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://live.support.brightcove.com/get-started/brightcove-live-training-videos.html</loc>
         <lastmod>2020-03-09</lastmod>
         <changefreq>daily</changefreq>
@@ -139,6 +146,13 @@
     </url>
     
     <url>
+        <loc>https://live.support.brightcove.com/live-api/ssai/</loc>
+        <lastmod>2020-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://live.support.brightcove.com/live-api/code-samples/</loc>
         <lastmod>2020-03-09</lastmod>
         <changefreq>daily</changefreq>
@@ -147,13 +161,6 @@
     
     <url>
         <loc>https://live.support.brightcove.com/live-api/getting-started/</loc>
-        <lastmod>2020-03-09</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://live.support.brightcove.com/live-api/ssai/</loc>
         <lastmod>2020-03-09</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>

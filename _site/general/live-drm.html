@@ -185,13 +185,32 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <h2 id="create">Enabling DRM for Live content</h2>
 
 <aside class="bcls-aside bcls-aside--information">
-<p>Note:</p>
-
-<ul>
-	<li>Your Live account must be enabled first&nbsp;by Brightcove Support in order to use DRM.</li>
-	<li>To publish a DRM-enabled event, it is necessary to create and use a DRM enabled player v6.37.1 or greater.</li>
-</ul>
-</aside>
+	<p>Note:</p>
+	
+	<p>By default DRM is applied to outputs as follows:</p>
+	
+	<ul>
+		<li>Your Live account must be enabled first&nbsp;by Brightcove Support in order to use DRM.</li>
+		<li>
+		<p>To publish a DRM-enabled event, use any of the following:</p>
+	
+		<ul>
+			<li>A DRM-enabled Brightcove Player v6.37.1 or later</li>
+			<li>The Brigthcove Native SDK for iOS v6.5.0 or later</li>
+			<li>
+			<p>The Brigthcove Native SDK for Android v6.11.0 or later</p>
+			</li>
+		</ul>
+		</li>
+		<li>If you want to override the DRM default settings you can do it via API or please contact Brightcove support to change them in the Live Platform.
+		<ul>
+			<li>FairPlay: applied to HLS outputs</li>
+			<li>Playready: applied to DASH outputs</li>
+			<li>Widevine: applied to HLS outputs</li>
+		</ul>
+		</li>
+	</ul>
+	</aside>
 
 <p>To enable DRM for your Live content follow these steps:</p>
 

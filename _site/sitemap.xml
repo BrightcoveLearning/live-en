@@ -48,6 +48,13 @@
     </url>
     
     <url>
+        <loc>https://live.support.brightcove.com/general/creating-live-stream-using-akamai-stream-packaging-and-telestream-wirecast.html</loc>
+        <lastmod>2020-03-10</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://live.support.brightcove.com/general/creating-video-clip-using-live-module.html</loc>
         <lastmod>2020-03-10</lastmod>
         <changefreq>daily</changefreq>
@@ -97,7 +104,7 @@
     </url>
     
     <url>
-        <loc>https://live.support.brightcove.com/live-api/ssai/</loc>
+        <loc>https://live.support.brightcove.com/get-started/</loc>
         <lastmod>2020-03-10</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -111,42 +118,7 @@
     </url>
     
     <url>
-        <loc>https://live.support.brightcove.com/get-started/</loc>
-        <lastmod>2020-03-10</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://live.support.brightcove.com/support/</loc>
-        <lastmod>2020-03-10</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
         <loc>https://live.support.brightcove.com/live-api/code-samples/</loc>
-        <lastmod>2020-03-10</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://live.support.brightcove.com/product-updates-known-issues/</loc>
-        <lastmod>2020-03-10</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://live.support.brightcove.com/live-api/getting-started/</loc>
-        <lastmod>2020-03-10</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://live.support.brightcove.com/live-module/</loc>
         <lastmod>2020-03-10</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -160,7 +132,21 @@
     </url>
     
     <url>
-        <loc>https://live.support.brightcove.com/live-api/</loc>
+        <loc>https://live.support.brightcove.com/live-api/ssai/</loc>
+        <lastmod>2020-03-10</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://live.support.brightcove.com/live-api/getting-started/</loc>
+        <lastmod>2020-03-10</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://live.support.brightcove.com/support/</loc>
         <lastmod>2020-03-10</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -168,6 +154,27 @@
     
     <url>
         <loc>https://live.support.brightcove.com/live-api/references/</loc>
+        <lastmod>2020-03-10</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://live.support.brightcove.com/product-updates-known-issues/</loc>
+        <lastmod>2020-03-10</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://live.support.brightcove.com/live-module/</loc>
+        <lastmod>2020-03-10</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://live.support.brightcove.com/live-api/</loc>
         <lastmod>2020-03-10</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -370,14 +377,14 @@
     </url>
     
     <url>
-        <loc>https://live.support.brightcove.com/general/reducing-latency-live-streams.html</loc>
+        <loc>https://live.support.brightcove.com/live-api/guides/reducing-latency-live-streams.html</loc>
         <lastmod>2020-03-10</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
-        <loc>https://live.support.brightcove.com/live-api/guides/reducing-latency-live-streams.html</loc>
+        <loc>https://live.support.brightcove.com/general/reducing-latency-live-streams.html</loc>
         <lastmod>2020-03-10</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>

@@ -1,0 +1,137 @@
+---
+title: Creating a Live Stream Using Akamai Stream Packaging and Telestream Wirecast
+parent: general
+---
+<article class="bcls-article">
+  <h1>Creating a Live Stream Using Akamai Stream Packaging and Telestream Wirecast</h1>
+  <summary>In this topic you will learn how to broadcast a live streaming event using Akamai Stream Packaging and Telestream Wirecast.</summary>
+  <section class="bcls-section">
+
+
+
+<p>This topic will help you broadcast a live event using Akamai Stream Packaging,&nbsp;the Telestream Wirecast encoder, remote asset videos and the Brightcove Player. Other encoders can also be used. For a list of all the options available from Brightcove for delivering live streaming video, see <a href="/node/11397">Delivering Live Streams</a>.</p>
+
+<p>To broadcast a live stream using Akamai Stream Packaging, you will:</p>
+
+<ul class="BCL_objectivesList">
+	<li><a href="#enable">Enable your Video Cloud account for live streaming</a></li>
+	<li><a href="#create">Create a live stream video using the Media module</a></li>
+	<li><a href="#telestream">Configure Telestream Wirecast for a live event</a></li>
+	<li><a href="#pubcode">Generate the publishing code for a live event</a></li>
+</ul>
+  </section>
+
+  <section class="bcls-section">
+<h2 id="enable">Enabling your Video Cloud account for live streaming</h2>
+
+<p>Before you can conduct a live streaming event, you should contact <a href="https://support.brightcove.com/en/contact/create">Brightcove Support</a> and let them know you would like your Video Cloud account enabled for live streaming. <strong>Also request that stream packaging be enabled for the account.</strong> When your account is configured, you will receive an email with a set of credentials and configuration information that will be needed to setup live streaming.</p>
+
+<figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/16269/node16269-email2.png" /></figure>
+
+<aside class="bcls-aside bcls-aside--information">Note: Credentials for Akamai HD are provisioned geographically based on your encoder IP. If you plan on having an event in a new location, you should provide Brightcove Support with an external and pingable IP address for the encoder at the new location. By doing so, Akamai can re-provision the entry point at the closest possible location to reduce latency and risk of interruption by travelling over as little of the public internet as possible. Brightcove Support needs to know this well in advance as the change takes some time to propagate within Akamai's network. If the encoder is not yet at the location, that is fine, so long as there is an externally pingable IP address on the network to use.</aside>
+  </section>
+
+  <section class="bcls-section">
+<h2 id="create">Creating a live stream video using the Media module</h2>
+
+<p>You must create a video with remote assets in your video library to handle the live stream. Remote assets are used when you maintain your video files on your own or a third-party system and then provide Brightcove with the URL of the video file when you create the video. Remote assets are created using the <a href="/node/16244">Media module</a> or by using the <a href="/node/18018">CMS API</a>.</p>
+
+<p>Follow these steps to create a remote asset video using the Media module.</p>
+
+<ol class="bcls-tasklist-restart">
+	<li>Open the Media module.</li>
+	<li>Click <strong>+ Add Remote Video</strong> in the side navigation panel.</li>
+	<li>Enter a <strong>Video Name</strong>.</li>
+	<li>Set the <strong>Video Type</strong> to <strong>Live</strong>.</li>
+	<li>Set the <strong>Format</strong> to <strong>HLS</strong>.</li>
+	<li>For the <strong>Rendition URL</strong>, start with the<strong> ARL</strong> value provided on your email from Brightcove Support. The ARL URL will be of the format:
+	<pre>
+<code> http://bcliveunivsecure-lh.akamaihd.net/[EVENT_ANGLE_BITRATE]@684348</code>
+</pre>
+	You must replace the <strong>EVENT and ANGLE</strong> placeholders with values. <strong>BITRATE</strong> will not be used. For example, your URL might be:
+
+	<pre>
+<code> http://bcliveunivsecure-lh.akamaihd.net/Live_1@684348</code></pre>
+
+	<p>Insert an <strong>i</strong> in the URL after the <strong>akamaihd.net</strong> part of the URL:</p>
+
+	<pre>
+<code> http://bcliveunivsecure-lh.akamaihd.net/i/Live_1@684348</code></pre>
+
+	<p>Also, append <strong>/master.m3u8</strong> to the end of the URL. The final rendition URL should look similar to:</p>
+
+	<pre>
+<code>http://bcliveunivsecure-lh.akamaihd.net/i/Live_1@684348/master.m3u8</code>
+</pre>
+	</li>
+	<li>Paste the formatted URL into the <strong>URL</strong> field and click <strong>Add Rendition</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/16269/node16269-remote-asset1.png" /></figure>
+	</li>
+	<li>Click <strong>Save</strong> to save the remote asset video.</li>
+	<li>Confirm that the remote asset appears in the Media module. <strong>Activate</strong> the remote asset video if needed.</li>
+</ol>
+
+<p>After you create a remote asset video in the Media module, you can edit its metadata like any other video.</p>
+  </section>
+
+  <section class="bcls-section">
+<h2 id="telestream">Configuring Telestream Wirecast for a live event</h2>
+
+<p>In this section, we will configure and use the Telestream Wirecast encoder to support a live streaming event. Telestream Wirecast software is a desktop application that captures input from your camera and produces a stream that can be delivered by a CDN. Note that there are hardware and other software based encoding solutions available that may be better suited for delivering your live streaming event. You can download a trial version of the Wirecast software from the <a href="https://www.telestream.net/wirecast/overview.htm">Telestream website</a>.</p>
+
+<aside class="bcls-aside bcls-aside--information">Note: You should have the Wirecast software installed and a camera connected to your computer before proceeding.</aside>
+
+<p>To configure Wirecast for a live event, follow these steps.</p>
+
+<ol class="bcls-tasklist-restart">
+	<li>Open Wirecast.</li>
+	<li>Click <strong>+</strong> and select <strong>Video Capture</strong>.</li>
+	<li>Select your camera from the list. Click <strong>Add</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/16269/node16269-add-camera.png" /></figure>
+	</li>
+	<li>Confirm that the selected video source appears in the preview pane.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/16269/node16269-live-shot.png" /></figure>
+	</li>
+	<li>Click the arrow button (<img alt="" src="/assets/images/general/16269/node16269-arrow-button.png" />) to make the camera shot the live shot.</li>
+	<li>Click the stream button (<img alt="" src="/assets/images/general/16269/node16269-stream-button.png" />). You will be prompted to enter the Output Settings.</li>
+	<li>Set the <strong>Destination</strong> to <strong>RTMP Server</strong>. Click <strong>OK</strong>.</li>
+	<li>For the <strong>Address</strong>, use the <strong>Primary Entrypoint</strong> value provided on the email from Brightcove Support.</li>
+	<li>For the <strong>Stream</strong>, use the [EVENT_ANGLE_BITRATE]@394443 value that was used when defining the remote asset URL. Make sure to use the same values for the EVENT and ANGLE you used when creating the remote asset. Set the BITRATE value to the bitrate set in Wirecast.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/16269/node16269-output-settings1.png" /></figure>
+	</li>
+	<li>Click <strong>Set Credentials...</strong></li>
+	<li>Enter the <strong>Username</strong> and <strong>Password</strong> provided on the email from Brightcove Support. Click <strong>OK</strong>.</li>
+	<li>Click <strong>OK</strong> to save the output settings.</li>
+	<li>Click the stream button. The live stream should begin.</li>
+</ol>
+  </section>
+
+  <section class="bcls-section">
+<h2 id="pubcode">Generating the publishing code for a live event</h2>
+
+<ol class="bcls-tasklist-restart">
+	<li>Open the Media module.</li>
+	<li>Select the live stream remote asset video.</li>
+	<li>Click <strong>Publish and Embed</strong>.</li>
+	<li>Select a player.</li>
+	<li>Click on the player URL to preview the live stream in a browser.</li>
+</ol>
+  </section>
+
+  <section class="bcls-section">
+<h2 id="help">For further help</h2>
+
+<p>If you need help getting your live event to work, Brightcove Support is available to help. You can submit a case <a href="https://support.brightcove.com/en/contact">here</a>. To make sure you get the fastest response possible, below is a list of what Brightcove Support will need to solve the problem.</p>
+
+<ul>
+	<li>The specific symptoms the stream is having. For example, does it not play at all or does it stutter or freeze?</li>
+	<li>Whether this stream worked correctly in the past</li>
+	<li>The entry point URL you are using in your encoder</li>
+	<li>The stream name</li>
+	<li>The encoding software and hardware are you using</li>
+	<li>The URL to the player to which you have published the live event</li>
+	<li>The video ID of your live remote asset</li>
+	<li>The results of a trace-route from your encoder to the publishing point host</li>
+</ul>
+  </section>
+</article>

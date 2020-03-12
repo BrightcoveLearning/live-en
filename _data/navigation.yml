@@ -21,7 +21,7 @@
       url: '/getting-started/quick-start-zencoder.html'
 - section: 
   name: 'Live API'
-  url: '/get-started/'
+  url: '/live-api/'
   icon: '<i class="far fa-brackets-curly"></i>'
   docs:
     - name: 'Getting Started'
@@ -29,6 +29,8 @@
       docs:
       - name: 'Overview: Live API'
         url: '/live-api/getting-started/overview-brightcove-live-api.html'
+      - name: 'Quick Start'
+        url: '/live-api/getting-started/quick-start-create-live-stream-using-brightcove-live-api.html'
 - section: 
   name: 'Support'
   url: '/support/'

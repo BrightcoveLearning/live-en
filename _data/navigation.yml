@@ -38,7 +38,7 @@
 - section: 
   name: Using the Live Module
   url: /live-module/
-  icon: '<i class="far fa-info-circle"></i>'
+  icon: '<i class="fas fa-satellite-dish"></i>'
   docs:
     - name: Creating and Managing Live Events
       url: /live-module/creating-and-managing-live-events-using-live-module.html
@@ -125,6 +125,7 @@
 - section: 
   name: Administering Accounts
   url: /admin/
+  icon: '<i class="fal fa-tools"></i>'
   docs:
     - name: Creating Custom Live Ingest Profiles
       url: /admin/creating-custom-live-ingest-profiles.html
@@ -137,7 +138,7 @@
 - section: 
   name: Release Notes
   url: /release-notes/
-  icon: '<i class="far fa-question-circle"></i>'
+  icon: '<i class="far fa-bell"></i>'
   docs:
     - name: Known Issues
       url: /release-notes/known-issues.html

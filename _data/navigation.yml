@@ -144,8 +144,8 @@
   docs:
     - name: Known Issues
       url: /release-notes/known-issues.html
-    - name: Product Updates
-      url: /release-notes/product-updates.html
+    - name: Live API Release Notes
+      url: /release-notes/live-api-release-notes.html
 - section: 
   name: 'Support'
   url: '/support/'

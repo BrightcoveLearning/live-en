@@ -461,6 +461,13 @@
     </url>
     
     <url>
+        <loc>https://live.support.brightcove.com/live-api/references/standard-live-ingest-profiles.html</loc>
+        <lastmod>2020-03-19</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://live.support.brightcove.com/admin/standard-live-ingest-profiles.html</loc>
         <lastmod>2020-03-19</lastmod>
         <changefreq>daily</changefreq>

@@ -91,6 +91,8 @@
         url: /live-api/ssai/live-api-cue-points-and-ad-beacons-ssai.html
       - name: 'Server-Side Ad Insertion (SSAI)'
         url: /live-api/ssai/live-api-server-side-ad-insertion-ssai.html
+      - name: 'Overview: Player Enhancements for Live SSAI'
+        url: /live-api/ssai/overview-player-enhancements-live-ssai.html
     - name: 'Guides'
       url: '/live-api/guides/'
       docs:

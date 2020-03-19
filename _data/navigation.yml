@@ -133,6 +133,8 @@
       url: /admin/fields-custom-live-ingest-profiles.html
     - name: Managing Live Settings
       url: /admin/managing-live-settings.html
+    - name: Managing API Authentication Credentials
+      url: /admin/managing-api-authentication-credentials.html
     - name: Standard Live Ingest Profiles
       url: /admin/standard-live-ingest-profiles.html
 - section: 

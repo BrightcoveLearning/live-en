@@ -75,7 +75,7 @@ parent: Live Module
   </section>
   <section class="bcls-section">
     <h2 id="create">Creating a new event</h2>
-    <p>For a complete step-by-step guide to creating and streaming a live event using the Live module, see <a href="/node/10820">Step-by-Step: Using the Live Module with Telestream Wirecast</a>.</p>
+    <p>For a complete step-by-step guide to creating and streaming a live event using the Live module, see <a href="/get-started/step-step-using-live-module-telestream-wirecast.html">Step-by-Step: Using the Live Module with Telestream Wirecast</a> or <a href="/get-started/step-step-using-live-module-open-broadcaster-software-obs.html">Step-by-Step: Using the Live Module with Open Broadcaster Software (OBS)</a>.</p>
     <p>To create a new event, follow these steps.</p>
     <ol class="bcls-tasklist-restart">
       <li class="language-editable">From the Manage Events page click <strong>Create Event</strong>. The Create Live Event or Create Live Channel page will open. The properties when creating events and channels are the same. The screen shots in this document cover creating an event.
@@ -90,7 +90,7 @@ parent: Live Module
         </ul>
       </li>
       <li class="language-editable">Any required custom fields for the account will be displayed. Assign values to the custom fields.</li>
-      <li class="language-editable">Setting <strong>Streaming to Social Media</strong> to <strong>Allowed</strong> will make the event available for streaming to social media platforms. This can be done <a href="#social">once the event has started streaming</a> or by using the <a href="/node/18749">Social module</a>.</li>
+      <li class="language-editable">Setting <strong>Streaming to Social Media</strong> to <strong>Allowed</strong> will make the event available for streaming to social media platforms. This can be done <a href="#social">once the event has started streaming</a> or by using the <a href="/live-module/publishing-live-event-facebook.html">Social module</a>.</li>
       <li class="language-editable">Select a <strong>Live Ingest Profile</strong>. The dropdown list will list all Live ingest profiles. The ingest profile will control the quality and number of live renditions that are created. Clicking the <strong>Manage Profiles</strong> link will open the ingest profile editor in another browser tab. Note that you must be an account administrator to access the ingest profile editor. Click the <strong>RENDITIONS</strong> link to view the renditions that will be created using the selected ingest profile.
         <aside class="bcls-aside bcls-aside--information language-editable">The bitrate and billing details of the three tiers are as follows:
           <ul>
@@ -99,7 +99,7 @@ parent: Live Module
             <li class="language-editable">Tier 3 allows up to 20,000 Kbps and is charged at 2.0x hours</li>
           </ul>
         </aside>
-        <aside class="bcls-aside bcls-aside--information"> For information on creating Live ingest profiles, see <a href="/node/18471">Creating Custom Live Ingest Profiles</a>.</aside>
+        <aside class="bcls-aside bcls-aside--information"> For information on creating Live ingest profiles, see <a href="/admin/creating-custom-live-ingest-profiles.html">Creating Custom Live Ingest Profiles</a>.</aside>
 
       </li>
       <li class="language-editable">Select <strong>Convert event to video asset when complete</strong> to save a VOD version of the live video to your Video Cloud account. When this option is selected, the highest quality rendition from the selected <strong>Live Ingest Profile</strong> is used as the source for the VOD video. The default ingest profile for the account is used when creating renditions. <strong>Note that the VOD version is not available as soon as the live event ends, the video will be available once the ingestion process is complete.</strong>
@@ -123,13 +123,13 @@ parent: Live Module
     <aside class="bcls-aside bcls-aside--information">Please contact Brightcove Support in the case you are interested in a custom edge CDN hostname.</aside>
     <ul>
       <li class="language-editable"><strong>Reconnect Time</strong> - If the encoder is disconnected, this is the amount of time that the live stream will be kept available. This setting has no effect on how soon the encoder must be started when a new event is created.</li>
-      <li class="language-editable"><strong>Enable Server Side Ad Insertion (SSAI)</strong> - Enables server side ad insertion. Ads are configured as part of the <a href="/node/18748">server-side ad settings</a>. For information on working with server-side ads in the Live module, see <a href="/node/18753">Implementing Server-Side Ads in the Live Module</a>.
-        <ul>
-          <li class="language-editable"><strong>Fill Slate</strong> - Select a fill slate. The fill slate will be displayed when there are gaps in a live stream ad break that cannot be filled with a dynamically-served ad. Create fill slates as part of the <a href="/node/18588">live settings</a>.</li>
+      <li class="language-editable"><strong>Enable Server Side Ad Insertion (SSAI)</strong> - Enables server side ad insertion. Ads are configured as part of the <a href="https://studio.support.brightcove.com/admin/configuring-server-side-ad-settings.html">server-side ad settings</a>. For information on working with server-side ads in the Live module, see <a href="/live-module/implementing-server-side-ads-live-module.html">Implementing Server-Side Ads in the Live Module.</a>
+<ul>
+          <li class="language-editable"><strong>Fill Slate</strong> - Select a fill slate. The fill slate will be displayed when there are gaps in a live stream ad break that cannot be filled with a dynamically-served ad. Create fill slates as part of the <a href="/admin/managing-live-settings.html">live settings</a>.</li>
           <li class="language-editable"><strong>Ad Audio</strong> - When checked, normalizes the audio levels on ads based on the adjustment that is set. This can be used as a way to help make sure ads aren’t significantly louder than the content.</li>
         </ul>
       </li>
-      <li class="language-editable"><strong>Create Cloud DVR</strong> - Enables DVR capability. If the event is published using a Brightcove Player version earlier than 6.33.0, the <a href="/node/18089">Live DVRUX Plugin</a> is required. Content is available for 7 days after the event finishes.
+      <li class="language-editable"><strong>Create Cloud DVR</strong> - Enables DVR capability. If the event is published using a Brightcove Player version earlier than 6.33.0, the <a href="https://player.support.brightcove.com/plugins/live-dvrux-plugin.html">Live DVRUX Plugin</a> is required. Content is available for 7 days after the event finishes.
         <ul>
           <li class="language-editable"><strong>DVR Window</strong> - The amount of time, in seconds, to keep in the live DVR manifest.</li>
         </ul>
@@ -141,7 +141,7 @@ parent: Live Module
           <li class="language-editable"><strong>Secure Reliable Transport (SRT)</strong></li>
         </ul>
       </li>
-      <li class="language-editable"><strong>RTMP credentials to use</strong> - Select the RTMP credential used to secure the Streaming Endpoint. Note this option will only appear if the Input Format is RTMP and at least one RTMP credential was created as part of the <a href="/node/18588">Live settings</a>.</li>
+      <li class="language-editable"><strong>RTMP credentials to use</strong> - Select the RTMP credential used to secure the Streaming Endpoint. Note this option will only appear if the Input Format is RTMP and at least one RTMP credential was created as part of the <a href="/admin/managing-live-settings.html">Live settings</a>.</li>
       <li class="language-editable"><strong>RTMP IP whitelist</strong> - Enter a set of IP addresses that are allowed to connect to the RTMP endpoint. This controls who can connect to the RTMP endpoint. Note this option will only appear if the Input Format is RTMP.</li>
       <li class="language-editable"><strong>CIDR Whitelist</strong>&nbsp; - Enter a set of IP addresses that are allowed to connect to the RTP or SRT endpoint. This controls who can connect to the RTP or SRT endpoints. Note this option will only appear if the Input Format is RTP or SRT.</li>
       <li class="language-editable"><strong>Region</strong> - The Amazon Web Services (AWS) region to use. To reduce latency, you should select the region that is closest to where your encoder is located. <strong>By default, the region is set to Oregon (US West) which will produce bad results if you are streaming from another continent.</strong> The following regions are supported:
@@ -162,7 +162,7 @@ parent: Live Module
           <li class="language-editable"><strong>AES-128</strong> - Secure the stream using AES-128 encryption. If this option is selected, you must enter your <strong>Encryption Key</strong>. The key must be 32 hexadecimal characters. For best results, use a <a href="https://www.allkeysgenerator.com/Random/Security-Encryption-Key-Generator.aspx">key generator</a>, choosing the <code>128-bit</code> and <code>Hex</code> options.
             <aside class="bcls-aside bcls-aside--information">Clips can't be created from encrypted live streams.</aside>
           </li>
-          <li class="language-editable"><strong>Digital Rights Management (DRM)</strong> - Secure Premium content stream with Digital Rights Management technologies. For details, see the <a href="../general/node/18944">Live DRM</a> document.
+          <li class="language-editable"><strong>Digital Rights Management (DRM)</strong> - Secure Premium content stream with Digital Rights Management technologies. For details, see the <a href="/general/live-drm.html">Live DRM</a> document.
             <ul>
               <li>HLS + <a href="https://developer.apple.com/streaming/fps/">FairPlay</a></li>
               <li>HLS (fMP4) + Widevine Modular</li>
@@ -171,7 +171,7 @@ parent: Live Module
           </li>
         </ul>
       </li>
-      <li class="language-editable"><strong>Enable stream status notifications</strong> - When checked, enter a <strong>Notification URL</strong>. An http request will be made to the <strong>Notification URL</strong> when there is a change in the job status. This can be used to update a server in response to changes in the job status. For more information on using API notifications, see the <a href="/node/18448">Live API Notifications</a> topic.</li>
+      <li class="language-editable"><strong>Enable stream status notifications</strong> - When checked, enter a <strong>Notification URL</strong>. An http request will be made to the <strong>Notification URL</strong> when there is a change in the job status. This can be used to update a server in response to changes in the job status. For more information on using API notifications, see the <a href="/live-api/guides/live-api-notifications.html">Live API Notifications</a> topic.</li>
       <li class="language-editable"><strong>+ Add multi CDN configuration</strong> - Enter a <strong>label</strong> and <strong>URL</strong> for additional CDNs. This is a whitelist of CDNs that are allowed to ask our primary CDN for the video segments. You are responsible for configuring the secondary CDN correctly.</li>
       <li class="language-editable"><strong>Create this as a recurring event using a Static Entry Point (SEP)</strong> - Allows a single live stream to be created and then activated/deactivated when needed. For information, see the <a href="#intro_recurring">Introduction to recurring events</a> section of this document.</li>
     </ul>
@@ -288,7 +288,7 @@ parent: Live Module
     </div>
     <div>
       <h3 id="clips">Clips</h3>
-      <p>The Clips section displays all of the clips that were created from the live stream. Clicking the clip name will open the clip in the Media module. For information on creating a clip, see <a href="/node/18551">Creating a Video Clip Using the Live Module</a>.</p>
+      <p>The Clips section displays all of the clips that were created from the live stream. Clicking the clip name will open the clip in the Media module. For information on creating a clip, see <a href="/live-module/creating-video-clip-using-live-module.html">Creating a Video Clip Using the Live Module</a>.</p>
     </div>
     <div>
       <h3 id="renditions">Renditions</h3>
@@ -298,7 +298,7 @@ parent: Live Module
       <h3 id="rtmp">RTMP</h3>
       <p>The RTMP section can be used to add RTMP Outputs. This allows the live stream to be sent to other RTMP entry points. This can be used to send the live to stream to Facebook or YouTube for example.</p>
       <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/18470/node18470-rtmp.png" /></figure>
-      <p>Enter the <strong>RTMP Output URL</strong> and the <strong>Rendition</strong> to send. Note that the format of the output URL may change depending on where the RTMP stream is being used. For more information, see <a href="/node/18726">Using Live RTMP Outputs to Stream to Facebook and YouTube</a>.</p>
+      <p>Enter the <strong>RTMP Output URL</strong> and the <strong>Rendition</strong> to send. Note that the format of the output URL may change depending on where the RTMP stream is being used. For more information, see <a href="/live-module/using-live-rtmp-outputs-stream-facebook-and-youtube.html">Using Live RTMP Outputs to Stream to Facebook and YouTube</a>.</p>
     </div>
     <div>
       <h3 id="social_event">Social Event</h3>
@@ -310,7 +310,7 @@ parent: Live Module
     <h2 id="monitor">Monitoring an event</h2>
     <p>Click the <strong>Monitoring</strong> tab below the preview player to view monitoring information. The monitoring information is available while an event is in progress and for up to 1 hour after the event ends.</p>
     <aside class="bcls-aside bcls-aside--information">By default, the Monitor module will only display the Output and Input Drift graphs. If you would like the extended Monitor version, please contact your Brightcove account representative.</aside>
-    <p>Click <strong>Reporting</strong> in the left navigation to view <a href="/node/18843">Live analytics</a>.</p>
+    <p>Click <strong>Reporting</strong> in the left navigation to view <a href="/live-module/reviewing-live-analytics.html">Live analytics</a>.</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/18470/node18470-monitoring.png" /></figure>
     <p>Click <strong>Select Graphs</strong> to select which graphs appear and for a description of what each graph contains.</p>
   </section>
@@ -338,7 +338,7 @@ parent: Live Module
       <li class="language-editable">Select a <strong>Player</strong>.
         <aside class="bcls-aside bcls-aside--information">Note: If the event is configured to enable server-side ads (SSAI), DVR or multi-CDN, Brightcove Player version 6.18.3 and above must be used. Only version 6.18.3 and above players will appear in the dropdown list.</aside>
       </li>
-      <li class="language-editable">When <strong>Allow DVR</strong> is checked, the player will request the DVR manifest instead of the live manifest. This option is only available if the event was created with the <strong>Create Cloud DVR</strong> option selected. If the event is published using a Brightcove Player version earlier than 6.33.0, the <a href="/node/18089">Live DVRUX Plugin</a> is required.
+      <li class="language-editable">When <strong>Allow DVR</strong> is checked, the player will request the DVR manifest instead of the live manifest. This option is only available if the event was created with the <strong>Create Cloud DVR</strong> option selected. If the event is published using a Brightcove Player version earlier than 6.33.0, the <a href="https://player.support.brightcove.com/plugins/live-dvrux-plugin.html">Live DVRUX Plugin</a> is required.
         <aside class="bcls-aside bcls-aside--information">Note:
           <ul>
             <li class="language-editable">The "Allow DVR" feature is not compatible with the Gallery module at the moment.</li>
@@ -360,10 +360,10 @@ parent: Live Module
   </section>
   <section class="bcls-section">
     <h2 id="social">Connecting to social media</h2>
-    <p>It's possible to connect a live event to a social event that was scheduled in the Social module. Before you can connect a live event to a social event, you should <a href="/node/18749">create a live event in the Social module</a>. Only events that were created with the <strong>Streaming to Social Media</strong> setting set to <strong>Allowed</strong> can be assigned to a scheduled event.</p>
+    <p>It's possible to connect a live event to a social event that was scheduled in the Social module. Before you can connect a live event to a social event, you should <a href="/live-module/publishing-live-event-facebook.html">create a live event in the Social module</a>. Only events that were created with the <strong>Streaming to Social Media</strong> setting set to <strong>Allowed</strong> can be assigned to a scheduled event.</p>
     <p>To connect a live event to a social event, follow these steps:</p>
     <ol class="bcls-tasklist-restart">
-      <li class="language-editable"><a href="/node/18749">Create a live event in the Social module</a>.</li>
+      <li class="language-editable"><a href="/live-module/publishing-live-event-facebook.html">Create a live event in the Social module</a>.</li>
       <li class="language-editable">Click on an event to open the Control Room page.</li>
       <li class="language-editable">Click <strong>Publish and Embed &gt; Connect to Social Media </strong>in the left navigation. A list of scheduled social events will display. If no events display, no scheduled events exist.</li>
       <li class="language-editable">Click on a scheduled event and then click <strong>Connect</strong>.
@@ -374,7 +374,7 @@ parent: Live Module
   </section>
   <section class="bcls-section">
     <h2 id="clip">Creating a clip</h2>
-    <p>Clips can be created while the event is in progress or after the event has ended. If clips can't be created, a message will appear when hovering over <strong>Create Clip</strong> in the left navigation. For information on creating a clip, see <a href="/node/18551">Creating a Video Clip Using the Live Module</a>.</p>
+    <p>Clips can be created while the event is in progress or after the event has ended. If clips can't be created, a message will appear when hovering over <strong>Create Clip</strong> in the left navigation. For information on creating a clip, see <a href="/live-module/creating-video-clip-using-live-module.html">Creating a Video Clip Using the Live Module</a>.</p>
     <aside class="bcls-aside bcls-aside--information">Note:
       <ul>
         <li class="language-editable">
@@ -390,7 +390,7 @@ parent: Live Module
     <h2 id="ad">Requesting an ad</h2>
     <p>If the <strong>Enable Server Side Ad Insertion (SSAI)</strong> option was selected when the event was created, the Control Room page will display a <strong>Goto Ad</strong> button. When clicked, the length of the ad break can be selected.</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/18470/node18470-goto-ad.png" /></figure>
-    <p>Click <strong>Insert</strong> to insert an ad break into the live stream. If the ad doesn't fill the entire ad break time, the fill slate will be displayed. For information on working with server-side ads in the Live module, see <a href="/node/18753">Implementing Server-Side Ads in the Live Module</a>.</p>
+    <p>Click <strong>Insert</strong> to insert an ad break into the live stream. If the ad doesn't fill the entire ad break time, the fill slate will be displayed. For information on working with server-side ads in the Live module, see <a href="/live-module/implementing-server-side-ads-live-module.html">Implementing Server-Side Ads in the Live Module</a>.</p>
   </section>
   <section class="bcls-section">
     <h2 id="captions">Captions</h2>

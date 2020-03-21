@@ -1,0 +1,633 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- remember to remove the following line when the site is ready to go live -->
+  <!-- <meta name="robots" content="noindex" /> -->
+  <title>Implementing Server-Side Ads in the Live Module</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="/assets/css/site/bc-icons.css"> -->
+  <link rel="stylesheet" href="https://learning-services-media.brightcove.com/doc-assets/site-assets/css/site/prism.css">
+  <link rel="stylesheet" href="https://learning-services-media.brightcove.com/doc-assets/site-assets/css/site/styles.css">
+  <link rel="stylesheet" href="https://learning-services-media.brightcove.com/doc-assets/site-assets/css/site/landing-page.css">
+  <link rel="stylesheet" href="https://learning-services-media.brightcove.com/doc-assets/site-assets/css/site/tabs.css">
+  <link rel="stylesheet" href="/assets/css/local.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/google-analytics.js"></script>
+</head>
+
+<body class="body">
+
+<header>
+  <div class="div-header">
+    <a href="/"><img class="product-logo" src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/product-logos/logo-bc-live.svg" alt="product logo" style="max-height: 100px;max-width: 232px;"></a>
+<!-- GTranslate: https://gtranslate.io/ -->
+<select onchange="doGTranslate(this);" style="margin-right: 1rem;">
+  <option value="">Select a language</option>
+  <option value="en|en">English</option>
+  <option value="en|fr">Français</option>
+  <option value="en|de">Deutsch</option>
+  <option value="en|ja">日本語</option>
+  <option value="en|ko">한국어</option>
+  <option value="en|es">Español</option>
+</select>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
+/* ]]> */
+</script>
+
+<select id="site_select" style="margin-right: 1rem;">
+  <option value="">Other Brightcove Documentation</option>
+  
+    
+      <option value="https://support.brightcove.com">Documentation Home</option>
+    
+  
+    
+      <option value="https://audience.support.brightcove.com">Brightcove Audience</option>
+    
+  
+    
+      <option value="https://beacon.support.brightcove.com">Brightcove Beacon</option>
+    
+  
+    
+      <option value="https://campaign.support.brightcove.com">Brightcove Campaign</option>
+    
+  
+    
+      <option value="https://gallery.support.brightcove.com">Gallery</option>
+    
+  
+    
+      <option value="https://zencoder.support.brightcove.com">Zencoder</option>
+    
+  
+</select>
+
+
+    <span class="secondary-nav"><a href="https://supportportal.brightcove.com/s/login/?language=en_US"><img src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/support.png" alt="support"> Contact Support</a> <span style="vertical-align: top;margin-left:1em;margin-right:1em;">|</span> <a href="https://status.brightcove.com/"><img src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/status.png" alt="system status"> System Status</a></span>
+  </div>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb arr-right">
+      
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      
+      
+      
+      <li class="breadcrumb-item"><a href="/live-module/">Live Module</a></li>
+      
+      <li class="breadcrumb-item active" aria-current="page">Implementing Server-Side Ads in the Live Module</li>
+    </ol>
+  </nav>
+</header>
+<div class="container">
+    <div class="row">
+      <div class="col-sm-3 left-side-bar">
+        <nav class="sidenav">
+          
+            
+            <h5><a href="/">Home</a></h5>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/get-started/">Getting Started <strong>+</strong></a></h5>            
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/get-started/brightcove-live-training-videos.html">Brightcove Live Training Videos</a></li>
+                  
+                
+                  
+                    <li><a href="/get-started/delivering-live-streams.html">Delivering Live Streams</a></li>
+                  
+                
+                  
+                    <li><a href="/get-started/glossary.html">Live Glossary</a></li>
+                  
+                
+                  
+                    <li><a href="/get-started/live-module-guidelines-and-best-practices.html">Live Module Guidelines and Best Practices</a></li>
+                  
+                
+                  
+                    <li><a href="/get-started/step-step-using-live-module-open-broadcaster-software-obs.html">Step-by-Step: Using the Live Module with OBS</a></li>
+                  
+                
+                  
+                    <li><a href="/get-started/step-step-using-live-module-telestream-wirecast.html">Step-by-Step: Using the Live Module with Wirecast</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/general/">General Information <strong>+</strong></a></h5>            
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/general/live-drm.html">Live DRM</a></li>
+                  
+                
+                  
+                    <li><a href="/general/live-platforms-comparison-matrix.html">Live Platforms Comparison Matrix</a></li>
+                  
+                
+                  
+                    <li><a href="/general/live-video-glossary.html">Live Video Glossary</a></li>
+                  
+                
+                  
+                    <li><a href="/general/reducing-latency-live-streams.html">Reducing Latency for Live Streams</a></li>
+                  
+                
+                  
+                    <li><a href="/live-api/guides/supported-encoders-live-events">Supported Encoders for Live Events</a></li>
+                  
+                
+                  
+                    <li><a href="/general/creating-live-stream-using-akamai-stream-packaging-and-telestream-wirecast.html">Using Akamai Stream Packaging and Wirecast</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/live-module/">Using the Live Module <strong>+</strong></a></h5>            
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/live-module/creating-and-managing-live-events-using-live-module.html">Creating and Managing Live Events</a></li>
+                  
+                
+                  
+                    <li><a href="/live-module/creating-video-clip-using-live-module.html">Creating a Video Clip</a></li>
+                  
+                
+                  
+                    <li><a href="/live-module/implementing-server-side-ads-live-module.html">Implementing Server-Side Ads</a></li>
+                  
+                
+                  
+                    <li><a href="/live-module/publishing-live-event-facebook.html">Publishing a Live Event to Facebook</a></li>
+                  
+                
+                  
+                    <li><a href="/live-module/publishing-live-event-youtube.html">Publishing a Live Event to YouTube</a></li>
+                  
+                
+                  
+                    <li><a href="/live-module/reviewing-live-analytics.html">Reviewing Live Analytics</a></li>
+                  
+                
+                  
+                    <li><a href="/live-module/using-live-rtmp-outputs-stream-facebook-and-youtube.html">Using Live RTMP Outputs</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/live-api/">Working with the Live API <strong>+</strong></a></h5>            
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/live-api/getting-started/">Getting Started <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/live-api/getting-started/overview-brightcove-live-api.html">Overview: Live API</a></li>
+                        
+                        <li><a href="/live-api/getting-started/quick-start-create-live-stream-using-brightcove-live-api.html">Creating a Live Stream using the API</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/live-api/code-samples/">Code Samples <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/live-api/code-samples/live-api-sample-create-live-job.html">Create a Live Job</a></li>
+                        
+                        <li><a href="/live-api/code-samples/quick-start-create-live-job-mpeg2-ts-input.html">Create a Live Job for MPEG2-TS Input</a></li>
+                        
+                        <li><a href="/live-api/code-samples/quick-start-using-rtmp-outputs-live-events.html">Using RTMP Outputs for Live Events</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/live-api/references/">References <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/live-api/references/live-api-error-messages.html">Error Messages</a></li>
+                        
+                        <li><a href="/live-api/references/live-api-release-notes.html">Release Notes</a></li>
+                        
+                        <li><a href="/live-api/references/reference.html">Live API Reference</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/live-api/ssai/">SSAI <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/live-api/ssai/live-api-cue-points-and-ad-beacons-ssai.html">Cue Points and Ad Beacons with SSAI</a></li>
+                        
+                        <li><a href="/live-api/ssai/live-api-server-side-ad-insertion-ssai.html">Server-Side Ad Insertion (SSAI)</a></li>
+                        
+                        <li><a href="/live-api/ssai/overview-player-enhancements-live-ssai.html">Overview: Player Enhancements for Live SSAI</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/live-api/guides/">Guides <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/live-api/guides/brightcove-live-best-practices.html">Brightcove Live Best Practices</a></li>
+                        
+                        <li><a href="/live-api/guides/brightcove-live-program-ad-metadata-api.html">Brightcove Live Program Ad Metadata API</a></li>
+                        
+                        <li><a href="/live-api/guides/live-api-creating-frame-accurate-clip.html">Creating a Frame-Accurate Clip</a></li>
+                        
+                        <li><a href="/live-api/guides/live-api-creating-vod-clips.html">Creating VOD Clips</a></li>
+                        
+                        <li><a href="/live-api/guides/getting-list-live-or-vod-jobs.html">Getting a List of Live or VOD Jobs</a></li>
+                        
+                        <li><a href="/live-api/guides/live-api-insert-id3-timed-metadata.html">Insert ID3 timed metadata</a></li>
+                        
+                        <li><a href="/live-api/guides/live-drm-live-api.html">Live DRM via the Live API</a></li>
+                        
+                        <li><a href="/live-api/guides/managing-credentials-live-api.html">Managing Credentials for the Live API</a></li>
+                        
+                        <li><a href="/live-api/guides/live-api-notifications.html">Notifications</a></li>
+                        
+                        <li><a href="/general/reducing-latency-live-streams.html">Reducing Latency for Live Streams</a></li>
+                        
+                        <li><a href="/live-api/guides/live-api-rtmp-outputs.html">RTMP Outputs</a></li>
+                        
+                        <li><a href="/live-api/guides/live-api-static-entry-points.html">Static Entry Points</a></li>
+                        
+                        <li><a href="/live-api/guides/signed-urls-and-token-auth-live-stream.html">Signed URLs and Token Auth with a Live Stream</a></li>
+                        
+                        <li><a href="/live-api/guides/live-api-vod-live-event.html">VOD from Live Event</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/admin/">Administering Accounts <strong>+</strong></a></h5>            
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/admin/creating-custom-live-ingest-profiles.html">Creating Custom Live Ingest Profiles</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/fields-custom-live-ingest-profiles.html">Fields for Custom Live Ingest Profiles</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/managing-live-settings.html">Managing Live Settings</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/managing-api-authentication-credentials.html">Managing API Authentication Credentials</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/standard-live-ingest-profiles.html">Standard Live Ingest Profiles</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/release-notes/">Release Notes <strong>+</strong></a></h5>            
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/release-notes/known-issues.html">Known Issues</a></li>
+                  
+                
+                  
+                    <li><a href="/release-notes/live-api-release-notes.html">Live API Release Notes</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/support/">Support <strong>+</strong></a></h5>            
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/support/opening-case-with-brightcove-support.html">Opening a Support Case</a></li>
+                  
+                
+                  
+                    <li><a href="/support/viewing-brightcove-system-status-page.html">Viewing the Brightcove System Status Page</a></li>
+                  
+                
+              </ul>
+            
+          
+      </nav>
+    </div>
+
+<!-- bootstrap layout -->
+<div class="col-lg-7" style="background-color: white;color: #333333;margin-top: -1em;margin-bottom: -1em;padding-bottom:1em;">
+
+<!-- search bar -->
+<div id="search_bar" class="search-bar">
+  <!-- TODO - cx value below must be changed for each site and new GCS instance set up-->
+  <!-- <script async src="https://cse.google.com/cse.js?cx=017969773216783359937:6sd3di5mwuw"></script> -->
+  <div id="search_box" class="gcse-search"></div>
+</div>
+
+<article class="bcls-article">
+  <h1>Implementing Server-Side Ads in the Live Module</h1>
+  <summary>In this topic you will learn how to implement server-side advertising in the Live module.</summary>
+  <section class="bcls-section">
+
+<h2 id="Introduction">Introduction</h2>
+
+<p>The Live module supports Server-Side Ad Insertion (SSAI) so server-side ads can be requested and displayed during a live stream. SSAI provides these main features during live events:</p>
+
+<ul>
+	<li>Since ads are stitched into the live video stream on the server side, they are not affected by ad blockers</li>
+	<li>Ads are inserted at cue points sent from your encoder or you can create an instant cue point using the&nbsp;Live module Control Room</li>
+	<li>You can configure&nbsp;<a href="#fill_slate">fill slates</a>&nbsp;to fill any unused ad time</li>
+</ul>
+
+<aside class="bcls-aside bcls-aside--information">Before you can use SSAI, your Video Cloud account needs to be configured for Dynamic Delivery and enabled for SSAI. Contact your account manager for details.</aside>
+
+<p>This topic focuses on the settings required and the process to request a server-side ad during a live event.</p>
+</section>
+
+<section class="bcls-section">
+<h2 id="Configuring_the_server_side_ad_settings">Configuring the server-side ad settings</h2>
+
+<p>Before server-side ads can be delivered, server-side ad settings must be configured. The server-side ad settings define various aspects of ad playback, including ad calls, timing, beacons and other ad configuration options. These settings are configured as part of the Server-Side Ad Settings in the Admin module. In this example, a simple ad tag is defined.</p>
+
+<figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/18753/node18753-live-ad-config.png" /></figure>
+
+<p>For more information, see <a href="https://studio.support.brightcove.com/admin/configuring-server-side-ad-settings.html">Configuring Server-Side Ad Settings</a>.</p>
+</section>
+
+<section class="bcls-section">
+<h2 id="fill_slate">Configuring the fill slate</h2>
+
+<p>Fill slates are videos that will be displayed when there are gaps in a live stream ad break that cannot be filled with a dynamically-served ad. If the requested ad is shorter than the ad break time, the fill slate will be displayed so viewers don't see a blank player. You should configure at least one fill slate before requesting a server-side ad. Ad slates are configured as part of the Live Settings in the Admin module. In this example, a fill slate that displays the Brightcove logo was defined.</p>
+
+<figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/18753/node18753-fill-slate.png" /></figure>
+
+<p>For information on creating ad slates, see <a href="/admin/managing-live-settings.html">Managing Live Settings</a>.</p>
+</section>
+
+<section class="bcls-section">
+<h2 id="Creating_a_live_event_that_supports_server_side_ads">Creating a live event that supports server-side ads</h2>
+
+<p>In order for a live event to display server-side ads, the <strong>Enable Server Side Ad Insertion (SSAI)</strong> setting must be selected when the event is created. For complete information on creating a live event using the Live module, see <a href="/live-module/creating-and-managing-live-events-using-live-module.html">Creating and Managing Live Events using the Live Module</a>.</p>
+
+<aside class="bcls-aside bcls-aside--information">You should have configured the Server-Side Ad Settings and added at least one fill slate before creating an event.</aside>
+
+<p>To create a new live event that supports server-side ads, follow these steps.</p>
+
+<ol class="bcls-tasklist-restart">
+	<li>Open the Live module.</li>
+	<li>From the Manage Events page click <strong>Create Event</strong>.</li>
+	<li>Enter the event details as needed.</li>
+	<li>Click <strong>ADVANCED OPTIONS</strong> to expand the advanced options.</li>
+	<li>Check <strong>Enable Server Side Ad Insertion (SSAI)</strong>. This will enable server side ad insertion.</li>
+	<li>Select a <strong>Fill Slate</strong>. The fill slate will be displayed when there are gaps in a live stream ad break that cannot be filled with a dynamically-served ad.</li>
+	<li>When the <strong>Ad Audio</strong> setting is checked, the audio levels on ads will be normalized based on the adjustment that is set. This can be used as a way to help make sure ads aren’t significantly louder than the content. Brightcove recommends selecting this option.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/18753/node18753-event-ssai-settings.png" /></figure>
+	</li>
+	<li>Click <strong>Create Event</strong>.</li>
+	<li>The&nbsp;Control Room page&nbsp;will open with details about the live event including the&nbsp;<strong>Streaming Endpoint (RTMP URL)</strong>&nbsp;and&nbsp;<strong>Stream Name</strong>. These values will be used by the encoder.</li>
+	<li>Configure the encoder and start the live stream.</li>
+	<li>By default, &nbsp;the Control Room preview player shows the ad-free stream. Ads will not be shown in the Control Room unless a Live ad configuration is selected. Use the dropdown below to the player to select an ad configuration.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/18753/node18753-select-ad-config.png" /></figure>
+	</li>
+	<li><strong>(Optional)</strong> Click the plus button (<img alt="" src="/assets/images/general/18753/node18753-plus-icon.png" />) to select an additional ad configuration. Doing this will add another preview player on the Control Room page.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/18753/node18753-two-preview-players.png" /></figure>
+	</li>
+</ol>
+
+<p>Click the volume button below the preview player to control which player audio stream is active.</p>
+
+<aside class="bcls-aside bcls-aside--information">If the event is using RTMP outputs, ads will not be streamed to the RTMP output. The ad-free stream will be streamed instead.</aside>
+
+<aside class="bcls-aside bcls-aside--information">If the event is being used by the <a href="/live-module/publishing-live-event-facebook.html">Live to Facebook</a> feature in the Social module, ads will not be streamed to Facebook. The ad-free stream will be streamed instead.</aside>
+</section>
+
+<section class="bcls-section">
+<h2 id="Requesting_an_ad">Requesting an ad</h2>
+
+<p>To request an ad, click<strong> Goto Ad</strong>. When clicked, the length of the ad break can be selected.</p>
+
+<figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/18753/node18753-goto-ad.png" /></figure>
+
+<p>Click <strong>Insert</strong> to insert an ad break into the live stream. If the ad doesn't fill the entire ad break time, the fill slate (selected when the event was created) will be displayed. Ads will be seen in the Control Room preview player and in players that are published using the Live module. This example shows 2 ads being displayed in the Control Room.</p>
+
+<figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/18753/node18753-two-ad-preview.png" /></figure>
+</section>
+
+<section class="bcls-section">
+<h2 id="Publishing_the_live_event">Publishing the live event</h2>
+
+<p>Live streams with server-side ads cannot be published using the Media module, they must be published using the Live Module.</p>
+
+<p>To generate the embed code for a live event with server-side ads, follow these steps:</p>
+
+<ol class="bcls-tasklist-restart">
+	<li>Click on an event to open the Control Room page.</li>
+	<li>Click<strong> Publish and Embed</strong> in the left navigation.</li>
+	<li>Select an <strong>Available Player</strong>.
+	<aside class="bcls-aside bcls-aside--information">If the event is configured to enable server-side ads (SSAI), DVR or multi-CDN, Brightcove Player version 6.18.3 and above must be used. Only version 6.18.3 and above players will appear in the dropdown list.</aside>
+	</li>
+	<li>Select the <strong>Ad Configuration</strong> to use with the player. The ad configuration will determine which ad(s) appear in the player.</li>
+	<li>Click the <strong>Player URL</strong> to preview the event in a browser or copy the appropriate embed code to use.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/18753/node18753-publish.png" /></figure>
+	</li>
+</ol>
+</section>
+
+<section class="bcls-section">
+<h2 id="Publishing_a_remote_live_event">Publishing a remote live event</h2>
+
+<p>If you want to use a remote live event, follow these steps:</p>
+
+<ol class="bcls-tasklist-restart">
+	<li>
+	<p>Return to the <strong>Live</strong> module's <strong>Control Room</strong> and copy the <strong>Playback URL</strong>. It should look similar to this:</p>
+
+	<pre>
+<code class="language-html">https://bcovlive-a.akamaihd.net/dd72289858ff8/us-west-2/5384493785001/playlist.m3u8</code></pre>
+	</li>
+	<li>
+	<p>Append the ad configuration id (045f90cfd55187ff6e60c8) that you want to use to the URL as follows:</p>
+
+	<pre>
+<code class="language-html">https://bcovlive-a.akamaihd.net/dd72289858ff8/us-west-2/5384493785001/<span class="bcls-highlight">045f90cfd55187ff6e60c8/</span>playlist.m3u8</code></pre>
+	</li>
+	<li>
+	<p>Rename the playlist from <code>playlist.m3u8</code> to <code>playlist_ssaiM.m3u8</code>. The remote asset should look similar to this:</p>
+
+	<pre>
+<code class="language-html">https://bcovlive-a.akamaihd.net/dd72289858ff8/us-west-2/5384493785001/045f90cfd55187ff6e60c8/<span class="bcls-highlight">playlist_ssaiM.m3u8</span></code></pre>
+
+	<p>You can use this with any player in your account, along with the embed code. You are ready to stream Live content with server-side ads.</p>
+	</li>
+</ol>
+</section>
+
+<section class="bcls-section">
+<h2 id="Troubleshooting_live_stream_issues">Troubleshooting live stream issues</h2>
+
+<p>If you need further help getting your live event to work, you can <a href="https://support.brightcove.com/en/contact/create">contact us</a>. To make sure you get the fastest response possible, below is a list of what support will need to solve the problem.</p>
+
+<ul>
+	<li>The specific symptoms the stream is having. For example, does it not play at all or does it stutter or freeze?</li>
+	<li>Whether this stream worked correctly in the past</li>
+	<li>The entry point URL you are using in your encoder</li>
+	<li>The encoding software and hardware are you using</li>
+	<li>The URL to the player to which you have published the live event</li>
+	<li>The video ID of your live asset in Video Cloud Studio</li>
+	<li>The results of a trace-route from your encoder to the publishing point host</li>
+</ul>
+</section>
+</article>
+
+<!-- complete bootstrap layout -->
+    </div>
+    <div class="col-sm-2 right-side-bar">
+      
+      <nav class="right-side-nav">
+        <h6 class="toc">Page Contents</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
+      
+    </div>
+  </div>
+</div>
+
+<hr>
+<div class="last-updated">
+  Page last updated on 19 Mar 2020
+</div>
+
+<footer class="bcls-footer" role="contentinfo">
+  <div class="row">
+    <div class="region region-footer-top-center col-md-12">
+      <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
+
+        <h2>Brightcove Support</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://status.brightcove.com">System Status</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?language=en_US">Contact Support</a>
+          </li>
+          <li>
+            <a href="https://support.brightcove.com/">Documentation</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-training-menu" id="block-training" class="footer-menu">
+
+        <h2>Training</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://support.brightcove.com/online-training-courses">Online Courses</a>
+          </li>
+          <li>
+            <a href="https://support.brightcove.com/register-training">Register for a course</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-brightcove-menu" class="footer-menu">
+
+        <h2>Brightcove</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://www.brightcove.com">Brightcove.com</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?language=en_US" data-drupal-link-system-path="node/18330">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="row">
+    <div class="region region-footer-bottom-center col-md-12">
+      <div class="bcls-copyright footer-menu">
+        <table>
+          <tr>
+            <td>
+              <div id="bc_copyright" class="field field--name-field-copyright-year field--type-string field--label-hidden field--item" style="float: left;"> Brightcove Inc. All rights reserved.</div>
+            </td>
+            <td><a href="https://www.brightcove.com/en/legal/privacy">Privacy</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">Terms &amp; Conditions</a></td>
+            <td>
+              <div class="gf-links-cols footer-menu">
+                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin"><i class="fab fa-linkedin-in" style="font-size: 1.5rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter"><i class="fab fa-twitter" style="font-size: 1.5rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i></a>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/https-fix.js"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/setDate.js"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/prism.js"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/site.js"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/tabs.js"></script>
+  
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/toc.js"></script>
+  
+  <script src="/assets/js/sites_nav.js"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/bcls-utils.js"></script>
+  <script src="/assets/js/feedback.js"></script>
+  <script src="/assets/js/search.js"></script>
+  <script async src="https://cse.google.com/cse.js?cx=017969773216783359937:qnv8hdpdmec"></script>
+</body>
+
+</html>

@@ -112,6 +112,10 @@ parent: Getting Started
           <td>Longer than expected latency</td>
           <td>Check the available bandwidth and ensure that data is being sent to the Live module in real time. It may take up to 10 minutes for a stream to be published. During this time, the stream is cached and the latency will be the longest. After being published, latency will continue to decrease until stabilizing between 30-90 seconds.</td>
         </tr>
+        <tr>
+          <td>Already used up your allotted redundant streams based on your account.</td>
+          <td>You may have redundant groups counting against your account limit. Once an event with redundant streams completes or is canceled it is no longer visible in the Live Module. However, such events can be listed and deleted via the Live API. <a target="_blank" href="https://docs.brightcove.com/live-api-stage/v1/doc/index.html#tag/Redundant-Groups">See Live API: Redundant Groups.</a></td>
+        </tr>
       </tbody>
     </table>
     &nbsp;

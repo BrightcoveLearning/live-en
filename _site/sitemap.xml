@@ -97,6 +97,13 @@
     </url>
     
     <url>
+        <loc>https://live.support.brightcove.com/live-module/host-zoom-conference-brightcove-live.html</loc>
+        <lastmod>2020-03-31</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://live.support.brightcove.com/icons.html</loc>
         <lastmod>2020-03-31</lastmod>
         <changefreq>daily</changefreq>
@@ -105,13 +112,6 @@
     
     <url>
         <loc>https://live.support.brightcove.com/live-module/implementing-server-side-ads-live-module.html</loc>
-        <lastmod>2020-03-31</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://live.support.brightcove.com/admin/</loc>
         <lastmod>2020-03-31</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -139,21 +139,7 @@
     </url>
     
     <url>
-        <loc>https://live.support.brightcove.com/live-api/guides/</loc>
-        <lastmod>2020-03-31</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
         <loc>https://live.support.brightcove.com/live-api/code-samples/</loc>
-        <lastmod>2020-03-31</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://live.support.brightcove.com/live-api/ssai/</loc>
         <lastmod>2020-03-31</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -188,7 +174,14 @@
     </url>
     
     <url>
-        <loc>https://live.support.brightcove.com/live-api/references/</loc>
+        <loc>https://live.support.brightcove.com/admin/</loc>
+        <lastmod>2020-03-31</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://live.support.brightcove.com/live-api/guides/</loc>
         <lastmod>2020-03-31</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -196,6 +189,20 @@
     
     <url>
         <loc>https://live.support.brightcove.com/live-api/getting-started/</loc>
+        <lastmod>2020-03-31</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://live.support.brightcove.com/live-api/references/</loc>
+        <lastmod>2020-03-31</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://live.support.brightcove.com/live-api/ssai/</loc>
         <lastmod>2020-03-31</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>

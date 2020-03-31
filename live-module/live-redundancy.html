@@ -1,0 +1,84 @@
+---
+title: Live Redundancy
+parent: Live Module
+---
+
+<article class="bcls-article">
+    <h1>Live Redundancy</h1>
+    <summary>In this topic, you will learn how to create Redundancy streams for your Live event. Redundancy will allow you to combine 2 or more Live Jobs into a single stream with automatic failover for uninterrupted reliable playback.</summary>
+    <section class="bcls-section">
+
+
+<h2 id="create">Enabling Live Redundancy</h2>
+
+<aside class="bcls-aside bcls-aside--information">
+<p>Note: Every account has a SEP (Static Entry Point) limit of 3, with the exception of us-west-2 which will have a limit of 10. If you need an increase please contact Brightcove support.</p>
+</aside>
+
+<p>The Live Redundancy feature is activated by adding two or more streams to your event in the Brightcove Live Platform.</p>
+
+<p>First Create a Live event. (For more information in how to create a Live event please <a target="_blank" href="https://support.brightcove.com/creating-and-managing-live-events-using-live-module">click here</a>).</p>
+
+<ol class="bcls-tasklist-restart">
+	<li class="language-editable">Go to the <strong>Stream Options</strong>, these options will allow you to name and select the region of your streams. Click in the <strong> (+) Add a Backup Stream </strong> button.
+
+	<p>If you don't see the Add a Backup Stream button then backup streaming has not been enabled for your account.</p>
+
+	<aside class="bcls-aside bcls-aside--information">Note: Please contact Brightcove Support to enable this option in your account.</aside>
+
+	<figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="700" height="350" src="/assets/images/general/18963/0.png" /></figure>
+	</li>
+	<li class="language-editable">By clicking the <strong>Add a Backup Stream</strong> button you will add a backup (redundancy) stream for your Live video. You can add up as many as your account limit supports.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="400" height="400" src="/assets/images/general/18963/1.png" /></figure>
+	</li>
+	<li class="language-editable">Name your Primary and Backup streams, and select a region that is closest to where your encoder is located. By default, the <strong>Primary stream</strong> region is set to Oregon (US West) which will produce bad results if you are streaming from another continent.
+	<p>The <strong>Reference ID </strong> is an optional identifier for internal use and must be unique (max 150 characters).</p>
+
+	<figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="410" height="730" src="/assets/images/general/18963/2.png" /></figure>
+
+	<p>Continue to set up your Live event as you will normally do. For more information on how to create a Live event please <a target="_blank" href="https://support.brightcove.com/creating-and-managing-live-events-using-live-module">click here</a>.</p>
+	</li>
+	<li class="language-editable">Alternatively, you can also add a new stream from the control room window:
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="800" height="100" src="/assets/images/general/18963/3.png" /></figure>
+	</li>
+	<li class="language-editable">Add your Backup Stream information and region.
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="800" height="400" src="/assets/images/general/18963/4.png" /></figure>
+	</li>
+	<li class="language-editable">In the Control Room you will be able to see the <strong>Endpoint</strong> and <strong>Stream Name</strong> details of each of your streams.
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="800" height="400" src="/assets/images/general/18963/5.png" /></figure>
+	</li>
+	<li class="language-editable">You can review all the streams information in the <strong>Control Room</strong>.
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="800" height="400" src="/assets/images/general/18963/6.png" /></figure>
+	</li>
+</ol>
+
+<aside class="bcls-aside bcls-aside--information">
+<p>Note: If you created a single-stream event and you add a redundancy stream in the Control Room, you will need to republish your player embed code to benefit from redundancy.</p>
+</aside>
+
+<figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="800" height="500" src="/assets/images/general/18963/6-2.png" /></figure>
+    </section>
+    <section>
+<h2 id="create">Clipping</h2>
+
+<ol class="bcls-tasklist-restart">
+	<li class="language-editable">Video Clipping will be available for each of your streams, just by selecting the desired stream from the drop-down menu. For information on creating a clip, see <a target="_blank" href="https://support.brightcove.com/creating-video-clip-using-live-module">Creating a Video Clip Using the Live Module</a>.
+
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="800" height="400" src="/assets/images/general/18963/7.png" /></figure>
+	</li>
+	<li class="language-editable">Second stream selection.
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="800" height="400" src="/assets/images/general/18963/8.png" /></figure>
+	</li>
+</ol>
+</section>
+
+<section>
+<h2 id="create">Monitoring</h2>
+
+<p>Click in the Monitoring tab below the preview player to view monitoring information. Monitoring will be available for each of your streams, just by selecting the desired stream from the drop-down menu.</p>
+
+<figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="800" height="400" src="/assets/images/general/18963/9.png" /></figure>
+
+<p>The monitoring information is available while an event is in progress and for up to 1 hour after the event ends.</p>
+</section>
+</article>

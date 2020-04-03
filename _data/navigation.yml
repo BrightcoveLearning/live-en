@@ -122,6 +122,8 @@
         url: /live-api/guides/live-api-static-entry-points.html
       - name: Signed URLs and Token Auth with a Live Stream
         url: /live-api/guides/signed-urls-and-token-auth-live-stream.html
+      - name: Using Live Redundancy
+        url: /live-api/guides/using-live-redundancy.html
       - name: VOD from Live Event
         url: /live-api/guides/live-api-vod-live-event.html
 - section: 

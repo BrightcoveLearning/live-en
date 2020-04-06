@@ -41,7 +41,7 @@ search_id: "017969773216783359937:qnv8hdpdmec"
 feedbackify_id: "15078"
 talla_appID: "00c26be3-4421-41e6-bb00-1dee68740f67"
 talla_token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1ODI4MDQzNDF9.RYf2x65FXvdDURzM h00i76KfUrYlsDLsw6mVuEv6zmE'
-talla_knowledgegroup: 'dc842a11-e75a-409e-81b6-3cc0b4563d52'
+talla_knowledgegroup: '6143c1e1-558c-408f-9d8d-86fcf3b9e2ef'
 defaults:
   -
     scope:

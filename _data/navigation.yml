@@ -44,6 +44,10 @@
       url: /live-module/creating-and-managing-live-events-using-live-module.html
     - name: Creating a Video Clip
       url: /live-module/creating-video-clip-using-live-module.html
+    - name: Host Cisco Webex Conference to Brightcove Live
+      url: /live-module/host-cisco-webex-conference-brightcove-live.html
+    - name: Host Zoom Conference to Brightcove Live
+      url: /live-module/host-zoom-conference-brightcove-live.html
     - name: Implementing Server-Side Ads
       url: /live-module/implementing-server-side-ads-live-module.html
     - name: Publishing a Live Event to Facebook

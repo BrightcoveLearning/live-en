@@ -330,6 +330,11 @@
   },
 
   {
+      "newURL": "https://live.support.brightcove.com/live-api/code-samples/simulated-live.html",
+      "oldURL": "/simulated-live"
+  },
+
+  {
       "newURL": "https://live.support.brightcove.com/admin/standard-live-ingest-profiles.html",
       "oldURL": "/standard-live-ingest-profiles"
   },

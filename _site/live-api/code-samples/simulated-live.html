@@ -32,7 +32,7 @@
 <!-- GTranslate: https://gtranslate.io/ -->
 <select onchange="doGTranslate(this);"><option value="">Select Language</option><option value="en|en">English</option><option value="en|zh-TW">繁體中文</option><option value="en|fr">Français</option><option value="en|de">Deutsch</option><option value="en|ja">日本語</option><option value="en|ko">한국어</option><option value="en|es">Español</option><option value="en|hy">Armenian</option></select>
 
-<script type="text/javascript">
+<script>
 /* <![CDATA[ */
 function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
 /* ]]> */
@@ -427,81 +427,55 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p></p>
 
     <div style="max-width: 960px;">
-      <video-js data-account="1752604059001" data-player="UCdIrPO1z" data-embed="default" controls="" data-video-id="" data-playlist-id="1664503635149515112" data-application-id="sim_live_player" class="vjs-fluid"></video-js>
+      <video-js data-account="1752604059001" data-player="UCdIrPO1z" id="simulated_live_player" data-embed="default" controls="" data-video-id="" data-playlist-id="" data-application-id="sim_live_player" class="vjs-fluid"></video-js>
     </div>
     <script src="https://players.brightcove.net/1752604059001/UCdIrPO1z_default/index.min.js"></script>
   </section>
 </article>
 
 <script>
+  videojs.getPlayer('simulated_live_player').ready(function() {
+    var myPlayer = this,
+    playlist_id = '1664503635149515112',
+    video_data,
+    video_ranges = [],
+    playlist_duration = 0,
+    origin_time = new Date(2020-01-01),
+    now_time = new Date(),
+    time_passed = now_time - origin_time;
+    myPlayer.catalog.getPlaylist(playlist_id, function(error, playlist){
+      if (error) {
+        window.alert('There was an error retrieving the playlist: ' + error)
+      }
+      myPlayer.catalog.load(playlist);
+    })
+  });
   var account_id = '1752604059001',
     policy_key =
     'BCpkADawqM3w8brSvb664VHo-AS4Qd1qFTQ4Ww3aY_D0iV2K3hq1sv66Nb-TtUzJ9u5MpAU5ZQ-mCq4Vitxaj0ul5e6JNeQuyVm-lNff8b_NpBh3JOMK-ynXLId-D-KGg_zyLVw12yH5Uo75',
     playback_API_URL = 'https://edge.api.brightcove.com/playback/v1/accounts/',
     video_data,
+    video_ranges = [],
     playlist_duration = 0,
     origin_time = new Date(2020-01-01),
     now_time = new Date(),
     time_passed = now_time - origin_time;
 
-  
+  /**
+   * get the duration of the whole playlist and array of item start times
+   */
   function get_playlist_duration(video_data) {
     var i,
       iMax = video_data.length;
     
     for (i = 0; i < iMax; i++) {
+      video_ranges[i] = playlist_duration;
       playlist_duration = playlist_duration + video_data[i].duration;
     }
 
   }
 
-  /**
-   * makes the request to the Playback API
-   * @param {function} callback function to send the response to for handling
-   */
-   function get_media_data(callback) {
-    var http_request = new XMLhttp_request(),
-      response_data,
-      parsed_data,
-      request_url =
-      'https://edge.api.brightcove.com/playback/v1/accounts/' +
-      account_id +
-      '/playlists/' +
-      playlist_id +
-      '?limit=100';
-    // response handler
-    get_response = function() {
-      try {
-        if (http_request.readyState === 4) {
-          if (http_request.status >= 200 && http_request.status < 300) {
-            response_data = http_request.responseText;
-            parsed_data = JSON.parse(response_data);
-            video_data = parsed_data.videos;
-            callback(response_data);
-          } else {
-            alert(
-              'There was a problem with the request. Request returned ' +
-              http_request.status
-            );
-          }
-        }
-      } catch (e) {
-        alert('Caught Exception: ' + e);
-      }
-    };
-    // set response handler
-    http_request.onreadystatechange = get_response;
-    // open the request
-    http_request.open('GET', request_url);
-    // set headers
-    http_request.setRequestHeader('Accept', 'application/json;pk=' + policy_key);
-    // open and send request
-    http_request.send();
-  }
 
-  get_media_data(function(response) {
-
-  })
 </script>
 <!-- complete bootstrap layout -->
     </div>
@@ -518,7 +492,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 20 Apr 2020
+  Page last updated on 21 Apr 2020
 </div>
 
 <footer class="bcls-footer" role="contentinfo">

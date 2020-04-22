@@ -30,6 +30,8 @@ grandparent: Live API
     video_data,
     video_ranges = [],
     playlist_duration = 0,
+    playlist_position,
+    current_video_index,
     origin_time = new Date(2020-01-01),
     now_time = new Date(),
     time_passed = now_time - origin_time;
@@ -40,19 +42,10 @@ grandparent: Live API
       myPlayer.catalog.load(playlist);
     })
   });
-  var account_id = '1752604059001',
-    policy_key =
-    'BCpkADawqM3w8brSvb664VHo-AS4Qd1qFTQ4Ww3aY_D0iV2K3hq1sv66Nb-TtUzJ9u5MpAU5ZQ-mCq4Vitxaj0ul5e6JNeQuyVm-lNff8b_NpBh3JOMK-ynXLId-D-KGg_zyLVw12yH5Uo75',
-    playback_API_URL = 'https://edge.api.brightcove.com/playback/v1/accounts/',
-    video_data,
-    video_ranges = [],
-    playlist_duration = 0,
-    origin_time = new Date(2020-01-01),
-    now_time = new Date(),
-    time_passed = now_time - origin_time;
 
   /**
    * get the duration of the whole playlist and array of item start times
+   * @param {array} video_data array of video data for the playlist videos
    */
   function get_playlist_duration(video_data) {
     var i,
@@ -61,9 +54,20 @@ grandparent: Live API
     for (i = 0; i < iMax; i++) {
       video_ranges[i] = playlist_duration;
       playlist_duration = playlist_duration + video_data[i].duration;
+      return {
+        video_ranges: video_ranges,
+        playlist_duration: playlist_duration
+      };
     }
-
   }
 
+  /** 
+   * @Desc:  gets time position in current playlist
+   * @Returns {number} playlist position
+   */
+  function get_playlist_position() {
+    playlist_position = time_passed % playlist_duration;
+    return playlist_position;
+  }
 
 </script>

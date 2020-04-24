@@ -414,143 +414,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </div>
 </div>
 
-<article class="bcls-article">
-  <h1>Creating a Simulated Live Event</h1>
-  <summary>Before you invest in the cost and workflow of creating and running live events, you may want to try a test to gauge the interest of your viewers. This sample shows you how to simulate a live streaming event to do that.</summary>
-  <section class="bcls-section">
-    <h2 id="introduction">Introduction</h2>
-    <p>What distinguishes live streaming from VOD is the passage of time.  The content stream is tied to time and all viewers are in sync to that timeline.</p>
-    <p>This sample simulates this effect of a live streaming event using VOD content in a Video Cloud playlist, and some JavaScript to keep all viewers at the same point in the playlist regardless of when they start playback.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="the_players">The players</h2>
-    <p>For testing purposes, we put two players in the page - one in-page, one iframe.</p>
-    <h3>In-page player</h3>
-    <div style="max-width: 800px;">
-      <video-js
-        data-account="1752604059001"
-        data-player="UCdIrPO1z"
-        data-embed="default"
-        controls=""
-        data-application-id=""
-        class="vjs-fluid"></video-js>
-    </div>
-    <script
-      src="//players.brightcove.net/1752604059001/UCdIrPO1z_default/index.min.js">
-    </script>
-
-    <h3>iframe player</h3>
-    <div
-    style="position: relative; display: block; max-width: 480px;">
-    <div
-      style="padding-top: 56.25%;">
-      <iframe
-        src="//players.brightcove.net/1752604059001/UCdIrPO1z_default/index.html"
-        allowfullscreen=""
-        allow="encrypted-media"
-        style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;"></iframe>
-    </div>
-  </div>
-  </section>
+<script>
+  shared_content = '/shared-content/code-samples/simulated-live.html';
+</script>
+<h1>Creating a Simulated Live Event</h1>
+<summary>Before you invest in the cost and workflow of creating and running live events, you may want to try a test to gauge the interest of your viewers. This sample shows you how to simulate a live streaming event to do that.</summary>
+<article id="bcls_article" class="bcls-article">
 </article>
 
-<script>
-  videojs.getPlayer('simulated_live_player').ready(function() {
-    var my_player = this,
-    playlist_id = '1664503635149515112',
-    video_data,
-    video_ranges = [],
-    playlist_duration = 0,
-    playlist_position,
-    current_video_index,
-    current_video_position,
-    origin_time = new Date(2020-01-01),
-    now_time = new Date(),
-    time_passed = now_time - origin_time;
-    my_player.catalog.getPlaylist(playlist_id, function(error, playlist){
-      if (error) {
-        window.alert('There was an error retrieving the playlist: ' + error)
-      }
-      console.log('playlist', playlist);
-      
-      // load the playlist into the player
-      my_player.catalog.load(playlist, -1);
-      // turn on auto-advance
-      my_player.playlist.autoadvance(0);
-      // get the video data from the playlist
-      video_data = my_player.playlist();
-      console.log('video data', video_data);
-      
-      // get the duration of the playlist and the video ranges
-      get_playlist_duration();
-      console.log('playlist_duration', playlist_duration);
-      console.log('video ranges', video_ranges);
-      
-      
-      // get the start position in the playlist
-      get_playlist_position();
-      console.log('playlist_position', playlist_position);
-      
-      // get the index of the video where the start position is
-      get_current_video_index();
-      console.log('video index', current_video_index);
-      
-      // get start position in the video
-      get_current_video_position();
-      console.log('video position', current_video_position);
-      
-      // set the start video as the current one
-      my_player.playlist.currentItem(current_video_index);
-      // seek to the start point
-      my_player.currentTime(current_video_position / 1000);
-      // start the video
-      my_player.play();
-      
-    })
-
-  /**
-   * get the duration of the whole playlist and array of video start times
-   * @param {array} video_data array of video data for the playlist videos
-   */
-  function get_playlist_duration() {
-    var i,
-      i_max = video_data.length;
-    
-    for (i = 0; i < i_max; i++) {
-      video_ranges[i] = playlist_duration;
-      playlist_duration = playlist_duration + video_data[i].duration;
-    }
-  }
-
-  /** 
-   * @Desc:  gets time position in current playlist
-   */
-  function get_playlist_position() {
-    playlist_position = time_passed % playlist_duration;
-    return playlist_position;
-  }
-
-  function get_current_video_index() {
-    var i,
-      i_max = video_ranges.length;
-      for (i = 0; i < i_max; i++) {
-        if (playlist_position > video_ranges[i] && playlist_position < video_ranges[i + 1]) {
-          current_video_index = i;
-          return;
-        }
-      }
-  }
-
-  function get_current_video_position() {
-    console.log('video_ranges[current_video_index]', video_ranges[get_current_video_index]);
-    
-    current_video_position = playlist_position - video_ranges[current_video_index];
-  }
-
-});
-
-
-</script>
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">
@@ -566,7 +437,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 22 Apr 2020
+  Page last updated on 23 Apr 2020
 </div>
 
 <footer class="bcls-footer" role="contentinfo">
@@ -648,16 +519,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/site.js"></script>
   <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/tabs.js"></script>
   
-  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/toc.js"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/toc-shared-content.js"></script>
   
   <script src="/assets/js/sites_nav.js"></script>
   <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/bcls-utils.js"></script>
   <script src="/assets/js/feedback.js"></script>
-  <!-- <script src="/assets/js/search.js"></script> -->
-  <!-- <script async src="https://cse.google.com/cse.js?cx=017969773216783359937:qnv8hdpdmec"></script> -->
-  <script src="https://assets.talla.com/latest/embeddedjs/talla.js"></script>
-  <script src="/assets/js/talla-init.js"></script>
-  <!-- <script src="/assets/js/tallafix.js"></script> -->
+  <script src="/assets/js/share.js"></script>
 </body>
 
 </html>

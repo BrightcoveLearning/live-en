@@ -50,6 +50,8 @@
       url: /live-module/host-zoom-conference-brightcove-live.html
     - name: Implementing Server-Side Ads
       url: /live-module/implementing-server-side-ads-live-module.html
+    - name: Live Redundancy
+      url: /live-module/live-redundancy.html
     - name: Publishing a Live Event to Facebook
       url: /live-module/publishing-live-event-facebook.html
     - name: Publishing a Live Event to YouTube

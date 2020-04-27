@@ -6,7 +6,7 @@
     
       <url>
         <loc>https://live.support.brightcove.com/</loc>
-        <lastmod>2020-04-26</lastmod>
+        <lastmod>2020-04-27</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
       </url>
@@ -14,7 +14,7 @@
     
       <url>
         <loc>https://live.support.brightcove.com/get-started/</loc>
-        <lastmod>2020-04-26</lastmod>
+        <lastmod>2020-04-27</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
       </url>
@@ -23,7 +23,7 @@
           
             <loc>https://live.support.brightcove.com/get-started/brightcove-live-training-videos.html</loc>
           
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -33,7 +33,7 @@
           
             <loc>https://live.support.brightcove.com/get-started/delivering-live-streams.html</loc>
           
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -43,7 +43,7 @@
           
             <loc>https://live.support.brightcove.com/get-started/glossary.html</loc>
           
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -53,7 +53,7 @@
           
             <loc>https://live.support.brightcove.com/get-started/live-module-guidelines-and-best-practices.html</loc>
           
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -63,7 +63,7 @@
           
             <loc>https://live.support.brightcove.com/get-started/step-step-using-live-module-open-broadcaster-software-obs.html</loc>
           
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -73,7 +73,7 @@
           
             <loc>https://live.support.brightcove.com/get-started/step-step-using-live-module-telestream-wirecast.html</loc>
           
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -82,7 +82,7 @@
     
       <url>
         <loc>https://live.support.brightcove.com/general/</loc>
-        <lastmod>2020-04-26</lastmod>
+        <lastmod>2020-04-27</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
       </url>
@@ -91,7 +91,7 @@
           
             <loc>https://live.support.brightcove.com/general/live-drm.html</loc>
           
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -101,7 +101,7 @@
           
             <loc>https://live.support.brightcove.com/general/live-platforms-comparison-matrix.html</loc>
           
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -111,7 +111,7 @@
           
             <loc>https://live.support.brightcove.com/general/live-video-glossary.html</loc>
           
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -121,7 +121,7 @@
           
             <loc>https://live.support.brightcove.com/general/reducing-latency-live-streams.html</loc>
           
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -131,7 +131,7 @@
           
             <loc>https://live.support.brightcove.com/live-api/guides/supported-encoders-live-events</loc>
           
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -141,7 +141,7 @@
           
             <loc>https://live.support.brightcove.com/general/creating-live-stream-using-akamai-stream-packaging-and-telestream-wirecast.html</loc>
           
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -150,7 +150,7 @@
     
       <url>
         <loc>https://live.support.brightcove.com/live-module/</loc>
-        <lastmod>2020-04-26</lastmod>
+        <lastmod>2020-04-27</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
       </url>
@@ -159,7 +159,7 @@
           
             <loc>https://live.support.brightcove.com/live-module/creating-and-managing-live-events-using-live-module.html</loc>
           
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -169,7 +169,7 @@
           
             <loc>https://live.support.brightcove.com/live-module/creating-video-clip-using-live-module.html</loc>
           
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -179,7 +179,7 @@
           
             <loc>https://live.support.brightcove.com/live-module/host-cisco-webex-conference-brightcove-live.html</loc>
           
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -189,7 +189,7 @@
           
             <loc>https://live.support.brightcove.com/live-module/host-zoom-conference-brightcove-live.html</loc>
           
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -199,7 +199,7 @@
           
             <loc>https://live.support.brightcove.com/live-module/implementing-server-side-ads-live-module.html</loc>
           
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -209,7 +209,7 @@
           
             <loc>https://live.support.brightcove.com/live-module/live-redundancy.html</loc>
           
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -219,7 +219,7 @@
           
             <loc>https://live.support.brightcove.com/live-module/publishing-live-event-facebook.html</loc>
           
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -229,7 +229,7 @@
           
             <loc>https://live.support.brightcove.com/live-module/publishing-live-event-youtube.html</loc>
           
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -239,7 +239,7 @@
           
             <loc>https://live.support.brightcove.com/live-module/reviewing-live-analytics.html</loc>
           
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -249,7 +249,7 @@
           
             <loc>https://live.support.brightcove.com/live-module/using-live-rtmp-outputs-stream-facebook-and-youtube.html</loc>
           
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -258,7 +258,7 @@
     
       <url>
         <loc>https://live.support.brightcove.com/live-api/</loc>
-        <lastmod>2020-04-26</lastmod>
+        <lastmod>2020-04-27</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
       </url>
@@ -267,7 +267,7 @@
           
             <loc>https://live.support.brightcove.com/live-api/getting-started/</loc>
           
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -276,7 +276,7 @@
             
               <loc>https://live.support.brightcove.com/live-api/getting-started/overview-brightcove-live-api.html</loc>
             
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -285,7 +285,7 @@
             
               <loc>https://live.support.brightcove.com/live-api/getting-started/quick-start-create-live-stream-using-brightcove-live-api.html</loc>
             
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -295,7 +295,7 @@
           
             <loc>https://live.support.brightcove.com/live-api/code-samples/</loc>
           
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -304,7 +304,7 @@
             
               <loc>https://live.support.brightcove.com/live-api/code-samples/live-api-sample-create-live-job.html</loc>
             
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -313,7 +313,7 @@
             
               <loc>https://live.support.brightcove.com/live-api/code-samples/quick-start-create-live-job-mpeg2-ts-input.html</loc>
             
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -322,7 +322,7 @@
             
               <loc>https://live.support.brightcove.com/live-api/code-samples/quick-start-using-rtmp-outputs-live-events.html</loc>
             
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -331,7 +331,7 @@
             
               <loc>https://live.support.brightcove.com/live-api/code-samples/simulated-live.html</loc>
             
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -341,7 +341,7 @@
           
             <loc>https://live.support.brightcove.com/live-api/references/</loc>
           
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -350,7 +350,7 @@
             
               <loc>https://live.support.brightcove.com/live-api/references/live-api-error-messages.html</loc>
             
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -359,7 +359,7 @@
             
               <loc>https://live.support.brightcove.com/live-api/references/live-api-release-notes.html</loc>
             
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -368,7 +368,7 @@
             
               <loc>https://live.support.brightcove.com/live-api/references/reference.html</loc>
             
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -378,7 +378,7 @@
           
             <loc>https://live.support.brightcove.com/live-api/ssai/</loc>
           
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -387,7 +387,7 @@
             
               <loc>https://live.support.brightcove.com/live-api/ssai/live-api-cue-points-and-ad-beacons-ssai.html</loc>
             
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -396,7 +396,7 @@
             
               <loc>https://live.support.brightcove.com/live-api/ssai/live-api-server-side-ad-insertion-ssai.html</loc>
             
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -405,7 +405,7 @@
             
               <loc>https://live.support.brightcove.com/live-api/ssai/overview-player-enhancements-live-ssai.html</loc>
             
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -415,7 +415,7 @@
           
             <loc>https://live.support.brightcove.com/live-api/guides/</loc>
           
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -424,7 +424,7 @@
             
               <loc>https://live.support.brightcove.com/live-api/guides/brightcove-live-best-practices.html</loc>
             
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -433,7 +433,7 @@
             
               <loc>https://live.support.brightcove.com/live-api/guides/brightcove-live-program-ad-metadata-api.html</loc>
             
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -442,7 +442,7 @@
             
               <loc>https://live.support.brightcove.com/live-api/guides/live-api-creating-frame-accurate-clip.html</loc>
             
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -451,7 +451,7 @@
             
               <loc>https://live.support.brightcove.com/live-api/guides/live-api-creating-vod-clips.html</loc>
             
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -460,7 +460,7 @@
             
               <loc>https://live.support.brightcove.com/live-api/guides/getting-list-live-or-vod-jobs.html</loc>
             
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -469,7 +469,7 @@
             
               <loc>https://live.support.brightcove.com/live-api/guides/live-api-insert-id3-timed-metadata.html</loc>
             
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -478,7 +478,7 @@
             
               <loc>https://live.support.brightcove.com/live-api/guides/live-drm-live-api.html</loc>
             
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -487,7 +487,7 @@
             
               <loc>https://live.support.brightcove.com/live-api/guides/managing-credentials-live-api.html</loc>
             
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -496,7 +496,7 @@
             
               <loc>https://live.support.brightcove.com/live-api/guides/live-api-notifications.html</loc>
             
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -505,7 +505,7 @@
             
               <loc>https://live.support.brightcove.com/general/reducing-latency-live-streams.html</loc>
             
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -514,7 +514,7 @@
             
               <loc>https://live.support.brightcove.com/live-api/guides/live-api-rtmp-outputs.html</loc>
             
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -523,7 +523,7 @@
             
               <loc>https://live.support.brightcove.com/live-api/guides/live-api-static-entry-points.html</loc>
             
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -532,7 +532,7 @@
             
               <loc>https://live.support.brightcove.com/live-api/guides/signed-urls-and-token-auth-live-stream.html</loc>
             
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -541,7 +541,7 @@
             
               <loc>https://live.support.brightcove.com/live-api/guides/using-live-redundancy.html</loc>
             
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -550,7 +550,7 @@
             
               <loc>https://live.support.brightcove.com/live-api/guides/live-api-vod-live-event.html</loc>
             
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -559,7 +559,7 @@
     
       <url>
         <loc>https://live.support.brightcove.com/admin/</loc>
-        <lastmod>2020-04-26</lastmod>
+        <lastmod>2020-04-27</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
       </url>
@@ -568,7 +568,7 @@
           
             <loc>https://live.support.brightcove.com/admin/creating-custom-live-ingest-profiles.html</loc>
           
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -578,7 +578,7 @@
           
             <loc>https://live.support.brightcove.com/admin/fields-custom-live-ingest-profiles.html</loc>
           
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -588,7 +588,7 @@
           
             <loc>https://live.support.brightcove.com/admin/managing-live-settings.html</loc>
           
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -598,7 +598,7 @@
           
             <loc>https://live.support.brightcove.com/admin/managing-api-authentication-credentials.html</loc>
           
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -608,7 +608,7 @@
           
             <loc>https://live.support.brightcove.com/admin/standard-live-ingest-profiles.html</loc>
           
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -617,7 +617,7 @@
     
       <url>
         <loc>https://live.support.brightcove.com/release-notes/</loc>
-        <lastmod>2020-04-26</lastmod>
+        <lastmod>2020-04-27</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
       </url>
@@ -626,7 +626,7 @@
           
             <loc>https://live.support.brightcove.com/release-notes/known-issues.html</loc>
           
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -636,7 +636,7 @@
           
             <loc>https://live.support.brightcove.com/release-notes/live-api-release-notes.html</loc>
           
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -645,7 +645,7 @@
     
       <url>
         <loc>https://live.support.brightcove.com/support/</loc>
-        <lastmod>2020-04-26</lastmod>
+        <lastmod>2020-04-27</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
       </url>
@@ -654,7 +654,7 @@
           
             <loc>https://live.support.brightcove.com/support/opening-case-with-brightcove-support.html</loc>
           
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -664,7 +664,7 @@
           
             <loc>https://live.support.brightcove.com/support/viewing-brightcove-system-status-page.html</loc>
           
-            <lastmod>2020-04-26</lastmod>
+            <lastmod>2020-04-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>

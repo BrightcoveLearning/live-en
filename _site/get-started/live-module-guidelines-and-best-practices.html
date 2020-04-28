@@ -1,11 +1,11 @@
 <!doctype html>
-<html>
+<html lang="en-us">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- remember to remove the following line when the site is ready to go live -->
-  <!-- <meta name="robots" content="noindex" /> -->
+  <meta name="description" content="">
+  
   <title>Live Module Guidelines and Best Practices</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -55,6 +55,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
         
           <option value="https://campaign.support.brightcove.com">Brightcove Campaign</option>
+        
+      
+        
+          <option value="https://engage.support.brightcove.com">Brightcove Engage</option>
         
       
         
@@ -444,6 +448,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>Maximum 1920x1080</li>
       <li>Maximum 30 fps, which is typical. Brightcove supports up to 60 fps, but you will need to <a href="https://support.brightcove.com/en/contact/create">Contact Brightcove Support</a> to have the limit increased. When using 60fps, Brightcove recommends increasing the bitrate significantly and using a constant frame rate.</li>
       <li>Less than 10 Mbps</li>
+      <li>Audio sampling rate: 44.1khz and 48khz are the recommended sample audio rates to use</li>
     </ul>
     <h3>Testing bandwidth</h3>
     <p>The first step towards arriving at the appropriate settings for the input stream is to determine the available bandwidth on site. There are a few tools that can help:</p>

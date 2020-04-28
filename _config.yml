@@ -39,6 +39,7 @@ product_color: rgb(149, 192, 57)
 product_icon: "logo-bc-live.svg"
 search_id: "017969773216783359937:qnv8hdpdmec"
 feedbackify_id: "15078"
+bing_custom_config_id: "bc7b446c-24dd-4e22-bccb-0e3d776463ed"
 talla_appID: "00c26be3-4421-41e6-bb00-1dee68740f67"
 talla_token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1ODI4MDQzNDF9.RYf2x65FXvdDURzM h00i76KfUrYlsDLsw6mVuEv6zmE'
 talla_knowledgegroup: '6143c1e1-558c-408f-9d8d-86fcf3b9e2ef'

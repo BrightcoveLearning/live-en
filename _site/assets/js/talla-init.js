@@ -12,7 +12,7 @@ var token =
     Talla.OptionDisplayName('Search Brightcove Live Docs'),
     Talla.OptionKnowledgeGroups(['6143c1e1-558c-408f-9d8d-86fcf3b9e2ef']),
     Talla.OptionWideBeacon(true),
-    Talla.OptionBeaconCTA("Search Brightcove Live Docs"),
+    Talla.OptionBeaconCTA("Have a question?"),
     Talla.OptionOpenIcon('https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/search.png'),
     Talla.OptionBotIcon('https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/search.png'),
     Talla.OptionAutodetectSession,

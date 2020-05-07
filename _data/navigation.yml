@@ -30,7 +30,7 @@
     - name: Reducing Latency for Live Streams
       url: /general/reducing-latency-live-streams.html
     - name: Supported Encoders for Live Events
-      url: /live-api/guides/supported-encoders-live-events
+      url: /general/supported-encoders-live-events.html
     - name: Using Akamai Stream Packaging and Wirecast
       url: /general/creating-live-stream-using-akamai-stream-packaging-and-telestream-wirecast.html
 - section: 

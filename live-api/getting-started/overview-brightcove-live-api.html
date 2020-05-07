@@ -269,7 +269,7 @@ grandparent: Live API
       <code class="notranslate"><span class="bcls-highlight notranslate">GET</span> https://api.bcovlive.io/v1/jobs
         </code></pre>
 
-<p>This endpoint is used to list your live streams via a <code class="notranslate">GET </code> request. The endpoint supports pagination, sorting, and search filtering. Details of the fields that can be included in the request body are given in the <a href="http://docs.brightcove.com/live-api/v1/doc/index.html#/Live_Jobs/ListLiveJobs">API Reference</a> and some additional information can be found in <a href="/node/18605">Getting a List of Live or VOD Jobs</a>.</p>
+<p>This endpoint is used to list your live streams via a <code class="notranslate">GET </code> request. The endpoint supports pagination, sorting, and search filtering. Details of the fields that can be included in the request body are given in the <a href="http://docs.brightcove.com/live-api/v1/doc/index.html#/Live_Jobs/ListLiveJobs">API Reference</a> and some additional information can be found in <a href="/live-api/guides/getting-list-live-or-vod-jobs.html">Getting a List of Live or VOD Jobs</a>.</p>
 
 <h3 id="Get_Live_Job_Details">Get Live Job Details</h3>
 
@@ -301,7 +301,7 @@ grandparent: Live API
 <section class="bcls-section">
 <h2 id="Creating_clips">Creating clips</h2>
 
-<p>You can create video-on-demand clips from a live stream and store them in a Video Cloud account, or send them to S3 bucket or FTP address. You can define the clips when you create the live stream, or create them later using the endpoint described below. Also see the <a href="/node/17761">Creating Clips</a> guide.</p>
+<p>You can create video-on-demand clips from a live stream and store them in a Video Cloud account, or send them to S3 bucket or FTP address. You can define the clips when you create the live stream, or create them later using the endpoint described below. Also see the <a href="/live-api/guides/live-api-creating-vod-clips.html">Creating Clips</a> guide.</p>
 
 <h3 id="Create_VOD_Clip">Create VOD Clip</h3>
 
@@ -315,7 +315,7 @@ grandparent: Live API
 
 <h3>Get a list of VOD (clip) jobs</h3>
 
-<p>To get a list of your VOD jobs for clips, see <a href="/node/18605">Getting a List of Live or VOD Jobs</a> and the <a href="http://docs.brightcove.com/live-api/v1/doc/index.html#/Clips/ListVodClips">API Reference</a>.</p>
+<p>To get a list of your VOD jobs for clips, see <a href="/live-api/guides/getting-list-live-or-vod-jobs.html">Getting a List of Live or VOD Jobs</a> and the <a href="http://docs.brightcove.com/live-api/v1/doc/index.html#/Clips/ListVodClips">API Reference</a>.</p>
 </section>
 
 <section class="bcls-section">
@@ -323,7 +323,7 @@ grandparent: Live API
 
 <p>Using server-side ad insertion ( <span class="notranslate">SSAI</span>), you can insert as many ad breaks as you like into your live stream. You can also ingest slate assets (VOD clips) to fill any unused ad time with a be-right-back message or whatever you like.</p>
 
-<p>More details of setting up <span class="notranslate">SSAI</span> can be found in <a href="/node/17763">Server-Side Ad Insertion Using the Brightcove <span class="notranslate">Live API</span> </a> and the <a href="https://docs.brightcove.com/live-api/v1/doc/index.html#api-SSAI">API Reference</a>.</p>
+<p>More details of setting up <span class="notranslate">SSAI</span> can be found in <a href="/live-api/ssai/live-api-server-side-ad-insertion-ssai.html">Server-Side Ad Insertion Using the Brightcove <span class="notranslate">Live API</span> </a> and the <a href="https://docs.brightcove.com/live-api/v1/doc/index.html#api-SSAI">API Reference</a>.</p>
 
 <h3 id="Get_Account_Ad_Configurations">Get Account Ad Configurations</h3>
 
@@ -385,7 +385,7 @@ grandparent: Live API
 <section class="bcls-section">
 <h2 id="Static_entry_points">Static entry points</h2>
 
-<p>The Static Entry Points (SEP) feature allows for a long-running live job that can be activated and deactivated while keeping the entry point URLs and playback URLs static and re-usable. This feature allows for customers to configure their encoder in their facilities or the field and allows the customer to create their own scheduling logic for live channels or programs. See <a href="/node/18443">Static Entry Points</a> for details.</p>
+<p>The Static Entry Points (SEP) feature allows for a long-running live job that can be activated and deactivated while keeping the entry point URLs and playback URLs static and re-usable. This feature allows for customers to configure their encoder in their facilities or the field and allows the customer to create their own scheduling logic for live channels or programs. See <a href="/live-api/guides/live-api-static-entry-points.html">Static Entry Points</a> for details.</p>
 </section>
 
 <section class="bcls-section">
@@ -399,14 +399,14 @@ grandparent: Live API
 <section class="bcls-section">
 <h2 id="Insert_ID3_timed_metadata">Insert ID3 timed metadata</h2>
 
-<p>This information has been moved to <a href="/node/18758">Insert ID3 timed metadata</a>.</p>
+<p>This information has been moved to <a href="/live-api/guides/live-api-insert-id3-timed-metadata.html">Insert ID3 timed metadata</a>.</p>
 </section>
 
 <section class="bcls-section">
 <h2 id="Limitations">Limitations</h2>
 
 <ul>
-	<li class="language-editable">Live jobs created using the API will <strong>not</strong> appear and cannot be used in the <a href="/node/18470">Live Module</a>.</li>
+	<li class="language-editable">Live jobs created using the API will <strong>not</strong> appear and cannot be used in the <a href="/live-module/creating-and-managing-live-events-using-live-module.html">Live Module</a>.</li>
 	<li class="language-editable">The initial connection from encoder provides the bandwidth information to be created with the Live playlist. If the initial connection is low, even if the job configuration had high output, the playlist will still maintain the same information on the playlist until the following is done:
 	<ul>
 		<li class="language-editable">Encoder is restarted</li>

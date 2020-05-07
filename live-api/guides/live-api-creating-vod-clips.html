@@ -45,8 +45,8 @@ grandparent: Live API
 		<li>If the job is finished: as long as the Epoch time window falls entirely within <code class="notranslate">created_at</code> and <code class="notranslate">finished_at</code>, the clip will be made</li>
 	</ul>
 	</li>
-	<li>Clips of live streams using <a href="/node/17763">SSAI</a> will not include ads.</li>
-	<li>Clips can be created up to 7 days after an event. For <a class="notranslate" href="/node/18443">SEP</a>, they can be created up until the next activation or 7 days (whichever is shorter).</li>
+	<li>Clips of live streams using <a href="/live-api/ssai/live-api-server-side-ad-insertion-ssai.html">SSAI</a> will not include ads.</li>
+	<li>Clips can be created up to 7 days after an event. For <a class="notranslate" href="/live-api/guides/live-api-static-entry-points.html">SEP</a>, they can be created up until the next activation or 7 days (whichever is shorter).</li>
 	<li>The VOD API will not add any content outside of what is present in the stream. If you specify 350 on a 300 seconds long live stream, the output will be 300 seconds long.</li>
 	<li>You do not have to use a DVR-enabled live stream for clipping to work, because the live stream is stored as it is broadcast and is available immediately and for 7 days after the event is over.</li>
 	<li>Brightcove Live clipping will only produce a clip that is the same resolution as the highest resolution output. It will not match the source input resolution (unless that is the same as the highest resolution output).</li>

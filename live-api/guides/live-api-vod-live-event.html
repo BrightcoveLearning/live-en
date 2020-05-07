@@ -174,11 +174,11 @@ grandparent: Live API
 
 <ul>
 	<li>If you <a href="https://docs.brightcove.com/live-api/v1/doc/index.html#api-Live_Jobs-Stop_Live_Job">stop (cancel)</a> the live job before the VOD has been created, it will not be created. Instead, stop your encoder to initiate creation of the VOD, and wait for that to finish before stopping the job.</li>
-	<li>For <a href="/node/18443">Static Entry Point</a> streams <strong>only</strong>, Live to VOD can not be set to archive the stream on completion.
+	<li>For <a href="/live-api/guides/live-api-static-entry-points.html">Static Entry Point</a> streams <strong>only</strong>, Live to VOD can not be set to archive the stream on completion.
 	<p style="font-weight:bold;">Alternatives:</p>
 
 	<ul>
-		<li>Use <a href="/node/17761">clipping</a> to archive the full live event as a VOD. The window for clipping will be available for the standard duration after an event or until the next activation of the SEP (whichever is shorter).</li>
+		<li>Use <a href="/live-api/guides/live-api-creating-vod-clips.html">clipping</a> to archive the full live event as a VOD. The window for clipping will be available for the standard duration after an event or until the next activation of the SEP (whichever is shorter).</li>
 	</ul>
 	</li>
 </ul>

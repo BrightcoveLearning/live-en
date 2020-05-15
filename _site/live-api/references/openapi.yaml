@@ -3206,7 +3206,7 @@ components:
         - name
       title: Create_Live_Job_Request_Body.videocloud.video
       description: >-
-        'An object containing inputs for Video Cloud video object creation - see the [CMS API Reference](https://docs.brightcove.com/cms-api/v1/doc/index.html#operation/CreateVideo)'
+        'An object containing inputs for Video Cloud video object creation - see the [CMS API Reference](https://apis.support.brightcove.com/cms/references/reference.html#operation/CreateVideo)'
       type: object
     CreateLiveJobRequestBody.videocloud.video.cuePoint:
       properties:
@@ -3506,7 +3506,7 @@ components:
         - name
       title: Create_VOD_ClipBody.outputs.videocloud.video
       description: >-
-        'An object containing inputs for Video Cloud video object creation - see the [CMS API Reference](https://docs.brightcove.com/cms-api/v1/doc/index.html#operation/CreateVideo)'
+        'An object containing inputs for Video Cloud video object creation - see the [CMS API Reference](https://apis.support.brightcove.com/cms/references/reference.html#operation/CreateVideo)'
       type: object
     CreateVodClipbody.outputs.videocloud.video.cuePoint:
       properties:

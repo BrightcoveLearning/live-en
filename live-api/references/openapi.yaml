@@ -4,7 +4,7 @@ info:
   description: |-
     Reference for the Brightcove Live API, used to create and manage live streaming events.
 
-    For additional in-depth guides to features of the API, see the **[Support Site](https://support.brightcove.com/live)**.
+    For additional in-depth guides to features of the API, see the **[Support Site](/)**.
 
     **Base URL**: https://api.bcovlive.io/v1
   version: 1.0.0
@@ -80,7 +80,7 @@ paths:
       summary: List Live Jobs
       description: >-
         'List live jobs - for additional useful information on the search filters, see [Getting a List of Live or VOD
-        Jobs](https://support.brightcove.com/getting-list-live-or-vod-jobs)'
+        Jobs](/live-api/guides/getting-list-live-or-vod-jobs.html)'
       operationId: ListLiveJobs
       parameters:
         - $ref: '#/components/parameters/ContentType'
@@ -516,7 +516,7 @@ paths:
         - RTMP Outputs
       summary: List RTMP Outputs
       description: >-
-        Get a list of RTMP outputs. See [Live API: RTMP Outputs](https://support.brightcove.com/live-api-rtmp-outputs) for more information on RTMP outputs.
+        Get a list of RTMP outputs. See [Live API: RTMP Outputs](/live-api/guides/live-api-rtmp-outputs.html) for more information on RTMP outputs.
       operationId: GetRTMPOutputs
       parameters:
         - $ref: '#/components/parameters/JobId'
@@ -549,7 +549,7 @@ paths:
         - RTMP Outputs
       summary: Create RTMP Output
       description: >-
-        Create an RTMP output. See [Live API: RTMP Outputs](https://support.brightcove.com/live-api-rtmp-outputs) for more information on RTMP outputs.
+        Create an RTMP output. See [Live API: RTMP Outputs](/live-api/guides/live-api-rtmp-outputs.html) for more information on RTMP outputs.
       operationId: CreateRTMPOutput
       parameters:
         - $ref: '#/components/parameters/JobId'
@@ -590,7 +590,7 @@ paths:
         - RTMP Outputs
       summary: Stop RTMP Output
       description: >-
-        Stop an RTMP output. See [Live API: RTMP Outputs](https://support.brightcove.com/live-api-rtmp-outputs) for more information on RTMP outputs.
+        Stop an RTMP output. See [Live API: RTMP Outputs](/live-api/guides/live-api-rtmp-outputs.html) for more information on RTMP outputs.
       operationId: StopRTMPOutput
       parameters:
         - $ref: '#/components/parameters/JobId'
@@ -1010,7 +1010,7 @@ paths:
       description: >-
         List VOD clips for a Live Stream - for additional useful information on
         the search filters, see [Getting a List of Live or VOD
-        Jobs](https://support.brightcove.com/getting-list-live-or-vod-jobs)
+        Jobs](/live-api/guides/getting-list-live-or-vod-jobs.html)
       operationId: ListVodClips
       parameters:
         - $ref: '#/components/parameters/ContentType'
@@ -1867,7 +1867,7 @@ components:
           type: integer
         notifications:
           description: >-
-            'Array of notification destination objects or strings - notifications defined here are for job-level events.  A notification will be sent to the destination when selected event occurs. You can use a simple string with a url: &quot;http://log:pass@httpbin.org/post&quot;, or you can use an object. See [Events](https://support.brightcove.com/live-api-notifications#Events) for an explanation of the events reported in `state_changed` notifications. <br> Retry strategy: In the event of a failed request to send a notification, the default retry strategy is to retry 50 times with an exponential delay between attempts: <br> `max_retry_times = 50` <br> `delay_delta_s = 5` <br> `next_retry =
+            'Array of notification destination objects or strings - notifications defined here are for job-level events.  A notification will be sent to the destination when selected event occurs. You can use a simple string with a url: &quot;http://log:pass@httpbin.org/post&quot;, or you can use an object. See [Events](/live-api/guides/live-api-notifications.htmls#Events) for an explanation of the events reported in `state_changed` notifications. <br> Retry strategy: In the event of a failed request to send a notification, the default retry strategy is to retry 50 times with an exponential delay between attempts: <br> `max_retry_times = 50` <br> `delay_delta_s = 5` <br> `next_retry =
             now_s + retry_count * delay_delta_s`'
           items:
             oneOf:
@@ -2508,11 +2508,11 @@ components:
       properties:
         beacon_type:
           description: >-
-            'The beacon type - see (/live-api/ssai/live-api-cue-points-and-ad-beacons-ssai.html#Beacons) for the valid beacon types'
+            'The beacon type - see [Beacons](/live-api/ssai/live-api-cue-points-and-ad-beacons-ssai.html#Beacons) for the valid beacon types'
           type: string
         beacon_url:
           description: >-
-            URL format for the beacon - see (/live-api/ssai/live-api-cue-points-and-ad-beacons-ssai.html#Beacons) for the valid
+            URL format for the beacon - see [Beacons](/live-api/ssai/live-api-cue-points-and-ad-beacons-ssai.html#Beacons) for the valid
             beacon variables
           type: string
       required:
@@ -2613,7 +2613,7 @@ components:
         channel_type:
           default: event
           description: >-
-            'Indicates whether the job should be billed as `event` hours or a channel (`24x7`) - see [Channels and Event Hours](https://support.brightcove.com/overview-brightcove-live-api#Channels_and_hours).'
+            'Indicates whether the job should be billed as `event` hours or a channel (`24x7`) - see [Channels and Event Hours](/live-api/getting-started/overview-brightcove-live-api.html#Channels_and_hours).'
           enum:
             - 24x7
             - event
@@ -2748,7 +2748,7 @@ components:
           type: integer
         region:
           description: >-
-            AWS region - you can also specify region as the alias for a list set up for the account by Brightcove Support. See [/live-api/getting-started/overview-brightcove-live-api.html#Support_aws_regions) for more details on the support in each region.
+            AWS region - you can also specify region as the alias for a list set up for the account by Brightcove Support. See [Supported AWS Regions](/live-api/getting-started/overview-brightcove-live-api.html#Support_aws_regions) for more details on the support in each region.
           enum:
             - us-west-2
             - us-east-1
@@ -3238,8 +3238,8 @@ components:
       properties:
         countries:
           description: >-
-            array of ISO 3166 list of 2-letter
-            codes(https://www.iso.org/obp/ui/#home) (search for &quot;country
+            array of ISO 3166 list of [2-letter
+            codes](https://www.iso.org/obp/ui/#home) (search for &quot;country
             codes&quot;)
           type: string
         exclude_countries:
@@ -3261,11 +3261,11 @@ components:
       properties:
         ends_at:
           description: >-
-            end date-time of availability in ISO-8601(http://www.ecma-international.org/ecma-262/5.1/#sec-15.9.1.15) format
+            end date-time of availability in [ISO-8601](http://www.ecma-international.org/ecma-262/5.1/#sec-15.9.1.15) format
           type: string
         starts_at:
           description: >-
-            start date-time of availability in ISO-8601(http://www.ecma-international.org/ecma-262/5.1/#sec-15.9.1.15) format
+            start date-time of availability in [ISO-8601](http://www.ecma-international.org/ecma-262/5.1/#sec-15.9.1.15) format
           type: string
       required:
         - ends_at
@@ -3538,7 +3538,7 @@ components:
       properties:
         countries:
           description: >-
-            array of ISO 3166 list of 2-letter codes(https://www.iso.org/obp/ui/#home) (search for &quot;country codes&quot;)
+            array of ISO 3166 list of [2-letter codes](https://www.iso.org/obp/ui/#home) (search for &quot;country codes&quot;)
           type: string
         exclude_countries:
           description: >-
@@ -3559,12 +3559,12 @@ components:
         ends_at:
           description: >-
             end date-time of availability in
-            ISO-8601(http://www.ecma-international.org/ecma-262/5.1/#sec-15.9.1.15)
+            [ISO-8601](http://www.ecma-international.org/ecma-262/5.1/#sec-15.9.1.15)
             format
           type: string
         starts_at:
           description: >-
-            'start date-time of availability in ISO-8601(http://www.ecma-international.org/ecma-262/5.1/#sec-15.9.1.15) format'
+            'start date-time of availability in [ISO-8601](http://www.ecma-international.org/ecma-262/5.1/#sec-15.9.1.15) format'
           type: string
       required:
         - ends_at
@@ -5569,12 +5569,12 @@ components:
       properties:
         beacon_type:
           description: >-
-            'the beacon type - see (/live-api/ssai/live-api-cue-points-and-ad-beacons-ssai.html#Beacons) for the valid
+            'the beacon type - see [Beacons](/live-api/ssai/live-api-cue-points-and-ad-beacons-ssai.html#Beacons) for the valid
             beacon types'
           type: string
         beacon_url:
           description: >-
-            URL format for the beacon - see (/live-api/ssai/live-api-cue-points-and-ad-beacons-ssai.html#Beacons) for the valid
+            URL format for the beacon - see [Beacons](/live-api/ssai/live-api-cue-points-and-ad-beacons-ssai.html#Beacons) for the valid
             beacon variables
           type: string
       required:

@@ -9,6 +9,7 @@ grandparent: Live API
   <h1>{{ page.title }}</h1>
   <summary>{{ page.description }}</summary>
 
+  {% raw %}
 <section class="bcls-section">
 <h2 id="Overview">Overview</h2>
 
@@ -81,7 +82,6 @@ grandparent: Live API
 </table>
 
 <h3>Sample request body</h3>
-
 <pre class="line-numbers">
     <code class="language-json notranslate">{
       "application_ad_configuration": {
@@ -104,7 +104,6 @@ grandparent: Live API
       "application_description": "Human readable description of the ad application",
       "account_id": "<span class="bcls-input">User's Account ID [Optional]</span>"
     }</code></pre>
-
 <aside class="bcls-aside bcls-aside--information">The <code>account_id </code> field is the Live Account ID. When omitted, the Account ID of the requesting user is used.</aside>
 
 <h3>Sample response</h3>
@@ -639,4 +638,6 @@ grandparent: Live API
 	<li>VMAP for Live SSAI is not currently supported.</li>
 </ul>
 </section>
+{% endraw %}
+
 </article>

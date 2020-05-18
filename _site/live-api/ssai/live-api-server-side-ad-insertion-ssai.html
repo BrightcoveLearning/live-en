@@ -417,6 +417,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <h1>Brightcove Live API: Server-Side Ad Insertion (SSAI)</h1>
   <summary>This topic shows you how to set up server-side ad insertion (SSAI) for your live stream jobs.</summary>
 
+  
 <section class="bcls-section">
 <h2 id="Overview">Overview</h2>
 
@@ -489,15 +490,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 </table>
 
 <h3>Sample request body</h3>
-
 <pre class="line-numbers">
     <code class="language-json notranslate">{
       "application_ad_configuration": {
         "ad_configuration_description": "Human readable description of the configuration",
         "ad_configuration_expected_response_type": "<span class="bcls-input">Dfp, Vast or SmartXML</span>",
         "ad_configuration_headers": {
-        "X-Custom-Header-Rand": "",
-        "X-VIDEOPLAZA-FORWARDED-FOR": ""
+        "X-Custom-Header-Rand": "{{random.int32}}",
+        "X-VIDEOPLAZA-FORWARDED-FOR": "{{client.ipaddress}}"
         },
         "ad_configuration_headers_for_impressions": false,
         "ad_configuration_strategy": "<span class="bcls-input">SingleAdResponse or MultipleAdResponse</span>",
@@ -507,12 +507,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           "xslt": "&lt;xsl:stylesheet version=\"1.0\" xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" xmlns:Det=\"http://Det.com\"&gt;&lt;xsl:output omit-xml-declaration=\"yes\"/&gt;&lt;xsl:template match=\"node()|@*\"&gt;&lt;xsl:copy&gt;&lt;xsl:apply-templates select=\"node()|@*\"/&gt;&lt;/xsl:copy&gt;&lt;/xsl:template&gt;&lt;/xsl:stylesheet&gt;"
           }
         ],
-        "ad_configuration_url_format": "https://ad-provider-host.com/path/to/ad-handler?ip=&amp;num=&amp;ses="
+        "ad_configuration_url_format": "https://ad-provider-host.com/path/to/ad-handler?ip={{client.ipaddress}}&amp;num={{random.int32}}&amp;ses={{session.session_id}}"
       },
       "application_description": "Human readable description of the ad application",
       "account_id": "<span class="bcls-input">User's Account ID [Optional]</span>"
     }</code></pre>
-
 <aside class="bcls-aside bcls-aside--information">The <code>account_id </code> field is the Live Account ID. When omitted, the Account ID of the requesting user is used.</aside>
 
 <h3>Sample response</h3>
@@ -526,8 +525,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           "ad_configuration_description": "Human readable description of the configuration",
           "ad_configuration_expected_response_type": "<span class="bcls-highlight">Dfp | Vast | SmartXML</span>",
           "ad_configuration_headers": {
-            "X-Custom-Header-Rand": "",
-            "X-VIDEOPLAZA-FORWARDED-FOR": ""
+            "X-Custom-Header-Rand": "{{random.int32}}",
+            "X-VIDEOPLAZA-FORWARDED-FOR": "{{client.ipaddress}}"
           },
           "ad_configuration_headers_for_impressions": false,
           "ad_configuration_strategy": "<span class="bcls-highlight">SingleAdResponse | MultipleAdResponse</span>",
@@ -537,7 +536,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
               "xslt": "&lt;xsl:stylesheet version=\"1.0\" xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" xmlns:Det=\"http://Det.com\"&gt;&lt;xsl:output omit-xml-declaration=\"yes\"/&gt;&lt;xsl:template match=\"node()|@*\"&gt;&lt;xsl:copy&gt;&lt;xsl:apply-templates select=\"node()|@*\"/&gt;&lt;/xsl:copy&gt;&lt;/xsl:template&gt;&lt;/xsl:stylesheet&gt;"
             }
           ],
-          "ad_configuration_url_format": "https://ad-provider-host.com/path/to/ad-handler?ip=&amp;num=&amp;ses="
+          "ad_configuration_url_format": "https://ad-provider-host.com/path/to/ad-handler?ip={{client.ipaddress}}&amp;num={{random.int32}}&amp;ses={{session.session_id}}"
         },
         "application_id": <span class="bcls-highlight">"Application ID"</span>
       },
@@ -575,8 +574,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         "ad_configuration_description": "Some Updated Description Value",
         "ad_configuration_expected_response_type": "<span class="bcls-input">Dfp or Vast or SmartXML</span>,
         "ad_configuration_headers": {
-          "X-Custom-Header-Rand": "",
-          "X-VIDEOPLAZA-FORWARDED-FOR": ""
+          "X-Custom-Header-Rand": "{{random.int32}}",
+          "X-VIDEOPLAZA-FORWARDED-FOR": "{{client.ipaddress}}"
         },
         "ad_configuration_headers_for_impressions": false,
         "ad_configuration_strategy": "<span class="bcls-input">SingleAdResponse or MultipleAdResponse</span>",
@@ -586,7 +585,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           "xslt": "&lt;xsl:stylesheet version=\"1.0\" xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" xmlns:Det=\"http://Det.com\"&gt;&lt;xsl:output omit-xml-declaration=\"yes\"/&gt;&lt;xsl:template match=\"node()|@*\"&gt;&lt;xsl:copy&gt;&lt;xsl:apply-templates select=\"node()|@*\"/&gt;&lt;/xsl:copy&gt;&lt;/xsl:template&gt;&lt;/xsl:stylesheet&gt;"
           }
         ],
-        "ad_configuration_url_format": "https://updated-ad-provider-host.com/path/to/ad-handler?ip=&amp;num=&amp;ses="
+        "ad_configuration_url_format": "https://updated-ad-provider-host.com/path/to/ad-handler?ip={{client.ipaddress}}&amp;num={{random.int32}}&amp;ses={{session.session_id}}"
       },
       "application_description": "Human readable description of the ad application",
       "account_id": "<span class="bcls-input">User's Account ID [Optional]</span>"
@@ -604,8 +603,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         "ad_configuration_description": "Some Updated Description Value",
         "ad_configuration_expected_response_type": "<span class="bcls-highlight">Dfp | Vast | SmartXML</span>",
         "ad_configuration_headers": {
-        "X-Custom-Header-Rand": "",
-        "X-VIDEOPLAZA-FORWARDED-FOR": ""
+        "X-Custom-Header-Rand": "{{random.int32}}",
+        "X-VIDEOPLAZA-FORWARDED-FOR": "{{client.ipaddress}}"
         },
         "ad_configuration_headers_for_impressions": false,
         "ad_configuration_strategy": "<span class="bcls-highlight">SingleAdResponse | MultipleAdResponse</span>",
@@ -615,7 +614,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           "xslt": "&lt;xsl:stylesheet version=\"1.0\" xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" xmlns:Det=\"http://Det.com\"&gt;&lt;xsl:output omit-xml-declaration=\"yes\"/&gt;&lt;xsl:template match=\"node()|@*\"&gt;&lt;xsl:copy&gt;&lt;xsl:apply-templates select=\"node()|@*\"/&gt;&lt;/xsl:copy&gt;&lt;/xsl:template&gt;&lt;/xsl:stylesheet&gt;"
           }
         ],
-        "ad_configuration_url_format": "https://updated-ad-provider-host.com/path/to/ad-handler?ip=&amp;num=&amp;ses="
+        "ad_configuration_url_format": "https://updated-ad-provider-host.com/path/to/ad-handler?ip={{client.ipaddress}}&amp;num={{random.int32}}&amp;ses={{session.session_id}}"
       },
       "application_id": <span class="bcls-highlight">"Application ID"</span>
     }</code></pre>
@@ -673,7 +672,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           "xpath": "/"
         }
         ],
-        "ad_configuration_url_format": "https://ad-provider-host.com/path/to/ad-handler?ip=&amp;num=&amp;ses=",
+        "ad_configuration_url_format": "https://ad-provider-host.com/path/to/ad-handler?ip={{client.ipaddress}}&amp;num={{random.int32}}&amp;ses={{session.session_id}}",
         "ad_configuration_expected_response_type": "Dfp"
         },
         "account_id": "Account_ID"
@@ -718,7 +717,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           "xpath": "/"
           }
         ],
-        "ad_configuration_url_format": "https://ad-provider-host.com/path/to/ad-handler?ip=&amp;num=&amp;ses=",
+        "ad_configuration_url_format": "https://ad-provider-host.com/path/to/ad-handler?ip={{client.ipaddress}}&amp;num={{random.int32}}&amp;ses={{session.session_id}}",
         "ad_configuration_expected_response_type": "Dfp"
       },
       "account_id": "Account_ID"
@@ -946,9 +945,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <p>When you <a href="#Create_an_ad_configuration">create an ad configuration</a>, your ad tag will typically look something like this:</p>
 
 <pre>
-      <code class="language-http">https://ad-provider-host.com/path/to/ad-handler?ip=&amp;
-      num=&amp;ses=&amp;IDFA=&amp;
-      sitesection=&amp;breakid=&amp;breaktheme=</code></pre>
+      <code class="language-http">https://ad-provider-host.com/path/to/ad-handler?ip={{client.ipaddress}}&amp;
+      num={{random.int32}}&amp;ses={{session.session_id}}&amp;IDFA={{deviceid}}&amp;
+      sitesection={{sitesection}}&amp;breakid={{breakid}}&amp;breaktheme={{breaktheme}}</code></pre>
 
 <p>The items inside the double curly braces are variables, also called ad macros, which Brightcove Live will replace with values, if they exist, when it sends the ad request.</p>
 
@@ -1047,6 +1046,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 	<li>VMAP for Live SSAI is not currently supported.</li>
 </ul>
 </section>
+
+
 </article>
 <!-- complete bootstrap layout -->
     </div>

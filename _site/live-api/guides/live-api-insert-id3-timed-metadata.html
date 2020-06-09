@@ -427,12 +427,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <pre class="line-numbers">
 <code class="language-http notranslate">https://api.bcovlive.io/v1/jobs/<span class="bcls-input">JOB_ID</span>/id3tag
- </code></pre>
+</code></pre>
 
 <h3>Sample request body</h3>
 
 <pre class="line-numbers">
-<code class="language-json" notranslate="">{
+<code class="language-json">{
  "id3_tag": {
  "name": "cp1",
  "value": "Some information I want to send",
@@ -447,9 +447,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 	<li>If you use the <code>timecode </code> property, the encoder must be sending SMPTE-formatted (HH:MM:SS:FF) timecode stored in the tc property via OnFI</li>
 	<li>Software encoders such as Wirecast and OBS <strong>do not</strong> support the sending timecode via OnFI packets in the RTMP stream</li>
 	<li>Elemental hardware encoders <strong>do</strong> support the sending timecode via OnFI packets in the RTMP stream</li>
-	<li>ID3v2 states tag <code class="“notranslate”">name</code> can be up to 4 characters .</li>
-	<li><code class="“notranslate”">value</code> can be up to 256KB.</li>
-	<li><code class="“notranslate”">Timecode</code> is optional - when omitted, insertion will be immediate.</li>
+	<li>ID3v2 states tag <code>name</code> can be up to 4 characters .</li>
+	<li><code>value</code> can be up to 256KB.</li>
+	<li><code>Timecode</code> is optional - when omitted, insertion will be immediate.</li>
 </ul>
 </aside>
 
@@ -568,7 +568,7 @@ curl -i "https://bcovlive-a.akamaihd.net/ade7a7b3aaea4a4d8107fb8bb262381e/eu-cen
 
 <hr>
 <div class="last-updated">
-  Page last updated on 18 Mar 2020
+  Page last updated on 09 Jun 2020
 </div>
 
 

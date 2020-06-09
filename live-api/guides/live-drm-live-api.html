@@ -29,7 +29,7 @@ grandparent: Live API
 	<li>Widevine: applied to HLS outputs</li>
 </ul>
 
-<p>Widevine can be applied to DASH&nbsp;outputs instead of HLS. To make Widevine with DASH the default requires an account-level override. Contact Support if you want this override applied to your account. In the next section you will see how you can specify <code>widevine:hls</code> or <code>widevine:dash</code> for particular jobs, regardless of the default for your account.</p>
+<p>Widevine can be applied to DASH&nbsp;outputs instead of HLS. To make Widevine with DASH the default requires an account-level override. Contact Support if you want this override applied to your account. In the next section you will see how you can specify <code>widevine:hls</code> or <code>widevine:dash</code> for particular jobs, regardless of the default for your account. <strong><em>Note that depending on how your account/job is configured, the API response (like the one shown below) will include either <code>widevine:hls</code> or <code>widevine:dash</code> outputs, but not both.</em></strong></p>
 
 <aside class="bcls-aside bcls-aside--information">Note that there are concurrency limits for PlayReady defined in your service agreement with Microsoft. See <a href="https://docs.microsoft.com/en-us/playready/features/concurrency-limiting">this Microsoft document</a> for information on managing concurrency. If the concurrency limit is exceeded for a video, it will fail to play for viewers beyond the maximum number.</aside>
 </section>

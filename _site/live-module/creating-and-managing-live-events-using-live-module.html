@@ -604,6 +604,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li class="language-editable">Activating the stream can take up to 60 seconds for the event to become available. Some encoders have built-in retry (Wirecast, Elemental, etc.) so the encoders will reconnect as soon as the entry point is available.</li>
       <li class="language-editable"><strong>Reconnect Time</strong> is still applicable for recurring events on encoder disconnects. If the <strong>Reconnect Time</strong> is reached, the recurring event will be set to a deactivated state. Brightcove recommends deactivating a stream when a job completes and setting the <strong>Reconnect Time</strong> to an acceptable window of time to wait in the event of a disconnect (input hour costs are accrued during this wait period).</li>
       <li class="language-editable">You should always stop the encoder before deactivating a recurring event. Accounts are allocated a finite number of recurring events. If the limit is reached, you will need to stop one of your recurring events before you can create a new one. If you have reached the maximum number of recurring events and attempt to create another one, an error will be returned.</li>
+      <li class="language-editable">When you deactivate a recurring event, the last few seconds of the stream remain playable for some time.</li>
     </ul>
   </section>
   <section class="bcls-section">

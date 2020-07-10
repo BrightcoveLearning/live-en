@@ -602,7 +602,85 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       }
     }</code></pre>
     </section>
-    
+    <section class="bcls-section">
+      <h2 id="get_redundant_group">Get redundant groups</h2>
+      <p>You can get all redundant groups by submitting a <code>GET</code> request to:</p>
+      <pre><code class="language-http">https://api.bcovlive.io/v1/redundantgroups</code></pre>
+      <p>You can also filter the response by using the <code>state</code> param. The allowed values are:</p>
+      <ul>
+        <li><code>cancelled</code></li>
+        <li><code>cancelling</code></li>
+        <li><code>deleting</code></li>
+        <li><code>disconnected</code></li>
+        <li><code>failed</code></li>
+        <li><code>finished</code></li>
+        <li><code>finishing</code></li>
+        <li><code>processing</code></li>
+        <li><code>standby</code></li>
+        <li><code>waiting</code></li>
+      </ul>
+      <p>The response will look like this:</p>
+<pre class="line-numbers"><code class="language-json">{
+  "redundant_groups": [
+    {
+      "id": "91c268a6ec5240d79a6004f4ccf0dc6f",
+      "account_id": "a95ac581551b4478b27910e5675db1f8",
+      "user_id": "c2691d4d039040be96c190a949d754a7",
+      "processing_regions": [
+        {
+          "region": "us-west-2",
+          "probability": 1
+        }
+      ],
+      "storage_regions": [
+        "us-west-2",
+        "us-east-1"
+      ],
+      "jobs": [],
+      "state": "standby",
+      "created_at": 1594316624287,
+      "updated_at": 1594316624287,
+      "label": "Test Redundant Group",
+      "live_dvr_sliding_window_duration": 86400,
+      "status": {
+        "us-west-2": null
+      },
+      "outputs": {
+        "playback_url": "https://bcovlive-a.akamaihd.net/r91c268a6ec5240d79a6004f4ccf0dc6f/us-west-2/NA/playlist.m3u8",
+        "playback_url_dvr": "https://bcovlive-a.akamaihd.net/r91c268a6ec5240d79a6004f4ccf0dc6f/us-west-2/NA/playlist_dvr.m3u8"
+      }
+    },
+    {
+      "id": "279ac36e4b4d48a3abbd3e1f98cd57aa",
+      "account_id": "a95ac581551b4478b27910e5675db1f8",
+      "user_id": "c2691d4d039040be96c190a949d754a7",
+      "processing_regions": [
+        {
+          "region": "us-west-2",
+          "probability": 1
+        }
+      ],
+      "storage_regions": [
+        "us-west-2",
+        "us-east-1"
+      ],
+      "jobs": [],
+      "state": "standby",
+      "created_at": 1594323207015,
+      "updated_at": 1594323207015,
+      "label": "Test Redundant Group2",
+      "live_dvr_sliding_window_duration": 86400,
+      "status": {
+        "us-west-2": null
+      },
+      "outputs": {
+        "playback_url": "https://bcovlive-a.akamaihd.net/r279ac36e4b4d48a3abbd3e1f98cd57aa/us-west-2/NA/playlist.m3u8",
+        "playback_url_dvr": "https://bcovlive-a.akamaihd.net/r279ac36e4b4d48a3abbd3e1f98cd57aa/us-west-2/NA/playlist_dvr.m3u8"
+      }
+    }
+  ]
+}</code></pre>
+    </section>
     <section class="bcls-section">
     <h2 id="Add_live_jobs_to_the_redundant_group">Add live jobs to the redundant group</h2>
     

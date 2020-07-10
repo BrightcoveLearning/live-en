@@ -667,26 +667,20 @@ paths:
     get:
       tags:
         - Redundant Groups
-      summary: Create Redundant Group
-      description: Creates a redundant group of live jobs to provide failover in case one stream fails
-      operationId: CreateRedundantGroup
+      summary: Get Redundant Groups
+      description: Get redundant groups for the account
+      operationId: GetRedundantGroups
       parameters:
         - $ref: '#/components/parameters/ContentType'
         - $ref: '#/components/parameters/XAPIKEY'
-      requestBody:
-        description: Create a redundant group of multiple Live jobs
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/CreateRedundantGroup'
-        required: true
+        - $ref: '#/components/parameters/RedundantGroupState'
       responses:
         '200':
           description: '200'
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CreateRedundantGroupResponse'
+                $ref: '#/components/schemas/GetRedundantGroupResponse'
         '400':
           description: >-
             BAD_REQUEST: Invalid input value - see Live API Error Messages for
@@ -1989,6 +1983,17 @@ components:
         state:
           type: string
           description: The current state of the group
+          enum:
+            - CANCELLED
+            - CANCELLING
+            - DELETING
+            - DISCONNECTED
+            - FAILED
+            - FINISHED
+            - FINISHING
+            - PROCESSING
+            - STANDBY
+            - WAITING
         live_dvr_sliding_window_duration: 
           type: integer
           description: Duration of live DVR sliding window in seconds
@@ -2006,38 +2011,129 @@ components:
           type: object
           description: Outputs for the group
       example: {
-          "id": "481ff4cf0bf74956bc2ec6e126588080",
+          "id": "91c268a6ec5240d79a6004f4ccf0dc6f",
+          "account_id": "a95ac581551b4478b27910e5675db1f8",
+          "user_id": "c2691d4d039040be96c190a949d754a7",
           "processing_regions": [
-              {
-                  "region": "us-west-2",
-                  "probability": 1
-              }
+            {
+              "region": "us-west-2",
+              "probability": 1
+            }
           ],
           "storage_regions": [
-              "us-west-2",
-              "us-east-1"
+            "us-west-2",
+            "us-east-1"
           ],
           "jobs": [],
           "state": "standby",
-          "label": "Test RG",
-          "live_dvr_sliding_window_duration": 1800,
+          "label": "Test Redundant Group",
+          "live_dvr_sliding_window_duration": 86400,
           "status": {
-              "us-west-2": null
+            "us-west-2": null
           },
-          "ad_insertion": true,
           "outputs": {
-            "playback_url": "https://playback-qa.a-live.io/r481ff4cf0bf74956bc2ec6e126588080/us-west-2/NA/playlist.m3u8",
-            "playback_url_dvr": "https://playback-qa.a-live.io/r481ff4cf0bf74956bc2ec6e126588080/us-west-2/NA/playlist_dvr.m3u8",
-            "ssai_playback_urls": {
-              "26f8470f61374e608e27af9c1b3f7ff0": {
-                  "playback_url": "https://playback-qa.a-live.io/r481ff4cf0bf74956bc2ec6e126588080/us-west-2/NA/26f8470f61374e608e27af9c1b3f7ff0/playlist_ssaiM.m3u8",
-                  "playback_url_dvr": "https://playback-qa.a-live.io/r481ff4cf0bf74956bc2ec6e126588080/us-west-2/NA/26f8470f61374e608e27af9c1b3f7ff0/playlist_dvr_ssaiM.m3u8",
-                  "description": "House Ads - 864b84f712ae40bca1510a8052b34312",
-                  "type": "ads"
-              }
-            }
+            "playback_url": "https://bcovlive-a.akamaihd.net/r91c268a6ec5240d79a6004f4ccf0dc6f/us-west-2/NA/playlist.m3u8",
+            "playback_url_dvr": "https://bcovlive-a.akamaihd.net/r91c268a6ec5240d79a6004f4ccf0dc6f/us-west-2/NA/playlist_dvr.m3u8"
           }
         }
+    GetRedundantGroupResponse:
+      properties:
+        redundant_groups:
+          type: array
+          description: Array of redundant groups
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+                description: ID of the redundant group
+              account_id:
+                type: string
+                description: ID of the Live account
+              processing_regions:
+                type: array
+                description: The processing regions defined for the group
+              storage_regions:
+                type: array
+                description: The storage regions defined for the group
+              jobs:
+                type: array
+                description: Array of live job ids included in the group
+              state:
+                type: string
+                description: The current state of the group
+                enum:
+                  - cancelled
+                  - cancelling
+                  - deleting
+                  - disconnected
+                  - failed
+                  - finished
+                  - finishing
+                  - processing
+                  - standby
+                  - waiting
+              created_at:
+                type: integer
+                description: When the group was created in Epoch time
+              updated_at:
+                type: integer
+                description: When the group was last updated in Epoch time
+              live_dvr_sliding_window_duration: 
+                type: integer
+                description: Duration of live DVR sliding window in seconds
+              label: 
+                type: string
+                description: The label for the group
+              status: 
+                type: object
+                description: >-
+                  The properties will be processing regions and the value their current status
+              ad_insertion:
+                type: boolean
+                description: Whether this group is SSAI enabled
+              outputs:
+                type: object
+                description: Outputs for the group
+                properties:
+                  playback_url:
+                    type: string
+                    description: URL for playback
+                  playback_url_dvr:
+                    type: string
+                    description: URL for playback with DVR
+      example: {
+        "redundant_groups": [
+          {
+            "id": "91c268a6ec5240d79a6004f4ccf0dc6f",
+            "account_id": "a95ac581551b4478b27910e5675db1f8",
+            "user_id": "c2691d4d039040be96c190a949d754a7",
+            "processing_regions": [
+              {
+                "region": "us-west-2",
+                "probability": 1
+              }
+            ],
+            "storage_regions": [
+              "us-west-2",
+              "us-east-1"
+            ],
+            "jobs": [],
+            "state": "standby",
+            "created_at": 1594316624287,
+            "updated_at": 1594316624287,
+            "label": "Test Redundant Group",
+            "live_dvr_sliding_window_duration": 86400,
+            "status": {
+              "us-west-2": null
+            },
+            "outputs": {
+              "playback_url": "https://bcovlive-a.akamaihd.net/r91c268a6ec5240d79a6004f4ccf0dc6f/us-west-2/NA/playlist.m3u8",
+              "playback_url_dvr": "https://bcovlive-a.akamaihd.net/r91c268a6ec5240d79a6004f4ccf0dc6f/us-west-2/NA/playlist_dvr.m3u8"
+            }
+          }
+        ]
+      }
     AddJobsRedundantGroupRequest:
       title: Add Jobs to a Redundant Group Request Body
       description: >-
@@ -5995,6 +6091,26 @@ components:
       explode: true
       schema:
         type: boolean
+    RedundantGroupState:
+      name: state
+      in: query
+      description: Filter redundant grous by state
+      style: form
+      explode: true
+      schema:
+        type: string
+        description: Job state
+        enum:
+          - cancelled
+          - cancelling
+          - deleting
+          - disconnected
+          - failed
+          - finished
+          - finishing
+          - processing
+          - standby
+          - waiting
     state:
       name: state
       in: query

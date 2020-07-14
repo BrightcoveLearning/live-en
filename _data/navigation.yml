@@ -2,7 +2,7 @@
   name: 'Home'
   url: '/'
 - section: 
-  name: Getting Started
+  name: Getting Started 
   url: /get-started/
   icon: '<i class="far fa-location-arrow"></i>'
   docs:
@@ -38,6 +38,8 @@
   url: /live-module/
   icon: '<i class="fas fa-satellite-dish"></i>'
   docs:
+    - name: 'Client-Side Preroll Ads with Live SSAI'
+      url: /live-module/client-side-preroll-with-live-ssai.html
     - name: Creating and Managing Live Events
       url: /live-module/creating-and-managing-live-events-using-live-module.html
     - name: Creating a Video Clip

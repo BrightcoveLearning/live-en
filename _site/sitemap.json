@@ -30,6 +30,11 @@
   },
 
   {
+      "newURL": "https://live.support.brightcove.com/support/contact-sales.html",
+      "oldURL": "/contact-sales"
+  },
+
+  {
       "newURL": "https://live.support.brightcove.com/live-module/creating-and-managing-live-events-using-live-module.html",
       "oldURL": "/creating-and-managing-live-events-using-live-module"
   },
@@ -85,11 +90,6 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/support/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://live.support.brightcove.com/general/",
       "oldURL": "/index"
   },
@@ -100,12 +100,12 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/admin/",
+      "newURL": "https://live.support.brightcove.com/support/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/live-api/guides/",
+      "newURL": "https://live.support.brightcove.com/admin/",
       "oldURL": "/index"
   },
 
@@ -115,7 +115,27 @@
   },
 
   {
+      "newURL": "https://live.support.brightcove.com/live-api/",
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://live.support.brightcove.com/live-module/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/live-api/code-samples/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/live-api/guides/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/release-notes/",
       "oldURL": "/index"
   },
 
@@ -126,21 +146,6 @@
 
   {
       "newURL": "https://live.support.brightcove.com/live-api/references/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://live.support.brightcove.com/release-notes/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://live.support.brightcove.com/live-api/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://live.support.brightcove.com/live-api/code-samples/",
       "oldURL": "/index"
   },
 
@@ -185,12 +190,12 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/release-notes/live-api-release-notes.html",
+      "newURL": "https://live.support.brightcove.com/live-api/references/live-api-release-notes.html",
       "oldURL": "/live-api-release-notes"
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/live-api/references/live-api-release-notes.html",
+      "newURL": "https://live.support.brightcove.com/release-notes/live-api-release-notes.html",
       "oldURL": "/live-api-release-notes"
   },
 

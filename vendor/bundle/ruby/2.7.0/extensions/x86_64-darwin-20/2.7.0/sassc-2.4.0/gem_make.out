@@ -1,5 +1,5 @@
 current directory: /Users/rcrooks/GitHub/live/vendor/bundle/ruby/2.7.0/gems/sassc-2.4.0/ext
-/Users/rcrooks/.rvm/rubies/ruby-2.7.0/bin/ruby -I /Users/rcrooks/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0 -r ./siteconf20200716-14878-1g1lp3c.rb extconf.rb
+/Users/rcrooks/.rvm/rubies/ruby-2.7.0/bin/ruby -I /Users/rcrooks/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0 -r ./siteconf20200720-26975-17tg8ir.rb extconf.rb
 creating Makefile
 
 current directory: /Users/rcrooks/GitHub/live/vendor/bundle/ruby/2.7.0/gems/sassc-2.4.0/ext
@@ -77,4 +77,4 @@ linking shared-object sassc/libsass.bundle
 
 current directory: /Users/rcrooks/GitHub/live/vendor/bundle/ruby/2.7.0/gems/sassc-2.4.0/ext
 make "DESTDIR=" install
-/usr/local/opt/coreutils/bin/ginstall -c -m 0755 libsass.bundle ./.gem.20200716-14878-1peyhnq/sassc
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 libsass.bundle ./.gem.20200720-26975-h37r41/sassc

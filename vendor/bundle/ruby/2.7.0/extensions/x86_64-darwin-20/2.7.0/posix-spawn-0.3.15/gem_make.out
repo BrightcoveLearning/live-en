@@ -1,5 +1,5 @@
 current directory: /Users/rcrooks/GitHub/live/vendor/bundle/ruby/2.7.0/gems/posix-spawn-0.3.15/ext
-/Users/rcrooks/.rvm/rubies/ruby-2.7.0/bin/ruby -I /Users/rcrooks/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0 -r ./siteconf20200716-14878-j8g24j.rb extconf.rb
+/Users/rcrooks/.rvm/rubies/ruby-2.7.0/bin/ruby -I /Users/rcrooks/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0 -r ./siteconf20200720-26975-1eqgcf.rb extconf.rb
 creating Makefile
 
 current directory: /Users/rcrooks/GitHub/live/vendor/bundle/ruby/2.7.0/gems/posix-spawn-0.3.15/ext
@@ -19,4 +19,4 @@ linking shared-object posix_spawn_ext.bundle
 
 current directory: /Users/rcrooks/GitHub/live/vendor/bundle/ruby/2.7.0/gems/posix-spawn-0.3.15/ext
 make "DESTDIR=" install
-/usr/local/opt/coreutils/bin/ginstall -c -m 0755 posix_spawn_ext.bundle ./.gem.20200716-14878-114fjq4
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 posix_spawn_ext.bundle ./.gem.20200720-26975-ejhgou

@@ -70,6 +70,11 @@
   },
 
   {
+      "newURL": "https://live.support.brightcove.com/live-module/host-avaya-conference-brightcove-live.html",
+      "oldURL": "/host-avaya-conference-brightcove-live"
+  },
+
+  {
       "newURL": "https://live.support.brightcove.com/live-module/host-cisco-webex-conference-brightcove-live.html",
       "oldURL": "/host-cisco-webex-conference-brightcove-live"
   },
@@ -90,7 +95,12 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/general/",
+      "newURL": "https://live.support.brightcove.com/live-api/references/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/admin/",
       "oldURL": "/index"
   },
 
@@ -105,17 +115,12 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/admin/",
+      "newURL": "https://live.support.brightcove.com/release-notes/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/get-started/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://live.support.brightcove.com/live-api/",
+      "newURL": "https://live.support.brightcove.com/general/",
       "oldURL": "/index"
   },
 
@@ -125,17 +130,17 @@
   },
 
   {
+      "newURL": "https://live.support.brightcove.com/get-started/",
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://live.support.brightcove.com/live-api/code-samples/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/live-api/guides/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://live.support.brightcove.com/release-notes/",
+      "newURL": "https://live.support.brightcove.com/live-api/",
       "oldURL": "/index"
   },
 
@@ -145,12 +150,12 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/live-api/references/",
+      "newURL": "https://live.support.brightcove.com/live-api/ssai/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/live-api/ssai/",
+      "newURL": "https://live.support.brightcove.com/live-api/guides/",
       "oldURL": "/index"
   },
 
@@ -360,12 +365,12 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/live-api/references/standard-live-ingest-profiles.html",
+      "newURL": "https://live.support.brightcove.com/admin/standard-live-ingest-profiles.html",
       "oldURL": "/standard-live-ingest-profiles"
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/admin/standard-live-ingest-profiles.html",
+      "newURL": "https://live.support.brightcove.com/live-api/references/standard-live-ingest-profiles.html",
       "oldURL": "/standard-live-ingest-profiles"
   },
 

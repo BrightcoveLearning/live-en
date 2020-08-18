@@ -6,46 +6,32 @@ description: This section contains release notes and reference information.
 icon: '<i class="far fa-bell"></i>'
 ---
 <style>
-    h1 i.fal,
-    i.fa,
-    h1 i.fab,
-    h1 i.fas,
-    h1 i.far {
-        font-size: 3rem;
-
-        color: {
-                {
-                site.product_color
-            }
-        }
-
-        ;
-        margin-right: .5rem;
-    }
-
-    .bcls-card-small ul {
-        font-size: small;
-        list-style: none;
-        margin-left: -3em;
+    .card-wrapper {
+        justify-content: start;
     }
 </style>
-
-<article class="bcls-article">
-    <h1>{{ page.icon }} {{ page.title }}</h1>
-    <summary>{{ page.description }}</summary>
-
+<article class="landing-page-wrapper">
+    <h1>{{ page.title }}</h1>
+    <section class="landing-page-header" id="landing_page_header">
+        <p>{{ page.description }}</p>
+    </section>
     <section class="card-wrapper">
-        {% for item in site.data.navigation %} {% if item.name == page.title %} {% for subsection in item.docs %}
-        <section class="bcls-card-small" onclick="window.location.href='{{subsection.url}}'">
+        {% for item in site.data.navigation %}
+        {% if item.name == page.section %}
+        <section class="bcls-card">
+            <div class="card-icon">
+                <i class="fal fa-books"></i>
+            </div>
             <div class="card-content">
-                <h2>{{ subsection.name }}</h2>
-                <ul>
-                    {% for doc in subsection.docs %}
-                    <li><a href="{{ doc.url }}">{{ doc.name }}</a></li>
+                <h2 class="landing-page-item-header">{{ item.name }} Topics</h2>
+                <ul class="landing-page-item list-none">
+                    {% for entry in item.docs %}
+                    <li><a href="{{ entry.url }}">{{ entry.name }}</a></li>
                     {% endfor %}
                 </ul>
             </div>
         </section>
-        {% endfor %} {% endif %} {% endfor %}
+        {% endif %}
+        {% endfor %}
     </section>
 </article>

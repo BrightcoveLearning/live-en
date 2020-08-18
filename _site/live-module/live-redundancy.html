@@ -455,7 +455,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 	<figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="700" height="350" src="/assets/images/general/18963/0.png" /></figure>
 	</li>
 	<li class="language-editable">By clicking the <strong>Add a Backup Stream</strong> button you will add a backup (redundancy) stream for your Live video. You can add up as many as your account limit supports.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="400" height="400" src="/assets/images/general/18963/1.png" /></figure>
+		<figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="400" height="400" src="/assets/images/general/18963/1.png" /></figure>
+		<aside class="bcls-aside bcls-aside--information">You may have redundant groups counting against your account limit. Once an event with redundant streams completes or is canceled it is no longer visible in the Live Module. However, such events can be listed and deleted via the Live API. See <a href="https://docs.brightcove.com/live-api-stage/v1/doc/index.html#tag/Redundant-Groups" target="_blank">Live API: Redundant Groups.</a></aside>
 	</li>
 	<li class="language-editable">Name your Primary and Backup streams, and select a region that is closest to where your encoder is located. By default, the <strong>Primary stream</strong> region is set to Oregon (US West) which will produce bad results if you are streaming from another continent.
 	<p>The <strong>Reference ID </strong> is an optional identifier for internal use and must be unique (max 150 characters).</p>

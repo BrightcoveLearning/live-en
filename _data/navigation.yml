@@ -44,6 +44,8 @@
       url: /live-module/creating-and-managing-live-events-using-live-module.html
     - name: Creating a Video Clip
       url: /live-module/creating-video-clip-using-live-module.html
+    - name: Host Avaya Conference on Brightcove Live
+      url: /live-module/host-avaya-conference-brightcove-live.html
     - name: Host Cisco Webex to Brightcove Live
       url: /live-module/host-cisco-webex-conference-brightcove-live.html
     - name: Host Zoom to Brightcove Live

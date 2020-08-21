@@ -193,7 +193,7 @@ grandparent: Live API
       <h2 id="get_redundant_group">Get redundant groups</h2>
       <p>You can get all redundant groups by submitting a <code>GET</code> request to:</p>
       <pre><code class="language-http">https://api.bcovlive.io/v1/redundantgroups</code></pre>
-      <p>You can also filter the response by using the <code>state</code> param. The allowed values are:</p>
+      <p>You can filter the response by using the <code>state</code> param. The allowed values are:</p>
       <ul>
         <li><code>cancelled</code></li>
         <li><code>cancelling</code></li>
@@ -206,6 +206,7 @@ grandparent: Live API
         <li><code>standby</code></li>
         <li><code>waiting</code></li>
       </ul>
+      <p>There is also a <code>page_size</code> parameter that can be set to an integer up to 1000. The default <code>page_size</code> is 10.</p>
       <p>The response will look like this:</p>
 <pre class="line-numbers"><code class="language-json">{
   "redundant_groups": [

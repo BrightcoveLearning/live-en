@@ -674,6 +674,7 @@ paths:
         - $ref: '#/components/parameters/ContentType'
         - $ref: '#/components/parameters/XAPIKEY'
         - $ref: '#/components/parameters/RedundantGroupState'
+        - $ref: '#/components/parameters/page_size'
       responses:
         '200':
           description: '200'
@@ -5999,7 +6000,7 @@ components:
     page_size:
       name: page_size
       in: query
-      description: 'Max number of jobs to return in one request (1-1000, default is 10)'
+      description: 'Max number of items to return in one request (1-1000, default is 10)'
       style: form
       explode: true
       schema:

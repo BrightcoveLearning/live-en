@@ -432,8 +432,8 @@ grandparent: Live API
 	</li>
 	<li class="language-editable">The "RTMP" address returned as the <code class="notranslate">stream_url</code> for Live jobs is an Akamai HD Live stream, not a legacy FMS RMTP stream - it is not supported by older versions of Internet Explorer.</li>
 	<li class="language-editable">Live streams are delivered over HTTPS, and if your Brightcove account is not enabled for HTTPS, the Brightcove player will fail to load the live stream. If your account does not have HTTPS support for origin serving enabled, please <a href="https://supportportal.brightcove.com/s/login/?language=en_US">Contact Brightcove Support</a> to get HTTPS support for origin serving enabled to prevent playback issues.</li>
-  <li class="language-editable">When using a transmuxed rendition within a multi-bitrate HLS output, <code>segment_size</code> can be included when transmuxing, but should be set so that it is a multiple of the <code>GOP</code> size of the input stream.  So if the input is 30 fps with keyframes every 60 frames, the ∑code size is 2 seconds, and the segment size should be a multiple of 2. If you do not do this, the stream segments will be of varying sizes.
-  <p>Also, the system will return a validation error if keyframe_interval is only specified on some outputs.</p>
+  <li class="language-editable">When using a transmuxed rendition within a multi-bitrate HLS output, <code>segment_size</code> can be included when transmuxing, but should be set so that it is a multiple of the <code>GOP</code> size of the input stream.  So if the input is 30 fps with keyframes every 60 frames, the <code>GOP</code> size is 2 seconds, and the segment size should be a multiple of 2. If you do not do this, the stream segments will be of varying sizes.
+  <p>Also, <code>keyframe_interval</code> should <strong>not</strong> be specified on any outputs.</p>
   </li>
 	<li class="language-editable">When using your own FTP or S3 origin location, your CDN must be configured to fallback to your origin location. The Brightcove Live system will not validate that the origin locations for the CDNs provided in the job request.</li>
 </ul>

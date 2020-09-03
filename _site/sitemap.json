@@ -100,7 +100,12 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/general/",
+      "newURL": "https://live.support.brightcove.com/live-api/references/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/admin/",
       "oldURL": "/index"
   },
 
@@ -115,12 +120,12 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/admin/",
+      "newURL": "https://live.support.brightcove.com/release-notes/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/live-api/guides/",
+      "newURL": "https://live.support.brightcove.com/general/",
       "oldURL": "/index"
   },
 
@@ -135,17 +140,12 @@
   },
 
   {
+      "newURL": "https://live.support.brightcove.com/live-api/code-samples/",
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://live.support.brightcove.com/live-api/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://live.support.brightcove.com/release-notes/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://live.support.brightcove.com/live-api/references/",
       "oldURL": "/index"
   },
 
@@ -155,12 +155,12 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/live-api/code-samples/",
+      "newURL": "https://live.support.brightcove.com/live-api/ssai/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/live-api/ssai/",
+      "newURL": "https://live.support.brightcove.com/live-api/guides/",
       "oldURL": "/index"
   },
 
@@ -200,12 +200,12 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/release-notes/live-api-release-notes.html",
+      "newURL": "https://live.support.brightcove.com/live-api/references/live-api-release-notes.html",
       "oldURL": "/live-api-release-notes"
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/live-api/references/live-api-release-notes.html",
+      "newURL": "https://live.support.brightcove.com/release-notes/live-api-release-notes.html",
       "oldURL": "/live-api-release-notes"
   },
 

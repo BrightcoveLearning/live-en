@@ -26,7 +26,7 @@ grandparent: Live API
 
 <p>Remember that these protocols use UDP (User Datagram Protocol) rather than TCP for communication between the encoder and Live, so your firewall / router needs to be configured properly and allow UDP outputs to the internet from the encoder's IP.</p>
 
-<aside class="bcls-aside bcls-aside--information">Note that in the case you have open ports on a local network. Brightcove allocates ports dynamically for each SRT and RTP job, which can range from 10000 to 65535.</aside>
+<aside class="bcls-aside bcls-aside--information">Note that if you have open ports on a local network, Brightcove allocates ports dynamically for each SRT and RTP job, which can range from 10000 to 65535.</aside>
 
 <p>If you are using <code>rtp-fec</code>, FEC information is sent on a different port than the media, so, for example, if you are using port 2000, you would also need to open ports 2002 and 2004 (if you are using 2D FEC).</p>
 

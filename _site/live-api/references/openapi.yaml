@@ -1149,7 +1149,7 @@ paths:
       summary: Create Ad Configuration
       description: |-
        Create a configuration for server-side ad application.
-       
+
        **Note: SSAI is supported for the following regions:**
           - us-west-2
           - us-east-1
@@ -1930,7 +1930,7 @@ components:
           items:
             type: string
             properties:
-              region: 
+              region:
                 type: string
                 description: An AWS region
                 enum:
@@ -2004,13 +2004,13 @@ components:
             - PROCESSING
             - STANDBY
             - WAITING
-        live_dvr_sliding_window_duration: 
+        live_dvr_sliding_window_duration:
           type: integer
           description: Duration of live DVR sliding window in seconds
-        label: 
+        label:
           type: string
           description: The label for the group
-        status: 
+        status:
           type: object
           description: >-
             The properties will be processing regions and the value their current status
@@ -2089,13 +2089,13 @@ components:
               updated_at:
                 type: integer
                 description: When the group was last updated in Epoch time
-              live_dvr_sliding_window_duration: 
+              live_dvr_sliding_window_duration:
                 type: integer
                 description: Duration of live DVR sliding window in seconds
-              label: 
+              label:
                 type: string
                 description: The label for the group
-              status: 
+              status:
                 type: object
                 description: >-
                   The properties will be processing regions and the value their current status
@@ -2265,7 +2265,7 @@ components:
               description: >-
                 A computed number used mostly internally. If it goes to 0, the group is not being updated.
             Duration:
-              type: integer 
+              type: integer
               description: >-
                 Duration of the last chunk added to the stream.
             DiscontinuitySequence:
@@ -2800,7 +2800,7 @@ components:
         drm:
           type: object
           description: >-
-            DRM settings to be applied to all outputs for the job. **Note that you can also apply DRM only to specific outputs if you prefer.** 
+            DRM settings to be applied to all outputs for the job. **Note that you can also apply DRM only to specific outputs if you prefer.**
           properties:
             modes:
               type: array
@@ -5305,7 +5305,7 @@ components:
                     type: string
                     description: URL to acquire the license
                     example: "https://license-proxy-qa.alive.us-west-2.qa.deploys.brightcove.com/lic/wv?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoiYnJpZ2h0Y292ZV9hbGl2ZS1xYS1uYS01ZmZlYWRlYjhlNWQ0ODM4OTEwOTEzMTQyOWRiMDM1NCIsInBsYXlsaXN0IjoiZGVmYXVsdCIsIm9wdGlvbnMiOltdLCJjcnQiOm51bGwsImFjY2lkIjoiMzAzMTI2NDE1NjQyMDIiLCJpYXQiOjE1ODA3ODg3MjQsImV4cCI6MTU4MDgzMTkyNCwiaXNzIjoiYWxpdmUiLCJzdWIiOiIxMjNlODgzZGVlNzg0MjgyYjlkMWU4OTk0ZTZmMWUxZCIsImp0aSI6IjFmYmM2ZGMxZjZjNzJlOGVmZGIzMzU1N2I4MjBjMmJlIn0.IpH2AQglCZAU8ECYZ3Uq_p-0QXNx7-cbmFFI7tsQfik"
-                  filename: 
+                  filename:
                     type: string
                     description: File name for the DRM packaged output
                     example: "playlist.mpd"
@@ -6069,14 +6069,16 @@ components:
     force:
       name: force
       in: query
-      description: >-
+      description: |-
         '1. For force failover requests: force failover for a redundant stream without going to manual mode
         2. For remove job from redundant group requests: force removal of on-air job
-        3. For delete redundant group requests: force delete redundant group in processing state'
+        3. For delete redundant group requests: force delete redundant group in processing state
+
+        Note that `force` is a string, not a boolean. The value must be `true`, not `1`.'
       style: form
       explode: true
       schema:
-        type: boolean
+        type: string
     modified_at:
       name: modified_at
       in: query

@@ -1,8 +1,8 @@
-- section: 
+- section:
   name: 'Home'
   url: '/index.html'
-- section: 
-  name: Getting Started 
+- section:
+  name: Getting Started
   url: /get-started/index.html
   icon: '<i class="far fa-location-arrow"></i>'
   docs:
@@ -16,7 +16,7 @@
       url: /get-started/step-step-using-live-module-open-broadcaster-software-obs.html
     - name: 'Step-by-Step: Using the Live Module with Wirecast'
       url: /get-started/step-step-using-live-module-telestream-wirecast.html
-- section: 
+- section:
   name: General Information
   url: /general/index.html
   icon: '<i class="far fa-info-circle"></i>'
@@ -33,7 +33,7 @@
       url: /general/supported-encoders-live-events.html
     - name: Using Akamai Stream Packaging and Wirecast
       url: /general/creating-live-stream-using-akamai-stream-packaging-and-telestream-wirecast.html
-- section: 
+- section:
   name: Using the Live Module
   url: /live-module/index.html
   icon: '<i class="fas fa-satellite-dish"></i>'
@@ -45,11 +45,13 @@
     - name: Creating a Video Clip
       url: /live-module/creating-video-clip-using-live-module.html
     - name: Host Avaya Conference on Brightcove Live
-      url: /live-module/host-avaya-conference-brightcove-live.html
+      url: 'https://integrations.support.brightcove.com/web-conferencing/host-avaya-conference-brightcove-live.html'
     - name: Host Cisco Webex to Brightcove Live
-      url: /live-module/host-cisco-webex-conference-brightcove-live.html
+      url: 'https://integrations.support.brightcove.com/web-conferencing/host-cisco-webex-conference-brightcove-live.html'
     - name: Host Zoom to Brightcove Live
-      url: /live-module/host-zoom-conference-brightcove-live.html
+      url: 'https://integrations.support.brightcove.com/web-conferencing/host-zoom-conference-brightcove-live.html'
+    - name: Host an INXPO Event on Brightcove Live
+      url: 'https://integrations.support.brightcove.com/web-conferencing/host-inxpo-live.html'
     - name: Implementing Server-Side Ads
       url: /live-module/implementing-server-side-ads-live-module.html
     - name: Live Redundancy
@@ -62,7 +64,7 @@
       url: /live-module/reviewing-live-analytics.html
     - name: Using Live RTMP Outputs
       url: /live-module/using-live-rtmp-outputs-stream-facebook-and-youtube.html
-- section: 
+- section:
   name: 'Working with the Live API'
   url: '/live-api/index.html'
   icon: '<i class="far fa-brackets-curly"></i>'
@@ -136,7 +138,7 @@
         url: /live-api/guides/using-live-redundancy.html
       - name: VOD from Live Event
         url: /live-api/guides/live-api-vod-live-event.html
-- section: 
+- section:
   name: Administering Accounts
   url: /admin/index.html
   icon: '<i class="fal fa-tools"></i>'
@@ -151,7 +153,7 @@
       url: /admin/managing-api-authentication-credentials.html
     - name: Standard Live Ingest Profiles
       url: /admin/standard-live-ingest-profiles.html
-- section: 
+- section:
   name: Release Notes
   url: /release-notes/index.html
   icon: '<i class="far fa-bell"></i>'
@@ -160,7 +162,7 @@
       url: /release-notes/live-api-release-notes.html
     - name: Known Issues
       url: /release-notes/known-issues.html
-- section: 
+- section:
   name: 'Support'
   url: '/support/index.html'
   icon: '<i class="far fa-question-circle"></i>'

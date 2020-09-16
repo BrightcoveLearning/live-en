@@ -177,7 +177,7 @@
       
         <url>
           
-            <loc>https://live.support.brightcove.com/live-module/host-avaya-conference-brightcove-live.html</loc>
+            <loc>https://integrations.support.brightcove.com/web-conferencing/host-avaya-conference-brightcove-live.html</loc>
           
             <lastmod>2020-09-16</lastmod>
             <changefreq>daily</changefreq>
@@ -187,7 +187,7 @@
       
         <url>
           
-            <loc>https://live.support.brightcove.com/live-module/host-cisco-webex-conference-brightcove-live.html</loc>
+            <loc>https://integrations.support.brightcove.com/web-conferencing/host-cisco-webex-conference-brightcove-live.html</loc>
           
             <lastmod>2020-09-16</lastmod>
             <changefreq>daily</changefreq>
@@ -197,7 +197,17 @@
       
         <url>
           
-            <loc>https://live.support.brightcove.com/live-module/host-zoom-conference-brightcove-live.html</loc>
+            <loc>https://integrations.support.brightcove.com/web-conferencing/host-zoom-conference-brightcove-live.html</loc>
+          
+            <lastmod>2020-09-16</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+      
+        <url>
+          
+            <loc>https://integrations.support.brightcove.com/web-conferencing/host-inxpo-live.html</loc>
           
             <lastmod>2020-09-16</lastmod>
             <changefreq>daily</changefreq>

@@ -6,7 +6,19 @@ parent: Live Module
 
 <article class="bcls-article">
   <h1>{{ page.title }}</h1>
-  <summary>{{ page.description }}</summary> 
+  <summary>{{ page.description }}</summary>
+  <script>
+    var BCLS = ( function (window, document) {
+      var newURL = 'https://integrations.support.brightcove.com/web-conferencing/host-zoom-conference-brightcove-live.html',
+      message = '<aside class="bcls-aside bcls-aside--warning language-editable"> This page has moved to the Integrations site. The new url is: <strong>' + newURL + '</strong> You will be redirected in 5 seconds. Please update your bookmarks.</aside>',
+          t;
+      function goToNewURL() {
+        window.location.href = newURL;
+      }
+      document.write(message);
+      t = window.setTimeout(goToNewURL, 5000);
+    })(window, document);
+  </script>
 
   <section class="bcls-section">
     <h2 id="Introduction">Introduction</h2>
@@ -37,8 +49,8 @@ parent: Live Module
     	  <figure class="bcls-figure"><img class="bcls-image" alt="" width="400" height="400" src="/assets/images/general/18964/0.png" /></figure>
       </li>
     </ol>
-    
-     
+
+
       <h5>Webinars</h5>
       <p>For Zoom webinars, do the following:</p>
     <ol>

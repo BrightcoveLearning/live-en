@@ -194,6 +194,7 @@ parent: Live Module
       <li class="language-editable"><strong>Reconnect Time</strong> is still applicable for recurring events on encoder disconnects. If the <strong>Reconnect Time</strong> is reached, the recurring event will be set to a deactivated state. Brightcove recommends deactivating a stream when a job completes and setting the <strong>Reconnect Time</strong> to an acceptable window of time to wait in the event of a disconnect (input hour costs are accrued during this wait period).</li>
       <li class="language-editable">You should always stop the encoder before deactivating a recurring event. Accounts are allocated a finite number of recurring events. If the limit is reached, you will need to stop one of your recurring events before you can create a new one. If you have reached the maximum number of recurring events and attempt to create another one, an error will be returned.</li>
       <li class="language-editable">When you deactivate a recurring event, the last few seconds of the stream remain playable for some time.</li>
+      <li>Accounts are limited to a total of 34 SEP events (3 per region, except for us-west-2, where 10 allowed). If you reach the limit, you must end one SEP event in the region where you want to create a new one before you can proceed.</li>
     </ul>
   </section>
   <section class="bcls-section">

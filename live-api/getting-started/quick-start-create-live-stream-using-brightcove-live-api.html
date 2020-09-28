@@ -48,7 +48,7 @@ grandparent: Live API
 <p>If the permissions you need are not available in Studio, or if you prefer to get them directly from the OAuth API, use your choice of the <strong>Get Client Credentials</strong> documents listed below. Whichever option you choose, you will need to ask for the correct operation permissions. The following can be used with cURL or Postman to get the proper permissions:</p>
 
 <pre class="line-numbers">
-    <code class="language-json notranslate">"operations": [
+    <code class="language-json" translate="No">"operations": [
     "video-cloud/videos/read",
     "video-cloud/videos/create",
     "video-cloud/videos/update"]</code></pre>
@@ -76,7 +76,7 @@ grandparent: Live API
 	<p>Use the following as the request body:</p>
 
 	<pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
     "live_stream": true,
     "region": "us-west-2",
     "reconnect_time": 1800,
@@ -145,7 +145,7 @@ grandparent: Live API
 	</li>
 	<li>The response from the API should look similar to this:
 	<pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
     "id": "15981d93877e490185e6ebc9af2c79a3",
     "outputs": [
         {
@@ -261,7 +261,7 @@ grandparent: Live API
 	<p>The request body can include several pieces of metadata (see <a href="https://docs.brightcove.com/cms-api/v1/doc/index.html#/Videos/CreateVideo">the API reference</a> for details), but the only thing required is a <code translate="No">name</code>:</p>
 
 	<pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
     "name": "<span class="bcls-input">some name for your live stream</span>"
 }</code></pre>
 	</li>
@@ -278,7 +278,7 @@ grandparent: Live API
 	<p>This time, the request body will be:</p>
 
 	<pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
     "remote_url": "<span class="bcls-input">playback_url for your live stream</span>"
 }</code></pre>
 	</li>

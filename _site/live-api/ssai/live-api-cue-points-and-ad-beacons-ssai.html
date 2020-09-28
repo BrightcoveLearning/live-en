@@ -459,7 +459,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   
   <ul>
     <li>Sent to Brightcove by the encoder</li>
-    <li>Immediate cue points created via the <span class="notranslate">Live API</span></li>
+    <li>Immediate cue points created via the <span translate="No">Live API</span></li>
   </ul>
   
   <h3>From the encoder</h3>
@@ -493,7 +493,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <section class="bcls-section">
   <h2 id="Manual_cue_point_insertion">Manual cue point insertion</h2>
   
-  <p>You can create immediate cue points using the <span class="notranslate">Live API</span> by sending a <code translate="No">POST</code> request:</p>
+  <p>You can create immediate cue points using the <span translate="No">Live API</span> by sending a <code translate="No">POST</code> request:</p>
   
   <table class="bcls-table">
     <tbody class="bcls-table__body">
@@ -554,7 +554,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <p>For example, inserting a <strong>10 second cue point</strong> in a job with <code translate="No">"segment_seconds"=4</code>, will work fine. However, inserting the same cue point in a job with <code translate="No">"segment_seconds"=6</code> will result in the following error:</p>
   
   <pre>
-  <code class="language-json notranslate">"error": "The parameter duration should be greater than
+  <code class="language-json" translate="No">"error": "The parameter duration should be greater than
     or equal to (2 * target duration) of the job"
   </code></pre>
   &nbsp;
@@ -562,7 +562,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <h3>Sample request body</h3>
   
   <pre class="line-numbers">
-  <code class="language-json notranslate">{
+  <code class="language-json" translate="No">{
     "duration": 30,
     "timecode": "15:50:49:16",
     "ad_server_data" : {
@@ -581,7 +581,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <h3>Sample response</h3>
   
   <pre class="line-numbers">
-  <code class="language-json notranslate">{
+  <code class="language-json" translate="No">{
     "id": "Job_ID",
     "cue_point": {
       "id": "adBreak-2f58393ada1442d98eca0817fa565ba4",
@@ -595,7 +595,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <section class="bcls-section">
   <h2 id="Beacons">Beacons</h2>
   
-  <p>Beacons are data points on playback sent to third-party analytics to track whether and how much of ads were played. In this section we will look at the beacon types that can be set using the <span class="notranslate">Live API</span>, and variables that can be used to provide the data. The next section will detail the API requests use to create and manage beacon sets.</p>
+  <p>Beacons are data points on playback sent to third-party analytics to track whether and how much of ads were played. In this section we will look at the beacon types that can be set using the <span translate="No">Live API</span>, and variables that can be used to provide the data. The next section will detail the API requests use to create and manage beacon sets.</p>
   
   <h3>Beacon types</h3>
   
@@ -862,7 +862,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <p>To add a beacon set to a Live job, first create the beacon set, and then include the id when you create the job, like this:</p>
   
   <pre class="line-numbers">
-  <code class="language-json notranslate">{
+  <code class="language-json" translate="No">{
   "live_stream": true,
   "region": "us-west-2",
   "reconnect_time": 30,
@@ -893,7 +893,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <h4>Sample request body</h4>
   
   <pre class="line-numbers">
-  <code class="language-json notranslate">{
+  <code class="language-json" translate="No">{
     "account_id": "<span class="bcls-input">User's Account ID [Optional]</span>",
     "beacon_urls": [
       {
@@ -912,7 +912,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <h4>Sample response</h4>
   
   <pre class="line-numbers">
-  <code class="language-json notranslate">{
+  <code class="language-json" translate="No">{
     "beacon_set": {
       "beacon_urls": [{
       "beacon_url": "https://myserver.com/beaconRX/{{job.job_id}}/load?position=load&amp;sid={{session.session_id}}&amp;jid={{job.job_id}}&amp;app={{application_ad_configuration.description}}&amp;rnd32={{random.int32}}&amp;rnd64={{random.int64}}&amp;bid={{random.uuid}}&amp;t={{server.timestamputc}}&amp;ua={{client.useragent}}&amp;ip={{client.ipaddress}}&amp;ref={{client.referrer}}&amp;ref={{client.referer}}&amp;ab={{live.adbreak}}&amp;abd={{live.adbreakduration}}&amp;abdi={{live.adbreakdurationint}}",
@@ -952,7 +952,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <h4>Sample request body</h4>
   
   <pre class="line-numbers">
-  <code class="language-json notranslate">{
+  <code class="language-json" translate="No">{
     "account_id": "<span class="bcls-input">User's Account ID [Optional]</span>",
     "beacon_urls": [
       {
@@ -971,7 +971,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <h4>Sample response</h4>
   
   <pre class="line-numbers">
-  <code class="language-json notranslate">{
+  <code class="language-json" translate="No">{
     "beacon_set": {
       "account_id": "User's Account ID",
       "beacon_set_id": "Beacon set ID",
@@ -1024,7 +1024,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <h4>Sample response</h4>
   
   <pre class="line-numbers">
-  <code class="language-json notranslate">[{
+  <code class="language-json" translate="No">[{
       "account_id": "User's Account ID",
       "beacon_set_id": "Beacon set ID1",
       "beacon_urls": [{
@@ -1069,7 +1069,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <h4>Sample response</h4>
   
   <pre class="line-numbers">
-  <code class="language-json notranslate">[{
+  <code class="language-json" translate="No">[{
       "account_id": "User's Account ID",
       "beacon_set_id": "Beacon set ID1",
       "beacon_urls": [{
@@ -1114,7 +1114,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <h4>Sample response</h4>
   
   <pre class="line-numbers">
-  <code class="language-json notranslate">{
+  <code class="language-json" translate="No">{
       "account_id": "User account ID",
       "beacon_set_id": "Beacon set ID",
       "beacon_urls": [{
@@ -1153,7 +1153,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <p>The response will look like this:</p>
   
   <pre class="line-numbers">
-  <code class="language-json notranslate">{
+  <code class="language-json" translate="No">{
     "beacon_set_id": "Beacon set ID",
     "deleted": true
   }</code></pre>

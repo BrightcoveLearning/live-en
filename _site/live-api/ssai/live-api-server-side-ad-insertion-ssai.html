@@ -451,7 +451,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <p><span class="”notranslate”">SSAI</span> allows you display ads during a live streaming event at specified times. The main features include:</p>
 
 <ul>
-	<li>Insert ads using cue points sent from your encoder or create an instant cue point using the <span class="notranslate">Live API</span></li>
+	<li>Insert ads using cue points sent from your encoder or create an instant cue point using the <span translate="No">Live API</span></li>
 	<li>Ingest "slate" assets to fill any unused ad time</li>
 	<li>Avoid ad blockers with ads that are stitched into the live stream on the server side</li>
 </ul>
@@ -518,7 +518,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <h3>Sample request body</h3>
 <pre class="line-numbers">
-    <code class="language-json notranslate">{
+    <code class="language-json" translate="No">{
       "application_ad_configuration": {
         "ad_configuration_description": "Human readable description of the configuration",
         "ad_configuration_expected_response_type": "<span class="bcls-input">Dfp, Vast or SmartXML</span>",
@@ -544,7 +544,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <h3>Sample response</h3>
 
 <pre class="line-numbers">
-    <code class="language-json notranslate">{
+    <code class="language-json" translate="No">{
       "application": {
         "account_id": "User Account ID",
         "application_description": "Human readable description of the ad application",
@@ -596,7 +596,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <h3>Sample request body</h3>
 
 <pre class="line-numbers">
-    <code class="language-json notranslate">{
+    <code class="language-json" translate="No">{
       "application_ad_configuration": {
         "ad_configuration_description": "Some Updated Description Value",
         "ad_configuration_expected_response_type": "<span class="bcls-input">Dfp or Vast or SmartXML</span>,
@@ -623,7 +623,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <h3>Sample response</h3>
 
 <pre class="line-numbers">
-    <code class="language-json notranslate">{
+    <code class="language-json" translate="No">{
       "account_id": "User Account ID",
       "application_description": "Human readable description of the ad application",
       "application_ad_configuration": {
@@ -674,7 +674,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <h3>Sample response</h3>
 
 <pre class="line-numbers">
-    <code class="language-json notranslate">[
+    <code class="language-json" translate="No">[
       {
         "application_id": "Application_ID_1",
         "application_description": "DFP Single Midroll",
@@ -732,7 +732,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <h3>Sample response</h3>
 
 <pre class="line-numbers">
-    <code class="language-json notranslate">{
+    <code class="language-json" translate="No">{
       "application_id": "Application_ID",
       "application_description": "Test DFP Single Midroll",
       "application_ad_configuration": {
@@ -776,7 +776,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <h3>Sample response</h3>
 
 <pre class="line-numbers">
-    <code class="language-json notranslate">{
+    <code class="language-json" translate="No">{
     "application_id": "Application_ID",
     "deleted": true
     }</code></pre>
@@ -813,7 +813,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <h4>Sample request body</h4>
 
 <pre class="line-numbers">
-    <code class="language-json notranslate">{
+    <code class="language-json" translate="No">{
       "source_url": "https://somesourceasset.com/slate-to-ingest.mp4",
       "account_id": "<span class="bcls-input">Account_ID [Optional]</span>",
       "source_description": "<span class="bcls-input">User identifiable description for the slate  [Optional]</span>"
@@ -826,7 +826,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <h4>Sample response</h4>
 
 <pre class="line-numbers">
-    <code class="language-json notranslate">{
+    <code class="language-json" translate="No">{
       "media_source_asset_id": "New_UUID",
       "account_id": "Account_ID",
       "media_source_asset_default": false,
@@ -862,7 +862,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <h4>Sample response</h4>
 
 <pre class="line-numbers">
-    <code class="language-json notranslate">{
+    <code class="language-json" translate="No">{
       "media_source_asset_id": "MSA_UUID",
       "media_source_asset_type": "slate",
       "media_source_asset_url": "http://someS3urlpath/media.mp4",
@@ -897,7 +897,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <h4>Sample response</h4>
 
 <pre class="line-numbers">
-    <code class="language-json notranslate">[
+    <code class="language-json" translate="No">[
       {
       "media_source_asset_id": "MSA_UUID_1",
       "media_source_asset_type": "slate",

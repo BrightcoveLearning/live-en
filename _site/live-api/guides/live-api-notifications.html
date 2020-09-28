@@ -457,11 +457,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <section class="bcls-section">
 <h2 id="Requesting_notifications">Requesting notifications</h2>
 
-<p>You can request notifications by including one or more <code class="notranslate">notifications</code> fields in the outputs your <a href="https://docs.brightcove.com/live-api/v1/doc/index.html#api-Live_Jobs-Create_a_Live_Job">Create Job</a> request.</p>
+<p>You can request notifications by including one or more <code translate="No">notifications</code> fields in the outputs your <a href="https://docs.brightcove.com/live-api/v1/doc/index.html#api-Live_Jobs-Create_a_Live_Job">Create Job</a> request.</p>
 
-<p>The value of <code class="notranslate">notifications</code> is an array of notification destination objects. You can use a simple string with a url: <code class="notranslate">"http://httpbin.org/post"</code>, or you can use an object with following options: <code class="notranslate">{"url": "http://httpbin.org/post", "credentials": "reference_to_your_credentials"}</code>. A notification will be sent to the destination you specify when the output changes its state. If you apply this parameter to a VOD output the notifications will only be related to that VOD job, not to the live job.</p>
+<p>The value of <code translate="No">notifications</code> is an array of notification destination objects. You can use a simple string with a url: <code translate="No">"http://httpbin.org/post"</code>, or you can use an object with following options: <code translate="No">{"url": "http://httpbin.org/post", "credentials": "reference_to_your_credentials"}</code>. A notification will be sent to the destination you specify when the output changes its state. If you apply this parameter to a VOD output the notifications will only be related to that VOD job, not to the live job.</p>
 
-<aside class="bcls-aside bcls-aside--warning">Please note. Only one notification url per event type ( <code class="notranslate">first_segment_uploaded</code>, <code class="notranslate">state_change</code>, etc) is allowed.</aside>
+<aside class="bcls-aside bcls-aside--warning">Please note. Only one notification url per event type ( <code translate="No">first_segment_uploaded</code>, <code translate="No">state_change</code>, etc) is allowed.</aside>
 
 <p>Here are some examples:</p>
 
@@ -537,7 +537,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <p>In the event of a failed request to send a notification, the default retry strategy is to retry 50 times with an exponential delay between attempts.</p>
 
 <pre>
-          <code class="notranslate">max_retry_times = 50
+          <code translate="No">max_retry_times = 50
           delay_delta_s = 5
           next_retry = now_s + retry_count * delay_delta_s</code></pre>
 </section>
@@ -548,12 +548,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <p>Below are the events of a job lifecycle you can listen for. Note that the event scope is per job, so the event lifecycle for a live job would be separate from the lifecycle for a VOD clipping job based on the same live stream.</p>
 
 <ul>
-	<li class="language-editable"><code class="notranslate">state_changed</code> - the state of the live job changed; see the table below for details</li>
-	<li class="language-editable"><code class="notranslate">first_segment_uploaded</code> - the first segment of the live stream is uploaded to origin</li>
-	<li class="language-editable"><code class="notranslate">output_finished</code> - the live event has ended, and VOD processing has created at least one audio and one video rendition, or one progressive MP4 rendition</li>
+	<li class="language-editable"><code translate="No">state_changed</code> - the state of the live job changed; see the table below for details</li>
+	<li class="language-editable"><code translate="No">first_segment_uploaded</code> - the first segment of the live stream is uploaded to origin</li>
+	<li class="language-editable"><code translate="No">output_finished</code> - the live event has ended, and VOD processing has created at least one audio and one video rendition, or one progressive MP4 rendition</li>
 </ul>
 
-<p>The <code class="notranslate">state_changed</code> will notify on the following states described in the table below</p>
+<p>The <code translate="No">state_changed</code> will notify on the following states described in the table below</p>
 
 <table class="bcls-table">
 	<caption class="bcls-caption--table">Live Job States</caption>
@@ -565,182 +565,182 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 	</thead>
 	<tbody class="bcls-table__body">
 		<tr>
-			<td colspan="2" style="background-color:RGB(172, 202, 204);text-align: center;font-weight:bold;">JOB States (reported in notifications as <code class="notranslate">state</code>)</td>
+			<td colspan="2" style="background-color:RGB(172, 202, 204);text-align: center;font-weight:bold;">JOB States (reported in notifications as <code translate="No">state</code>)</td>
 		</tr>
 		<tr>
-			<td><code class="notranslate">error</code></td>
+			<td><code translate="No">error</code></td>
 			<td>An error has occurred; the job will not be processed.</td>
 		</tr>
 		<tr>
-			<td><code class="notranslate">standby</code></td>
+			<td><code translate="No">standby</code></td>
 			<td>(Only applicable to Static Entry Point [SEP] jobs.) The job is allocated and ready for activation.</td>
 		</tr>
 		<tr>
-			<td><code class="notranslate">waiting</code></td>
+			<td><code translate="No">waiting</code></td>
 			<td>The job has been assigned to a streaming worker and ready for the encoder to connect.</td>
 		</tr>
 		<tr>
-			<td><code class="notranslate">processing</code></td>
+			<td><code translate="No">processing</code></td>
 			<td>The encoder is connected and the job is available for playback.</td>
 		</tr>
 		<tr>
-			<td><code class="notranslate">disconnected</code></td>
+			<td><code translate="No">disconnected</code></td>
 			<td>The encoder has disconnected and the streaming worker is waiting for a reconnection.</td>
 		</tr>
 		<tr>
-			<td><code class="notranslate">cancelling</code></td>
+			<td><code translate="No">cancelling</code></td>
 			<td>The job has been cancelled and the worker is stopping the job and will NOT process any pending VOD outputs.</td>
 		</tr>
 		<tr>
-			<td><code class="notranslate">finishing</code></td>
-			<td>The encoder has been disconnected for more than <code class="notranslate">reconnect_time</code>, and streaming worker is stopping the jobs and creating any associated VOD outputs.</td>
+			<td><code translate="No">finishing</code></td>
+			<td>The encoder has been disconnected for more than <code translate="No">reconnect_time</code>, and streaming worker is stopping the jobs and creating any associated VOD outputs.</td>
 		</tr>
 		<tr>
-			<td><code class="notranslate">cancelled</code></td>
+			<td><code translate="No">cancelled</code></td>
 			<td>The job has been cancelled successfully.</td>
 		</tr>
 		<tr>
-			<td><code class="notranslate">finished</code></td>
+			<td><code translate="No">finished</code></td>
 			<td>The job has finished successfully.</td>
 		</tr>
 		<tr>
-			<td><code class="notranslate">failed</code></td>
+			<td><code translate="No">failed</code></td>
 			<td>The job has stopped as a result of a system error.</td>
 		</tr>
 		<tr>
-			<td colspan="2" style="background-color:RGB(172, 202, 204);text-align: center;font-weight:bold;">VOD JOB States (reported in notifications as <code class="notranslate">jvod_state</code>)</td>
+			<td colspan="2" style="background-color:RGB(172, 202, 204);text-align: center;font-weight:bold;">VOD JOB States (reported in notifications as <code translate="No">jvod_state</code>)</td>
 		</tr>
 		<tr>
-			<td><code class="notranslate">error</code></td>
+			<td><code translate="No">error</code></td>
 			<td>An error has occurred; the job will not be processed.</td>
 		</tr>
 		<tr>
-			<td><code class="notranslate">waiting</code></td>
+			<td><code translate="No">waiting</code></td>
 			<td>The job waiting for processing.</td>
 		</tr>
 		<tr>
-			<td><code class="notranslate">waiting_finish_live</code></td>
+			<td><code translate="No">waiting_finish_live</code></td>
 			<td>The job waiting for the Live Job to finish (if the clip depends on that).</td>
 		</tr>
 		<tr>
-			<td><code class="notranslate">processing</code></td>
+			<td><code translate="No">processing</code></td>
 			<td>The clip is being processed.</td>
 		</tr>
 		<tr>
-			<td><code class="notranslate">creating_asset</code></td>
+			<td><code translate="No">creating_asset</code></td>
 			<td>A VOD asset is being created.</td>
 		</tr>
 		<tr>
-			<td><code class="notranslate">cancelling</code></td>
+			<td><code translate="No">cancelling</code></td>
 			<td>The job has been cancelled and the worker is stopping the job and will NOT process any pending VOD outputs.</td>
 		</tr>
 		<tr>
-			<td><code class="notranslate">cancelled</code></td>
+			<td><code translate="No">cancelled</code></td>
 			<td>The job has been cancelled successfully.</td>
 		</tr>
 		<tr>
-			<td><code class="notranslate">finished</code></td>
+			<td><code translate="No">finished</code></td>
 			<td>The job has finished successfully.</td>
 		</tr>
 		<tr>
-			<td><code class="notranslate">failed</code></td>
+			<td><code translate="No">failed</code></td>
 			<td>The job has stopped as a result of a system error.</td>
 		</tr>
 		<tr>
-			<td colspan="2" style="background-color:RGB(172, 202, 204);text-align: center;font-weight:bold;">SSAI States (reported in notifications as <code class="notranslate">ssai_state</code>)</td>
+			<td colspan="2" style="background-color:RGB(172, 202, 204);text-align: center;font-weight:bold;">SSAI States (reported in notifications as <code translate="No">ssai_state</code>)</td>
 		</tr>
 		<tr>
-			<td><code class="notranslate">none</code></td>
+			<td><code translate="No">none</code></td>
 			<td>The job is not an SSAI job.</td>
 		</tr>
 		<tr>
-			<td><code class="notranslate">waiting_input</code></td>
+			<td><code translate="No">waiting_input</code></td>
 			<td>The streaming worker is waiting for the encoder to connect and provide the stream input information.</td>
 		</tr>
 		<tr>
-			<td><code class="notranslate">start_transcoding</code></td>
+			<td><code translate="No">start_transcoding</code></td>
 			<td>The encoder has connected and the SSAI slate has been queued for transcoding based on the stream input data and outputs data.</td>
 		</tr>
 		<tr>
-			<td><code class="notranslate">transcoding</code></td>
+			<td><code translate="No">transcoding</code></td>
 			<td>The slate is being transcoded.</td>
 		</tr>
 		<tr>
-			<td><code class="notranslate">error</code></td>
+			<td><code translate="No">error</code></td>
 			<td>The slate could not be downloaded or transcoded.</td>
 		</tr>
 		<tr>
-			<td><code class="notranslate">ready</code></td>
+			<td><code translate="No">ready</code></td>
 			<td>The slate has been generated and the job is ready for SSAI playback.</td>
 		</tr>
 		<tr>
-			<td colspan="2" style="background-color:RGB(172, 202, 204);text-align: center;font-weight:bold;">SEP States (reported in notifications as <code class="notranslate">sep_state</code>)</td>
+			<td colspan="2" style="background-color:RGB(172, 202, 204);text-align: center;font-weight:bold;">SEP States (reported in notifications as <code translate="No">sep_state</code>)</td>
 		</tr>
 		<tr>
-			<td><code class="notranslate">none</code></td>
+			<td><code translate="No">none</code></td>
 			<td>The job is not an SEP job.</td>
 		</tr>
 		<tr>
-			<td><code class="notranslate">ready</code></td>
+			<td><code translate="No">ready</code></td>
 			<td>The entry point has been activated and ready for the encoder to connect.</td>
 		</tr>
 		<tr>
-			<td><code class="notranslate">pending_activation</code></td>
+			<td><code translate="No">pending_activation</code></td>
 			<td>The entry point has been queued for streaming worker assignment.</td>
 		</tr>
 		<tr>
-			<td><code class="notranslate">activation_in_progress</code></td>
+			<td><code translate="No">activation_in_progress</code></td>
 			<td>The entry point is updating to route connections to the streaming worker.</td>
 		</tr>
 		<tr>
-			<td><code class="notranslate">pending_deactivation</code></td>
+			<td><code translate="No">pending_deactivation</code></td>
 			<td>The entry point has been queued for cleanup from the streaming worker.</td>
 		</tr>
 		<tr>
-			<td><code class="notranslate">deactivation_in_progress</code></td>
+			<td><code translate="No">deactivation_in_progress</code></td>
 			<td>The entry point is disconnecting from the streaming worker.</td>
 		</tr>
 		<tr>
-			<td><code class="notranslate">cancelled</code></td>
+			<td><code translate="No">cancelled</code></td>
 			<td>The entry point has been cancelled.</td>
 		</tr>
 		<tr>
-			<td><code class="notranslate">finished</code></td>
+			<td><code translate="No">finished</code></td>
 			<td>The entry point has completed successfully.</td>
 		</tr>
 		<tr>
-			<td colspan="2" style="background-color:RGB(172, 202, 204);text-align: center;font-weight:bold;">RTMP Output States (reported for <code translate="No">rtmp_output_state_changed</code> notifications as <code class="notranslate">state</code>)</td>
+			<td colspan="2" style="background-color:RGB(172, 202, 204);text-align: center;font-weight:bold;">RTMP Output States (reported for <code translate="No">rtmp_output_state_changed</code> notifications as <code translate="No">state</code>)</td>
 		</tr>
 		<tr>
-			<td><code class="notranslate">starting</code></td>
+			<td><code translate="No">starting</code></td>
 			<td>The stream is starting.</td>
 		</tr>
 		<tr>
-			<td><code class="notranslate">connected</code></td>
+			<td><code translate="No">connected</code></td>
 			<td>The encoder has connected.</td>
 		</tr>
 		<tr>
-			<td><code class="notranslate">Disconnected</code></td>
+			<td><code translate="No">Disconnected</code></td>
 			<td>The encoder has disconnected.</td>
 		</tr>
 		<tr>
-			<td><code class="notranslate">error</code></td>
+			<td><code translate="No">error</code></td>
 			<td>The stream failed to connect.</td>
 		</tr>
 		<tr>
-			<td><code class="notranslate">pending_deactivation</code></td>
+			<td><code translate="No">pending_deactivation</code></td>
 			<td>The entry point has been queued for cleanup from the streaming worker.</td>
 		</tr>
 		<tr>
-			<td><code class="notranslate">deactivation_in_progress</code></td>
+			<td><code translate="No">deactivation_in_progress</code></td>
 			<td>The entry point is disconnecting from the streaming worker.</td>
 		</tr>
 		<tr>
-			<td><code class="notranslate">cancelled</code></td>
+			<td><code translate="No">cancelled</code></td>
 			<td>The entry point has been cancelled.</td>
 		</tr>
 		<tr>
-			<td><code class="notranslate">finished</code></td>
+			<td><code translate="No">finished</code></td>
 			<td>The entry point has completed successfully.</td>
 		</tr>
 	</tbody>
@@ -752,7 +752,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <h3>Live stream notification</h3>
 
-<p>Here is a sample notification for a <code class="notranslate">state_changed</code> event for a live job:</p>
+<p>Here is a sample notification for a <code translate="No">state_changed</code> event for a live job:</p>
 
 <pre class="line-numbers">
           <code class="language-json notranslate">{
@@ -946,7 +946,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <h3>Clipping to S3 sample</h3>
 
-<p>Below is a sample <code class="notranslate">state_changed</code> event for creating a clip and sending it to an S3 bucket. Note that it includes the S3 address of the clip as <code class="notranslate">jvod_url</code>.</p>
+<p>Below is a sample <code translate="No">state_changed</code> event for creating a clip and sending it to an S3 bucket. Note that it includes the S3 address of the clip as <code translate="No">jvod_url</code>.</p>
 
 <pre class="line-numbers">
           <code class="language-json notranslate">{
@@ -974,7 +974,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <section class="bcls-section">
 <h2 id="handling_notifications">Handling notifications</h2>
 
-<p>To receive notifications, you simply need an app that can receive HTTP/HTTPS <code class="notranslate">POST</code> requests. The app can then parse the JSON notifications and do whatever you want based on their contents.</p>
+<p>To receive notifications, you simply need an app that can receive HTTP/HTTPS <code translate="No">POST</code> requests. The app can then parse the JSON notifications and do whatever you want based on their contents.</p>
 
 <p>As a simple example, here is a PHP app we use in Brightcove Learning Services to receive notifications and write them to a text file.</p>
 

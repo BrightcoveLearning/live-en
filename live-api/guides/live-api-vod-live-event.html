@@ -47,10 +47,10 @@ grandparent: Live API
 
 <h3>Send to <span class="notranslate">Video Cloud</span></h3>
 
-<p>Note that there are two ways that <code class="notranslate">videocloud</code> objects are used when you create a new live job:</p>
+<p>Note that there are two ways that <code translate="No">videocloud</code> objects are used when you create a new live job:</p>
 
 <ol class="bcls-tasklist-restart">
-	<li>Including <code class="notranslate">videocloud</code> in the <strong>job-level fields</strong> will create a video in the <span class="notranslate">Video Cloud</span> account which will take the live stream as a remote asset:
+	<li>Including <code translate="No">videocloud</code> in the <strong>job-level fields</strong> will create a video in the <span class="notranslate">Video Cloud</span> account which will take the live stream as a remote asset:
 
 	<pre class="line-numbers">
 <code class="language-json notranslate">{
@@ -64,10 +64,10 @@ grandparent: Live API
   		}
   	}</span>...</code></pre>
 
-	<p>In this case, there is no <code class="notranslate">ingest</code> object inside the <code class="notranslate">videocloud</code> object, because nothing will be ingested.</p>
+	<p>In this case, there is no <code translate="No">ingest</code> object inside the <code translate="No">videocloud</code> object, because nothing will be ingested.</p>
 	</li>
 	<li>
-	<p>Including the <code class="notranslate">videocloud</code> object in the properties of an <code class="notranslate">outputs</code> clip or full VOD object will create a <span class="notranslate">Video Cloud</span> video for the clip - the clip is ingested into <span class="notranslate">Video Cloud</span> and becomes part of the VOD library:</p>
+	<p>Including the <code translate="No">videocloud</code> object in the properties of an <code translate="No">outputs</code> clip or full VOD object will create a <span class="notranslate">Video Cloud</span> video for the clip - the clip is ingested into <span class="notranslate">Video Cloud</span> and becomes part of the VOD library:</p>
 
 	<pre class="line-numbers">
 <code class="language-json notranslate">{

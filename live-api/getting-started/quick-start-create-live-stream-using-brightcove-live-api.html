@@ -66,7 +66,7 @@ grandparent: Live API
 <p>First we will create the live job.</p>
 
 <ol class="bcls-tasklist-restart">
-	<li>For this step, you will submit a <code class="notranslate">POST </code> request to:
+	<li>For this step, you will submit a <code translate="No">POST </code> request to:
 
 	<pre class="line-numbers">
 <code class="language-http" translate="No">https://api.bcovlive.io/v1/jobs
@@ -227,7 +227,7 @@ grandparent: Live API
 		<li>playback_url (line 54)</li>
 	</ul>
 
-	<aside class="bcls-aside bcls-aside--information">Note that you can also use the <code class="notranslate">playback_url_dvr</code> if you want DVR capability; the <code class="notranslate">playback_url_vod</code> is for internal use only.</aside>
+	<aside class="bcls-aside bcls-aside--information">Note that you can also use the <code translate="No">playback_url_dvr</code> if you want DVR capability; the <code translate="No">playback_url_vod</code> is for internal use only.</aside>
 
 	<aside class="bcls-aside bcls-aside--information">Note that DVR capability will only work if the player supports it. See <a href="https://player.support.brightcove.com/plugins/live-dvrux-plugin.html">Live DVRUX Plugin</a> for the Brightcove Player plugin required.</aside>
 
@@ -252,13 +252,13 @@ grandparent: Live API
 
 <ol class="bcls-tasklist-restart">
 	<li>
-	<p>First, you will need to create a new video by making a <code class="notranslate">POST</code> request to:</p>
+	<p>First, you will need to create a new video by making a <code translate="No">POST</code> request to:</p>
 
 	<pre>
 <code class="language-http" translate="No">https://cms.api.brightcove.com/v1/accounts/<span class="bcls-input">account_id</span>/videos</code></pre>
 	</li>
 	<li>
-	<p>The request body can include several pieces of metadata (see <a href="https://docs.brightcove.com/cms-api/v1/doc/index.html#/Videos/CreateVideo">the API reference</a> for details), but the only thing required is a <code class="notranslate">name</code>:</p>
+	<p>The request body can include several pieces of metadata (see <a href="https://docs.brightcove.com/cms-api/v1/doc/index.html#/Videos/CreateVideo">the API reference</a> for details), but the only thing required is a <code translate="No">name</code>:</p>
 
 	<pre class="line-numbers">
 <code class="language-json notranslate">{
@@ -266,10 +266,10 @@ grandparent: Live API
 }</code></pre>
 	</li>
 	<li>
-	<p>The response will contain all the video metadata, but the important field is the <code class="notranslate">id</code>, which you will need to add the remote asset.</p>
+	<p>The response will contain all the video metadata, but the important field is the <code translate="No">id</code>, which you will need to add the remote asset.</p>
 	</li>
 	<li>
-	<p>To add the HLS stream, you will make another <code class="notranslate">POST</code> request to:</p>
+	<p>To add the HLS stream, you will make another <code translate="No">POST</code> request to:</p>
 
 	<pre>
 <code class="language-http" translate="No">https://cms.api.brightcove.com/v1/accounts/<span class="bcls-input">account_id</span>/videos/<span class="bcls-input">video_id</span>/assets/hls_manifest</code></pre>
@@ -372,7 +372,7 @@ curl -X "POST" "https://api.bcovlive.io/v1/jobs" \
 "live_stream": true
 }'</code></pre>
 
-<p>Copy this code into a text editor, and replace <code class="notranslate">YOUR_API_KEY_HERE </code> with your own api key. Then copy and paste the code at a command line and run it.</p>
+<p>Copy this code into a text editor, and replace <code translate="No">YOUR_API_KEY_HERE </code> with your own api key. Then copy and paste the code at a command line and run it.</p>
 </section>
 
 <section class="bcls-section">
@@ -388,12 +388,12 @@ curl -X "POST" "https://api.bcovlive.io/v1/jobs" \
 	<figcaption class="bcls-caption--image">Add Remote Video Menu Item</figcaption>
 	</figure>
 	</li>
-	<li>In the <strong>Add Remote Video</strong> dialog, add a video name and copy and paste the value for the <code class="notranslate">playback_url</code> from the Live API response into the URL field. Then click <strong>Add Rendition</strong>, and <strong>Save</strong>:
+	<li>In the <strong>Add Remote Video</strong> dialog, add a video name and copy and paste the value for the <code translate="No">playback_url</code> from the Live API response into the URL field. Then click <strong>Add Rendition</strong>, and <strong>Save</strong>:
 	<figure class="bcls-figure"><img class="bcls-image" alt="Add Rendition Dialog" src="/assets/images/get-started/remote-video-dialog.png" />
 	<figcaption class="bcls-caption--image">Add Rendition Dialog</figcaption>
 	</figure>
 
-	<aside class="bcls-aside bcls-aside--information">Note: if you want to stream over HTTPS for a secure stream, simply change <code class="notranslate">http</code> in the playback_url to <code class="notranslate">https</code>.</aside>
+	<aside class="bcls-aside bcls-aside--information">Note: if you want to stream over HTTPS for a secure stream, simply change <code translate="No">http</code> in the playback_url to <code translate="No">https</code>.</aside>
 	</li>
 </ol>
 </section>
@@ -439,8 +439,8 @@ curl -X "POST" "https://api.bcovlive.io/v1/jobs" \
 <p>You are now ready to create a live streaming session. You need to add the following to your encoder configuration:</p>
 
 <ul>
-	<li><code class="notranslate">stream_url</code>: add the <code class="notranslate">stream_url</code> from your job (the <code class="notranslate">rtmp</code> address)</li>
-	<li><code class="notranslate">stream_name</code>: the stream name must be <code class="notranslate">alive</code></li>
+	<li><code translate="No">stream_url</code>: add the <code translate="No">stream_url</code> from your job (the <code translate="No">rtmp</code> address)</li>
+	<li><code translate="No">stream_name</code>: the stream name must be <code translate="No">alive</code></li>
 </ul>
 
 <p>Once you start the live stream, you should see it show up in the Brightcove player you created in the earlier steps.</p>

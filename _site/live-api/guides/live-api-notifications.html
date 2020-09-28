@@ -548,9 +548,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <p>Below are the events of a job lifecycle you can listen for. Note that the event scope is per job, so the event lifecycle for a live job would be separate from the lifecycle for a VOD clipping job based on the same live stream.</p>
 
 <ul>
-	<li class="language-editable"><code translate="No">state_changed</code> - the state of the live job changed; see the table below for details</li>
-	<li class="language-editable"><code translate="No">first_segment_uploaded</code> - the first segment of the live stream is uploaded to origin</li>
-	<li class="language-editable"><code translate="No">output_finished</code> - the live event has ended, and VOD processing has created at least one audio and one video rendition, or one progressive MP4 rendition</li>
+	<li ><code translate="No">state_changed</code> - the state of the live job changed; see the table below for details</li>
+	<li ><code translate="No">first_segment_uploaded</code> - the first segment of the live stream is uploaded to origin</li>
+	<li ><code translate="No">output_finished</code> - the live event has ended, and VOD processing has created at least one audio and one video rendition, or one progressive MP4 rendition</li>
 </ul>
 
 <p>The <code translate="No">state_changed</code> will notify on the following states described in the table below</p>
@@ -1020,10 +1020,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <p>To set up notifications for a live event created in the Live Module, you will need to do the following:</p>
 
 <ol class="bcls-tasklist-restart">
-	<li class="language-editable">Create a handler application that can receive POST requests like the PHP app shown in the previous section.</li>
-	<li class="language-editable">Host the app on a public URL.</li>
-	<li class="language-editable">When you create your live job in the Live module, expand the <strong>Advanced Options</strong>.</li>
-	<li class="language-editable">Check the <strong>Enable stream status notifications option</strong> and enter the URL for your handler app:
+	<li >Create a handler application that can receive POST requests like the PHP app shown in the previous section.</li>
+	<li >Host the app on a public URL.</li>
+	<li >When you create your live job in the Live module, expand the <strong>Advanced Options</strong>.</li>
+	<li >Check the <strong>Enable stream status notifications option</strong> and enter the URL for your handler app:
 	<figure class="bcls-figure"><img class="bcls-image" alt="Enable Notications in Live Module" src="/assets/images/live-api/18448/enable-notifications.png" />
 	<figcaption class="bcls-caption--image">Enable Notications in Live Module</figcaption>
 	</figure>

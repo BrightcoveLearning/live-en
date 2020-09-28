@@ -475,24 +475,24 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <p>Multiple values can be specified for a single filter using the following format:</p>
 
 <pre>
-<code class="language-http notranslate">{filter}=[value1,value2]</code></pre>
+<code class="language-http" translate="No">{filter}=[value1,value2]</code></pre>
 
 <p>Filter values specified this way are treated as <code translate="No">OR</code> conditions -- a job is returned if it matches any of the values.</p>
 
 <p>A comparison operator may be included before a filter value, separated by a colon:</p>
 
 <pre>
-<code class="language-http notranslate">{filter}={op}:{value}</code></pre>
+<code class="language-http" translate="No">{filter}={op}:{value}</code></pre>
 
 <p>Operators are: <code translate="No">gt</code> (greater than), <code translate="No">ge</code> (greater than or equal), <code translate="No">lt</code> (less than), <code translate="No">le</code> (less than or equal). For example, to search for vod jobs created after Jan 1, 2018:</p>
 
 <pre>
-<code class="language-http notranslate">created_at=gt:1514764800000</code></pre>
+<code class="language-http" translate="No">created_at=gt:1514764800000</code></pre>
 
 <p>The filter type is inferred from the value. If a number or boolean needs to be treated as a string it can be enclosed in single quotes:</p>
 
 <pre>
-<code class="language-http notranslate">{filter}=’1234’</code></pre>
+<code class="language-http" translate="No">{filter}=’1234’</code></pre>
 
 <table class="bcls-table">
 	<caption class="bcls-caption--table">Search Filters</caption>

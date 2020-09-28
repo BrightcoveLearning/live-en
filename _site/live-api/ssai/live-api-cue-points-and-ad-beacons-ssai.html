@@ -483,7 +483,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <h4>Notes:</h4>
   
   <ul>
-    <li>Only <code>avail_in</code> type cue points are currently supported.</li>
+    <li>Only <code translate="No">avail_in</code> type cue points are currently supported.</li>
     <li>SCTE-35 cue points are supported for RTMP and <a href="/live-api/getting-started/overview-brightcove-live-api.html#input_protocol">TS</a> inputs.</li>
   </ul>
   
@@ -493,7 +493,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <section class="bcls-section">
   <h2 id="Manual_cue_point_insertion">Manual cue point insertion</h2>
   
-  <p>You can create immediate cue points using the <span class="notranslate">Live API</span> by sending a <code>POST</code> request:</p>
+  <p>You can create immediate cue points using the <span class="notranslate">Live API</span> by sending a <code translate="No">POST</code> request:</p>
   
   <table class="bcls-table">
     <tbody class="bcls-table__body">
@@ -524,23 +524,23 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </thead>
     <tbody class="bcls-table__body">
       <tr>
-        <td><code>duration</code></td>
+        <td><code translate="No">duration</code></td>
         <td>Integer</td>
         <td>Duration of the break in seconds.<br />
         <br />
         The duration of the cue point being inserted needs to be <strong>at least twice the length of the segments</strong> in the job. See the <a href="#Duration_example">duration example</a>.</td>
       </tr>
       <tr>
-        <td><code>timecode</code></td>
+        <td><code translate="No">timecode</code></td>
         <td>SMPTE format</td>
         <td><strong>OPTIONAL:</strong> A timecode in SMPTE format, <strong>HH:MM:SS:FF</strong> (FF = frames), to specify when a set of any variables (key/value pairs) should be passed to the adServer.<br />
         <br />
         If omitted, the cue point will be inserted immediately.<br />
         <br />
-        If you use the timecode property, the encoder must be sending SMPTE-formatted (<code>HH:MM:SS:FF</code>) timecode stored in the <code>tc</code> property via <code>OnFI</code>. Timecodes are from the start of the live stream.</td>
+        If you use the timecode property, the encoder must be sending SMPTE-formatted (<code translate="No">HH:MM:SS:FF</code>) timecode stored in the <code translate="No">tc</code> property via <code translate="No">OnFI</code>. Timecodes are from the start of the live stream.</td>
       </tr>
       <tr>
-        <td><code>ad_server_data</code></td>
+        <td><code translate="No">ad_server_data</code></td>
         <td>Object</td>
         <td><strong>OPTIONAL:</strong> The key/value pairs you pass will depend on the ad server you are using. For more details, see your ad server documentation and the <a href="/live-api/ssai/live-api-server-side-ad-insertion-ssai.html#Targeting_ads_using_ad_macros">Targeting ads using ad macros</a> section.</td>
       </tr>
@@ -551,7 +551,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   
   <p>The duration of the cue point being inserted needs to be <strong>at least twice the length of the segments</strong> in the job.</p>
   
-  <p>For example, inserting a <strong>10 second cue point</strong> in a job with <code>"segment_seconds"=4</code>, will work fine. However, inserting the same cue point in a job with <code>"segment_seconds"=6</code> will result in the following error:</p>
+  <p>For example, inserting a <strong>10 second cue point</strong> in a job with <code translate="No">"segment_seconds"=4</code>, will work fine. However, inserting the same cue point in a job with <code translate="No">"segment_seconds"=6</code> will result in the following error:</p>
   
   <pre>
   <code class="language-json notranslate">"error": "The parameter duration should be greater than
@@ -574,8 +574,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <h4>Notes</h4>
   
   <ol>
-    <li>Software encoders such as Wirecast and OBS do not support the sending timecode via <code>OnFI</code> packets in the RTMP stream</li>
-    <li>Elemental hardware encoders do support the sending timecode via <code>OnFI</code> packets in the RTMP stream</li>
+    <li>Software encoders such as Wirecast and OBS do not support the sending timecode via <code translate="No">OnFI</code> packets in the RTMP stream</li>
+    <li>Elemental hardware encoders do support the sending timecode via <code translate="No">OnFI</code> packets in the RTMP stream</li>
   </ol>
   
   <h3>Sample response</h3>
@@ -586,7 +586,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     "cue_point": {
       "id": "adBreak-2f58393ada1442d98eca0817fa565ba4",
       "duration": 30,
-      "accuracy": "segment", [Can be <code>segment</code> or <code>frame </code> ]
+      "accuracy": "segment", [Can be <code translate="No">segment</code> or <code translate="No">frame </code> ]
       "inserted_at": "2017-07-21T09:30:46.307Z" [ Time when the cue point was inserted in the stream]
     },
   }</code></pre>
@@ -609,43 +609,43 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </thead>
     <tbody class="bcls-table__body">
       <tr>
-        <td style="width:20%"><code>Load </code></td>
+        <td style="width:20%"><code translate="No">Load </code></td>
         <td style="text-align:left;width:60%;word-wrap:break-word">Fired once per session and only triggered when top level manifest is requested</td>
       </tr>
       <tr>
-        <td style="width:20%"><code>Play </code></td>
+        <td style="width:20%"><code translate="No">Play </code></td>
         <td style="text-align:left;width:60%;word-wrap:break-word">Content has been requested and the first segment returned</td>
       </tr>
       <tr>
-        <td style="width:20%"><code>Heartbeat </code></td>
+        <td style="width:20%"><code translate="No">Heartbeat </code></td>
         <td style="text-align:left;width:60%;word-wrap:break-word">Target duration (segment seconds)</td>
       </tr>
       <tr>
-        <td style="width:20%"><code>AdStart </code></td>
+        <td style="width:20%"><code translate="No">AdStart </code></td>
         <td style="text-align:left;width:60%;word-wrap:break-word">Individual ad started</td>
       </tr>
       <tr>
-        <td style="width:20%"><code>AdFirstQuartile </code></td>
+        <td style="width:20%"><code translate="No">AdFirstQuartile </code></td>
         <td style="text-align:left;width:60%;word-wrap:break-word">First ad quartile (25%)</td>
       </tr>
       <tr>
-        <td style="width:20%"><code>AdMidpoint </code></td>
+        <td style="width:20%"><code translate="No">AdMidpoint </code></td>
         <td style="text-align:left;width:60%;word-wrap:break-word">Second ad quartile (50%)</td>
       </tr>
       <tr>
-        <td style="width:20%"><code>AdThirdQuartile </code></td>
+        <td style="width:20%"><code translate="No">AdThirdQuartile </code></td>
         <td style="text-align:left;width:60%;word-wrap:break-word">Third ad quartile (75%)</td>
       </tr>
       <tr>
-        <td style="width:20%"><code>AdComplete </code></td>
+        <td style="width:20%"><code translate="No">AdComplete </code></td>
         <td style="text-align:left;width:60%;word-wrap:break-word">Individual ad completed</td>
       </tr>
       <tr>
-        <td style="width:20%"><code>AdBreakStart </code></td>
+        <td style="width:20%"><code translate="No">AdBreakStart </code></td>
         <td style="text-align:left;width:60%;word-wrap:break-word">Ad break has started</td>
       </tr>
       <tr>
-        <td style="width:20%"><code>AdBreakComplete </code></td>
+        <td style="width:20%"><code translate="No">AdBreakComplete </code></td>
         <td style="text-align:left;width:60%;word-wrap:break-word">ad break has ended</td>
       </tr>
     </tbody>
@@ -653,7 +653,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   
   <h3>Beacon/Ad variables</h3>
   
-  <p>The table below shows the variables you can use to provide data for the beacon URLs. To include a variable, surround with double curly braces, like this: <code><span class="bcls-highlight">{{</span>job.job_id<span class="bcls-highlight">}}</span> </code>. See the next section on managing beacon sets for full examples.</p>
+  <p>The table below shows the variables you can use to provide data for the beacon URLs. To include a variable, surround with double curly braces, like this: <code translate="No"><span class="bcls-highlight">{{</span>job.job_id<span class="bcls-highlight">}}</span> </code>. See the next section on managing beacon sets for full examples.</p>
   
   <table class="bcls-table">
     <caption class="bcls-caption--table">Ad Configuration Variables</caption>
@@ -667,135 +667,135 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </thead>
     <tbody class="bcls-table__body">
       <tr>
-        <td style="width:20%"><code>session.session_id </code></td>
+        <td style="width:20%"><code translate="No">session.session_id </code></td>
         <td style="text-align:left;width:60%;">
         <div style="word-wrap:break-word;">unique session id</div>
         </td>
       </tr>
       <tr>
-        <td style="width:20%"><code>job.job_id </code></td>
+        <td style="width:20%"><code translate="No">job.job_id </code></td>
         <td style="text-align:left;width:60%;">
         <div style="word-wrap:break-word;">unique job id</div>
         </td>
       </tr>
       <tr>
-        <td style="width:20%"><code>videocloud.video_id</code></td>
+        <td style="width:20%"><code translate="No">videocloud.video_id</code></td>
         <td style="text-align:left;width:60%;">
         <div style="word-wrap:break-word;">Only available for jobs created with a VideoCloud video.</div>
         </td>
       </tr>
       <tr>
-        <td style="width:20%"><code>application_ad_configuration.description </code></td>
+        <td style="width:20%"><code translate="No">application_ad_configuration.description </code></td>
         <td style="text-align:left;width:60%;">
         <div style="word-wrap:break-word;">value of the application at session creation</div>
         </td>
       </tr>
       <tr>
-        <td style="width:20%"><code>random.int32 </code></td>
+        <td style="width:20%"><code translate="No">random.int32 </code></td>
         <td style="text-align:left;width:60%;">
         <div style="word-wrap:break-word;">random 32-bit signed integer</div>
         </td>
       </tr>
       <tr>
-        <td style="width:20%"><code>random.int64 </code></td>
+        <td style="width:20%"><code translate="No">random.int64 </code></td>
         <td style="text-align:left;width:60%;">
         <div style="word-wrap:break-word;">random 64-bit signed integer</div>
         </td>
       </tr>
       <tr>
-        <td style="width:20%"><code>random.uint32 </code></td>
+        <td style="width:20%"><code translate="No">random.uint32 </code></td>
         <td style="text-align:left;width:60%;">
         <div style="word-wrap:break-word;">random 32-bit unsigned integer</div>
         </td>
       </tr>
       <tr>
-        <td style="width:20%"><code>random.uint64 </code></td>
+        <td style="width:20%"><code translate="No">random.uint64 </code></td>
         <td style="text-align:left;width:60%;">
         <div style="word-wrap:break-word;">random 64-bit unsigned integer</div>
         </td>
       </tr>
       <tr>
-        <td style="width:20%"><code>random.uuid </code></td>
+        <td style="width:20%"><code translate="No">random.uuid </code></td>
         <td style="text-align:left;width:60%;">
         <div style="word-wrap:break-word;">random uuid</div>
         </td>
       </tr>
       <tr>
-        <td style="width:20%"><code>server.timestamputc </code></td>
+        <td style="width:20%"><code translate="No">server.timestamputc </code></td>
         <td style="text-align:left;width:60%;">
         <div style="word-wrap:break-word;">epoch time in milliseconds when the call from the ads-api has been made</div>
         </td>
       </tr>
       <tr>
-        <td style="width:20%"><code>client.useragent </code></td>
+        <td style="width:20%"><code translate="No">client.useragent </code></td>
         <td style="text-align:left;width:60%;">
         <div style="word-wrap:break-word;">http user-agent header value at session creation</div>
         </td>
       </tr>
       <tr>
-        <td style="width:20%"><code>client.ipaddress </code></td>
+        <td style="width:20%"><code translate="No">client.ipaddress </code></td>
         <td style="text-align:left;width:60%;">
         <div style="word-wrap:break-word;">http x-forwarded-for header value at session creation, if provided, otherwise the remote address</div>
         </td>
       </tr>
       <tr>
-        <td style="width:20%"><code>client.referrer </code></td>
+        <td style="width:20%"><code translate="No">client.referrer </code></td>
         <td style="text-align:left;width:60%;">
         <div style="word-wrap:break-word;">http referer header value at session creation (note: that is the correct spelling)</div>
         </td>
       </tr>
       <tr>
-        <td style="width:20%"><code>client.referer </code></td>
+        <td style="width:20%"><code translate="No">client.referer </code></td>
         <td style="text-align:left;width:60%;">
         <div style="word-wrap:break-word;">http referer header value at session creation (http spelling)</div>
         </td>
       </tr>
       <tr>
-        <td style="width:20%"><code>client.ipuaid </code></td>
+        <td style="width:20%"><code translate="No">client.ipuaid </code></td>
         <td style="text-align:left;width:60%;">
         <div style="word-wrap:break-word;">hash value of client.ipaddress and client.useragent</div>
         </td>
       </tr>
       <tr>
-        <td style="width:20%"><code>live.adbreak </code></td>
+        <td style="width:20%"><code translate="No">live.adbreak </code></td>
         <td style="text-align:left;width:60%;">
         <div style="word-wrap:break-word;">(currently unused)</div>
         </td>
       </tr>
       <tr>
-        <td style="width:20%"><code>live.adbreakdurationms</code></td>
+        <td style="width:20%"><code translate="No">live.adbreakdurationms</code></td>
         <td style="text-align:left;width:60%;">
         <div style="word-wrap:break-word;">Ad break duration in milliseconds</div>
         </td>
       </tr>
       <tr>
-        <td style="width:20%"><code>live.adbreakduration </code></td>
+        <td style="width:20%"><code translate="No">live.adbreakduration </code></td>
         <td style="text-align:left;width:60%;">
         <div style="word-wrap:break-word;">Ad break duration in double-precision floating-point seconds</div>
         </td>
       </tr>
       <tr>
-        <td style="width:20%"><code>live.adbreakdurationint </code></td>
+        <td style="width:20%"><code translate="No">live.adbreakdurationint </code></td>
         <td style="text-align:left;width:60%;">
         <div style="word-wrap:break-word;">Ad break duration in integer seconds</div>
         </td>
       </tr>
       <tr>
-        <td style="width:20%"><code>live.adbreak.timestamputc.wallclock </code></td>
+        <td style="width:20%"><code translate="No">live.adbreak.timestamputc.wallclock </code></td>
         <td style="text-align:left;width:60%;">
         <div style="word-wrap:break-word;">epoch time in milliseconds when the call to the ads server has been made</div>
         </td>
       </tr>
       <tr>
-        <td style="width:20%"><code>live.adbreak.timestamputc.origin </code></td>
+        <td style="width:20%"><code translate="No">live.adbreak.timestamputc.origin </code></td>
         <td style="text-align:left;width:60%;">
         <div style="word-wrap:break-word;">epoch time in milliseconds from the origin chunklist. This value indicates the time when the cue out chunk has been created in the origin chunklist.</div>
         </td>
       </tr>
       <tr>
-        <td style="width:20%"><code>live.adbreak.timestamputc.session </code></td>
+        <td style="width:20%"><code translate="No">live.adbreak.timestamputc.session </code></td>
         <td style="text-align:left;width:60%;">
-        <div style="word-wrap:break-word;">epoch time in milliseconds from the ssai chunklist. This value indicates the time of the cue out chunk in the ssai chunklist. Since the adbreak content and the adbreak gap are NOT usually the same, after the 1st adbreak the <code>live.adbreak.timestamputc.origin </code> is different from <code>live.adbreak.timestamputc.session </code>. This value takes into account the time adjustments that have been made in the <span class="”notranslate”">SSAI</span> chunklist.</div>
+        <div style="word-wrap:break-word;">epoch time in milliseconds from the ssai chunklist. This value indicates the time of the cue out chunk in the ssai chunklist. Since the adbreak content and the adbreak gap are NOT usually the same, after the 1st adbreak the <code translate="No">live.adbreak.timestamputc.origin </code> is different from <code translate="No">live.adbreak.timestamputc.session </code>. This value takes into account the time adjustments that have been made in the <span class="”notranslate”">SSAI</span> chunklist.</div>
         </td>
       </tr>
     </tbody>
@@ -821,31 +821,31 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </thead>
     <tbody class="bcls-table__body">
       <tr>
-        <td style="width:20%"><code>scte35_eventID</code></td>
+        <td style="width:20%"><code translate="No">scte35_eventID</code></td>
         <td style="text-align:left;width:60%;">
         <div style="word-wrap:break-word;">an unique event id passed with an SCTE35 message.</div>
         </td>
       </tr>
       <tr>
-        <td style="width:20%"><code>scte35_programID</code></td>
+        <td style="width:20%"><code translate="No">scte35_programID</code></td>
         <td style="text-align:left;width:60%;">
         <div style="word-wrap:break-word;">A unique program id passed with an SCTE35 message.</div>
         </td>
       </tr>
       <tr>
-        <td style="width:20%"><code>scte35_availNum</code></td>
+        <td style="width:20%"><code translate="No">scte35_availNum</code></td>
         <td style="text-align:left;width:60%;">
         <div style="word-wrap:break-word;">An id for a specific splice time available for ads, send via a SCTE35 message.</div>
         </td>
       </tr>
       <tr>
-        <td style="width:20%"><code>scte35_breakDuration</code></td>
+        <td style="width:20%"><code translate="No">scte35_breakDuration</code></td>
         <td style="text-align:left;width:60%;">
         <div style="word-wrap:break-word;">Break duration for the ad break, in terms of ticks of the program’s 90 kHz clock, passed with a SCTE35 message.</div>
         </td>
       </tr>
       <tr>
-        <td style="width:20%"><code>scte35_spliceTime</code></td>
+        <td style="width:20%"><code translate="No">scte35_spliceTime</code></td>
         <td style="text-align:left;width:60%;">
         <div style="word-wrap:break-word;">Splice time for an ad break, in terms of ticks of the program’s 90 kHz clock, passed with a SCTE35 message.</div>
         </td>
@@ -871,7 +871,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   
   <h3>Create a beacon set</h3>
   
-  <p>To create a beacon set, send a <code>POST</code> request:</p>
+  <p>To create a beacon set, send a <code translate="No">POST</code> request:</p>
   
   <table class="bcls-table">
     <tbody class="bcls-table__body">
@@ -907,7 +907,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     ]
   }</code></pre>
   
-  <aside class="bcls-aside bcls-aside--information">The <code>account_id </code> field is the Live Account ID. When omitted, the Account ID of the requesting user is used.</aside>
+  <aside class="bcls-aside bcls-aside--information">The <code translate="No">account_id </code> field is the Live Account ID. When omitted, the Account ID of the requesting user is used.</aside>
   
   <h4>Sample response</h4>
   
@@ -930,7 +930,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   
   <h3>Update a beacon set</h3>
   
-  <p>Updating a beacon set is similar to creating one. Submit a <code>PUT</code> request:</p>
+  <p>Updating a beacon set is similar to creating one. Submit a <code translate="No">PUT</code> request:</p>
   
   <table class="bcls-table">
     <tbody class="bcls-table__body">
@@ -966,7 +966,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     ]
   }</code></pre>
   
-  <aside class="bcls-aside bcls-aside--information">The <code>account_id </code> field is the Live Account ID. When omitted, the Account ID of the requesting user is used.</aside>
+  <aside class="bcls-aside bcls-aside--information">The <code translate="No">account_id </code> field is the Live Account ID. When omitted, the Account ID of the requesting user is used.</aside>
   
   <h4>Sample response</h4>
   
@@ -1000,7 +1000,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   
   <h3>Get beacon sets</h3>
   
-  <p>To retrieve the beacon sets for an account, submit a <code>GET</code> request:</p>
+  <p>To retrieve the beacon sets for an account, submit a <code translate="No">GET</code> request:</p>
   
   <table class="bcls-table">
     <tbody class="bcls-table__body">
@@ -1092,7 +1092,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   
   <h3>Get a beacon set by id</h3>
   
-  <p>To retrieve a single beacon set by its id, submit a <code>GET</code> request:</p>
+  <p>To retrieve a single beacon set by its id, submit a <code translate="No">GET</code> request:</p>
   
   <table class="bcls-table">
     <tbody class="bcls-table__body">
@@ -1129,7 +1129,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   
   <h3>Delete a beacon set</h3>
   
-  <p>Finally, to delete a beacon set, send a <code>DELETE</code> request:</p>
+  <p>Finally, to delete a beacon set, send a <code translate="No">DELETE</code> request:</p>
   
   <table class="bcls-table">
     <tbody class="bcls-table__body">

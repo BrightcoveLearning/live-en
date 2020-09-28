@@ -62,7 +62,7 @@ grandparent: Live API
 <section class="bcls-section">
 <h2 id="Create_an_ad_configuration">Create an ad configuration</h2>
 
-<p>To create a new ad configuration, send a <code>POST</code> request as follows:</p>
+<p>To create a new ad configuration, send a <code translate="No">POST</code> request as follows:</p>
 
 <table class="bcls-table">
 	<tbody class="bcls-table__body">
@@ -104,7 +104,7 @@ grandparent: Live API
       "application_description": "Human readable description of the ad application",
       "account_id": "<span class="bcls-input">User's Account ID [Optional]</span>"
     }</code></pre>
-<aside class="bcls-aside bcls-aside--information">The <code>account_id </code> field is the Live Account ID. When omitted, the Account ID of the requesting user is used.</aside>
+<aside class="bcls-aside bcls-aside--information">The <code translate="No">account_id </code> field is the Live Account ID. When omitted, the Account ID of the requesting user is used.</aside>
 
 <h3>Sample response</h3>
 
@@ -139,7 +139,7 @@ grandparent: Live API
 <section class="bcls-section">
 <h2 id="Update_an_ad_configuration">Update an ad configuration</h2>
 
-<p>Updating an ad configuration is very similar to creating one. Make a <code>PUT</code> request as follows:</p>
+<p>Updating an ad configuration is very similar to creating one. Make a <code translate="No">PUT</code> request as follows:</p>
 
 <table class="bcls-table">
 	<tbody class="bcls-table__body">
@@ -183,7 +183,7 @@ grandparent: Live API
       "account_id": "<span class="bcls-input">User's Account ID [Optional]</span>"
     }</code></pre>
 
-<aside class="bcls-aside bcls-aside--information">The <code>account_id </code> field is the Live Account ID. When omitted, the Account ID of the requesting user is used.</aside>
+<aside class="bcls-aside bcls-aside--information">The <code translate="No">account_id </code> field is the Live Account ID. When omitted, the Account ID of the requesting user is used.</aside>
 
 <h3>Sample response</h3>
 
@@ -215,7 +215,7 @@ grandparent: Live API
 <section class="bcls-section">
 <h2 id="Get_all_ad_configurations">Get all ad configurations</h2>
 
-<p>To retrieve all the ad configurations for an account, submit a <code>GET </code> request as follows:</p>
+<p>To retrieve all the ad configurations for an account, submit a <code translate="No">GET </code> request as follows:</p>
 
 <table class="bcls-table">
 	<tbody class="bcls-table__body">
@@ -234,7 +234,7 @@ grandparent: Live API
 	</tbody>
 </table>
 
-<aside class="bcls-aside bcls-aside--information">The <code>Account_ID</code> here is the Live Account ID.</aside>
+<aside class="bcls-aside bcls-aside--information">The <code translate="No">Account_ID</code> here is the Live Account ID.</aside>
 
 <h3>Sample response</h3>
 
@@ -275,7 +275,7 @@ grandparent: Live API
 <section class="bcls-section">
 <h2 id="Get_an_ad_configuration">Get an ad configuration</h2>
 
-<p>You can also retrieve a specific ad configuration by its <code>application_id </code> by sending a <code>GET</code> request as follows:</p>
+<p>You can also retrieve a specific ad configuration by its <code translate="No">application_id </code> by sending a <code translate="No">GET</code> request as follows:</p>
 
 <table class="bcls-table">
 	<tbody class="bcls-table__body">
@@ -319,7 +319,7 @@ grandparent: Live API
 <section class="bcls-section">
 <h2 id="Delete_an_ad_configuration">Delete an ad configuration</h2>
 
-<p>To delete an ad configuration, send a <code>DELETE</code> request as follows:</p>
+<p>To delete an ad configuration, send a <code translate="No">DELETE</code> request as follows:</p>
 
 <table class="bcls-table">
 	<tbody class="bcls-table__body">
@@ -356,7 +356,7 @@ grandparent: Live API
 
 <h3>Add slate asset</h3>
 
-<p>To ingest a new slate media source asset, submit a <code>POST</code> request:</p>
+<p>To ingest a new slate media source asset, submit a <code translate="No">POST</code> request:</p>
 
 <table class="bcls-table">
 	<tbody class="bcls-table__body">
@@ -386,7 +386,7 @@ grandparent: Live API
     </code>
     </pre>
 
-<aside class="bcls-aside bcls-aside--information">The <code>account_id </code> here is the Live Account ID. When omitted, Account ID of the requesting user is used.</aside>
+<aside class="bcls-aside bcls-aside--information">The <code translate="No">account_id </code> here is the Live Account ID. When omitted, Account ID of the requesting user is used.</aside>
 
 <h4>Sample response</h4>
 
@@ -401,11 +401,11 @@ grandparent: Live API
       "media_source_asset_description": "User identifiable description for the slate"
     }</code></pre>
 
-<aside class="bcls-aside bcls-aside--information">Note: that setting <code>media_source_asset_default</code> is <strong>not</strong> supported at this time.</aside>
+<aside class="bcls-aside bcls-aside--information">Note: that setting <code translate="No">media_source_asset_default</code> is <strong>not</strong> supported at this time.</aside>
 
 <h3>Delete slate asset</h3>
 
-<p>To delete a slate media source asset, send a <code>DELETE</code> request:</p>
+<p>To delete a slate media source asset, send a <code translate="No">DELETE</code> request:</p>
 
 <table class="bcls-table">
 	<tbody class="bcls-table__body">
@@ -438,7 +438,7 @@ grandparent: Live API
 
 <h3>Get slate assets</h3>
 
-<p>You can retrieve an array of all the slate media source assets for an account by sending a <code>GET</code> request:</p>
+<p>You can retrieve an array of all the slate media source assets for an account by sending a <code translate="No">GET</code> request:</p>
 
 <table class="bcls-table">
 	<tbody class="bcls-table__body">
@@ -457,7 +457,7 @@ grandparent: Live API
 	</tbody>
 </table>
 
-<aside class="bcls-aside bcls-aside--information">The <code>Account_ID </code> here is the Live Account ID.</aside>
+<aside class="bcls-aside bcls-aside--information">The <code translate="No">Account_ID </code> here is the Live Account ID.</aside>
 
 <h4>Sample response</h4>
 
@@ -489,7 +489,7 @@ grandparent: Live API
 
 <h3>Ad tag</h3>
 
-<p>When you are creating an ad tag for Live, be sure you are following the proper guidelines and including <code>/live </code>. See the DFP document <a href="https://support.google.com/dfp_premium/answer/1068325?hl=en">Create a master video tag manually</a> for full details.</p>
+<p>When you are creating an ad tag for Live, be sure you are following the proper guidelines and including <code translate="No">/live </code>. See the DFP document <a href="https://support.google.com/dfp_premium/answer/1068325?hl=en">Create a master video tag manually</a> for full details.</p>
 
 <h3>Concurrency</h3>
 
@@ -497,7 +497,7 @@ grandparent: Live API
 
 <h3>Single/multiple ad responses</h3>
 
-<p>The <code>singleadresponse </code> and <code>multiadresponse </code> parameters are not currently used by <span class="”notranslate”">SSAI</span>.</p>
+<p>The <code translate="No">singleadresponse </code> and <code translate="No">multiadresponse </code> parameters are not currently used by <span class="”notranslate”">SSAI</span>.</p>
 
 <p>Live <span class="”notranslate”">SSAI</span> only makes a single ad server call and expects the response to contain all the ads for the break with the exception that it will follow any necessary ad wrappers with a limit of 5 redirects per ad. The following ad response formats are accepted and will be parsed as follows:</p>
 
@@ -513,15 +513,15 @@ grandparent: Live API
 
 <p>The <span class="”notranslate”">SSAI</span> platform can pass custom headers with the Ad calls and all beacons used by the backend platform. Some ad servers such as VideoPlaza require custom headers.</p>
 
-<p>Custom headers are specified as a set of key-value pairs in an <code>ad_configuration_headers</code> object, which is part of the <code>application_ad_configuration </code> (see the <a href="#Create_an_ad_configuration">Create an ad configuration</a> section).</p>
+<p>Custom headers are specified as a set of key-value pairs in an <code translate="No">ad_configuration_headers</code> object, which is part of the <code translate="No">application_ad_configuration </code> (see the <a href="#Create_an_ad_configuration">Create an ad configuration</a> section).</p>
 
 <h3>Notes</h3>
 
 <ul>
 	<li>Standard headers are handled by default such as:
 	<ul>
-		<li><code>X-Forwarded-For </code></li>
-		<li><code>X-Device-User-Agent </code></li>
+		<li><code translate="No">X-Forwarded-For </code></li>
+		<li><code translate="No">X-Device-User-Agent </code></li>
 	</ul>
 	</li>
 	<li>Header values can use the <a href="#Ad_configuration_variables">ad configuration variables</a></li>

@@ -450,7 +450,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <section class="bcls-section">
 <h2 id="Insert_ID3_timed_metadata">Overview</h2>
 
-<p>ID3 timed metadata is used to send data with a live stream at a specific point in time. To insert ID3 timed metadata for an ongoing job, make a <code>POST </code> request to:</p>
+<p>ID3 timed metadata is used to send data with a live stream at a specific point in time. To insert ID3 timed metadata for an ongoing job, make a <code translate="No">POST </code> request to:</p>
 
 <pre class="line-numbers">
 <code class="language-http notranslate">https://api.bcovlive.io/v1/jobs/<span class="bcls-input">JOB_ID</span>/id3tag
@@ -469,14 +469,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <aside class="bcls-aside bcls-aside--warning">Note:
 <ul>
-  <li>Only <code>id3_tag</code> object may be submitted in a request</li>
-	<li>If you use the <code>timecode </code> property, the job only stores the most recent request for insertion</li>
-	<li>If you use the <code>timecode </code> property, the encoder must be sending SMPTE-formatted (HH:MM:SS:FF) timecode stored in the tc property via OnFI</li>
+  <li>Only <code translate="No">id3_tag</code> object may be submitted in a request</li>
+	<li>If you use the <code translate="No">timecode </code> property, the job only stores the most recent request for insertion</li>
+	<li>If you use the <code translate="No">timecode </code> property, the encoder must be sending SMPTE-formatted (HH:MM:SS:FF) timecode stored in the tc property via OnFI</li>
 	<li>Software encoders such as Wirecast and OBS <strong>do not</strong> support the sending timecode via OnFI packets in the RTMP stream</li>
 	<li>Elemental hardware encoders <strong>do</strong> support the sending timecode via OnFI packets in the RTMP stream</li>
-	<li>ID3v2 states tag <code>name</code> can be up to 4 characters .</li>
-	<li><code>value</code> can be up to 256KB.</li>
-	<li><code>Timecode</code> is optional - when omitted, insertion will be immediate.</li>
+	<li>ID3v2 states tag <code translate="No">name</code> can be up to 4 characters .</li>
+	<li><code translate="No">value</code> can be up to 256KB.</li>
+	<li><code translate="No">Timecode</code> is optional - when omitted, insertion will be immediate.</li>
 </ul>
 </aside>
 

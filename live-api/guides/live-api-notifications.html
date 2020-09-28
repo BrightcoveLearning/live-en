@@ -66,7 +66,7 @@ grandparent: Live API
     }]
 }</code></pre>
 
-<h3>Notifications for Live to VOD (<code>output_finished</code> event only)</h3>
+<h3>Notifications for Live to VOD (<code translate="No">output_finished</code> event only)</h3>
 
 <pre class="line-numbers">
 <code class="language-json">{
@@ -272,7 +272,7 @@ grandparent: Live API
 			<td>The entry point has completed successfully.</td>
 		</tr>
 		<tr>
-			<td colspan="2" style="background-color:RGB(172, 202, 204);text-align: center;font-weight:bold;">RTMP Output States (reported for <code>rtmp_output_state_changed</code> notifications as <code class="notranslate">state</code>)</td>
+			<td colspan="2" style="background-color:RGB(172, 202, 204);text-align: center;font-weight:bold;">RTMP Output States (reported for <code translate="No">rtmp_output_state_changed</code> notifications as <code class="notranslate">state</code>)</td>
 		</tr>
 		<tr>
 			<td><code class="notranslate">starting</code></td>
@@ -573,7 +573,7 @@ grandparent: Live API
 <h3>Notes</h3>
 
 <ul>
-	<li>In certain cases, identical notifications will be sent more than once. If your handler is taking actions (apart from simple logging) based on notifications, you should configure it to check for duplicates (multiple notifications with the same <code>id</code> and <code>status</code>) and ignore them.</li>
+	<li>In certain cases, identical notifications will be sent more than once. If your handler is taking actions (apart from simple logging) based on notifications, you should configure it to check for duplicates (multiple notifications with the same <code translate="No">id</code> and <code translate="No">status</code>) and ignore them.</li>
 </ul>
 </section>
 

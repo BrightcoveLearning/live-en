@@ -461,7 +461,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <ul>
 	<li>When the live streaming event is complete, stop your encoder, but <strong>do not <a href="https://docs.brightcove.com/live-api/v1/doc/index.html#api-Live_Jobs-Cancel_Live_Job">cancel</a> the job</strong>. Wait until the VOD clip has been created before cancelling the job, or it will not be created successfully.</li>
-	<li>Creation of the VOD will not begin until the <code>reconnect_time</code> for the live job has expired.</li>
+	<li>Creation of the VOD will not begin until the <code translate="No">reconnect_time</code> for the live job has expired.</li>
 	<li>If the live event duration is greater than 24 hours, only the final 24 hours will be captured in the VOD.</li>
 </ul>
 
@@ -470,11 +470,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <p>The fast VOD option allows you to get the VOD version of the live event more quickly. Fast Live to VOD will publish (using a transmux) of live renditions which will be <strong>segment accurate</strong>.</p>
 
-<p>The the <code>output</code> fields for fast VOD are:</p>
+<p>The the <code translate="No">output</code> fields for fast VOD are:</p>
 
 <ul>
-	<li><code>mode</code> (required for fast VOD) - for fast VOD, the value will be <code>instant</code></li>
-	<li><code>playlist_label</code> (optional) - Only applicable for instant mode VODs. Indicates which playlist to use to create a VOD output (from the live job). Only necessary if custom playlists were defined at live job creation.</li>
+	<li><code translate="No">mode</code> (required for fast VOD) - for fast VOD, the value will be <code translate="No">instant</code></li>
+	<li><code translate="No">playlist_label</code> (optional) - Only applicable for instant mode VODs. Indicates which playlist to use to create a VOD output (from the live job). Only necessary if custom playlists were defined at live job creation.</li>
 </ul>
 </section>
 </section>
@@ -572,9 +572,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <p>Note that for the video metadata, you can include any fields listed for the <a href="https://docs.brightcove.com/cms-api/v1/doc/index.html#api-videoGroup-Create_Video">Create Video</a> operation of the CMS API.</p>
 
-<p>Ingest profiles define the renditions that will be created for the VOD. For <code>valid-ingest-profile-name</code>, you can substitute the name of any custom or standard ingest profile for your account. What standard profiles you have depends on whether or not your account is enabled for Dynamic Delivery. See the <a href="https://apis.support.brightcove.com/ingest-profiles/references/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">Standard Ingest Profiles for Dynamic Delivery and Context Aware Encoding</a> or the <a href="https://apis.support.brightcove.com/ingest-profiles-legacy/references/standard-ingest-profiles-legacy-transcoding.html">Standard Ingest Profiles for Legacy Transcoding</a>.</p>
+<p>Ingest profiles define the renditions that will be created for the VOD. For <code translate="No">valid-ingest-profile-name</code>, you can substitute the name of any custom or standard ingest profile for your account. What standard profiles you have depends on whether or not your account is enabled for Dynamic Delivery. See the <a href="https://apis.support.brightcove.com/ingest-profiles/references/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">Standard Ingest Profiles for Dynamic Delivery and Context Aware Encoding</a> or the <a href="https://apis.support.brightcove.com/ingest-profiles-legacy/references/standard-ingest-profiles-legacy-transcoding.html">Standard Ingest Profiles for Legacy Transcoding</a>.</p>
 
-<aside class="bcls-aside bcls-aside--information">Note that the <code>profile</code> field is optional. If you do not specify a profile, the default profile for the account will be used.</aside>
+<aside class="bcls-aside bcls-aside--information">Note that the <code translate="No">profile</code> field is optional. If you do not specify a profile, the default profile for the account will be used.</aside>
 
 <h3>Send to S3</h3>
 

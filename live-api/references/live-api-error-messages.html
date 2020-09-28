@@ -23,8 +23,8 @@ grandparent: Live API
   </thead>
   <tbody class="bcls-table__body">
     <tr>
-      <td><code>400 BAD_REQUEST</code></td>
-      <td>The <code>region </code> specified in the request does not exist or is not supported</td>
+      <td><code translate="No">400 BAD_REQUEST</code></td>
+      <td>The <code translate="No">region </code> specified in the request does not exist or is not supported</td>
       <td>Create live job</td>
       <td>
       <pre class="line-numbers">
@@ -36,7 +36,7 @@ grandparent: Live API
       </td>
     </tr>
     <tr>
-      <td><code>400 BAD_REQUEST</code></td>
+      <td><code translate="No">400 BAD_REQUEST</code></td>
       <td>The duration of the cue point being inserted needs to be, at least, twice the length of the segments in the job</td>
       <td>Insert cuepoint</td>
       <td>
@@ -49,7 +49,7 @@ grandparent: Live API
       </td>
     </tr>
     <tr>
-      <td><code>400 BAD_REQUEST</code></td>
+      <td><code translate="No">400 BAD_REQUEST</code></td>
       <td>The JSON included an invalid value for some field</td>
       <td>Create live job, create VOD clip, create/update ad configuration, create/update beacon set, ingest slate, create beacon set</td>
       <td>
@@ -62,7 +62,7 @@ grandparent: Live API
       </td>
     </tr>
     <tr>
-      <td><code>400 BAD_REQUEST</code></td>
+      <td><code translate="No">400 BAD_REQUEST</code></td>
       <td>The notification url was missing the protocol or the protocol is not a supported type</td>
       <td>Create live job, create VOD clip, create/update ad configuration, create/update beacon set, ingest slate, create beacon set</td>
       <td>
@@ -75,8 +75,8 @@ grandparent: Live API
       </td>
     </tr>
     <tr>
-      <td><code>400 BAD_REQUEST</code></td>
-      <td>The number of SEP jobs allowed is limited. You will also receive this error if you include <code>"channel_type": "24x7"</code> in the create job request, and have purchased only SEPs, not events.</td>
+      <td><code translate="No">400 BAD_REQUEST</code></td>
+      <td>The number of SEP jobs allowed is limited. You will also receive this error if you include <code translate="No">"channel_type": "24x7"</code> in the create job request, and have purchased only SEPs, not events.</td>
       <td>Create live job</td>
       <td>
       <pre class="line-numbers">
@@ -88,7 +88,7 @@ grandparent: Live API
       </td>
     </tr>
     <tr>
-      <td><code>400 BAD_REQUEST</code></td>
+      <td><code translate="No">400 BAD_REQUEST</code></td>
       <td>Only 5 jobs in a waiting state (waiting for an encoder to be connected) are allowed. To create additional jobs, you will need to connect an encoder to one of the waiting jobs or cancel it</td>
       <td>Create live job</td>
       <td>
@@ -101,7 +101,7 @@ grandparent: Live API
       </td>
     </tr>
     <tr>
-      <td><code>400 BAD_REQUEST</code></td>
+      <td><code translate="No">400 BAD_REQUEST</code></td>
       <td>To create VOD assets you need to use our own delivery</td>
       <td>The most likely cause is that you are requesting a full VOD asset or a clip on an encrypted stream. VOD assets for encrypted streams are not supported</td>
       <td>
@@ -114,8 +114,8 @@ grandparent: Live API
       </td>
     </tr>
     <tr>
-      <td><code>401 UNAUTHORIZED</code></td>
-      <td>The <code>X-API-KEY </code> header was not sent with the request, or the key value was not valid</td>
+      <td><code translate="No">401 UNAUTHORIZED</code></td>
+      <td>The <code translate="No">X-API-KEY </code> header was not sent with the request, or the key value was not valid</td>
       <td>All requests</td>
       <td>
       <pre class="line-numbers">
@@ -127,7 +127,7 @@ grandparent: Live API
       </td>
     </tr>
     <tr>
-      <td><code>404 RESOURCE_NOT_FOUND</code></td>
+      <td><code translate="No">404 RESOURCE_NOT_FOUND</code></td>
       <td>The request URL was faulty</td>
       <td>All requests</td>
       <td>
@@ -140,7 +140,7 @@ grandparent: Live API
       </td>
     </tr>
     <tr>
-      <td><code>500 INTERNAL_SERVER_ERROR</code></td>
+      <td><code translate="No">500 INTERNAL_SERVER_ERROR</code></td>
       <td>You attempted to stop a live job that has already been stopped</td>
       <td>Cancel live job</td>
       <td>
@@ -153,7 +153,7 @@ grandparent: Live API
       </td>
     </tr>
     <tr>
-      <td><code>500 INTERNAL_SERVER_ERROR</code></td>
+      <td><code translate="No">500 INTERNAL_SERVER_ERROR</code></td>
       <td>You specified a job or asset id that does not exist</td>
       <td>Get job details, cancel live job, activate SEP job, insert cuepoint, insert ID3 timed metadata, create VOD clip</td>
       <td>

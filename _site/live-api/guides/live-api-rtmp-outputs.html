@@ -457,25 +457,25 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 	<li>You must have purchased <strong>event hours</strong>, or any Digital Marketing package</li>
 	<li>RTMP output hours will be billed against event hours</li>
 	<li>They are limited to 5 outputs per live job</li>
-	<li>You can define a <code>label</code> where the label can choose one of the output renditions selected for the stream. If the <code>label</code> is not set then the output will default to the input source.</li>
+	<li>You can define a <code translate="No">label</code> where the label can choose one of the output renditions selected for the stream. If the <code translate="No">label</code> is not set then the output will default to the input source.</li>
 	<li>They can be used with standard jobs and recurring events (SEP).</li>
 	<li>They can be used for events or 24/7 streams.</li>
 	<li>They can be started and stopped independently from any live stream.</li>
 	<li>For SEP jobs that were created before the RTMP output feature was implemented, the feature will not work entirely: on the API it will show a failure even though the RTMP output is actually created. For best results, create a new SEP job to use the RTMP output feature.</li>
 	<li>When using a RTMP output with a standard job (non-SEP) the RTMP output stream will end when the job ends.</li>
-  <li>RTMP Outputs <strong>do</strong> support <code>rtmps</code> urls, and we recommend using them if the social media platform supports them. Also note that as of 1 May 2019, Facebook will only allow RTMPS.</li>
-  <li>The <strong>only format current supported for RTMP URLs</strong> is <code>rtmps://host:port/application/streamName</code>.</li>
+  <li>RTMP Outputs <strong>do</strong> support <code translate="No">rtmps</code> urls, and we recommend using them if the social media platform supports them. Also note that as of 1 May 2019, Facebook will only allow RTMPS.</li>
+  <li>The <strong>only format current supported for RTMP URLs</strong> is <code translate="No">rtmps://host:port/application/streamName</code>.</li>
 </ul>
 </section>
 
 <section class="bcls-section">
 <h2 id="notifications">Notifications</h2>
 
-<p>You can set up notifications for <code>rtmp_output_state_changed</code> events. Notifications will be sent for the following states:</p>
+<p>You can set up notifications for <code translate="No">rtmp_output_state_changed</code> events. Notifications will be sent for the following states:</p>
 
 <p>Notifications for RTMP outputs must be set at the <strong><a href="https://docs.brightcove.com/live-api/v1/doc/index.html#operation/CreateALiveJob">job level</a></strong> when you create the live job.</p>
 
-<p>To see the different <code>state</code> values reported for RTMP outputs, see <a href="/live-api/guides/live-api-notifications.html">Live Notifications</a>.</p>
+<p>To see the different <code translate="No">state</code> values reported for RTMP outputs, see <a href="/live-api/guides/live-api-notifications.html">Live Notifications</a>.</p>
 </section>
 
 <section class="bcls-section">
@@ -492,7 +492,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <h3>Method</h3>
 
-<p><code>POST</code></p>
+<p><code translate="No">POST</code></p>
 
 <h3>Request body</h3>
 
@@ -514,13 +514,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 	</thead>
 	<tbody class="bcls-table__body">
 		<tr>
-			<td><code>url</code></td>
+			<td><code translate="No">url</code></td>
 			<td>yes</td>
 			<td>string</td>
-			<td>The URL for the RTMP output - example <code>rtmp://live-api-s.facebook.com:80/rtmp/my_stream</code></td>
+			<td>The URL for the RTMP output - example <code translate="No">rtmp://live-api-s.facebook.com:80/rtmp/my_stream</code></td>
 		</tr>
 		<tr>
-			<td><code>output_label</code></td>
+			<td><code translate="No">output_label</code></td>
 			<td>no</td>
 			<td>string</td>
 			<td>The label of the job output to use as the source for the RTMP output. Omit this parameter to simply use the RTMP input instead.</td>
@@ -550,7 +550,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <h3>Method</h3>
 
-<p><code>GET</code></p>
+<p><code translate="No">GET</code></p>
 
 <h3>Sample response</h3>
 
@@ -580,9 +580,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <h3>Method</h3>
 
-<p><code>PUT</code></p>
+<p><code translate="No">PUT</code></p>
 
-<aside class="bcls-aside bcls-aside--information">Note that the job needs to be started at least once to get the <code>job_id</code>.</aside>
+<aside class="bcls-aside bcls-aside--information">Note that the job needs to be started at least once to get the <code translate="No">job_id</code>.</aside>
 
 <h3>Sample response</h3>
 

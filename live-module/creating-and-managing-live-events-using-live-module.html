@@ -146,7 +146,7 @@ parent: Live Module
       <li class="language-editable"><strong>RTMP IP whitelist</strong> - Enter a set of IP addresses that are allowed to connect to the RTMP endpoint. This controls who can connect to the RTMP endpoint. Note this option will only appear if the Input Format is RTMP.</li>
       <li class="language-editable">
         <strong>CIDR Whitelist</strong> - Enter a set of IP addresses that are allowed to connect to the RTP or SRT endpoint. This controls who can connect to the RTP or SRT endpoints. Note this option will only appear if the Input Format is RTP or SRT.
-        <strong>You can specify <code>0.0.0.0/0</code> to allow all networks.</strong>
+        <strong>You can specify <code translate="No">0.0.0.0/0</code> to allow all networks.</strong>
       </li>
       <li class="language-editable"><strong>Region</strong> - The Amazon Web Services (AWS) region to use. To reduce latency, you should select the region that is closest to where your encoder is located. <strong>By default, the region is set to Oregon (US West) which will produce bad results if you are streaming from another continent.</strong> The following regions are supported:
         <ul>
@@ -163,7 +163,7 @@ parent: Live Module
       <li class="language-editable"><strong>Content Encryption</strong> - Select the type of encryption to apply to the live stream:
         <ul>
           <li class="language-editable"><strong>None</strong> - No encryption is applied</li>
-          <li class="language-editable"><strong>AES-128</strong> - Secure the stream using AES-128 encryption. If this option is selected, you must enter your <strong>Encryption Key</strong>. The key must be 32 hexadecimal characters. For best results, use a <a href="https://www.allkeysgenerator.com/Random/Security-Encryption-Key-Generator.aspx">key generator</a>, choosing the <code>128-bit</code> and <code>Hex</code> options.
+          <li class="language-editable"><strong>AES-128</strong> - Secure the stream using AES-128 encryption. If this option is selected, you must enter your <strong>Encryption Key</strong>. The key must be 32 hexadecimal characters. For best results, use a <a href="https://www.allkeysgenerator.com/Random/Security-Encryption-Key-Generator.aspx">key generator</a>, choosing the <code translate="No">128-bit</code> and <code translate="No">Hex</code> options.
             <aside class="bcls-aside bcls-aside--information">Clips can't be created from encrypted live streams.</aside>
           </li>
           <li class="language-editable"><strong>Digital Rights Management (DRM)</strong> - Secure Premium content stream with Digital Rights Management technologies. For details, see the <a href="/general/live-drm.html">Live DRM</a> document.

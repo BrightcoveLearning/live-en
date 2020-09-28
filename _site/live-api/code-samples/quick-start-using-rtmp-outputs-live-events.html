@@ -474,7 +474,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 	<p>Copy and paste the following <span class="notranslate">curl</span> command into a text editor:</p>
 
 	<pre class="line-numbers">
-<code class="language-bash">curl -X POST \
+<code class="language-bash" translate="No">curl -X POST \
   https://api.bcovlive.io/v1/jobs \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: ' \
@@ -537,7 +537,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 	<p>The response should be something like this:</p>
 
 	<pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
     "id": "3b6871bf2f344acaa6b397d09b476018",
     "outputs": [... removed for simplicity ...],
     "stream_url": "rtmp://ep1-usw2.bcovlive.io:1935/3b6871bf2f344acaa6b397d09b476018",
@@ -618,7 +618,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 	<p>Copy the <span class="notranslate">curl</span> command below into a text editor:</p>
 
 	<pre class="line-numbers">
-<code class="language-bash">curl -X POST \
+<code class="language-bash" translate="No">curl -X POST \
   https://api.bcovlive.io/v1/jobs//rtmpouts \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: ' \
@@ -640,7 +640,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 	<p>The response should be something like this:</p>
 
 	<pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
           "connection_info": {
             "host": "a.rtmp.youtube.com",
             "port": 1935,
@@ -682,7 +682,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 	<p>Next, create live output for Brightcove live job using "server url" and "stream key" from Facebook. Copy the <span class="notranslate">curl</span> command below and paste it into a text editor:</p>
 
 	<pre class="line-numbers">
-<code class="language-bash">curl -X POST \
+<code class="language-bash" translate="No">curl -X POST \
   https://api.bcovlive.io/v1/jobs//rtmpouts \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: ' \
@@ -703,7 +703,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 	<p>The response should be something like this:</p>
 
 	<pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "connection_info": {
       "host": "live-api-s.facebook.com",
       "port": 80,
@@ -737,7 +737,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 26 Sep 2020
+  Page last updated on 28 Sep 2020
 </div>
 
 

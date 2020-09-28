@@ -480,7 +480,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 	<p>Copy and paste the following <span class="notranslate">curl</span> command into a text editor:</p>
 
 	<pre class="line-numbers">
-  <code class="language-bash">curl -X POST \
+  <code class="language-bash" translate="No">curl -X POST \
     https://api.bcovlive.io/v1/jobs \
     -H 'Content-Type: application/json' \
     -H 'x-api-key: <span class="bcls-input"></span>' \
@@ -547,7 +547,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 	<p>The response should be something like this if you are using the <code translate="No">rtp-fec</code> protocol:</p>
 
 	<pre class="line-numbers">
-  <code class="language-json">{
+  <code class="language-json" translate="No">{
       "id": "42c913e5373844a99a6285367f2704ec",
       "outputs": [... removed for simplicity ...],
       "stream_url": "<span class="bcls-highlight">rtp:</span>//ec2-34-212-0-224.us-west-2.compute.amazonaws.com:12675",
@@ -561,7 +561,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 	<p>Or like this for <code translate="No">srt</code>:</p>
 
 	<pre class="line-numbers">
-  <code class="language-json">{
+  <code class="language-json" translate="No">{
       "id": "cdb820f2d7764b91a79536dac799fb77",
       "outputs": [... removed for simplicity ...],
       "stream_url": "srt://ec2-34-212-0-224.us-west-2.compute.amazonaws.com:13820",
@@ -644,7 +644,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 09 Sep 2020
+  Page last updated on 28 Sep 2020
 </div>
 
 

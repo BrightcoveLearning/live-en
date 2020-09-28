@@ -35,7 +35,7 @@ grandparent: Live API
 	<p>Copy and paste the following <span class="notranslate">curl</span> command into a text editor:</p>
 
 	<pre class="line-numbers">
-  <code class="language-bash">curl -X POST \
+  <code class="language-bash" translate="No">curl -X POST \
     https://api.bcovlive.io/v1/jobs \
     -H 'Content-Type: application/json' \
     -H 'x-api-key: {{bcov-live-api-key}}' \
@@ -98,7 +98,7 @@ grandparent: Live API
 	<p>The response should be something like this:</p>
 
 	<pre class="line-numbers">
-  <code class="language-json">{
+  <code class="language-json" translate="No">{
       "id": "3b6871bf2f344acaa6b397d09b476018",
       "outputs": [... removed for simplicity ...],
       "stream_url": "rtmp://ep1-usw2.bcovlive.io:1935/3b6871bf2f344acaa6b397d09b476018",
@@ -160,7 +160,7 @@ grandparent: Live API
 <ol class="bcls-tasklist">
 	<li>Copy the curl command below into a text editor:
 	<pre class="line-numbers">
-<code class="language-bash">curl -X POST \ https://api.bcovlive.io/v1/credentials \ -H 'Content-Type: application/json' \ -H 'x-api-key: {{bcov-live-api-key}}' \ -d '{ "credential_default_for_type": true, "credential_label": "Video_Cloud_Uploads", "credential_private": "{{client_secret}}", "credential_public": "{{client_id}}", "credential_type": "videocloud" }' </code></pre>
+<code class="language-bash" translate="No">curl -X POST \ https://api.bcovlive.io/v1/credentials \ -H 'Content-Type: application/json' \ -H 'x-api-key: {{bcov-live-api-key}}' \ -d '{ "credential_default_for_type": true, "credential_label": "Video_Cloud_Uploads", "credential_private": "{{client_secret}}", "credential_public": "{{client_id}}", "credential_type": "videocloud" }' </code></pre>
 	</li>
 	<li>
 	<p><strong>Replace:</strong></p>
@@ -174,7 +174,7 @@ grandparent: Live API
 	<li>Copy and paste the edited command into Terminal or your command line app, and run it.</li>
 	<li>The response should look similar to this:
 	<pre class="line-numbers">
-  <code class="language-json">{
+  <code class="language-json" translate="No">{
     "credential_id": "1e0180330b724dfbbcaf6b28b6c5d517",
     "user_id": "c2691d4d039040be96c190a949d754a7",
     "credential_label": "Video_Cloud_Uploads"
@@ -191,7 +191,7 @@ grandparent: Live API
 <ol class="bcls-tasklist">
 	<li>Copy the curl request below and paste it into a text editor:
 	<pre class="line-numbers">
-  <code class="language-bash">curl -X POST \
+  <code class="language-bash" translate="No">curl -X POST \
     https://api.bcovlive.io/v1/vods \
     -H 'Content-Type: application/json' \
     -H 'x-api-key: {{bcov-live-api-key}}' \
@@ -219,7 +219,7 @@ grandparent: Live API
 	<li>Copy and paste the edited code into Terminal or your command line app, and run it.</li>
 	<li>The response should look similar to this:
 	<pre class="line-numbers">
-  <code class="language-json">{
+  <code class="language-json" translate="No">{
       "vod_jobs": [
           {
               "jvod_id": "0b14a4ba326d4dd08f15053ca2a403b7",

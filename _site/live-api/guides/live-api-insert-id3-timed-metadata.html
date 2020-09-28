@@ -459,7 +459,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <h3>Sample request body</h3>
 
 <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
  "id3_tag": {
  "name": "cp1",
  "value": "Some information I want to send",
@@ -486,7 +486,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <h3>Sample response</h3>
 
 <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
 "id": "JOB_ID",
 "id3_tag": {
 "tag_name": "BCOV",
@@ -498,24 +498,24 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <section class="bcls-section">
 <h2 id="Do_SMPTE_timecodes_exist">Do SMPTE timecodes exist in the input?</h2>
 
-<p>Not all encoders send SMPTE timecodes. To check if they exist in your input, one way to check is to look at the VOD chunklist for tags like <code class="language-html">#VOD-TIMING:timecode=15:18:36:01,wallclock=1549047672441,tsvideo=25400,tsaudio=-1</code>. The vod chunklist URL should be available on <code class="language-html">output_media_files[0].playback_url_vod</code> when you retrieve the Job information.</p>
+<p>Not all encoders send SMPTE timecodes. To check if they exist in your input, one way to check is to look at the VOD chunklist for tags like <code class="language-html" translate="No">#VOD-TIMING:timecode=15:18:36:01,wallclock=1549047672441,tsvideo=25400,tsaudio=-1</code>. The vod chunklist URL should be available on <code class="language-html" translate="No">output_media_files[0].playback_url_vod</code> when you retrieve the Job information.</p>
 
 <h2 id="Do_SMPTE_timecodes_exist">Analyze a Live Playlist to get the timecode</h2>
 
 <p>When you create a Brightcove Live job a default master playlist is returned. For example:</p>
 
 <pre>
-<code class="language-html">https://bcovlive-a.akamaihd.net/ade7a7b3aaea4a4d8107fb8bb262381e/eu-central-1/52725330351/playlist.m3u8</code></pre>
+<code class="language-html" translate="No">https://bcovlive-a.akamaihd.net/ade7a7b3aaea4a4d8107fb8bb262381e/eu-central-1/52725330351/playlist.m3u8</code></pre>
 
 <p>We will need the VOD master playlist for which we will need to add "_vod" at the last part of our URL extension as <strong>playlist_vod.m3u8</strong></p>
 
 <pre>
-<code class="language-html">https://bcovlive-a.akamaihd.net/ade7a7b3aaea4a4d8107fb8bb262381e/eu-central-1/52725330351/playlist_vod.m3u8</code></pre>
+<code class="language-html" translate="No">https://bcovlive-a.akamaihd.net/ade7a7b3aaea4a4d8107fb8bb262381e/eu-central-1/52725330351/playlist_vod.m3u8</code></pre>
 
 <p>The Playlist will be composed of&nbsp;several renditions/profiles, that if you "curl" the playlist, you will be able to see the renditions. Example:</p>
 
 <pre class="line-numbers">
-<code class="language-javascript">
+<code class="language-javascript" translate="No">
 curl -i "https://bcovlive-a.akamaihd.net/ade7a7b3aaea4a4d8107fb8bb262381e/eu-central-1/52725330351/playlist_vod.m3u8"
 
 #EXTM3U
@@ -532,10 +532,10 @@ profile_3/chunklist_vod.m3u8</code></pre>
 <p>The full list of rendition/profiles playlist will&nbsp;look like these "profile_0" and "profile_1" URLs:</p>
 
 <pre>
-<code class="language-html">https://bcovlive-a.akamaihd.net/ade7a7b3aaea4a4d8107fb8bb262381e/eu-central-1/52725330351/profile_0/chunklist_vod.m3u8</code></pre>
+<code class="language-html" translate="No">https://bcovlive-a.akamaihd.net/ade7a7b3aaea4a4d8107fb8bb262381e/eu-central-1/52725330351/profile_0/chunklist_vod.m3u8</code></pre>
 
 <pre>
-<code class="language-html">https://bcovlive-a.akamaihd.net/ade7a7b3aaea4a4d8107fb8bb262381e/eu-central-1/52725330351/profile_1/chunklist_vod.m3u8</code></pre>
+<code class="language-html" translate="No">https://bcovlive-a.akamaihd.net/ade7a7b3aaea4a4d8107fb8bb262381e/eu-central-1/52725330351/profile_1/chunklist_vod.m3u8</code></pre>
 
 </section>
 
@@ -548,7 +548,7 @@ profile_3/chunklist_vod.m3u8</code></pre>
     <li>You could do a "curl" command. Example:</li>
 
 <pre class="line-numbers">
-<code class="language-javascript">
+<code class="language-javascript" translate="No">
 curl -i "https://bcovlive-a.akamaihd.net/ade7a7b3aaea4a4d8107fb8bb262381e/eu-central-1/52725330351/profile_0/chunklist_vod.m3u8"
 #EXTM3U
 #EXT-X-VERSION:3
@@ -574,7 +574,7 @@ curl -i "https://bcovlive-a.akamaihd.net/ade7a7b3aaea4a4d8107fb8bb262381e/eu-cen
 	
     <li>If you use the Safari&nbsp;browser, you can play the master playlist or one of the chunklist. Then, open the developer network tab and search for "chunklist". Select one of them and look at the preview tab.</li>
     <figure class="bcls-figure"><img alt="" class="bcls-image--no-border" width="750" height="400" src="/assets/images/live-api/18758/0.png" /></figure>
-	<li>If you do not have Safari, you can apply the same process in another browser using the Akamai player in <code class="language-html">http://players.akamai.com/hls/</code>. Load the playlist in the Akamai Player, then open your browser network tab and search for the "chunklist".</li>
+	<li>If you do not have Safari, you can apply the same process in another browser using the Akamai player in <code class="language-html" translate="No">http://players.akamai.com/hls/</code>. Load the playlist in the Akamai Player, then open your browser network tab and search for the "chunklist".</li>
 	<li>If you have a proxy, as "Charles", it is the same principle. Play one of the VOD playlists in the Safari or Akamai HLS player, and then filter the results in your proxy to look at one of the chunklist returned.</li>
 </ol>
 </section>
@@ -595,7 +595,7 @@ curl -i "https://bcovlive-a.akamaihd.net/ade7a7b3aaea4a4d8107fb8bb262381e/eu-cen
 
 <hr>
 <div class="last-updated">
-  Page last updated on 09 Jun 2020
+  Page last updated on 28 Sep 2020
 </div>
 
 

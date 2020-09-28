@@ -472,7 +472,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 	<p>Copy and paste the following <span class="notranslate">curl</span> command into a text editor:</p>
 
 	<pre class="line-numbers">
-  <code class="language-bash">curl -X POST \
+  <code class="language-bash" translate="No">curl -X POST \
     https://api.bcovlive.io/v1/jobs \
     -H 'Content-Type: application/json' \
     -H 'x-api-key: ' \
@@ -535,7 +535,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 	<p>The response should be something like this:</p>
 
 	<pre class="line-numbers">
-  <code class="language-json">{
+  <code class="language-json" translate="No">{
       "id": "3b6871bf2f344acaa6b397d09b476018",
       "outputs": [... removed for simplicity ...],
       "stream_url": "rtmp://ep1-usw2.bcovlive.io:1935/3b6871bf2f344acaa6b397d09b476018",
@@ -597,7 +597,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <ol class="bcls-tasklist">
 	<li>Copy the curl command below into a text editor:
 	<pre class="line-numbers">
-<code class="language-bash">curl -X POST \ https://api.bcovlive.io/v1/credentials \ -H 'Content-Type: application/json' \ -H 'x-api-key: ' \ -d '{ "credential_default_for_type": true, "credential_label": "Video_Cloud_Uploads", "credential_private": "", "credential_public": "", "credential_type": "videocloud" }' </code></pre>
+<code class="language-bash" translate="No">curl -X POST \ https://api.bcovlive.io/v1/credentials \ -H 'Content-Type: application/json' \ -H 'x-api-key: ' \ -d '{ "credential_default_for_type": true, "credential_label": "Video_Cloud_Uploads", "credential_private": "", "credential_public": "", "credential_type": "videocloud" }' </code></pre>
 	</li>
 	<li>
 	<p><strong>Replace:</strong></p>
@@ -611,7 +611,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 	<li>Copy and paste the edited command into Terminal or your command line app, and run it.</li>
 	<li>The response should look similar to this:
 	<pre class="line-numbers">
-  <code class="language-json">{
+  <code class="language-json" translate="No">{
     "credential_id": "1e0180330b724dfbbcaf6b28b6c5d517",
     "user_id": "c2691d4d039040be96c190a949d754a7",
     "credential_label": "Video_Cloud_Uploads"
@@ -628,7 +628,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <ol class="bcls-tasklist">
 	<li>Copy the curl request below and paste it into a text editor:
 	<pre class="line-numbers">
-  <code class="language-bash">curl -X POST \
+  <code class="language-bash" translate="No">curl -X POST \
     https://api.bcovlive.io/v1/vods \
     -H 'Content-Type: application/json' \
     -H 'x-api-key: ' \
@@ -656,7 +656,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 	<li>Copy and paste the edited code into Terminal or your command line app, and run it.</li>
 	<li>The response should look similar to this:
 	<pre class="line-numbers">
-  <code class="language-json">{
+  <code class="language-json" translate="No">{
       "vod_jobs": [
           {
               "jvod_id": "0b14a4ba326d4dd08f15053ca2a403b7",
@@ -698,7 +698,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 07 May 2020
+  Page last updated on 28 Sep 2020
 </div>
 
 

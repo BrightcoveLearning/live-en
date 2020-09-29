@@ -473,6 +473,50 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <p>You can set up notifications for <code translate="No">rtmp_output_state_changed</code> events. Notifications will be sent for the following states:</p>
 
+b<table class="bcls-table">
+  <caption class="bcls-caption--table">RTMP Output States</caption>
+  <thead class="bcls-table__head">
+      <tr>
+          <th>RTMP Output States</th>
+          <th>(reported for <code translate="No">rtmp_output_state_changed</code> notifications as <code translate="No">state</code>)</th>
+      </tr>
+  </thead>
+  <tbody class="bcls-table__body">
+		<tr>
+			<td><code translate="No">starting</code></td>
+			<td>The stream is starting.</td>
+		</tr>
+		<tr>
+			<td><code translate="No">connected</code></td>
+			<td>The encoder has connected.</td>
+		</tr>
+		<tr>
+			<td><code translate="No">Disconnected</code></td>
+			<td>The encoder has disconnected.</td>
+		</tr>
+		<tr>
+			<td><code translate="No">error</code></td>
+			<td>The stream failed to connect.</td>
+		</tr>
+		<tr>
+			<td><code translate="No">pending_deactivation</code></td>
+			<td>The entry point has been queued for cleanup from the streaming worker.</td>
+		</tr>
+		<tr>
+			<td><code translate="No">deactivation_in_progress</code></td>
+			<td>The entry point is disconnecting from the streaming worker.</td>
+		</tr>
+		<tr>
+			<td><code translate="No">cancelled</code></td>
+			<td>The entry point has been cancelled.</td>
+		</tr>
+		<tr>
+			<td><code translate="No">finished</code></td>
+			<td>The entry point has completed successfully.</td>
+		</tr>
+  </tbody>
+</table>
+
 <p>Notifications for RTMP outputs must be set at the <strong><a href="https://docs.brightcove.com/live-api/v1/doc/index.html#operation/CreateALiveJob">job level</a></strong> when you create the live job.</p>
 
 <p>To see the different <code translate="No">state</code> values reported for RTMP outputs, see <a href="/live-api/guides/live-api-notifications.html">Live Notifications</a>.</p>

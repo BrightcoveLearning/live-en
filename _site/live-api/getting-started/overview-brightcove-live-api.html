@@ -478,7 +478,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <p>All requests are authenticated using an API key that will be provided to you when your account is set up. The key is passed in an <code translate="No">X-API-KEY </code> header. A <code translate="No">Content-Type </code> header is also required:</p>
 
       <pre>
-      <code class="language-bash" translate="No">X-API-KEY : <span class="bcls-input notranslate">YOUR_APIKey</span>
+      <code class="language-bash" translate="No">X-API-KEY : <span class="bcls-input" translate="No">YOUR_APIKey</span>
       Content-Type: application/json
       </code>
       </pre>
@@ -710,7 +710,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <h3 id="Get_Live_Job_Details">Get Live Job Details</h3>
 
       <pre>
-      <code translate="No"><span class="bcls-highlight notranslate">GET</span> https://api.bcovlive.io/v1/jobs/<span class="bcls-input notranslate">:jobId</span>
+      <code translate="No"><span class="bcls-highlight notranslate">GET</span> https://api.bcovlive.io/v1/jobs/<span class="bcls-input" translate="No">:jobId</span>
         </code></pre>
 
       <p>This endpoint allows you to get the detailed information about a live stream, which is also returned when you originally create the job. See the <a href="http://docs.brightcove.com/live-api/v1/doc/index.html#/Live_Jobs/GetLiveJobDetails">API Reference</a> for details of the response fields.</p>
@@ -718,7 +718,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <h3 id="Manual_Ad_Cue_Point_Insertion">Manual Ad Cue Point Insertion</h3>
 
       <pre>
-      <code translate="No"><span class="bcls-highlight notranslate">POST</span> https://api.bcovlive.io/v1/jobs/<span class="bcls-input notranslate">:jobId</span>/cuepoint
+      <code translate="No"><span class="bcls-highlight notranslate">POST</span> https://api.bcovlive.io/v1/jobs/<span class="bcls-input" translate="No">:jobId</span>/cuepoint
         </code></pre>
 
       <p>Typically your encoder will be sending cue points for ad breaks, but you can also create an immediate ad break by sending a request to this endpoint. See the <a href="http://docs.brightcove.com/live-api/v1/doc/index.html#/Live_Jobs/ManualAdCuePointInsertion">API Reference</a> for details.</p>
@@ -728,7 +728,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <h3 id="Stop_a_Live_Job">Stop a Live Job</h3>
 
       <pre>
-      <code translate="No"><span class="bcls-highlight notranslate">PUT</span> https://api.bcovlive.io/v1/jobs/<span class="bcls-input notranslate">:jobId</span>/cancel
+      <code translate="No"><span class="bcls-highlight notranslate">PUT</span> https://api.bcovlive.io/v1/jobs/<span class="bcls-input" translate="No">:jobId</span>/cancel
         </code></pre>
 
       <p>Use this endpoint to stop a live stream immediately. Once cancelled, a live stream cannot be restarted. See the <a href="http://docs.brightcove.com/live-api/v1/doc/index.html#/Live_Jobs/CancelLiveJob">API Reference</a> for details.</p>
@@ -764,7 +764,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <h3 id="Get_Account_Ad_Configurations">Get Account Ad Configurations</h3>
 
       <pre>
-      <code translate="No"><span class="bcls-highlight notranslate">GET</span> https://api.bcovlive.io/v1/ssai/applications/<span class="bcls-input notranslate">:account_id</span>
+      <code translate="No"><span class="bcls-highlight notranslate">GET</span> https://api.bcovlive.io/v1/ssai/applications/<span class="bcls-input" translate="No">:account_id</span>
         </code></pre>
 
       <p>This endpoint allows you to get all ad configurations that have been set up for an account. Details of the response fields can be found in the <a href="https://docs.brightcove.com/live-api/v1/doc/index.html#api-SSAI-Get_Account_Ad_Configurations">API Reference</a>.</p>
@@ -780,7 +780,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <h3 id="Get_Ad_Configuration">Get Ad Configuration</h3>
 
       <pre>
-      <code translate="No"><span class="bcls-highlight notranslate">GET</span> https://api.bcovlive.io/v1/ssai/application/<span class="bcls-input notranslate">:application_id</span></code>
+      <code translate="No"><span class="bcls-highlight notranslate">GET</span> https://api.bcovlive.io/v1/ssai/application/<span class="bcls-input" translate="No">:application_id</span></code>
       </pre>
 
       <p>Use this endpoint to get the details of an ad configuration you have created. Details of the response fields can be found in the <a href="http://docs.brightcove.com/live-api/v1/doc/index.html#/SSAI/GetuserAdConfigurations">API Reference</a>.</p>
@@ -788,7 +788,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <h3 id="Update_Ad_Configuration">Update Ad Configuration</h3>
 
       <pre>
-      <code translate="No"><span class="bcls-highlight notranslate">PUT</span> https://api.bcovlive.io/v1/ssai/application/account/<span class="bcls-input notranslate">:application_id</span></code>
+      <code translate="No"><span class="bcls-highlight notranslate">PUT</span> https://api.bcovlive.io/v1/ssai/application/account/<span class="bcls-input" translate="No">:application_id</span></code>
       </pre>
 
       <p>Update the details of an ad configuration. Details of the request body fields can be found in the <a href="http://docs.brightcove.com/live-api/v1/doc/index.html#/SSAI/UpdateAdConfiguration">API Reference</a>.</p>
@@ -796,7 +796,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <h3 id="Get_Slate_Media_Source_Assets">Get Slate Media Source Assets</h3>
 
       <pre>
-      <code translate="No"><span class="bcls-highlight notranslate">GET</span> https://api.bcovlive.io/v1/ssai/slates/<span class="bcls-input notranslate">:ACCOUNT_ID</span></code>
+      <code translate="No"><span class="bcls-highlight notranslate">GET</span> https://api.bcovlive.io/v1/ssai/slates/<span class="bcls-input" translate="No">:ACCOUNT_ID</span></code>
       </pre>
 
       <p>Get the slate media assets that have been defined for an account. Slate media assets are used to fill ad break time that is not filled by ads. Details of the response fields can be found in the <a href="http://docs.brightcove.com/live-api/v1/doc/index.html#/SSAI/GetUserSlateMediaSourceAssets">API Reference</a>.</p>
@@ -812,7 +812,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <h3 id="Delete_Slate_Media_Source_Asset">Delete Slate Media Source Asset</h3>
 
       <pre>
-      <code translate="No"><span class="bcls-highlight notranslate">DELETE</span> https://api.bcovlive.io/v1/ssai/slates/<span class="bcls-input notranslate">:SLATE_MSA_ID</span>
+      <code translate="No"><span class="bcls-highlight notranslate">DELETE</span> https://api.bcovlive.io/v1/ssai/slates/<span class="bcls-input" translate="No">:SLATE_MSA_ID</span>
         </code></pre>
 
       <p>Deletes a slate media asset.</p>

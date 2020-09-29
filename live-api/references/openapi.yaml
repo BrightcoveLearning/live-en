@@ -2909,8 +2909,9 @@ components:
             - eu-central-1
             - eu-west-1
           type: string
-        rtmp_credentials:
-          description: The label for an RTMP credential to protect the RTMP stream
+        credentials:
+          description: >-
+            The label for a named credential. When specified, the customer must include the user name and password defined by the named credential when connecting their encoder.
           type: string
         rtmp_ip_whitelist:
           description: Array of IP addresses white-listed for RTMP delivery

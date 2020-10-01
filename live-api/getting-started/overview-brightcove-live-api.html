@@ -240,24 +240,24 @@ grandparent: Live API
 
         <p>Example request body for RTP+FEC job:</p>
 
-        <pre class="line-numbers">
-      <code class="language-json" translate="No">{
-         "live_stream":true,
-         "region":"us-west-2",
-         "reconnect_time":300,
-         "outputs":[
-            {
-              "label": "hls720p",
-              "live_stream": true,
-              "height": 720,
-              "video_bitrate": 800,
-              "segment_seconds": 6,
-              "keyframe_interval": 90
-            }
-         ],
-         "protocol": "rtp-fec",
-         "cidr_whitelist": ["127.0.0.1/32"]
-      }</code></pre>
+<pre class="line-numbers">
+<code class="language-json" translate="No">{
+    "live_stream":true,
+    "region":"us-west-2",
+    "reconnect_time":300,
+    "outputs":[
+      {
+        "label": "hls720p",
+        "live_stream": true,
+        "height": 720,
+        "video_bitrate": 800,
+        "segment_seconds": 6,
+        "keyframe_interval": 90
+      }
+    ],
+    "protocol": "rtp-fec",
+    "cidr_whitelist": ["127.0.0.1/32"]
+}</code></pre>
       </section>
 
       <p>The <a href="https://live.support.brightcove.com/live-api/getting-started/quick-start-create-live-stream-using-brightcove-live-api.html"> <span translate="No">Live API</span> Quick Start</a> walks you through creating a live stream job and setting up a Brightcove Player to play it.</p>

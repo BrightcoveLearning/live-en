@@ -457,7 +457,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <section class="bcls-section">
 <h2 id="Introduction">Introduction</h2>
 
-<p>For shorter live streaming events, you may want to make a recording of the event available as a video-on-demand (VOD) in your <span translate="No">Video Cloud</span> account after the event has completed. You can easily do this by adding some configuration for the VOD when you <a href="https://docs.brightcove.com/live-api/v1/doc/index.html#api-Live_Jobs-Create_a_Live_Job">create your live job</a>.</p>
+<p>For shorter live streaming events, you may want to make a recording of the event available as a video-on-demand (VOD) in your <span translate="No">Video Cloud</span> account after the event has completed. You can easily do this by adding some configuration for the VOD when you <a href="/live-api/references/reference.html#api-Live_Jobs-Create_a_Live_Job">create your live job</a>.</p>
 
 <p>Fast Live to VOD allows for clips to be published quickly with segment accuracy while a backend process that's fully transparent to the customer will clean up the clip boundaries and re-publish.</p>
 
@@ -466,7 +466,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <p><strong>Important</strong>:</p>
 
 <ul>
-	<li>When the live streaming event is complete, stop your encoder, but <strong>do not <a href="https://docs.brightcove.com/live-api/v1/doc/index.html#api-Live_Jobs-Cancel_Live_Job">cancel</a> the job</strong>. Wait until the VOD clip has been created before cancelling the job, or it will not be created successfully.</li>
+	<li>When the live streaming event is complete, stop your encoder, but <strong>do not <a href="/live-api/references/reference.html#api-Live_Jobs-Cancel_Live_Job">cancel</a> the job</strong>. Wait until the VOD clip has been created before cancelling the job, or it will not be created successfully.</li>
 	<li>Creation of the VOD will not begin until the <code translate="No">reconnect_time</code> for the live job has expired.</li>
 	<li>If the live event duration is greater than 24 hours, only the final 24 hours will be captured in the VOD.</li>
 </ul>
@@ -574,7 +574,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     ]
 }</code></pre>
 
-<aside class="bcls-aside bcls-aside--information">If you do not yet have credentials for your S3 bucket set up, you can add a new credentials <a href="https://docs.brightcove.com/live-api/v1/doc/index.html#operation/CreateCredential">via the API</a>.</aside>
+<aside class="bcls-aside bcls-aside--information">If you do not yet have credentials for your S3 bucket set up, you can add a new credentials <a href="/live-api/references/reference.html#operation/CreateCredential">via the API</a>.</aside>
 
 <p>Note that for the video metadata, you can include any fields listed for the <a href="https://docs.brightcove.com/cms-api/v1/doc/index.html#api-videoGroup-Create_Video">Create Video</a> operation of the CMS API.</p>
 
@@ -616,7 +616,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <h2 id="Limitations">Limitations</h2>
 
 <ul>
-	<li>If you <a href="https://docs.brightcove.com/live-api/v1/doc/index.html#api-Live_Jobs-Stop_Live_Job">stop (cancel)</a> the live job before the VOD has been created, it will not be created. Instead, stop your encoder to initiate creation of the VOD, and wait for that to finish before stopping the job.</li>
+	<li>If you <a href="/live-api/references/reference.html#api-Live_Jobs-Stop_Live_Job">stop (cancel)</a> the live job before the VOD has been created, it will not be created. Instead, stop your encoder to initiate creation of the VOD, and wait for that to finish before stopping the job.</li>
 	<li>For <a href="/live-api/guides/live-api-static-entry-points.html">Static Entry Point</a> streams <strong>only</strong>, Live to VOD can not be set to archive the stream on completion.
 	<p style="font-weight:bold;">Alternatives:</p>
 

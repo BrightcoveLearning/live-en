@@ -405,7 +405,27 @@ grandparent: Live API
       <h2 id="Limitations">Limitations</h2>
 
       <ul>
-        <li>Live jobs created using the API will <strong>not</strong> appear and cannot be used in the <a href="/live-module/creating-and-managing-live-events-using-live-module.html">Live Module</a>.</li>
+        <li>
+          In order for Live jobs created using the API to appear and cannot be used in the <a href="/live-module/creating-and-managing-live-events-using-live-module.html">Live Module</a>, You must include the <code translate="No">videocloud</code> object in the request body when you create the job.
+          <p>For example:</p>
+<pre class="line-numbers"><code class="language-json" translate="No">{
+  "live_stream": true,
+  "region": "eu-central-1",
+  "reconnect_time": 1800,
+  "live_sliding_window_duration_ms": 0,
+  "outputs": [
+    { "label": "hls720p", "live_stream": true, "width": 1280, "height": 720, "video_codec": "h264", "h264_profile": "high", "video_bitrate": 2100, "segment_seconds": 4, "keyframe_interval": 60 }
+    ,
+    { "label": "hls540p", "live_stream": true, "width": 960, "height": 540, "video_codec": "h264", "h264_profile": "main", "video_bitrate": 1500, "segment_seconds": 4, "keyframe_interval": 60 }
+    ,
+    { "label": "hls360p", "live_stream": true, "width": 640, "height": 360, "video_codec": "h264", "h264_profile": "main", "video_bitrate": 800, "segment_seconds": 4, "keyframe_interval": 60 }
+  ],
+  "<span class="bcls-highlight">videocloud</span>": {
+    "video":
+      { "name": "live event UI", "description": "live event UI", "long_description": "", "tags": [], "reference_id": "", "state": "ACTIVE" }
+    }
+  }</code></pre>
+        </li>
         <li>The initial connection from encoder provides the bandwidth information to be created with the Live playlist. If the initial connection is low, even if the job configuration had high output, the playlist will still maintain the same information on the playlist until the following is done:
           <ul>
             <li>Encoder is restarted</li>
@@ -429,7 +449,7 @@ grandparent: Live API
 
           <p>Any of these limits can be adjusted on an account level by Support. Contact your account manager if you need additional capacity.</p>
         </li>
-        <li>The "RTMP" address returned as the <code translate="No">stream_url</code> for Live jobs is an Akamai HD Live stream, not a legacy FMS RMTP stream - it is not supported by older versions of Internet Explorer.</li>
+        <li>The "RTMP" address returned as the <code translate="No">stream_url</code> for Live jobs is an Akamai HD Live stream, not a legacy FMS RTMP stream - it is not supported by older versions of Internet Explorer.</li>
         <li>Live streams are delivered over HTTPS, and if your Brightcove account is not enabled for HTTPS, the Brightcove player will fail to load the live stream. If your account does not have HTTPS support for origin serving enabled, please <a href="https://supportportal.brightcove.com/s/login/?language=en_US">Contact Brightcove Support</a> to get HTTPS support for origin serving enabled to prevent playback issues.</li>
         <li>When using a transmuxed rendition within a multi-bitrate HLS output, <code translate="No">segment_size</code> can be included when transmuxing, but should be set so that it is a multiple of the <code translate="No">GOP</code> size of the input stream. So if the input is 30 fps with keyframes every 60 frames, the <code translate="No">GOP</code> size is 2 seconds, and the segment size should be a multiple of 2. If you do not do this, the stream segments will be of varying sizes.
           <p>Also, <code translate="No">keyframe_interval</code> should <strong>not</strong> be specified on any outputs.</p>

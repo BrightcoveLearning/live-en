@@ -1906,11 +1906,18 @@ components:
         label:
           type: string
           description: A label to identify the group
+        live_sliding_window_duration:
+          default: 1800000
+          description: >-
+            The time, in seconds, to allow scrubbing back on the timeline.
+          maximum: 86400000
+          minimum: 0
+          type: integer
         live_dvr_sliding_window_duration:
-          default: 1800000 if `live_sliding_window_duration_ms` is not set. Otherwise 1000 x `live_sliding_window_duration_ms`
+          default: 1800000
           description: >-
             The time, in seconds, to keep in the live DVR manifest. If the stream duration is longer than the window duration, segment references will be removed first in first out. **Note: for SSAI jobs, the limit is `7200`. If you do not want to be charged for DVR usage, set this to 0 in the request body.
-          maximum: 86400
+          maximum: 86400000
           minimum: 0
           type: integer
         notifications:
@@ -2846,14 +2853,19 @@ components:
           minimum: 0
           type: integer
         live_dvr_sliding_window_duration:
-          default: 0
+          default: 1800
           description: >-
-            The time, in seconds, to keep in the live DVR manifest. If the stream duration is longer than the window duration, segment references will be removed first in first out. **Note: for SSAI jobs, the limit is `7200`. If you do not want to be charged for DVR usage, set this to 0 or do not included it in the request body.
+            The time, in seconds, to keep in the live DVR manifest. If the stream duration is longer than the window duration, segment references will be removed first in first out. **Note: for SSAI jobs, the limit is `7200`. If you do not want to be charged for DVR usage, set this to 0 in the request body.**
           maximum: 86400
           minimum: 0
           type: integer
         live_sliding_window_duration:
           description: >-
+            The time, in seconds, to allow scrubbing back on the live stream.
+          default: 1800
+          maximum: 86400
+          minimum: 0
+          type: integer
         live_stream:
           description: Indicates that the job is a live streaming job.
           type: boolean

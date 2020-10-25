@@ -449,7 +449,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <article class="bcls-article">
   <h1>Reviewing Live Analytics</h1>
   <summary>In this topic you will learn about the live analytics that are provided by the Live module.</summary>
-  
+
 
   <section class="bcls-section">
 <p>The Live module provides reports on live streaming event or channel performance. Information including real-time concurrent viewers and aggregated post-event data about the viewers stream time, geography, and devices are available.</p>
@@ -462,7 +462,15 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 	<li>Data will be available for up to 32 days after the event</li>
 	<li>Real-time is defined by the aggregated sessions over a one-minute interval</li>
 	<li>With recurring events (static entry points), analytics will be provided from the start of the most recent activation</li>
-	<li>At the moment, the analytics module cannot fetch the precise "unique viewer" data and has a discrepancy between LIVE module analytics. Please use the LIVE Analytics UI to confirm the number of viewers.</li>
+  <li>At the moment, the analytics module cannot fetch the precise "unique viewer" data and has a discrepancy between LIVE module analytics. Please use the LIVE Analytics UI to confirm the number of viewers.</li>
+  <li>
+    Certain ad blockers will prevent Live analytics data from loading properly
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/live-module/ad-blocker-blocks-live-analytics.png" alt="Ad Blocker Blocks Analytics Data">
+      <figcaption class="bcls-caption--image">Ad Blocker Blocks Analytics Data</figcaption>
+    </figure>
+    <p>Disabling the ad blocker should resolve the issue.</p>
+  </li>
 </ul>
 
 <p>To view live analytics, open the Live module, click on an event name and then click&nbsp;<strong>Reporting</strong>&nbsp;in the left navigation. The analytics dashboard is organized into the following sections:</p>

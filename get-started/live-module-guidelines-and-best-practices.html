@@ -30,7 +30,7 @@ parent: Getting Started
       <li>Audio sampling rate: 44.1khz and 48khz are the recommended sample audio rates to use</li>
       <li>Keyframe Rate or GOP (Group of Pictures) aligned:
         <ol type="a">
-          <li>A <strong>Keyframe</strong> should always occur every 2 seconds. Meaning a keyframe is sent to Brightcove from the encoder every two seconds of the stream itself. This process can be defined in different ways, but <strong>Keyframe Rate</strong> is the most common. </li>
+          <li>A <strong>Keyframe</strong> should always occur every 2 seconds <strong>for both inputs and outputs</strong>. Meaning a keyframe is sent to Brightcove from the encoder every two seconds of the stream itself. This process can be defined in different ways, but <strong>Keyframe Rate</strong> is the most common. </li>
           <li>It can be calculated in different ways by different encoders. For example:
             <ul>
               <li>Wirecast uses the amount of frames that pass, so for a 30fps video, the setting would be 60.</li>

@@ -1,0 +1,68 @@
+---
+title: Live Catch-up API
+description: This topic explains how create a live job with DRM protection using the Live Catch-up API (TimeShift).
+parent: Guides
+grandparent: Live API
+layout: staging
+---
+<h1>{{ page.title }}</h1>
+<article class="bcls-article">
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <h2 id="Introduction">Introduction</h2>
+    <p>The Live Catch-up API is an addition to the Live API that provides DRM protection for your live stream using TimeShift DRM.</p>
+    <p>TimeShift DRM is added to a Live job via a new <code translate="No">timeshift</code> object field used when you create a Live job. The details of the <code translate="No">timeshift</code> object fields are detailed in the sections below.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="timeshift_fields">TimeShift fields</h2>
+    <p>The <code translate="No">timeshift</code> object is a top-level object in the request body for create Live job request. The table below details the fields for this object.</p>
+    <table class="bcls-table">
+      <caption class="bcls-caption--table"><code translate="No">timeshift</code> Fields</caption>
+      <thead class="bcls-table__head">
+          <tr>
+              <th>Field</th>
+              <th>Description</th>
+          </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+          <tr>
+              <td><code translate="No">startover_duration</code></td>
+              <td>
+                Size of start-over window in seconds, up to 604800 (7 days).
+                <p>If <code translate="No">timeshift.startover_duration</code> is specified in the request, a time-shift-enabled playback URL will be created for each playlist.  These URLs will support live edge playback (with a DVR size as specified by the <code translate="No">live_duration</code> parameter).</p>
+                <p>They will also support playback of arbitrary portions within the period defined by startover_duration by appending parameters:</p>
+                <ul style="padding: 0;margin-left: 1rem;">
+                  <li><code translate="No">start=ts</code> - Unix epoch timestamp of playback start</li>
+                  <li><code translate="No">end=ts</code> - Unix epoch timestamp of playback end</li>
+                </ul>
+              </td>
+          </tr>
+          <tr>
+              <td><code translate="No">live_duration</code></td>
+              <td>Size of live window in seconds up to 300.  The default value is 4 x segment duration.</td>
+          </tr>
+          <tr>
+              <td><code translate="No">live_delay</code></td>
+              <td>Number of seconds to delay live output.  The minimum and default is 5 seconds.</td>
+          </tr>
+          <tr>
+              <td><code translate="No">type</code></td>
+              <td>
+                <ul style="padding: 0;margin-left: 1rem;">
+                  <li>single - for a standalone time shift job (default)</li>
+                  <li>primary - for the primary time shift job (must be an <a href="/live-api/guides/live-api-static-entry-points.html">SEP job</a>)</li>
+                </ul>
+              </td>
+          </tr>
+          <tr>
+              <td><code translate="No"></code></td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><code translate="No"></code></td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  </section>
+</article>

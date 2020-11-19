@@ -493,16 +493,17 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 <ul style="padding: 0;margin-left: 1rem;">
                   <li>single - for a standalone time shift job (default)</li>
                   <li>primary - for the primary time shift job (must be an <a href="/live-api/guides/live-api-static-entry-points.html">SEP job</a>)</li>
+                  <li>backup - for a backup time shift job</li>
                 </ul>
               </td>
           </tr>
           <tr>
-              <td><code translate="No"></code></td>
-              <td></td>
+              <td><code translate="No">primary_job_id</code></td>
+              <td>References the primary time shift job id (required if type is backup).</td>
           </tr>
           <tr>
-              <td><code translate="No"></code></td>
-              <td></td>
+              <td><code translate="No">skip_live_output</code></td>
+              <td>Don't generate normal live or dvr playlists (default is false)</td>
           </tr>
       </tbody>
   </table>

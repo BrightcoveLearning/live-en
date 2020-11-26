@@ -14,13 +14,13 @@ servers:
 tags:
   - name: Live Jobs
     description: |-
-       Operations for creating live jobs, listing live jobs, getting job details, and canceling live jobs. There are also operations for activating and deactivating SEP jobs, and for inserting cuepoints or ID3 timed metadata.
+      Operations for creating live jobs, listing live jobs, getting job details, and canceling live jobs. There are also operations for activating and deactivating SEP jobs, and for inserting cuepoints or ID3 timed metadata.
   - name: Redundant Groups
     description: >-
       Operations for creating redundant groups of live jobs for failover in case one stream fails
   - name: RTMP Outputs
     description: >-
-       Operations for creating and managing RTMP outputs. Note that RTMP output hours will be billed against event hours.
+      Operations for creating and managing RTMP outputs. Note that RTMP output hours will be billed against event hours.
   - name: Clips
     description: >-
       Operations for creating and managing VOD clips
@@ -2828,6 +2828,16 @@ components:
               description: Amount of time in seconds before the token expires
               default: 43200
               maximum: 31622400
+            require_playback_token:
+              type: boolean
+              description: >-
+                Enables EPA.  Playback auth JWT will be required when requesting license. Uses playback rights id associated with video or JWT to enforce restrictions. **Note that EPA is in Limited Availability release. Contact your account manager for more information.** See [Using PAS/EPA with Live](/live-api/guides/live-pas-epa.html) for more information.
+              default: false
+            check_playback_rights:
+              type: boolean
+              description: >-
+                Enables PAS.  Playback auth JWT will be required when requesting license. **Note that PAS is in Limited Availability release. Contact your account manager for more information.** See [Using PAS/EPA with Live](/live-api/guides/live-pas-epa.html) for more information.
+              default: false
         encryption:
           $ref: '#/components/schemas/CreateLiveJobRequestBody.encryption'
         event_length:

@@ -33,8 +33,6 @@ parent: Live Module
   <li>If you stop and restart a channel for a new live stream, the previous live stream information for clipping may be overwritten</li>.
 	<li>Clips will be frame-accurate <strong>provided that the encoder is sending SMPTE timecodes for the stream</strong> - otherwise, they will be accurate within a couple of frames. Note that to provide clips as quickly as possible, a segment-accurate clip is first created, and replaced by a frame-accurate clip as soon as it is available.</li>
 	<li>Clips with a start time less than 10 seconds into the stream cannot be created.</li>
-	<li>Media sharing will fail for videos created by clipping Live streams.</li>
-	<li>Clips cannot be created from AES encrypted live streams.</li>
 	<li>At the moment, the Safari browser does not support clipping. The clipping timeline UI may not display correctly.</li>
 </ul>
 <aside class="bcls-aside bcls-aside--information">Note that when you create a recurring event, a video is automatically created for it in the Media module. Do <strong>not</strong> delete this video, as it will be needed every time the event recurs.</aside>

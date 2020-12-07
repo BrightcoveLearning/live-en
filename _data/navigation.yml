@@ -52,7 +52,7 @@
       url: 'https://integrations.support.brightcove.com/web-conferencing/host-zoom-conference-brightcove-live.html'
     - name: Host an INXPO Event on Brightcove Live
       url: 'https://integrations.support.brightcove.com/web-conferencing/host-inxpo-live.html'
-    - name: Implementing Server-Side Ads
+    - name: Implementing Server-Side Ads (SSAI)
       url: /live-module/implementing-server-side-ads-live-module.html
     - name: Live Redundancy
       url: /live-module/live-redundancy.html

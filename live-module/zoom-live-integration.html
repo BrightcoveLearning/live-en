@@ -1,0 +1,120 @@
+---
+title: Brightcove Live - Zoom Integration
+parent: Live Module
+---
+<article class="bcls-article">
+  <h1>Integrating a Zoom meeting into Brightcove Live</h1>
+  <summary>In this topic, you will learn how to integrate a Zoom meeting into Brightcove Live.</summary>
+  <section class="bcls-section">
+
+    <h2 id="schedule">Prerequisites</h2>
+    <p>Before starting an integration, it is required to have a custom metadata field to track whether an event is streaming from Zoom. This will track the state of the integration between sessions, i.e., if an event is currently linked to a Zoom meeting. For specific details on how to add the custom metadata field, please review the <a href="https://studio.support.brightcove.com/admin/creating-custom-metadata-fields.html" target="_blank">following documentation</a>. </p>
+    <ol class="bcls-tasklist-restart">
+        <li>Go to <strong>Video Cloud Studio</strong> > <strong>Admin</strong> > <strong>Video Fields</strong> > <strong>Add Custom Field</strong></li>.
+        <li>Write a <strong>Display Name</strong> for your custom metadata field.</li>
+        <li>For the Internal Name field, you should write: <strong>bc_meeting_id</strong>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="" height="" src="/assets/images/general/live-zoom-integration/1-id-meeting-field.png" /></figure>
+
+        </li>
+        <li>Write a <strong>Description</strong> for your custom metadata field.</li>
+
+    </ol>
+    
+  </section>
+
+  <section class="bcls-section">
+
+    <h2 id="schedule">Creating a Zoom Meeting</h2>
+
+  <p>To stream a Zoom meeting to Brightcove Live, you must have a Zoom account with scheduled meetings. If you have a Zoom account and scheduled meetings, you can skip to Link your Zoom Account with Brightcove.</p>
+  <ol class="bcls-tasklist-restart">
+  <li>First, access your <a href="https://zoom.us/" target="_blank">Zoom account</a>, and create a Zoom meeting. For information on how to create a Zoom meeting, please follow the <a href="https://support.zoom.us/hc/en-us/articles/201362413-Scheduling-meetings" target= "_blank">Zoom Documentation</a>. </li>
+  <li>In Zoom, go to  <strong>Settings</strong> > <strong>Meeting (Advanced)</strong>  > <strong>live streaming meetings</strong>. </li>
+  <li>Make sure your Zoom account settings have the <strong>Custom Live Streaming Service</strong> enabled.
+<figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="" height="" src="/assets/images/general/live-zoom-integration/2-zoom-service-enabled.png" /></figure>
+
+    </li>
+</ol>
+
+</section>
+
+<section class="bcls-section">
+
+    <h2 id="schedule">Integrating the Zoom Account with Brightcove Live</h2>
+
+    <p>To integrate a Zoom account with Brightcove Live, follow these steps:</p>
+
+    <ol class="bcls-tasklist-restart">
+        <li>Log in to Video Cloud Studio.</li>
+        <li>Click the <strong>Admin</strong> button in the navigation header.</li>
+        <li>Select the <strong>Integrations</strong> option from the dropdown menu.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="" height="" src="/assets/images/general/live-zoom-integration/3-Integrations-UI-Admin.png" /></figure>
+        </li>
+        <li>Click the <strong>Add Integration</strong> button to link one or more Zoom accounts to Brightcove Video Cloud.</li>
+        <li>Provide your Zoom credentials to integrate the account.</li>
+        
+    </ol>
+</section>
+
+<section class="bcls-section">
+
+    <h2 id="schedule">Adding the Zoom Integration to a Brightcove Live event</h2>
+
+    <p>To add the Zoom integration to Brightcove Live event, follow these steps:</p>
+
+    <ol class="bcls-tasklist-restart">
+    <li>Navigate to the <a href="https://studio.brightcove.com/" target="_blank">Live module</a> in Video Cloud.</li>
+    <li>Click the <strong>Create Event</strong> button on the Live <strong>Manage Events</strong> page. For complete information on how to create a Live event please review the <a href="https://live.support.brightcove.com/live-module/creating-and-managing-live-events-using-live-module.html#create" target="_blank">Creating and Managing Live Events using the Live Module</a> documentation.</li>
+    <li>Fill in the Live event details as normal, until you reach the <strong>Integrations</strong> section.
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="" height="" src="/assets/images/general/live-zoom-integration/4-add_integration_button.png" /></figure>
+
+    </li>
+    <li>Click the <strong>Add Integration</strong> button.</li>
+    <li>You will be able to see a list of your active and scheduled Zoom meetings.</li>
+    <li>Click the dropdown menu.</li>
+    <li>Select your meeting. In this example, I am choosing the <strong>Test Docs Meeting</strong>.
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="" height="" src="/assets/images/general/live-zoom-integration/5-added-integration.png" /></figure>
+    <aside class="bcls-aside bcls-aside--information">Only one integration can be added to an event at a time. To clear the integration click on the <strong>Remove Integration</strong> button. If you want to have more than one account, you will be able to do so in the  <a href="https://studio.brightcove.com/products/videocloud/admin/integrations" target="_blank">Admin > Integrations</a> panel. </aside>
+    </li>
+    <li>Once ready to create the Live event, click on the <strong>Create Event</strong> button.
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="" height="" src="/assets/images/general/live-zoom-integration/6-create-event-button.png" /></figure>
+
+    </li>
+    <li>In the <strong>Control Room</strong>, there will be a tabbed option to stream your meeting from Zoom. If you prefer not to use the integration source, switch back to the Ingest URL tab in the top left part.
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="" height="" src="/assets/images/general/live-zoom-integration/7-control_room.png" /></figure>
+
+    </li>
+    <li>If your Zoom meeting was recently created, try syncing with Zoom again using the <strong>Sync</strong> button. 
+        <aside class="bcls-aside bcls-aside--information">If your meeting is still not showing up after syncing, try verifying that your meeting is <strong>Scheduled</strong> in Zoom and that you have fewer than 30 meetings scheduled.</aside>
+    </li>
+    <li>Head on to your <a href="https://zoom.us/meeting" target="_blank">Zoom meeting</a> account.</li>
+    <li>Click the blue <strong>Start</strong> button to start your meeting.
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="" height="" src="/assets/images/general/live-zoom-integration/8-zoom-start-event.png" /></figure>
+    <aside class="bcls-aside bcls-aside--information">Due to a Zoom limitation, before starting to broadcast the Zoom meeting to Brightcove Live, the Zoom meeting has to be started.</aside>
+    </li>
+    <li>Back In the Brightcove Live <strong>Control Room</strong>, click the <strong>Start Broadcasting</strong> button.
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="" height="" src="/assets/images/general/live-zoom-integration/9-start_broadcasting_button.png" /></figure>
+
+    </li>
+    <li>After the last step, you will be able to see your Zoom Meeting in the <strong>Control Room</strong>.</li>
+
+    <aside class="bcls-aside bcls-aside--warning">
+        <ul>
+            <li>At any time during the Zoom Meeting, you can stop and restart broadcasting. However, if you are not actively broadcasting the event may time out if the gap exceeds the Event reconnect time.</li>
+            <li>Zoom broadcast over Brightcove will be delayed by approximately 20 seconds.</li>
+            <li>If the Zoom meeting does not start streaming after 20 seconds you can click <strong>Stop Broadcasting</strong> and then <strong>Start Broadcasting</strong> again.</li>
+        </ul>
+    </aside>
+
+
+
+    </ol>
+
+
+
+</section>
+
+
+
+
+</article>

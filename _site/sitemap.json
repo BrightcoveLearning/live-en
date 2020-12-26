@@ -110,17 +110,17 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/support/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://live.support.brightcove.com/admin/",
       "oldURL": "/index"
   },
 
   {
       "newURL": "https://live.support.brightcove.com/live-module/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/support/",
       "oldURL": "/index"
   },
 
@@ -162,11 +162,6 @@
   {
       "newURL": "https://live.support.brightcove.com/live-api/guides/",
       "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://live.support.brightcove.com/release-notes/known-issues.html",
-      "oldURL": "/known-issues"
   },
 
   {

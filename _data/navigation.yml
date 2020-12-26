@@ -160,8 +160,8 @@
   docs:
     - name: Live Release Notes
       url: /release-notes/live-api-release-notes.html
-    - name: Known Issues
-      url: /release-notes/known-issues.html
+    # - name: Known Issues
+    #   url: /release-notes/known-issues.html
 - section:
   name: 'Support'
   url: '/support/index.html'

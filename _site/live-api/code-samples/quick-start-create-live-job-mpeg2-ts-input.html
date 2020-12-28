@@ -486,6 +486,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <p>One of these protocols must be specified explicitly to use TS input, because the default input protocol is <code translate="No">rtmp</code>.</p>
 
+<p>To use SMPTE timecodes for clipping, SSAI cue points, or ID3 tags, they should be inserted in the H.264 (AVC) video in SEI Picture Timing messages.</p>
+
 <p>Remember that these protocols use UDP (User Datagram Protocol) rather than TCP for communication between the encoder and Live, so your firewall / router needs to be configured properly and allow UDP outputs to the internet from the encoder's IP.</p>
 
 <aside class="bcls-aside bcls-aside--information">Note that if you have open ports on a local network, Brightcove allocates ports dynamically for each SRT and RTP job, which can range from 10000 to 65535.</aside>

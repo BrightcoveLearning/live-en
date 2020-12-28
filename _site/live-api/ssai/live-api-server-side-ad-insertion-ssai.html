@@ -999,7 +999,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <p>The items inside the double curly braces are variables, also called ad macros, which Brightcove Live will replace with values, if they exist, when it sends the ad request.</p>
 
-<aside class="bcls-aside bcls-aside--information">The variables that will be useful depend on the ad server.</aside>
+<aside class="bcls-aside bcls-aside--information">
+  <p>Notes:</p>
+  <ul>
+    <li>The variables that will be useful depend on the ad server.</li>
+    <li>Brightcove URI encodes any value being inserted into the ad server URL.</li>
+    <li>If there are several values for one key, the encoded variables won't be readable by the ad server. This is because of the URI encoding.</li>
+  </ul>
+</aside>
 
 <p>Ad macro values can be supplied in following ways:</p>
 

@@ -36,7 +36,7 @@
 - section:
   name: Using the Live Module
   url: /live-module/index.html
-  icon: '<i class="fas fa-satellite-dish"></i>'
+  icon: '<img class="bcls-icon" src="/assets/images/feather/zap.svg">'
   docs:
     - name: 'Client-Side Preroll Ads with Live SSAI'
       url: /live-module/client-side-preroll-with-live-ssai.html
@@ -67,7 +67,7 @@
 - section:
   name: 'Working with the Live API'
   url: '/live-api/index.html'
-  icon: '<i class="far fa-brackets-curly"></i>'
+  icon: '<img class="bcls-icon" src="/assets/images/feather/code.svg">'
   docs:
     - name: 'Live API: Getting Started'
       url: '/live-api/getting-started/index.html'
@@ -156,7 +156,7 @@
 - section:
   name: Release Notes
   url: /release-notes/index.html
-  icon: '<i class="far fa-bell"></i>'
+  icon: '<img class="bcls-icon" src="/assets/images/feather/bell.svg">'
   docs:
     - name: Live Release Notes
       url: /release-notes/live-api-release-notes.html

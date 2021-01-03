@@ -4,7 +4,7 @@
 - section:
   name: Getting Started
   url: /get-started/index.html
-  icon: '<i class="far fa-location-arrow"></i>'
+  icon: '<img class="bcls-icon" src="/assets/images/feather/play.svg">'
   docs:
     - name: Brightcove Live Training Videos
       url: /get-started/brightcove-live-training-videos.html
@@ -19,7 +19,7 @@
 - section:
   name: General Information
   url: /general/index.html
-  icon: '<i class="far fa-info-circle"></i>'
+  icon: '<img class="bcls-icon" src="/assets/images/feather/info.svg">'
   docs:
     - name: Live DRM
       url: /general/live-drm.html
@@ -141,7 +141,7 @@
 - section:
   name: Administering Accounts
   url: /admin/index.html
-  icon: '<i class="fal fa-tools"></i>'
+  icon: '<img class="bcls-icon" src="/assets/images/feather/tool.svg">'
   docs:
     - name: Creating Custom Live Ingest Profiles
       url: /admin/creating-custom-live-ingest-profiles.html
@@ -165,7 +165,7 @@
 - section:
   name: 'Support'
   url: '/support/index.html'
-  icon: '<i class="far fa-question-circle"></i>'
+  icon: '<img class="bcls-icon" src="/assets/images/feather/help-circle.svg">'
   docs:
     - name: 'Brightcove Answers'
       url: '/support/brightcove-answer.html'

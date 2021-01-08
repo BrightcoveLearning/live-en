@@ -3139,7 +3139,7 @@ components:
         audio_codec:
           default: aac
           description: >-
-             The output audio codec to use. Note: Only `aac` is supported.
+            The output audio codec to use. Note: Only `aac` is supported.
           enum:
             - aac
           type: string
@@ -3211,7 +3211,7 @@ components:
           minimum: 1
           type: integer
         label:
-          description: Label for the live or VOD asset.
+          description: Label for the live or VOD asset. Each label **must be unique** for the job.
           type: string
         playlist_label:
           type: string

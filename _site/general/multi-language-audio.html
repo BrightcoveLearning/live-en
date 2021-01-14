@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <meta name="robots" content="noindex,nofollow"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="This topic explains how create a live job with multiple audio tracks in different languages.">
+  <meta name="description" content="">
   
-  <title>Live Multi-Language Audio</title>
+  <title>Multi Language Audio</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -128,9 +128,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item"><a href="/live-api/guides/">Guides</a></li>
+      <li class="breadcrumb-item"><a href="/general/">General Information</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Live Multi-Language Audio</li>
+      <li class="breadcrumb-item active" aria-current="page">Multi Language Audio</li>
     </ol>
   </nav>
 </header>
@@ -451,255 +451,79 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     
 
 
-<h1>Live Multi-Language Audio</h1>
 <article class="bcls-article">
-  <summary>This topic explains how create a live job with multiple audio tracks in different languages.</summary>
-
+  <h1>Multi-Language Audio</h1>
+  <summary>This feature allows ingesting multiple audio languages, descriptive or ambient audio experience tracks to be available for live playback.</summary>
   <section class="bcls-section">
-    <h2 id="Requirements">Requirements</h2>
+
+    <h2 id="Prerequisites">Prerequisites:</h2>
     <ul>
-      <li>An account set up for the Live API with multi-language audio feature enabled (contact your Account Manager for details)</li>
-      <li>An API key for the Live API (provided to you when the account is set up)</li>
-      <li>An encoder that supports RTP protocol. Multi-language audio support is limited to <code translate="No">rtp</code> or <code translate="No">rtp-fec</code> protocol.</li>
-      <li>The PID of each audio track must be known when creating the Job.</li>
-    </ul>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Create_your_Live_Job">Create your Live Job</h2>
+        <li>Define the <strong>PIDs (Package Identifiers)</strong> for each audio track in your encoder.</li>
+        <li>At this moment, only the RTP input format is supported. For this section to be enabled in the <strong>Create Live Event</strong> page, go to the <strong>ADVANCED OPTIONS</strong> section and select <strong>Real-Time Transport Protocol (RTP)</strong> under the <strong>Input Format</strong> selector. The Multi-Language button will be disabled if the Input Format is not set to RTP. </li>
 
-    <p>In order to add multiple audio tracks to your job, a list of audio tracks must be provided in the request body when creating a Live Job:</p>
-<pre class="line-numbers"><code class="language-json" translate="No">{
-  "live_stream": true,
-  "region": "us-west-2",
-  "protocol": "rtp",
-  "cidr_whitelist": [ /* omitted… */ ],
-  "outputs": [ /* omitted… */ ],
-  <span class="bcls-highlight">"alternate_audio": {
-    "tracks": [ { Track Details } ]
-  }</span>
-}</code></pre>
-    <h3>Supported fields for the <code translate="No">Track</code> object</h3>
-    <p>The table below contains a full description of supported fields in the <code translate="No">track</code> object</p>
-    <table class="bcls-table">
-      <caption class="bcls-caption--table">Track Fields</caption>
-      <thead class="bcls-table__head">
-          <tr>
-              <th>Field</th>
-              <th>Description</th>
-          </tr>
-      </thead>
-      <tbody class="bcls-table__body">
-          <tr>
-              <td><code translate="No">pid</code></td>
-              <td><strong>Required</strong>. The PID to pick from the incoming TS for the track that is specified in the stream file sent to Wowza.</td>
-          </tr>
-          <tr>
-              <td><code translate="No">language</code></td>
-              <td>
-                <strong>Required</strong>. The code for the language to be used. At present this is flexible and could be in any of the various language formats required/supported by the specs, specifically RFC5456/BCP47 which also covers ISO-639 as per the requirements. <a href="https://tools.ietf.org/html/rfc5646">https://tools.ietf.org/html/rfc5646</a>
-                <p>HLS &gt; <code translate="No">LANGUAGE</code> field</p>
-                <p>DASH &gt; <code translate="No">AdaptationSet:lang</code> field</p>
-              </td>
-          </tr>
-          <tr>
-              <td><code translate="No">variant</code></td>
-              <td>
-                <strong>Optional</strong>. Maps to the DASH Role Schema values: main, alternate, commentary, supplementary, dub. Used in DASH Role <code translate="No">urn:mpeg:dash:role:2011</code>. Defaults to <code translate="No">main</code>.
-                <p>HLS &gt; CHARACTERISTICS see <a href="https://tools.ietf.org/html/rfc8216#section-4.3.4.1">https://tools.ietf.org/html/rfc8216#section-4.3.4.1</a></p>
-              </td>
-          </tr>
-          <tr>
-              <td><code translate="No">label</code></td>
-              <td><strong>Optional</strong>. A text description to be used for the track, preferred to be used by the player where possible. Used in: HLS &gt; <code translate="No">NAME</code> field. Defaults to the <code translate="No">language</code> with an ID for each track e.g. <code translate="No">en-0</code> if not specified.</td>
-          </tr>
-          <tr>
-              <td><code translate="No">streams</code> []</td>
-              <td>
-                <strong>Optional</strong>. If not present copy use only the default audio settings. 
-                <p>HLS &gt; <code translate="No">GROUP-ID</code>. (Object)</p>
-                <p>Example: <code translate="No">{ “source”: “720p” }</code> - match label of output source.</p> <p>This mimics the <code translate="No">streams</code> field of playlist output type.</p>
-              </td>
-          </tr>
-          <tr>
-              <td><code translate="No">default</code></td>
-              <td>
-                <strong>Required except where default</strong>. Which audio track should be marked as <code translate="No">DEFAULT</code> in the <code translate="No">EXT-X-MEDIA</code> as well as which to be muxed into video stream *
-                <p>If not present first one is default.</p>
-                <p>* if multiple playlists are defined with different defaults, the top level default track is the muxed one</p>
-              </td>
-          </tr>
-      </tbody>
-  </table>
-  </section>
-  <section class="bcls-section">
-    <h2 id="example">Example</h2>
-    <p>This example body will create a Job with 2 audio tracks.</p>
-    <h3>Request</h3>
-<pre><code class="language-http" translate="No">POST https://api.bcovlive.io/v1/jobs
-  Content-Type: application/json
-  X-API-KEY: <span class="bcls-input">your_API_key</span></code></pre>
-    <h3>Request body</h3>
-<pre class="line-numbers"><code class="language-json" translate="No>{
-  "live_stream": true,
-  "region": "us-west-2",
-  "protocol": "rtp",
-  "cidr_whitelist": [
-    "0.0.0.0/0"
-  ],
-  "outputs": [
-    {
-      "label": "hls720p",
-      "live_stream": true,
-      "height": 720,
-      "video_bitrate": 2400,
-      "segment_seconds": 6,
-      "keyframe_interval": 90
-    },
-    {
-      "label": "hls540p",
-      "live_stream": true,
-      "height": 540,
-      "video_bitrate": 1200,
-      "segment_seconds": 6,
-      "keyframe_interval": 90
-    }
-  ],
-  <span class="bcls-highlight">"alternate_audio": {
-    "tracks": [
-      {
-        "label": "English",
-        "language": "en",
-        "variant": "main",
-        "pid": 257,
-        "default": true
-      },
-      {
-        "label": "Spanish",
-        "language": "es",
-        "variant": "main",
-        "pid": 258
-      }
-    ]
-  }</span>
-}</code></pre>
-    <details>
-      <summary><h2>Sample response</h2></summary>
-<pre class="line-numbers"><code class="language-json" translate="No">{
-  "id": "76f814fbcd7840e99ebf0e335c933730",
-  "outputs": [
-      {
-          "id": "0-76f814fbcd7840e99ebf0e335c933730",
-          "playback_url": "https://playback-qa.a-live.io/76f814fbcd7840e99ebf0e335c933730/us-west-2/NA/profile_0/chunklist.m3u8",
-          "playback_url_dvr": "https://playback-qa.a-live.io/76f814fbcd7840e99ebf0e335c933730/us-west-2/NA/profile_0/chunklist_dvr.m3u8",
-          "playback_url_vod": "https://playback-qa.a-live.io/76f814fbcd7840e99ebf0e335c933730/us-west-2/NA/profile_0/chunklist_vod.m3u8",
-          "playback_added_cdns": [],
-          "label": "hls720p"
-      },
-      {
-          "id": "1-76f814fbcd7840e99ebf0e335c933730",
-          "playback_url": "https://playback-qa.a-live.io/76f814fbcd7840e99ebf0e335c933730/us-west-2/NA/profile_1/chunklist.m3u8",
-          "playback_url_dvr": "https://playback-qa.a-live.io/76f814fbcd7840e99ebf0e335c933730/us-west-2/NA/profile_1/chunklist_dvr.m3u8",
-          "playback_url_vod": "https://playback-qa.a-live.io/76f814fbcd7840e99ebf0e335c933730/us-west-2/NA/profile_1/chunklist_vod.m3u8",
-          "playback_added_cdns": [],
-          "label": "hls540p"
-      },
-      {
-          "id": "2-76f814fbcd7840e99ebf0e335c933730",
-          "playlist_type": "defaultS3",
-          "type": "playlist",
-          "alternate_audio": {
-              "tracks": [
-                  {
-                      "label": "English",
-                      "language": "en",
-                      "name": "Alt0",
-                      "pid": 257,
-                      "playlistDefault": true,
-                      "default": true,
-                      "variant": "main",
-                      "profile_sources": [
-                          "profile_0"
-                      ]
-                  },
-                  {
-                      "label": "Spanish",
-                      "language": "es",
-                      "name": "Alt1",
-                      "pid": 258,
-                      "playlistDefault": false,
-                      "default": false,
-                      "variant": "main",
-                      "profile_sources": [
-                          "profile_0"
-                      ]
-                  }
-              ]
-          },
-          "filename": "playlist.m3u8",
-          "dvr_filename": "playlist_dvr.m3u8",
-          "playback_url": "https://playback-qa.a-live.io/76f814fbcd7840e99ebf0e335c933730/us-west-2/NA/playlist.m3u8",
-          "playback_url_dvr": "https://playback-qa.a-live.io/76f814fbcd7840e99ebf0e335c933730/us-west-2/NA/playlist_dvr.m3u8",
-          "playback_added_cdns": []
-      }
-  ],
-  <span class="bcls-highlight">"stream_url": "rtp://ep3-usw2.a-live.io:11780"</span>,
-  "stream_name": "76f814fbcd7840e99ebf0e335c933730.stream",
-  "static": false,
-  "alternate_audio": {
-      "tracks": [
-          {
-              "label": "English",
-              "language": "en",
-              "pid": 257,
-              "default": true,
-              "variant": "main",
-              "name": "Alt0"
-          },
-          {
-              "label": "Spanish",
-              "language": "es",
-              "pid": 258,
-              "default": false,
-              "variant": "main",
-              "name": "Alt1"
-          }
-      ]
-  },
-  "event_length": 93600,
-  "encryption": {},
-  <span class="bcls-highlight">"playback_url": "https://playback-qa.a-live.io/76f814fbcd7840e99ebf0e335c933730/us-west-2/NA/playlist.m3u8"</span>,
-  "playback_url_dvr": "https://playback-qa.a-live.io/76f814fbcd7840e99ebf0e335c933730/us-west-2/NA/playlist_dvr.m3u8",
-  "playback_added_cdns": []
-}
-</code></pre>
-    </details>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Configure_your_encoder">Configure your encoder</h2>
-    <p>Configure your encoder to deliver MPEG-TS over RTP to the stream_url from the create response. Make sure that the audio tracks provided in the request body are configured with the correct PID in your encoder.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Test_Playback">Test Playback</h2>
-    <p>Load the playback_url into the <a href="http://players.brightcove.net/3303963094001/player-reference-app/index.html">Brightcove Player</a> or Safari to confirm playback.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="DRM Playback">DRM_Playback</h2>
-    <p>Currently, DRM is only supported through the Catch-up (timeshift) service. Add these fields to your Create Job request request body:</p>
-<pre class="line-numbers"><code class="language-json" translate="No">{
-  "drm": {
-    "modes": [
-      "all"
-    ]
-  },
-  "timeshift": {
-    "type": "single",
-    "startover_duration": 36000,
-    "skip_live_output": true
-  }
-}
-</code></pre>
-    <p>The response will include DRM outputs and a <code translate="No">timeshift_url</code> to use for playback.</p>
-  </section>
+
+        <aside class="bcls-aside bcls-aside--information">Notes: 
+            <ul>
+            
+            <li>For information on how to define the <strong>PIDs (Package Identifiers)</strong>, for the audio tracks please refer to your Encoder documentation. </li>
+            <li>Support for SRT will be added in the near future.</li>
+        </ul>
+        
+        </aside>
+    </ul>
+
+
+    </section>
+    <section class="bcls-section">
+
+        <h2 id="add-audio">Adding Audio Tracks to a Live Event </h2>
+
+        <p>When creating a new Live event:</p>
+
+    <ol class="bcls-tasklist-restart">
+
+        <li>Open the <strong>Audio Tracks</strong> section.</li>
+        <li>Click the <strong>Add Audio Tracks</strong> button.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/multi-language-audio/audio-track-section.png" /></figure>
+
+        </li>
+        <li>Fill in the fields to add a new Audio track. Fields with an asterisk (*) are required.
+         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/multi-language-audio/audio-track-fields.png" /></figure>
+            <ul>
+                <li><strong>Default</strong>: Select which audio track is the default.</li>
+                <li><strong>Language*</strong>: Type the language code of the new audio track. Example: en, es, cy-GB, etc.</li>
+                <li><strong>PID*</strong>: Enter the PID code previously defined in your Encoder to sync the audio tracks in your incoming stream to the correct language and variant.
+                    Note: Unique PID's are required for each audio track. </li>
+                <li><strong>Variant</strong>: Represents the variant of the audio track. These can be: <strong>main, commentary, alternate, caption, subtitle, supplementary, dub</strong>. </li>
+                <li><strong>Label</strong>: Type a name for the track. Example: English, Spanish etc. Note that ff the label field is left empty, the language code will be used as a label.</li>
+            </ul>
+        </li>
+        <li>By clicking on the <strong>+</strong> and <strong>-</strong> buttons, you can add or remove audio tracks.
+            <aside class="bcls-aside bcls-aside--information">Note: You can add up to six Audio Tracks. If there is a need to add more tracks, please contact support.</aside>
+        
+        </li>
+    
+    </ol>
+
+    </section>
+
+    <section class="bcls-section">
+
+        <h2 id="change-audio">Changing the Audio Track</h2>
+
+        <ol class="bcls-tasklist-restart">
+            <li>If the multi-audio tracks were set up correctly, the player will have a headphone icon that can be used to switch between tracks.
+
+                <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/multi-language-audio/player-multi-language.png" /></figure>
+
+            </li>
+
+        </ol>
+
+        </section>
+
+
+
 </article>
 <!-- complete bootstrap layout -->
     </div>

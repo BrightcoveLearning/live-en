@@ -196,6 +196,15 @@ parent: Live Module
       <li>You should always stop the encoder before deactivating a recurring event. Accounts are allocated a finite number of recurring events. If the limit is reached, you will need to stop one of your recurring events before you can create a new one. If you have reached the maximum number of recurring events and attempt to create another one, an error will be returned.</li>
       <li>When you deactivate a recurring event, the last few seconds of the stream remain playable for some time.</li>
       <li>Accounts are limited to a total of 34 SEP events (3 per region, except for us-west-2, where 10 allowed). If you reach the limit, you must end one SEP event in the region where you want to create a new one before you can proceed.</li>
+      <li>If you attempt to activate more than 5 SEP jobs at once, you will receive an error like the following:
+<pre class="line-numbers"><code class="language-json" translate="No">{
+  “message”:“Allocating additional streaming capacity to the region. Please retry your request.: no_streaming_capacity_in_region”,
+  “statusCode”:500,
+  “name”:“ApiError”,
+  “isApiError”:true
+}</code></pre>
+        <p>You will need to wait until some jobs have finished activating before retrying the request.</p>
+      </li>
     </ul>
   </section>
   <section class="bcls-section">

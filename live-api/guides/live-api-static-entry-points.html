@@ -142,8 +142,17 @@ grandparent: Live API
 <code class="language-json" translate="No">{
   "error": "You've reached the number of static entry points jobs you can create for your account"
 }</code></pre>
-	</li>
-</ul>
+      </li>
+      <li>If you attempt to activate more than 5 SEP jobs at once, you will receive an error like the following:
+<pre class="line-numbers"><code class="language-json" translate="No">{
+  “message”:“Allocating additional streaming capacity to the region. Please retry your request.: no_streaming_capacity_in_region”,
+  “statusCode”:500,
+  “name”:“ApiError”,
+  “isApiError”:true
+}</code></pre>
+        <p>You will need to wait until some jobs have finished activating before retrying the request.</p>
+      </li>
+    </ul>
 </section>
 
 <section class="bcls-section">

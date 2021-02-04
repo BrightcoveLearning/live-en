@@ -64,7 +64,7 @@
       url: /live-module/reviewing-live-analytics.html
     - name: Using Live RTMP Outputs
       url: /live-module/using-live-rtmp-outputs-stream-facebook-and-youtube.html
-    - name: Integrating a Zoom meeting
+    - name: Integrating a Zoom Meeting
       url: /live-module/zoom-live-integration.html
 - section:
   name: 'Working with the Live API'

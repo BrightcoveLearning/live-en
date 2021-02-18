@@ -3361,7 +3361,6 @@ components:
           $ref: '#/components/schemas/CreateLiveJobRequestBody.videocloud.video'
       required:
         - video
-        - ingest
       title: Create_Live_Job_Request_Body.videocloud
       type: object
       description: >-

@@ -2882,7 +2882,7 @@ components:
         event_length:
           default: 0
           description: >-
-            Used to preset and define an end time for the live event. At any point within the specified `event_length` you may reconnect to your stream. The `event_length` setting goes into effect as soon as streaming begins. In case the encoder stops, the live stream will be kept available for the **remainder** of the `event_length` or the `reconnect_time`, whichever is *greater* (so if `event_length` is not set, its value is `0`, and `reconnect_time` will determine how long the stream is kept available)
+            Used to preset and define an end time for the live event. At any point within the specified `event_length` you may reconnect to your stream. The `event_length` setting goes into effect as soon as streaming begins. In case the encoder stops, the live stream will be kept available for the duration of the `reconnect_time
           maximum: 93600
           minimum: 0
           type: integer

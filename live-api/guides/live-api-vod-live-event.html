@@ -57,7 +57,7 @@ grandparent: Live API
 <p>Note that there are two ways that <code translate="No">videocloud</code> objects are used when you create a new live job:</p>
 
 <ol class="bcls-tasklist-restart">
-	<li>Including <code translate="No">videocloud</code> in the <strong>job-level fields</strong> will create a video in the <span translate="No">Video Cloud</span> account which will take the live stream as a remote asset, and with an <code translate="No">ingest</code> object to define the way the VOD will be ingested into Video Cloud:
+	<li>Including <code translate="No">videocloud</code> in the <strong>job-level fields</strong> will create a video in the <span translate="No">Video Cloud</span> account which will take the live stream as a remote asset, and create the VOD in your Video Cloud library:
 
 	<pre class="line-numbers">
 <code class="language-json" translate="No">{
@@ -65,15 +65,14 @@ grandparent: Live API
     "region": "us-west-2",
     "reconnect_time": 2400,
     "live_dvr_sliding_window_duration": 30,
-    <span class="bcls-highlight">"videocloud": {
-    "video": {
-      "name": "test_live_stream"
-    },
-    <span class="bcls-highlight">"live_to_vod": true</span>,
-    "ingest": {
-      "profile": "<span class="bcls-input">valid-ingest-profile-name</span>"
-    }
-  }</span></code></pre>
+    <strong>
+      "videocloud": {
+        "video": {
+          "name": "test_live_stream"
+        },
+        <span class="bcls-highlight">"live_to_vod": true</span>
+        }
+    </strong></code></pre>
 	</li>
 	<li>
 	<p>Including the <code translate="No">videocloud</code> object in the properties of an <code translate="No">outputs</code> clip or full VOD object will create a <span translate="No">Video Cloud</span> video for the clip - the clip is ingested into <span translate="No">Video Cloud</span> and becomes part of the VOD library:</p>
@@ -94,7 +93,6 @@ grandparent: Live API
         "video": {
             "name": "video name",
         },
-        <span class="bcls-highlight">"live_to_vod": true</span>,
         "ingest": {
             "profile": "<span class="bcls-input">valid-ingest-profile-name</span>"
         }

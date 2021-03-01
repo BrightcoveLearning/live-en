@@ -3266,11 +3266,6 @@ components:
           description: >-
             For jobs, setting live_stream to true indicates the output is a live rendition. If live_stream is false, or is not set, the output will be treated as a VOD output.
           type: boolean
-        live_to_vod:
-          type: boolean
-          default: false
-          description: >-
-            If set to `true`, a full VOD version of the live event will be created after the event is complete. Set the property here to deliver the VOD to S3 only. To send it to Video Cloud, it must me in the `videocloud`object.
         notifications:
           description: >-
             Array of notification destination objects or strings - notifications defined here are for job-level events.  A notification will be sent to the destination when selected event occurs. You can use a simple string with a url: &quot;http://log:pass@httpbin.org/post&quot;, or you can use an object. See [Events](/live-api/guides/live-api-notifications.html#Events) for an explanation of the events reported in `state_changed` notifications. <br> Retry strategy: In the event of a failed request to send a notification, the default retry strategy is to retry 50 times with an exponential delay between attempts: <br> `max_retry_times = 50` <br> `delay_delta_s = 5` <br> `next_retry = now_s + retry_count * delay_delta_s`
@@ -3660,12 +3655,6 @@ components:
           $ref: '#/components/schemas/CreateVodClipbody.outputs.videocloud.ingest'
         video:
           $ref: '#/components/schemas/CreateVodClipbody.outputs.videocloud.video'
-        live_to_vod:
-          type: boolean
-          default: false
-          description: >-
-            If set to `true`, a full VOD version of the live event will be created after the event is complete. Requires that there is a Video Cloud account associated with the Live account, *and* the `videocloud.video` property is set.
-
       required:
         - video
         - ingest

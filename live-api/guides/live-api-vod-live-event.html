@@ -103,10 +103,11 @@ grandparent: Live API
     }
   ]
 }</code></pre>
+    <p>Note: omit the ingest - profile field to use the default ingest profile for the account.</p>
 	</li>
 </ol>
 
-<p>You can also specify <code translate="No">live_to_vod</code> in the <code translate="No">videocloud</code> object within an output object:</p>
+<p>You can also include the <code translate="no">videocloud</code> object within an output object (in this case you do not need to <code translate="No">live_to_vod</code> field):</p>
 
 <pre class="line-numbers">
 <code class="language-json" translate="No">{
@@ -166,7 +167,6 @@ grandparent: Live API
     <span class="bcls-highlight">{
       "url":"s3://YOUR_BUCKET/path/filename.mp4",
       "credentials": "<span class="bcls-input">YOUR_CREDENTIAL_LABEL</span>",
-      <span class="bcls-highlight">"live_to_vod": true</span>
       "notifications": [
         {
           "url": "http://httpbin.org/post?vodStateChange"

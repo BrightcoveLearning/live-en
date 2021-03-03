@@ -647,6 +647,8 @@ grandparent: Live API
 	</li>
 	<li>
 	<p>When an ad break has remaining time shorter than the segment seconds of the stream and a slate is displayed, the slate is displayed for its segment duration and the actual ad break will be longer than expected.</p>
+   <li>
+     <p>The above can cause that one of the following ad breaks, will be shrunk by the latency duration, to try to get the session back to the live edge.</p></li>
 	</li>
 	<li>The first time the ad is seen by our system, it will not play until it is transcoded and ready to deliver.</li>
 	<li>VMAP for Live SSAI is not currently supported.</li>

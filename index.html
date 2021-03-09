@@ -11,8 +11,6 @@ parent: null
 <article class="landing-page-wrapper">
   <section class="landing-page-header" id="landing_page_header">
     <h1 style="font-weight: bold;">{{ site.title }}</h1>
-
-    <!-- <p>{{ site.description }}</p> -->
     <table width="100%" border="0">
 	<tbody>
 		<tr>
@@ -33,10 +31,6 @@ parent: null
   <section class="card-wrapper">
     {% for section in site.data.navigation offset:1 %}
     <section class="bcls-card-small" onclick="window.location.href='{{ section.url }}'">
-
-      <div class="card-icon">
-        {{ section.icon }}
-      </div>
 
       <div class="card-content">
         <h2>{{ section.name }}</h2>

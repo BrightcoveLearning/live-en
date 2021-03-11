@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   
-  <title>Implementing Server-Side Ads in the Live Module (SSAI)</title>
+  <title>Step-by-Step: Streaming a Secure Reliable Transport (SRT) Live event</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -62,9 +62,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item"><a href="/live-module/">Live Module</a></li>
+      <li class="breadcrumb-item"><a href="/get-started/">Getting Started</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Implementing Server-Side Ads in the Live Module (SSAI)</li>
+      <li class="breadcrumb-item active" aria-current="page">Step-by-Step: Streaming a Secure Reliable Transport (SRT) Live event</li>
     </ol>
   </nav>
 </header>
@@ -458,203 +458,174 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 
 <article class="bcls-article">
-  <h1>Implementing Server-Side Ads in the Live Module</h1>
-  <summary>In this topic you will learn how to implement server-side advertising in the Live module.</summary>
+  <h1>Step-by-Step: Streaming a Secure Reliable Transport (SRT) Live event</h1>
+  <summary>The purpose of this Quick Start is to show you how to use the Video Cloud Live module and Open Broadcaster Software (OBS) to broadcast an SRT live event.</summary>
   <section class="bcls-section">
-
-<h2 id="Introduction">Introduction</h2>
-
-<p>The Live module supports Server-Side Ad Insertion (SSAI) so server-side ads can be requested and displayed during a live stream. SSAI provides these main features during live events:</p>
-
-<ul>
-	<li>Since ads are stitched into the live video stream on the server side, they are not affected by ad blockers</li>
-	<li>Ads are inserted at cue points sent from your encoder or you can create an instant cue point using the&nbsp;Live module Control Room</li>
-	<li>You can configure&nbsp;<a href="#fill_slate">fill slates</a>&nbsp;to fill any unused ad time</li>
-</ul>
-
-<aside class="bcls-aside bcls-aside--information">
-  <ul>
-    <li>Before you can use SSAI, your Video Cloud account needs to be configured for Dynamic Delivery and enabled for SSAI. Contact your account manager for details.</li>
-  </ul>
-
-</aside>
-
-<p>This topic focuses on the settings required and the process to request a server-side ad during a live event.</p>
-</section>
-
-<section class="bcls-section">
-<h2 id="Configuring_the_server_side_ad_settings">Configuring the server-side ad settings</h2>
-
-<p>Before server-side ads can be delivered, server-side ad settings must be configured. The server-side ad settings define various aspects of ad playback, including ad calls, timing, beacons and other ad configuration options. These settings are configured as part of the Server-Side Ad Settings in the Admin module. In this example, a simple ad tag is defined.</p>
-
-<figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/18753/node18753-live-ad-config.png" width="600" height="900" /></figure>
-
-<p>For more information, see <a href="https://studio.support.brightcove.com/admin/configuring-server-side-ad-settings.html">Configuring Server-Side Ad Settings</a>.</p>
-</section>
-
-<section class="bcls-section">
-<h2 id="fill_slate">Configuring the fill slate</h2>
-
-<p>Fill slates are videos that will be displayed when there are gaps in a live stream ad break that cannot be filled with a dynamically-served ad. If the requested ad is shorter than the ad break time, the fill slate will be displayed so viewers don't see a blank player. You should configure at least one fill slate before requesting a server-side ad. Ad slates are configured as part of the Live Settings in the Admin module. In this example, a fill slate that displays the Brightcove logo was defined.</p>
-
-<figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/18753/node18753-fill-slate.png" /></figure>
-
-<p>For information on creating ad slates, see <a href="/admin/managing-live-settings.html">Managing Live Settings</a>.</p>
-</section>
-
-<section class="bcls-section">
-<h2 id="Creating_a_live_event_that_supports_server_side_ads">Creating a live event that supports server-side ads</h2>
-
-<p>In order for a live event to display server-side ads, the <strong>Enable Server Side Ad Insertion (SSAI)</strong> setting must be selected when the event is created. For complete information on creating a live event using the Live module, see <a href="/live-module/creating-and-managing-live-events-using-live-module.html">Creating and Managing Live Events using the Live Module</a>.</p>
-
-<aside class="bcls-aside bcls-aside--information">You should have configured the Server-Side Ad Settings and added at least one fill slate before creating an event.</aside>
-
-<p>To create a new live event that supports server-side ads, follow these steps.</p>
-
-<ol class="bcls-tasklist-restart">
-	<li>Open the Live module.</li>
-	<li>From the Manage Events page click <strong>Create Event</strong>.</li>
-	<li>Enter the event details as needed.</li>
-	<li>Click <strong>ADVANCED OPTIONS</strong> to expand the advanced options.</li>
-	<li>Check <strong>Enable Server Side Ad Insertion (SSAI)</strong>. This will enable server side ad insertion.</li>
-	<li>Select a <strong>Fill Slate</strong>. The fill slate will be displayed when there are gaps in a live stream ad break that cannot be filled with a dynamically-served ad.</li>
-	<li>When the <strong>Ad Audio</strong> setting is checked, the audio levels on ads will be normalized based on the adjustment that is set. This can be used as a way to help make sure ads aren’t significantly louder than the content. Brightcove recommends selecting this option.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/18753/node18753-event-ssai-settings.png" width="600" height="900" /></figure>
-	</li>
-	<li>Click <strong>Create Event</strong>.</li>
-	<li>The&nbsp;Control Room page&nbsp;will open with details about the live event including the&nbsp;<strong>Streaming Endpoint (RTMP URL)</strong>&nbsp;and&nbsp;<strong>Stream Name</strong>. These values will be used by the encoder.</li>
-	<li>Configure the encoder and start the live stream.</li>
-	<li>By default, &nbsp;the Control Room preview player shows the ad-free stream. Ads will not be shown in the Control Room unless a Live ad configuration is selected. Use the dropdown below to the player to select an ad configuration.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/18753/node18753-select-ad-config.png" /></figure>
-	</li>
-	<li><strong>(Optional)</strong> Click the plus button (<img alt="" src="/assets/images/general/18753/node18753-plus-icon.png" width="15" height="15" />) to select an additional ad configuration. Doing this will add another preview player on the Control Room page.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/18753/node18753-two-preview-players.png" /></figure>
-	</li>
-</ol>
-
-<p>Click the volume button below the preview player to control which player audio stream is active.</p>
-
-<aside class="bcls-aside bcls-aside--information">If the event is using RTMP outputs, ads will not be streamed to the RTMP output. The ad-free stream will be streamed instead.</aside>
-
-<aside class="bcls-aside bcls-aside--information">If the event is being used by the <a href="/live-module/publishing-live-event-facebook.html">Live to Facebook</a> feature in the Social module, ads will not be streamed to Facebook. The ad-free stream will be streamed instead.</aside>
-</section>
-
-<section class="bcls-section">
-<h2 id="Requesting_an_ad">Requesting an ad</h2>
-
-<p>To request an ad, click<strong> Goto Ad</strong>. When clicked, the length of the ad break can be selected.</p>
-
-<figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/18753/node18753-goto-ad.png" width="500" height="800" /></figure>
-
-<p>Click <strong>Insert</strong> to insert an ad break into the live stream. If the ad doesn't fill the entire ad break time, the fill slate (selected when the event was created) will be displayed. Ads will be seen in the Control Room preview player and in players that are published using the Live module. This example shows 2 ads being displayed in the Control Room.</p>
-
-<figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/18753/node18753-two-ad-preview.png" /></figure>
-</section>
-
-<section class="bcls-section">
-<h2 id="Publishing_the_live_event">Publishing the live event</h2>
-
-<p>Live streams with server-side ads cannot be published using the Media module, they must be published using the Live Module.</p>
-
-<p>To generate the embed code for a live event with server-side ads, follow these steps:</p>
-
-<ol class="bcls-tasklist-restart">
-	<li>Click on an event to open the Control Room page.</li>
-	<li>Click<strong> Publish and Embed</strong> in the left navigation.</li>
-	<li>Select an <strong>Available Player</strong>.
-	<aside class="bcls-aside bcls-aside--information">If the event is configured to enable server-side ads (SSAI), DVR or multi-CDN, Brightcove Player version 6.18.3 and above must be used. Only version 6.18.3 and above players will appear in the dropdown list.</aside>
-	</li>
-	<li>Select the <strong>Ad Configuration</strong> to use with the player. The ad configuration will determine which ad(s) appear in the player.</li>
-	<li>Click the <strong>Player URL</strong> to preview the event in a browser or copy the appropriate embed code to use.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/18753/node18753-publish.png" /></figure>
-	</li>
-</ol>
-</section>
-
-<section class="bcls-section">
-<h2 id="Publishing_a_remote_live_event">Publishing a remote live event</h2>
-
-<p>If you want to publish a remote live event, follow these steps:</p>
-
-<ol class="bcls-tasklist-restart">
-  <li>
-    <p>After creating your live event by following the steps <a href="#Creating_a_live_event_that_supports_server_side_ads">listed above</a>, return to the <strong>Live</strong> module's <strong>Control Room</strong>.
-	</li>
-	<li>
-    <p>If you know the value of your ad config id, then you can insert it into the playlist URL.</p>
-    <p>In the <strong>Live</strong> module's <strong>Control Room</strong>, copy the <strong>Playback URL</strong>.</p>
-    <p></p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Playback URL" src="/assets/images/live-module/remote/playback-url.png" />
-    <figcaption class="bcls-caption--image">Playback URL</figcaption>
-    </figure>
-    <p>Next, insert the ad config id (045f90cfd55187ff6e60c8) that you want to use to the URL as follows:</p>
-
-	<pre>
-<code class="language-html" translate="No">https://bcovlive-a.akamaihd.net/21e83ff8c229478e8c81416838eb6e1f/us-west-2/NA/<span class="bcls-highlight">045f90cfd55187ff6e60c8/</span>playlist.m3u8</code></pre>
-<p>Then, rename the playlist from <code translate="No">playlist.m3u8</code> to <code translate="No">playlist_ssaiM.m3u8</code>. The remote asset should look similar to this:</p>
-
-	<pre>
-<code class="language-html" translate="No">https://bcovlive-a.akamaihd.net/21e83ff8c229478e8c81416838eb6e1f/us-west-2/NA/045f90cfd55187ff6e60c8/<span class="bcls-highlight">playlist_ssaiM.m3u8</span></code></pre>
-<p>Skip to step 6 and use this playlist URL.</p>
-	</li>
-  <li>
-    <p>If you don't know the value of your ad config id, you can get the complete playlist URL as follows. Select the ad configuration that you want to use. </p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Select ad config" src="/assets/images/live-module/remote/select-ad-config.png" />
-    <figcaption class="bcls-caption--image">Select ad config</figcaption>
-    </figure>
-	</li>
-  <li>
-    <p>For your browser, open the network console tab. In this case, we are using the Chrome browser.</p>
-	</li>
-  <li>
-    <p>In the network console, search for "playlist_ssaiM". Copy the URL that ends with "playlist_ssaiM.m3u8". You may have to refresh the page and re-open your network tab.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Network console" src="/assets/images/live-module/remote/network-console.png" />
-    <figcaption class="bcls-caption--image">Network console</figcaption>
-    </figure>
-    <aside class="bcls-aside bcls-aside--information">Since the ad config id is contained within the URL, your SSAI URL will be different depending on the ad config you have selected.</aside>
-    <p>In this example, the URL is:</p>
-    <pre>
-<code class="language-html" translate="No">https://bcovlive-a.akamaihd.net/21e83ff8c229478e8c81416838eb6e1f/us-west-2/NA/582ea6fafea84bf595f610b8ebbeeda8/playlist_ssaiM.m3u8</code></pre>
-	</li>
-  <li>
-    <p>
-      In Studio, navigate to the <strong>Media</strong> module and create a new Remote asset pointing to the playlist URL from the previous step. In the left-side menu, select <strong>+ Add Remote Video</strong>.
-    </p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Add Remote Video" src="/assets/images/live-module/remote/add-remote-video.png" width="300" height="500"/>
-    <figcaption class="bcls-caption--image">Add Remote Video</figcaption>
-    </figure>
-  </li>
-  <li>
-    <p>
-      In the <strong>Add Remote Video</strong> enter a <strong>Video Name</strong> and the playlist URL. Select the <strong>Save</strong> button.
-    </p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Add Remote Video dialog" src="/assets/images/live-module/remote/remote-dialog.png" />
-    <figcaption class="bcls-caption--image">Add Remote Video dialog</figcaption>
-    </figure>
-  </li>
-  <li>
-    <p>
-      You now have a video Id pointing to your remote live stream. You can use this with any player in your account to stream live content with server-side ads.
-    </p>
-  </li>
-</ol>
-</section>
-
-<section class="bcls-section">
-<h2 id="Troubleshooting_live_stream_issues">Troubleshooting live stream issues</h2>
-
-<p>If you need further help getting your live event to work, you can <a href="https://supportportal.brightcove.com/create">contact us</a>. To make sure you get the fastest response possible, below is a list of what support will need to solve the problem.</p>
-
-<ul>
-	<li>The specific symptoms the stream is having. For example, does it not play at all or does it stutter or freeze?</li>
-	<li>Whether this stream worked correctly in the past</li>
-	<li>The entry point URL you are using in your encoder</li>
-	<li>The encoding software and hardware are you using</li>
-	<li>The URL to the player to which you have published the live event</li>
-	<li>The video ID of your live asset in Video Cloud Studio</li>
-	<li>The results of a trace-route from your encoder to the publishing point host</li>
-</ul>
-</section>
+    <p>To learn about all of the features and functionality available in the Live module, see <a href="/live-module/creating-and-managing-live-events-using-live-module.html">Creating and Managing Live Events using the Live Module</a>. For a series of best practices and recommendations to help ensure a high quality, stable live streaming experience, see <a href="/get-started/live-module-guidelines-and-best-practices.html">Live Module Guidelines and Best Practices</a>. For a list of all the options available from Brightcove for delivering live streaming video, see <a href="/get-started/delivering-live-streams.html">Delivering Live Streams</a>.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: Live streaming support is available only for Video Cloud Enterprise publishers.</aside>
+    <p>After completing this Quick Start, you should be able to:</p>
+    <ul>
+      <li>Use the Video Cloud Live module to create an SRT live event</li>
+      <li>Configure your encoder for an SRT live event</li>
+      <li>Trim your event and save it as a VOD asset in your Video Cloud account</li>
+    </ul>
+    <p>This Quick Start will help you broadcast a live event to different devices using Open Broadcaster Software (OBS) Studio. OBS is open source software for video recording and live streaming and can be <a href="https://obsproject.com">downloaded here</a>. Other encoders can also be used with the Live module.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="audience">Audience</h2>
+    <p>Any Video Cloud publisher who needs to broadcast a live streaming event using the Video Cloud Live module.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="prereq">Prerequisites</h2>
+    <ul>
+      <li>A Video Cloud Enterprise account with access to the Live module</li>
+      <li>A camera to broadcast the event</li>
+      <li>You must have your own encoding software; this Quick Start uses <a href="https://obsproject.com">OBS Studio</a> which can be downloaded for free (see a list of <a href="/general/supported-encoders-live-events.html">supported encoders</a>)</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="limitations">Limitations</h2>
+    <ul>
+      <li>Your encoder must output an RTMP or SRT stream</li>
+      <li>Live broadcasts will experience a 20-30 second delay</li>
+      <li>Streaming must begin within 30 minutes of the event start (default-level account setting)</li>
+      <li>For users using Internet Explorer, version 10 or later is required</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="steps">Steps to broadcast a live event</h2>
+    <p>To stream your live event using the Live module, you will complete the following tasks:</p>
+    <ul>
+      <li><a href="#newevent">Create a new event using the Video Cloud Live module</a></li>
+      <li><a href="#encoder">Configure your encoder</a></li>
+      <li><a href="#publish">Publish the live stream</a></li>
+      <li><a href="#clip">Create a clip from the live event</a></li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="newevent">Creating a new live event</h2>
+    <ol class="bcls-tasklist-restart">
+      <li>In a browser window, navigate to <a href="https://studio.brightcove.com">Video Cloud Studio</a>.</li>
+      <li>Enter your Video Cloud login credentials and click<strong> Sign In.</strong></li>
+      <li>The current Video Cloud account name will appear in the upper right corner of the page. If you have multiple accounts, click the account selector drop down and select the account you would like to save the live asset in. If you select an account that has not been enabled for Live, the Live module will open in trial mode.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="400" height="600"  src="/assets/images/get-started/10821/node10820-account-selector.png" /></figure>
+      </li>
+      <li>Click <strong> Live</strong> in the navigation header.</li>
+      <li>Click the <strong>Create Event</strong> button to create a new event.</li>
+      <li>Enter an <strong>Event Name</strong>.</li>
+      <li>Enter some <strong>Tags</strong> for the event.</li>
+      <li>If your account has been configured with required custom fields, make sure the custom fields are assigned values.</li>
+      <li>Select a <strong>Live Ingest Profile</strong> from the dropdown list. The live ingest profile controls the number and quality of live renditions that are created.</li>
+      <li>Select <strong>Convert event to video asset when complete</strong>. This will save the event as a video in the Media module.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/10821/node10820-create-live-event.png" /></figure>
+      </li>
+      
+      <li>Select the <strong>Region</strong> closest to your location.</li>
+      <li>Click the <strong>ADVANCED OPTIONS</strong> link to expand the advanced options.</li>
+      <li>Set the <strong>Reconnect Time</strong> to 10 minutes (default).
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/10821/node10820-srt-options.png" /></figure>
+      </li>
+      <li>Select <strong>Secure Reliable Transport (SRT)</strong> from the <strong>Input Format</strong> dropdown menu.</li>
+      <li>In the <strong>CIDR Whitelist</strong> section, enter a set of IP addresses that are allowed to connect to the SRT endpoint. This controls who can connect to the SRT endpoints. Note this option will only appear if the <strong>Input Format</strong> is RTP or SRT. You can specify <code translate="No">0.0.0.0/0</code> to allow all networks.</li>
+      <li>Click <strong>Start Streaming</strong>. The Live module will return a <strong>Stream Endpoint (SRT URL)</strong>. The SRT URL will be used in the encoder settings available in OBS by selecting <strong>Custom</strong> under <strong>Stream settings Service</strong>, then entering the <code translate="No">srt://</code> path into the Server box.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/10821/control-room-srt.png" /></figure>
+      </li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="encoder">Configuring your encoder</h2>
+    <p>In this section, we will configure and use the OBS Studio encoder to support a live streaming event. OBS Studio software is a desktop application that captures input from your camera and produces a stream that can be delivered by a CDN. Note that there are hardware and other software based encoding solutions available that may be better suited for delivering your live streaming event. You can download the OBS Studio software <a href="https://obsproject.com">here</a>.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: You should have the OBS software installed and a camera connected to your computer before proceeding</aside>
+    <aside class="bcls-aside bcls-aside--information">Note: This example uses a DSLR connected to a laptop using the Blackmagic Design UltraStudio Mini Recorder.</aside>
+    <aside class="bcls-aside bcls-aside--information">Note: OBS offers the ability to record a local copy of the stream. By choosing to do this, you will have a local copy of the stream that you can create clips from in case any networking issues occur during the broadcast of the event. For information on how to record a local file, see the <a href="https://obsproject.com/docs/index.html">OBS documentation</a>.</aside>
+    <ol class="bcls-tasklist-restart">
+      <li>Open OBS Studio.</li>
+      <li>In the <strong>Sources</strong> section, click <strong>+</strong> to add a new source. Select a <strong>Source</strong> from the list. This Quick Start is using a DSLR connected to a laptop using the Blackmagic Design UltraStudio Mini Recorder, so <strong>Blackmagic Device</strong> is selected.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/10821/node18621-add-source.png" /></figure>
+      </li>
+      <li>Enter a name for the new source and click <strong>OK</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/10821/node18621-blackmagic.png" /></figure>
+      </li>
+      <li>Select your camera from the <strong>Device</strong> list. A preview should appear in the properties dialog. Click <strong>OK</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/10821/node18621-source-preview.png" /></figure>
+      </li>
+      <li>In the Controls section, click <strong>Settings</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/10821/node18621-controls.png" /></figure>
+      </li>
+      <li>Click <strong>Stream</strong> in the left side of the Settings dialog.</li>
+      <li>In the <strong>Service</strong> dropdown menu, select <strong>Custom</strong>.</li>
+      <li>For <strong>Server</strong>, use the <strong>SRT URL</strong> provided by the Live module.</li>
+      <li>For the <strong>Stream key</strong>, leave it empty.</li>
+      <li>Click <strong>OK</strong> to save the settings.</li>
+      <li>In the Controls section, click <strong>Start Streaming</strong>. The live stream should begin.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/10821/node18621-live-stream-OBS.png" /></figure>
+      </li>
+    </ol>
+    <aside class="bcls-aside bcls-aside--information">Note: It will take about a minute to process your streams.</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="publish">Publishing the live event</h2>
+    <p>To generate the embed code for the live event, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Return to the Live module.</li>
+      <li>If the Control Room page for the event is not displayed, click the <strong>Live</strong> tab to display a list of live events. Click on the event name to open the Control Room page.</li>
+      <li>Confirm that you can see the live stream. Note that after starting the encoder, it may take a minute for the live stream to appear.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/10821/node10820-control-room.png" /></figure>
+      </li>
+      <li>Click <strong>Publish and Embed</strong>.</li>
+      <li>Select a <strong>Player</strong> and then click the <strong>Player URL</strong> to view the live stream.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/10821/node10820-embed-code.png" /></figure>
+      </li>
+      <li>When you are done with the live stream, click the <strong>Stop Stream</strong> button in the Live module. Also, return to OBS Studio and click the stream button to stop the encoder from streaming.
+        <aside class="bcls-aside bcls-aside--information">Note: It is important to make sure you close/stop your encoder when the live stream is complete. Leaving a connection open between any encoder and Brightcove, even when no data is being sent, may result in unexpected connection charges.</aside>
+      </li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="clip">Creating a clip</h2>
+    <p>The Live module provides the ability to create video clips from completed events. Clips can also be created while a live event is in progress. There are several reasons you might want to create a clip:</p>
+    <ul>
+      <li>To create a short, teaser clip that can be posted to social media</li>
+      <li>To limit the length of a video that you want to post (most platforms limit the length of videos)</li>
+      <li>You have found that shorter videos perform better on social media</li>
+    </ul>
+    <p>Clips can only be created within 7 days of the event end. Afterwards, the <strong>Create Clip</strong> button will be disabled. If the event is longer than 24 hours, only the last 24 hours are clippable.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: For complete details on using the clipping interface, see <a href="/live-module/creating-video-clip-using-live-module.html">Creating a Video Clip Using the Live Module</a>.</aside>
+    <p>To create a clip, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Return to the Live module.</li>
+      <li>Click the <strong>Completed</strong> tab.</li>
+      <li>Locate the event and click the event name to open the Control Room.</li>
+      <li>Click <strong>Create Clip</strong>. The clipping editor will open.</li>
+      <li>Click and drag the clipping handles (<img alt="" width="5" height="20" src="/assets/images/get-started/10821/node10820-clip-handle.png" />)on the focus timeline to set the start and end points for the clip.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="400" height="300" src="/assets/images/get-started/10821/node10820-clip-start-end.png" /></figure>
+      </li>
+      <li>Click <strong>Preview Clip</strong> to preview the clip. The start and end points can be adjusted as needed.</li>
+      <li>Click <strong>Save Clip</strong>.</li>
+      <li>Enter a <strong>Clip Name</strong> and other metadata values. Any required fields for the account will also appear and should be assigned values.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/10821/node10820-clip-metadata.png" /></figure>
+      </li>
+      <li>Click <strong>Create Clip</strong>. The ingestion process will begin and the clip will be saved to your Video Cloud account.</li>
+      <li>Clips will appear below the clip editor. Click <strong>Publish to Social</strong> to publish the clip to one of your social destinations using Brightcove Social. For information on publishing videos using the Social module, see <a href="https://social.support.brightcove.com/general/publishing-videos-social-media-platforms.html">Publishing Videos to Social Media Platforms</a>.</li>
+      <li>Click the <strong>Back to Control Room: Completed</strong> breadcrumb. All clips will also appear in the Control Room for the event.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/10821/node10820-clips-section.png" /></figure>
+        <aside class="bcls-aside bcls-aside--information">Note: You can click the Create Clip button multiple times to create multiple clips of your broadcast. This allows you to trim and save as many times as you want for each broadcast, saving the clips as separate VOD assets in your media library.</aside>
+      </li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="troubleshoot">Troubleshooting live stream issues</h2>
+    <p>If you need further help getting your live event to work, you can <a href="https://supportportal.brightcove.com/create">contact us</a>. To make sure you get the fastest response possible, below is a list of what support will need to solve the problem.</p>
+    <ul>
+      <li>The specific symptoms the stream is having. For example, does it not play at all or does it stutter or freeze?</li>
+      <li>Whether this stream worked correctly in the past</li>
+      <li>The entry point URL you are using in your encoder</li>
+      <li>The encoding software and hardware are you using</li>
+      <li>The URL to the player to which you have published the live event</li>
+      <li>The video ID of your live asset in Video Cloud Studio</li>
+      <li>The results of a trace-route from your encoder to the publishing point host</li>
+    </ul>
+  </section>
 </article>
 
 <!-- complete bootstrap layout -->
@@ -672,7 +643,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 10 Mar 2021
+  Page last updated on 11 Mar 2021
 </div>
 
 

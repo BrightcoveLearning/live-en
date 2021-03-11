@@ -395,6 +395,11 @@
   },
 
   {
+      "newURL": "https://live.support.brightcove.com/get-started/step-step-live-srt.html",
+      "oldURL": "/step-step-live-srt"
+  },
+
+  {
       "newURL": "https://live.support.brightcove.com/get-started/step-step-using-live-module-open-broadcaster-software-obs.html",
       "oldURL": "/step-step-using-live-module-open-broadcaster-software-obs"
   },

@@ -265,6 +265,11 @@
   },
 
   {
+      "newURL": "https://live.support.brightcove.com/live-api/guides/live-playback-restrictions.html",
+      "oldURL": "/live-playback-restrictions"
+  },
+
+  {
       "newURL": "https://live.support.brightcove.com/live-module/live-redundancy.html",
       "oldURL": "/live-redundancy"
   },

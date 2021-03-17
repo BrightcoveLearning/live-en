@@ -16,6 +16,8 @@
       url: /get-started/step-step-using-live-module-open-broadcaster-software-obs.html
     - name: 'Step-by-Step: Using the Live Module with Wirecast'
       url: /get-started/step-step-using-live-module-telestream-wirecast.html
+    - name: 'Step-by-Step: Streaming an SRT Live Event'
+      url: /get-started/step-step-live-srt.html
 - section:
   name: General Information
   url: /general/index.html

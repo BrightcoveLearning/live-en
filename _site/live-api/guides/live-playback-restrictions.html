@@ -490,19 +490,27 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="Create_Live_job">Create a Live job</h2>
     <p>You can create live jobs that utilize playback restrictions. For details about creating live streams, see the <a href="/live-api/getting-started/quick-start-create-live-stream-using-brightcove-live-api.html">Create a Live Stream Using the Brightcove Live API</a> document.</p>
 
-    <h3>New fields for the <code translate="No">drm</code> object:</h3>
-    <dl>
-      <dt><code translate="No">require_playback_token</code> (boolean)</dt>
-      <dd>Enables PAS.  Playback auth JWT will be required when requesting license.</dd>
-      <dt><code translate="No">check_playback_rights</code> (boolean)</dt>
-      <dd>Enables EPA.  Playback auth JWT will be required when requesting license. Uses playback rights id associated with video or JWT to enforce restrictions.</dd>
-    </dl>
-    <h3>New field for the <code translate="No">videocloud.video</code> object:</h3>
-    <aside class="bcls-aside bcls-aside--information language-editable">Note that this field must be added to video using the CMS API <em>after</em> you create the live job, because it cannot be added when the video is created.</aside>
-    <dl>
-      <dt><code translate="No">playback_rights_id</code> (string)</dt>
-      <dd>Associates specified EPA playback rights with video.</dd>
-    </dl>
+    <h3>New fields</h3>
+    <p>The following new fields are used to add Playback Restrictions to a Live job.</p>
+    <ul>
+      <li>
+        <h4><code translate="No">drm</code> object:</h4>
+        <dl>
+          <dt><code translate="No">require_playback_token</code> (boolean)</dt>
+          <dd>Playback auth JWT will be required when requesting license.</dd>
+          <dt><code translate="No">check_playback_rights</code> (boolean)</dt>
+          <dd>Playback auth JWT will be required when requesting license. Uses playback rights id associated with video or JWT to enforce restrictions.</dd>
+        </dl>
+      </li>
+      <li>
+        <h4><code translate="No">videocloud.video</code> object:</h4>
+        <aside class="bcls-aside bcls-aside--information language-editable">Note that this field must be added to video using the CMS API <em>after</em> you create the live job, because it cannot be added when the video is created.</aside>
+        <dl>
+          <dt><code translate="No">playback_rights_id</code> (string)</dt>
+          <dd>Associates specified Playback Restrictions with a video.</dd>
+        </dl>
+      </li> 
+    </ul>
 
     <h3 id="Sample_request_response">Sample request and response</h3>
     <p>Below is a sample Live API request body for creating a Live job with Playback Restrictions.</p>
@@ -673,21 +681,16 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 	"playback_rights_id": "<span class="bcls-input">your playback_rights_id</span>"
 }</code></pre>
   </section>
+
   <section class="bcls-section">
-    <h2 id="player_implementation">Player implementation</h2>
-    <p>If you are using the Brightcove web player or one of the Brightcove native player SDKs to deliver the live stream, the implementation for PAS or EPA is the same as for VOD. See one of the following:</p>
-    <h3>PAS</h3>
+    <h2 id="Delivering_the_stream">Delivering the stream</h2>
+    <p>If you are using the Brightcove web player or one of the Brightcove native player SDKs to deliver the live stream, the implementation for Playback Restrictions is the same as for VOD. See one of the following:</p>
     <ul>
-      <li><a href="https://apis.support.brightcove.com/playback-authorization/guides/using-pas-with-bcp.html">Using Playback Authorization DRM with the Brightcove Player</a></li>
-      <li><a href="https://apis.support.brightcove.com/playback-authorization/guides/using-pas-with-sdks.html">Using Playback Authorization DRM with the Native SDKs</a></li>
-    </ul>
-    <h3>EPA</h3>
-    <ul>
-      <li><a href="https://apis.support.brightcove.com/playback-rights/guides/using-epa-with-bcp.html">Using Playback Rights with Brightcove Player</a></li>
-      <li><a href="https://apis.support.brightcove.com/playback-rights/guides/using-epa-with-sdks.html">Using Playback Rights with the Native SDKs</a></li>
+      <li><a href="https://apis.support.brightcove.com/playback-restrictions/getting-started/implementing-playback-rights.html#Configure_your_player">Configure your player</a> section of the Implementing Playback Rights document</li>
+      <li><a href="https://apis.support.brightcove.com/playback-restrictions/getting-started/implementing-runtime-restrictions.html#Configure_the_player">Configure your player</a> section of the Implementing Runtime Restrictions document</li>
     </ul>
   </section>
-  <section class="bcls-section">
+  <!-- <section class="bcls-section">
     <h2 id="Related_topics">Related topics</h2>
     <ul>
       <li><a href="https://apis.support.brightcove.com/playback-authorization/index.html">PAS</a></li>
@@ -698,7 +701,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>a href="https://apis.support.brightcove.com/playback-rights/guides/using-epa-with-bcp.html">Using Playback Rights with Brightcove Player</a></li>
       <li><a href="https://apis.support.brightcove.com/playback-rights/guides/using-epa-with-sdks.html">Using Playback Rights with the Native SDKs</a></li>
     </ul>
-  </section>
+  </section> -->
 </article>
 
 <!-- complete bootstrap layout -->

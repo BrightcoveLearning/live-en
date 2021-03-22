@@ -1,0 +1,75 @@
+---
+title: 'Scheduling Activation/Deactivation of a Live Stream'
+description: 'With the <code translate="No">JobStartStop</code> endpoint, you can schedule the activation and deactivation of an existing live <a href="/live-api/guides/live-api-static-entry-points.html">SEP</a> job. At the specified time, our system will make the necessary API calls to activate and de-active a Job on your behalf.'
+parent: Guides
+grandparent: Live API
+---
+<h1>{{ page.title }}</h1>
+<article class="bcls-article">
+  <summary>{{ page.description }}</summary>
+	<section class="bcls-section">
+		<h2 id="Requirements">Requirements</h2>
+		<ul>
+			<li>The Live API key for your account.</li>
+			<li>Your live account must have the scheduler override enabled.</li>
+			<li>An existing Live Job with <code translate="no">"static": true</code> (see <a href="/live-api/guides/live-api-static-entry-points.html">Static Entry Point Jobs</a> for more information).</li>
+		</ul>
+	</section>
+	<section class="bcls-section">
+		<h2 id="Create_a_scheduler">Create a scheduler</h2>
+		<p>Let's say we want to schedule a 2 hour event that will start at <code>2021-04-02T14:00:00+00:00</code>.</p>
+
+		<p>Timestamps must be in UTC formated as unix timestamp in seconds. You can use <a href="https://www.unixtimestamp.com/" rel="nofollow">https://www.unixtimestamp.com/</a> for conversion.</p>
+		<aside class="bcls-aside bcls-aside--information language-editable">Note that the activation time limitations described <a href="https://live.support.brightcove.com/live-api/guides/live-api-static-entry-points.html#Limitations" rel="nofollow">here</a> still apply to scheduled activations, so we recommended scheduling a time that is at least 60 seconds before your desired start time.
+			<p>For this example, we will choose 5 minutes before the intended start time:</p>
+			<pre><code translate="no">start:
+				2021-04-02T13:55:00+00:00 = 1617386100
+				
+				stop:
+				2021-04-02T16:00:00+00:00 = 1617393600</code></pre>
+		</aside>
+		<p>To implement the scheduler, make the following <code translate="No">POST</code> request:</p>
+		<pre><code class="language-http" translate="No">https://api.bcovlive.io/v1/scheduler/jobstartstop</code></pre>
+		<h3>Headers</h3>
+		<pre class="line-numbers"><code class="language-bash" translate="No">Content-Type: application/json
+		X-API-KEY: <span class="bcls-input">{your API Key}</span></code></pre>
+		<h3>Request body</h3>
+		<pre class="line-numbers"><code class="language-json" translate="No">{
+			"job_id": "your Job ID",
+			"activation": {
+				"time_utc": 1617386100
+			},
+			"deactivation": {
+				"time_utc": 1617393600
+			},
+			"description": "My Tuesday broadcast"
+		}</code></pre>
+			<details>
+				<summary><h3>Sample response</h3></summary>
+<pre class="line-numbers"><code class="language-json" translate="No">{
+	"account_id": "1752604059001",
+	"activation": {
+		"state": "pending",
+		"time_utc": 1617386100
+	},
+	"deactivation": {
+		"state": "pending",
+		"time_utc": 1617393600
+	},
+	"description": "My Tuesday broadcast",
+	"job_id": "15981d93877e490185e6ebc9af2c79a3",
+	"type": "jobstartstop",
+	"workflow_id": "d44cf29f4f184757ac0995beb8a0097e"
+}</code></pre>
+			</details>
+		</section>
+		<section class="bcls-section">
+			<h2 id="Update_a_scheduler">Update a scheduler</h2>
+			<p>You can update the <code translate="no">activation</code> and/or <code translate="no">deactivation</code> time for a scheduler provided that the job is in a <strong translate="no">pending</strong> state (<code translate="no">"state": "pending"</code>). To do this, send a <code translate="no">PUT</code> request to:</p>
+<pre><code class="language-http" translate="No">https://api.bcovlive.io/v1/scheduler/jobstartstop/<span class="bcls-input">{workflow_id}</span></code></pre>
+			<p>The headers are the same as for the <code translate="no">POST</code> request shown above.</p>
+			<h3>Request body</h3>
+			<p>In the request body object, include only the <code translate="no">activation</code> and/or <code translate="no">deactivation</code> fields.</p>
+			<p>For example, to </p>
+		</section>
+</article>

@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Learn how to manage Live account settings.">
+  <meta name="description" content="">
   
-  <title>Administering Accounts</title>
+  <title>Brightcove Live - Zoom Integration</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -62,7 +62,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item active" aria-current="page">Administering Accounts</li>
+      <li class="breadcrumb-item"><a href="/live-module/">Live Module</a></li>
+      
+      <li class="breadcrumb-item active" aria-current="page">Brightcove Live - Zoom Integration</li>
     </ol>
   </nav>
 </header>
@@ -471,53 +473,98 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     
 
 
-<h1>Administering Accounts</h1>
 <article class="bcls-article">
-  <summary>Learn how to manage Live account settings.</summary>
+    <h1>Auto Start/Stop of Live Events in the Control Room</h1>
+    <summary>This feature allows the user to schedule and manage the start and stop time of one or many Live Job events. 
+        </summary>
+   
 
-  <section class="card-wrapper">
-    <section class="bcls-card">
-      <div class="card-content">
-        <h2 id="Topics_in_this_section">Topics in this section</h2>
-        <ul>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          <li><a href="/admin/creating-custom-live-ingest-profiles.html">Creating Custom Live Ingest Profiles</a>  </li>
-          
-          <li><a href="/admin/fields-custom-live-ingest-profiles.html">Fields for Custom Live Ingest Profiles</a>  </li>
-          
-          <li><a href="/admin/managing-live-settings.html">Managing Live Settings</a>  </li>
-          
-          <li><a href="/admin/managing-api-authentication-credentials.html">Managing API Authentication Credentials</a>  </li>
-          
-          <li><a href="/admin/standard-live-ingest-profiles.html">Standard Live Ingest Profiles</a>  </li>
-          
-          
-          
-          
-          
-          
-          
-        </ul>
-      </div>
-    </section>
-  </section>
+        <section class="bcls-section">
+            <h2 id="schedule">Prerequisites</h2>
+
+            <p>In order to schedule events a SEP (Static Entry Point) type of Live event must be created.</p>
+
+            <h2 id="schedule">Recommendations and Best Practices</h2>
+
+            <p>For best results, please follow the directions below.</p>
+                <ol class="bcls-tasklist-restart">
+                <li>Six pending activations can be scheduled at a time. If more are needed, please contact customer support.</li>
+                <li>Once the SEP is activated, the default Maximum waiting time is still valid (see <a href="https://live.support.brightcove.com/live-api/guides/live-api-static-entry-points.html#max_waiting_time" target="_blank">Live API: Static Entry Points for more information</a>).</li>
+                <li>Note that the limitations described in the <a href="https://live.support.brightcove.com/live-api/guides/live-api-static-entry-points.html#Limitations" target="_blank">Static Entry Points</a> are still valid.</li>
+                </ol>
+        </section>
+
+        <section class="bcls-section">
+
+            <h2 id="schedule">Scheduling Panel in the Control Room</h2>
+
+            <p>If a Live account is enabled for Auto Start/Stop, a Scheduling panel will be available on the top right corner of the control room, under the preview player.</p>
+            <p>To use Auto Start/Stop, follow the instructions below:</p>
+
+            <ol class="bcls-tasklist-restart">
+                <li>In the Live module, create a new Live event with a Static Entry Point or visit a previously created one.</li>
+                <li>In the <strong>Control Room</strong>, a new panel named Scheduling is going to be available. Click <strong>+ Add Schedule</strong> to create a new auto activation and deactivation.
+                <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="" height="" src="/assets/images/live-module/scheduling/add-schedule.png" /></figure>
+
+                </li>
+                <li>Modify the start and end dates to the desired activation and deactivation, respectively.
+                <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="" height="" src="/assets/images/live-module/scheduling/start-end-dates.png" /></figure>
+                <aside class="bcls-aside bcls-aside--information">While we do not prevent multiple schedules from running at the same time, the conflicting rows will be shown with a warning. Conflicting schedules are likely to fail if not addressed prior to the activation time. To avoid the warning, simply delete one of the rows or adjust the times.</aside>
+                </li>
+                <li>
+                    To create a second schedule, click again the <strong>+ Add Schedule</strong> button. The <strong>+ Add Schedule</strong> button will be automatically disabled when the limit of pending activations is reached.
+                    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="" height="" src="/assets/images/live-module/scheduling/more-schedules.png" /></figure>
+
+                </li>
+                <li>To delete a schedule, click the <img class="bcls-image--no-border" alt="" width="30" height="30" src="/assets/images/live-module/scheduling/trash-icon.png" /> icon.</li>
+                
+            </ol>
+
+
+        </section>
+
+        <section class="bcls-section">
+
+            <h2 id="schedule">Viewing Upcoming Activations</h2>
+
+            <ol class="bcls-tasklist-restart">
+                
+                <li>Once scheduled activations are created, you can view them in the <strong>Manage Events > Standby </strong> tab. 
+                    The next upcoming <strong>Start</strong> and <strong>Stop</strong> dates are shown under the <strong>Upcoming</strong> title.
+                    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="" height="" src="/assets/images/live-module/scheduling/upcoming-events.png" /></figure>
+                </li>
+                <li>The <strong>Show</strong> select box allows you to display only scheduled events.
+                <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="300" height="200" src="/assets/images/live-module/scheduling/show-events.png" /></figure>
+                </li>
+                <li>Once an event starts will be displayed on the <strong>Live</strong> tab, and the <strong>Start</strong> time will be disabled.
+                <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="" height="" src="/assets/images/live-module/scheduling/streaming-event.png" /></figure>
+
+                </li>
+            </ol>
+
+
+
+            </section>
+
+        <section class="bcls-section">
+
+            <h2 id="schedule">Managing the Scheduled Events</h2>
+
+            </section>
+
+
+
+
 </article>
 
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">
+      
+      <nav class="right-side-nav" id="right_side_nav">
+        <h6 class="toc">Page Contents</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
       
     </div>
   </div>
@@ -525,7 +572,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 22 Mar 2021
+  Page last updated on 24 Mar 2021
 </div>
 
 

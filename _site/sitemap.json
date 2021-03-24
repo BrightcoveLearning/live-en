@@ -100,7 +100,7 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/general/",
+      "newURL": "https://live.support.brightcove.com/live-api/getting-started/",
       "oldURL": "/index"
   },
 
@@ -135,7 +135,7 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/live-api/getting-started/",
+      "newURL": "https://live.support.brightcove.com/general/",
       "oldURL": "/index"
   },
 
@@ -275,6 +275,11 @@
   },
 
   {
+      "newURL": "https://live.support.brightcove.com/live-api/guides/live-scheduler.html",
+      "oldURL": "/live-scheduler"
+  },
+
+  {
       "newURL": "https://live.support.brightcove.com/general/live-video-glossary.html",
       "oldURL": "/live-video-glossary"
   },
@@ -370,6 +375,16 @@
   },
 
   {
+      "newURL": "https://live.support.brightcove.com/live-api/guides/scheduler-stop-start.html",
+      "oldURL": "/scheduler-stop-start"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/live-module/scheduling-live-event.html",
+      "oldURL": "/scheduling-live-event"
+  },
+
+  {
       "newURL": "https://live.support.brightcove.com/search-test.html",
       "oldURL": "/search-test"
   },
@@ -390,12 +405,12 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/admin/standard-live-ingest-profiles.html",
+      "newURL": "https://live.support.brightcove.com/live-api/references/standard-live-ingest-profiles.html",
       "oldURL": "/standard-live-ingest-profiles"
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/live-api/references/standard-live-ingest-profiles.html",
+      "newURL": "https://live.support.brightcove.com/admin/standard-live-ingest-profiles.html",
       "oldURL": "/standard-live-ingest-profiles"
   },
 

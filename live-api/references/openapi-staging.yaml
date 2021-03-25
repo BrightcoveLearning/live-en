@@ -15,15 +15,21 @@ tags:
   - name: Live Jobs
     description: |-
       Operations for creating live jobs, listing live jobs, getting job details, and canceling live jobs. There are also operations for activating and deactivating SEP jobs, scheduling activation and deactivation of SEP jobs, and for inserting cuepoints or ID3 timed metadata.
+  - name: Schedule SEP Job Start Stop
+    description: |-
+      Operations for scheduling the activation and deactivation of an SEP job.
   - name: Redundant Groups
     description: >-
       Operations for creating redundant groups of live jobs for failover in case one stream fails
   - name: RTMP Outputs
     description: >-
       Operations for creating and managing RTMP outputs. Note that RTMP output hours will be billed against event hours.
-  - name: Clips
+  - name: Live Job Clip
     description: >-
       Operations for creating and managing VOD clips, including scheduling clips for SEP jobs
+  - name: Schedule Clip
+    description: >-
+      Operations for scheduling the creation of a VOD clip for SEP jobs only.
   - name: SSAI
     description: Operations for managing server-side ad insertion with live streams.
   - name: Credentials
@@ -960,7 +966,7 @@ paths:
   /scheduler/jobstartstop:
     post:
       tags:
-        - Live Jobs
+        - Schedule SEP Job Start Stop
       summary: Create a JobStartStop workflow to schedule activation/deactivation of an SEP job
       description: >-
         Create a JobStartStop workflow to schedule activation/deactivation of an SEP job.
@@ -1003,10 +1009,119 @@ paths:
         AllowDynamicQueryParameters: false
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
+  '/scheduler/jobstartstop/{workflow_id}':
+    get:
+      tags:
+        - Schedule SEP Job Start Stop
+      summary: Get JobStartStop Details
+      description: Get JobStartStop Details
+      operationId: GetJobStartStop
+      parameters:
+        - $ref: '#/components/parameters/WorkflowId'
+        - $ref: '#/components/parameters/ContentType'
+        - $ref: '#/components/parameters/XAPIKEY'
+      responses:
+        '200':
+          description: '200'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JobStartStop'
+        '401':
+          description: >-
+            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more details
+        '404':
+          description: >-
+            RESOURCE_NOT_FOUND: The api could not find the resource you requested - see Live API Error Messages for more details
+        '500':
+          description: >-
+             INTERNAL_SERVER_ERROR: see Live API Error Messages for more details
+      deprecated: false
+      security: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+    put:
+      tags:
+        - Schedule SEP Job Start Stop
+      summary: Update JobStartStop Details
+      description: >-
+        Update Activation and/or Deactivation time. Can only update if
+        state is "pending".
+      operationId: UpdateJobStartStop
+      parameters:
+        - $ref: '#/components/parameters/WorkflowId'
+        - $ref: '#/components/parameters/ContentType'
+        - $ref: '#/components/parameters/XAPIKEY'
+      requestBody:
+        description: Update a JobStartStop workflow
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateJobStartStopRequestBody'
+        required: true
+      responses:
+        '200':
+          description: '200'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JobStartStop'
+        '401':
+          description: >-
+            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more details
+        '404':
+          description: >-
+            RESOURCE_NOT_FOUND: The api could not find the resource you requested - see Live API Error Messages for more details
+        '500':
+          description: >-
+             INTERNAL_SERVER_ERROR: see Live API Error Messages for more details
+      deprecated: false
+      security: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+    delete:
+      tags:
+        - Schedule SEP Job Start Stop
+      summary: Cancel JobStartStop
+      description: Cancel JobStartStop
+      operationId: CancelJobStartStop
+      parameters:
+        - $ref: '#/components/parameters/WorkflowId'
+        - $ref: '#/components/parameters/ContentType'
+        - $ref: '#/components/parameters/XAPIKEY'
+      responses:
+        '200':
+          description: '200'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JobStartStop'
+        '401':
+          description: >-
+            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more details
+        '404':
+          description: >-
+            RESOURCE_NOT_FOUND: The api could not find the resource you requested - see Live API Error Messages for more details
+        '500':
+          description: >-
+             INTERNAL_SERVER_ERROR: see Live API Error Messages for more details
+      deprecated: false
+      security: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
   /vods:
     post:
       tags:
-        - Clips
+        - Live Job Clip
       summary: Create VOD Clip
       description: 'Create VOD clips from a Live Stream. '
       operationId: CreateVodClip
@@ -1051,7 +1166,7 @@ paths:
   '/vods/{jvod_id}':
     get:
       tags:
-        - Clips
+        - Live Job Clip
       summary: Get VOD Clip Job
       description: 'Get a VOD clip job by id. '
       operationId: GetVodClipJob
@@ -1090,7 +1205,7 @@ paths:
   '/vods/{jvod_id}/cancel':
     put:
       tags:
-        - Clips
+        - Live Job Clip
       summary: Cancel a VOD Clip Job
       description: 'Cancel a VOD clip job by id. '
       operationId: CancelVodClipJob
@@ -1129,7 +1244,7 @@ paths:
   '/jobs/{job_id}/vods':
     get:
       tags:
-        - Clips
+        - Live Job Clip
       summary: List VOD Clip Jobs
       description: >-
         List VOD clips for a Live Stream - for additional useful information on
@@ -1181,7 +1296,7 @@ paths:
         IsMultiContentStreaming: false
     post:
       tags:
-        - Clips
+        - Live Job Clip
       summary: 'Create VOD Clip (Alternate)'
       description: >-
         Create VOD clips from a Live Stream. This is operation is identical to
@@ -1227,13 +1342,13 @@ paths:
         AllowDynamicQueryParameters: false
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
-  '/sceduler/clip':
+  '/scheduler/clip':
     post:
       tags:
-        - Live Job Clip
-      summary: Create a Clip workflow
-      description: 'Create a Clip workflow'
-      operationId: CreateAClip
+        - Schedule Clip
+      summary: Create a Scheduled Clip workflow
+      description: 'Create a Scheduled Clip workflow'
+      operationId: CreateAScheduledClip
       parameters:
         - $ref: '#/components/parameters/ContentType'
         - $ref: '#/components/parameters/XAPIKEY'
@@ -1274,8 +1389,8 @@ paths:
         IsMultiContentStreaming: false
     get:
       tags:
-        - Live Job Clip
-      summary: List Clip workflows
+        - Schedule Clip
+      summary: List Scheduled Clip workflows
       description: >-
         'List Clip workflows'
       operationId: ListClip
@@ -1316,10 +1431,10 @@ paths:
   '/sceduler/Clip/{workflow_id}':
     get:
       tags:
-        - Clips
-      summary: Get Clip Details
-      description: Get Clip Details
-      operationId: GetClip
+        - Schedule Clip
+      summary: Get Clip Schedule Details
+      description: Get Clip Schedule Details
+      operationId: GetScheduledClip
       parameters:
         - $ref: '#/components/parameters/WorkflowId'
         - $ref: '#/components/parameters/ContentType'
@@ -1349,12 +1464,12 @@ paths:
         IsMultiContentStreaming: false
     put:
       tags:
-        - Live Job Clip
-      summary: Update Clip Details
+        - Schedule Clip
+      summary: Update Clip Schedule Details
       description: >-
         Update Clip time. Can only update if
         state is "pending".
-      operationId: UpdateClip
+      operationId: UpdateScheduledClip
       parameters:
         - $ref: '#/components/parameters/WorkflowId'
         - $ref: '#/components/parameters/ContentType'
@@ -1381,7 +1496,7 @@ paths:
             RESOURCE_NOT_FOUND: The api could not find the resource you requested - see Live API Error Messages for more details
         '500':
           description: >-
-             INTERNAL_SERVER_ERROR: see Live API Error Messages for more details
+            INTERNAL_SERVER_ERROR: see Live API Error Messages for more details
       deprecated: false
       security: []
       x-operation-settings:
@@ -1391,10 +1506,10 @@ paths:
         IsMultiContentStreaming: false
     delete:
       tags:
-        - Live Job Clip
-      summary: Cancel Clip
+        - Schedule Clip
+      summary: Cancel Scheduled Clip
       description: Cancel Clip
-      operationId: CancelClip
+      operationId: CancelScheduledClip
       parameters:
         - $ref: '#/components/parameters/WorkflowId'
         - $ref: '#/components/parameters/ContentType'
@@ -6286,6 +6401,23 @@ components:
           "time_utc": 1612879500
         }
       }
+    CreateClipRequestBody.ClipInfo:
+      properties:
+        time_utc:
+          description: >-
+            UTC time to perform task. Value must be unix timestamp in seconds.
+          type: number
+        notification:
+          description: >-
+            Duration in seconds before time_utc to send a notification for the upcoming task.
+          type: number
+        output:
+          $ref: '#/components/schemas/CreateVodClipbody.outputs'
+      required:
+        - time_utc
+        - output
+      title: Create_Clip_Body.clip_info
+      type: object
     CreateVodClipbody.outputs:
       properties:
         credentials:
@@ -6522,6 +6654,15 @@ components:
       required: true
       style: simple
       explode: false
+      schema:
+        type: string
+    job_id:
+      name: job_id
+      in: query
+      description: >-
+        Filter results by particular Job.
+      style: form
+      explode: true
       schema:
         type: string
     live_account_id:

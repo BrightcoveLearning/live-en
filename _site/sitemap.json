@@ -195,12 +195,12 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/release-notes/live-api-release-notes.html",
+      "newURL": "https://live.support.brightcove.com/live-api/references/live-api-release-notes.html",
       "oldURL": "/live-api-release-notes"
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/live-api/references/live-api-release-notes.html",
+      "newURL": "https://live.support.brightcove.com/release-notes/live-api-release-notes.html",
       "oldURL": "/live-api-release-notes"
   },
 
@@ -377,11 +377,6 @@
   {
       "newURL": "https://live.support.brightcove.com/live-api/guides/scheduler-stop-start.html",
       "oldURL": "/scheduler-stop-start"
-  },
-
-  {
-      "newURL": "https://live.support.brightcove.com/live-module/scheduling-live-event.html",
-      "oldURL": "/scheduling-live-event"
   },
 
   {

@@ -270,7 +270,7 @@ paths:
         - $ref: '#/components/parameters/start_token'
         - $ref: '#/components/parameters/page_size'
         - $ref: '#/components/parameters/job_id'
-        - $ref: '#/components/parameters/state'
+        - $ref: '#/components/parameters/scheduler_state'
         - $ref: '#/components/parameters/start'
         - $ref: '#/components/parameters/end'
       responses:
@@ -445,7 +445,7 @@ components:
           "time_utc": 1611188000,
           "notification": 300
         },
-        "description": "My JobStartStop workflow".
+        "description": "My JobStartStop workflow",
         "notification_url": "http://example.com/live/jobstartstop/callbacks"
       }
     CreateJobStartStopRequestBody.TaskInfo:
@@ -596,7 +596,7 @@ components:
           },
           "time_utc": 1612879800
         },
-        "description": "My JobStartStop workflow".
+        "description": "My JobStartStop workflow",
         "notification_url": "http://example.com/live/jobstartstop/callbacks"
       }
     CreateClipRequestBody.ClipInfo:
@@ -1001,7 +1001,7 @@ components:
         minimum: 1
         maximum: 1000
         default: 10
-    account_id:
+    scheduler_account_id:
       name: account_id
       in: query
       description: >-
@@ -1019,7 +1019,7 @@ components:
       explode: true
       schema:
         type: string
-    state:
+    scheduler_state:
       name: state
       in: query
       description: >-

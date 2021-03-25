@@ -100,7 +100,7 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/live-api/getting-started/",
+      "newURL": "https://live.support.brightcove.com/general/",
       "oldURL": "/index"
   },
 
@@ -135,7 +135,7 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/general/",
+      "newURL": "https://live.support.brightcove.com/live-api/getting-started/",
       "oldURL": "/index"
   },
 
@@ -275,6 +275,21 @@
   },
 
   {
+      "newURL": "https://live.support.brightcove.com/live-api/guides/live-scheduler-clips.html",
+      "oldURL": "/live-scheduler-clips"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/live-api/guides/live-scheduler-notifications.html",
+      "oldURL": "/live-scheduler-notifications"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/live-api/guides/live-scheduler-stop-start.html",
+      "oldURL": "/live-scheduler-stop-start"
+  },
+
+  {
       "newURL": "https://live.support.brightcove.com/live-api/guides/live-scheduler.html",
       "oldURL": "/live-scheduler"
   },
@@ -360,6 +375,11 @@
   },
 
   {
+      "newURL": "https://live.support.brightcove.com/live-api/references/reference-staging.html",
+      "oldURL": "/reference-staging"
+  },
+
+  {
       "newURL": "https://live.support.brightcove.com/live-api/references/reference.html",
       "oldURL": "/reference"
   },
@@ -375,8 +395,8 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/live-api/guides/scheduler-stop-start.html",
-      "oldURL": "/scheduler-stop-start"
+      "newURL": "https://live.support.brightcove.com/live-module/scheduling-live-event.html",
+      "oldURL": "/scheduling-live-event"
   },
 
   {

@@ -4,7 +4,6 @@
 - section:
   name: Getting Started
   url: /get-started/index.html
-  icon: '<img class="bcls-icon" src="/assets/images/feather/play.svg">'
   docs:
     - name: Brightcove Live Training Videos
       url: /get-started/brightcove-live-training-videos.html
@@ -21,7 +20,6 @@
 - section:
   name: General Information
   url: /general/index.html
-  icon: '<i data-feather="info"></i>'
   docs:
     - name: Live DRM
       url: /general/live-drm.html
@@ -38,7 +36,6 @@
 - section:
   name: Using the Live Module
   url: /live-module/index.html
-  icon: '<img class="bcls-icon" src="/assets/images/feather/zap.svg">'
   docs:
     - name: 'Client-Side Preroll Ads with Live SSAI'
       url: /live-module/client-side-preroll-with-live-ssai.html
@@ -142,10 +139,17 @@
         url: /live-api/guides/using-live-redundancy.html
       - name: VOD from Live Event
         url: /live-api/guides/live-api-vod-live-event.html
+      # - name: 'Overview: Live Scheduler'
+      #   url: /live-api/guides/live-scheduler.html
+      # - name: Scheduling Activation/Deactivation of an SEP Stream
+      #   url: /live-api/guides/live-scheduler-stop-start.html
+      # - name: Scheduling Clip Generation for an Live Streams
+      #   url: /live-api/guides/live-scheduler-clips.html
+      # - name: Live Scheduler Notifications
+      #   url: /live-api/guides/live-scheduler-notifications.html
 - section:
   name: Administering Accounts
   url: /admin/index.html
-  icon: '<i data-feather="tool"></i>'
   docs:
     - name: Creating Custom Live Ingest Profiles
       url: /admin/creating-custom-live-ingest-profiles.html
@@ -160,7 +164,6 @@
 - section:
   name: Release Notes
   url: /release-notes/index.html
-  icon: '<img class="bcls-icon" src="/assets/images/feather/bell.svg">'
   docs:
     - name: Live Release Notes
       url: /release-notes/live-api-release-notes.html
@@ -169,7 +172,6 @@
 - section:
   name: 'Support'
   url: '/support/index.html'
-  icon: '<i data-feather="help-circle"></i>'
   docs:
     - name: 'Brightcove Answers'
       url: '/support/brightcove-answer.html'

@@ -21,14 +21,14 @@ layout: staging
       <li>limiting the total users</li>
     </ul>
 
-    <p>For a comprehensive set of restrictions, you can configure them using the Playback Rights API. In this case, you would associate the <code translate="No">playback_rights_id</code> with a video. For details, see the <a href="https://apis.support.brightcove.com/playback-restrictions/getting-started/overview-playback-restrictions.html">Asset-level restrictions</a> section of the Overview: Brightcove Playback Restrictions document.</p>
+    <p>For a comprehensive set of restrictions, you can configure them using the Playback Rights API. In this case, you would associate the <code translate="No">playback_rights_id</code> with a video. For details, see the <a href="https://apis.support.brightcove.com/playback-restrictions/getting-started/overview-playback-restrictions.html#Asset_level_restrictions">Asset-level restrictions</a> section of the Overview: Brightcove Playback Restrictions document.</p>
 
-    <p>For runtime restrictions, you can specify the JWT claims. These restrictions include stream concurrency and device limits. For details, see the <a href="https://apis.support.brightcove.com/playback-restrictions/getting-started/overview-playback-restrictions.html#Runtime_restrictions">Runtime restrictions</a> section of the Overview: Brightcove Playback Restrictions document.</p>
+    <p>For runtime restrictions, you can specify the JSON Web Token (JWT) claims. These restrictions include stream concurrency and device limits. For details, see the <a href="https://apis.support.brightcove.com/playback-restrictions/getting-started/overview-playback-restrictions.html#Runtime_restrictions">Runtime restrictions</a> section of the Overview: Brightcove Playback Restrictions document.</p>
 
-    <p>With live streams, you can also override the DRM CRT for a user. For details, see the <a href="https://apis.support.brightcove.com/playback-restrictions/getting-started/overview-playback-restrictions.html#Key_license_protection">Key/license protection</a> section of the Overview: Brightcove Playback Restrictions document.</p>
+    <p>With live streams, you can also override the DRM CRT for a user. For details, see the <a href="https://apis.support.brightcove.com/playback-restrictions/getting-started/overview-playback-restrictions.html#License_Keys_Protection">License Keys Protection</a> section of the Overview: Brightcove Playback Restrictions document.</p>
 
     <p>No matter which mode you choose, the job request must include a <code translate="No">videocloud.video</code> attribute so that a Video Cloud video is created and linked to the live job.  The <code translate="No">playback_rights_id</code> attribute can be updated on the Video Cloud video to change the playback restrictions via the <a href="https://apis.support.brightcove.com/cms/references/reference.html#operation/UpdateVideo">CMS API</a>.</p>
-    <p>You will also need to <a href="https://general.support.brightcove.com/developer/create-jwt-stage.html">create a JWT</a> with the appropriate claims. The JWT will need to be included in any license server requests.  If you are implementing your own player, you will need to pass this value in either a <code translate="No">BCOV-Auth</code> header or <code translate="No">bcov_auth</code> query parameter (in addition to the DRM token).</p>
+    <p>You will also need to <a href="https://general.support.brightcove.com/developer/create-json-web-token.html">create a JSON Web Token (JWT)</a> with the appropriate claims. The JWT will need to be included in any license server requests.  If you are implementing your own player, you will need to pass this value in either a <code translate="No">BCOV-Auth</code> header or <code translate="No">bcov_auth</code> query parameter (in addition to the DRM token).</p>
   </section>
 
   <section class="bcls-section">
@@ -229,22 +229,10 @@ layout: staging
 
   <section class="bcls-section">
     <h2 id="Deliver_the_stream">Deliver the stream</h2>
-    <p>If you are using the Brightcove web player or one of the Brightcove native player SDKs to deliver the live stream, the implementation for Playback Restrictions is the same as for VOD. See one of the following:</p>
+    <p>If you are using the Brightcove web player or one of the Brightcove native player SDKs to deliver the live stream, the implementation for Playback Restrictions is the same as for VOD. See the following:</p>
     <ul>
       <li><a href="https://apis.support.brightcove.com/playback-restrictions/getting-started/implementing-playback-rights.html#Configure_your_player">Configure your player</a> section of the Implementing Playback Rights document</li>
-      <li><a href="https://apis.support.brightcove.com/playback-restrictions/getting-started/implementing-runtime-restrictions.html#Configure_the_player">Configure your player</a> section of the Implementing Runtime Restrictions document</li>
     </ul>
   </section>
-  <!-- <section class="bcls-section">
-    <h2 id="Related_topics">Related topics</h2>
-    <ul>
-      <li><a href="https://apis.support.brightcove.com/playback-authorization/index.html">PAS</a></li>
-      <li><a href="https://apis.support.brightcove.com/playback-rights/index.html">EPA</a></li>
-      <li><a href="https://general.support.brightcove.com/developer/create-jwt-stage.html#Claims_for_Playback_Authorization">Creating JSON Web Tokens (JWT)</a></li>
-      <li><a href="https://apis.support.brightcove.com/playback-authorization/guides/using-pas-with-bcp.html">Using Playback Authorization DRM with the Brightcove Player</a></li>
-      <li><a href="https://apis.support.brightcove.com/playback-authorization/guides/using-pas-with-sdks.html">Using Playback Authorization DRM with the Native SDKs</a></li>
-      <li>a href="https://apis.support.brightcove.com/playback-rights/guides/using-epa-with-bcp.html">Using Playback Rights with Brightcove Player</a></li>
-      <li><a href="https://apis.support.brightcove.com/playback-rights/guides/using-epa-with-sdks.html">Using Playback Rights with the Native SDKs</a></li>
-    </ul>
-  </section> -->
+  
 </article>

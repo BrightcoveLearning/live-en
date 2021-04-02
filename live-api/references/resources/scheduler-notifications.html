@@ -19,7 +19,7 @@
     </a>Scheduler Notifications
   </h1>
   <p>When creating workflows with the scheduler, you can optionally configure notifications. After completing a task, the scheduler will send a notification to the configured endpoint using http method
-    <code>POST</code>
+    <code translate="no">POST</code>
     with details on what action was performed and it's success/failure.
 	You can also configure a pre-notification of an upcoming task. Please refer to the
     <a href="/live-api/references/reference-staging.html">API reference</a> for configuring notifications for your workflow type.
@@ -44,7 +44,7 @@
     </a>Notification Body
   </h2>
   <p>When the server sends a notification to your
-    <code>notification_url</code>, the request will include a JSON body
+    <code translate="no">notification_url</code>, the request will include a JSON body
   </p>
   <table>
     <thead>
@@ -107,7 +107,7 @@
         <td>activate</td>
         <td>jobstartstop</td>
         <td>Job activation complete. If
-          <code>"error"</code> is present, the activation has failed and the deactivation will be cancelled.
+          <code translate="no">"error"</code> is present, the activation has failed and the deactivation will be cancelled.
         </td>
       </tr>
       <tr>
@@ -119,7 +119,7 @@
         <td>deactivate</td>
         <td>jobstartstop</td>
         <td>Job deactivation compelte. If
-          <code>"error"</code> is present, the deactvation has failed.
+          <code translate="no">"error"</code> is present, the deactvation has failed.
         </td>
       </tr>
       <tr>
@@ -131,7 +131,7 @@
         <td>clip</td>
         <td>clip</td>
         <td>Clip request complete. If
-          <code>"error"</code> is present, the request has failed.
+          <code translate="no">"error"</code> is present, the request has failed.
         </td>
       </tr>
     </tbody>

@@ -556,12 +556,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>Here are notes related to live analytics:</p>
     
     <ul>
-      <li>Only <strong>Concurrent Viewers</strong> will be presented in real-time; other metrics will be collected and aggregated with a delay similar to standard analytics</li>
-      <li><strong>Concurrent Viewers</strong> is only accurate for streams that are delivered with the Brightcove Player and SDKs</li>
-      <li>Data will be available for up to 32 days after the event</li>
-      <li>Real-time is defined by the aggregated sessions over a one-minute interval</li>
-      <li>With recurring events (static entry points), analytics will be provided from the start of the most recent activation</li>
-      <li>At the moment, the analytics module cannot fetch the precise "unique viewer" data and has a discrepancy between LIVE module analytics. Please use the LIVE Analytics UI to confirm the number of viewers.</li>
+      <li>
+        <p>Analytics are recorded for the default live video ID generated with a Live event. If a customer takes the m3u8 playlist for playback, or creates a remote asset with it (a new video ID), the analytics won't be collected for the new asset.</p></li>
+      <li><p>Only <strong>Concurrent Viewers</strong> will be presented in real-time; other metrics will be collected and aggregated with a delay similar to standard analytics</p></li>
+      <li><p><strong>Concurrent Viewers</strong> is only accurate for streams that are delivered with the Brightcove Player and SDKs</p></li>
+      <li><p>Data will be available for up to 32 days after the event</p></li>
+      <li><p>Real-time is defined by the aggregated sessions over a one-minute interval</p></li>
+      <li><p>With recurring events (static entry points), analytics will be provided from the start of the most recent activation</p></li>
+      <li><p>At the moment, the analytics module cannot fetch the precise "unique viewer" data and has a discrepancy between LIVE module analytics. Please use the LIVE Analytics UI to confirm the number of viewers.</p></li>
       <li>
         <p>Certain ad blockers will prevent Live analytics data from loading properly, as shown below:</p>
         <figure class="bcls-figure">
@@ -588,7 +590,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 19 Feb 2021
+  Page last updated on 07 Apr 2021
 </div>
 
 

@@ -479,28 +479,17 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 
   <section class="bcls-section">
+    <h2 id="Overview">Overview</h2>
 <p>The Live module provides reports on live streaming event or channel performance. Information including real-time concurrent viewers and aggregated post-event data about the viewers stream time, geography, and devices are available.</p>
 
-<p>Notes:</p>
+  <p>To view live analytics, follow these steps:</p>
+  <ol class="bcls-tasklist">
+    <li>Open the <strong>Live</strong> module.</li>
+    <li>Click on an event name.</li>
+    <li>Click&nbsp;<strong>Reporting</strong>&nbsp;in the left navigation.</li>
+  </ol>
 
-<ul>
-	<li>Only <strong>Concurrent Viewers</strong> will be presented in real-time; other metrics will be collected and aggregated with a delay similar to standard analytics</li>
-	<li><strong>Concurrent Viewers</strong> is only accurate for streams that are delivered with the Brightcove Player and SDKs</li>
-	<li>Data will be available for up to 32 days after the event</li>
-	<li>Real-time is defined by the aggregated sessions over a one-minute interval</li>
-	<li>With recurring events (static entry points), analytics will be provided from the start of the most recent activation</li>
-  <li>At the moment, the analytics module cannot fetch the precise "unique viewer" data and has a discrepancy between LIVE module analytics. Please use the LIVE Analytics UI to confirm the number of viewers.</li>
-  <li>
-    Certain ad blockers will prevent Live analytics data from loading properly
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/live-module/ad-blocker-blocks-live-analytics.png" alt="Ad Blocker Blocks Analytics Data">
-      <figcaption class="bcls-caption--image">Ad Blocker Blocks Analytics Data</figcaption>
-    </figure>
-    <p>Disabling the ad blocker should resolve the issue.</p>
-  </li>
-</ul>
-
-<p>To view live analytics, open the Live module, click on an event name and then click&nbsp;<strong>Reporting</strong>&nbsp;in the left navigation. The analytics dashboard is organized into the following sections:</p>
+<p>The analytics dashboard is organized into the following sections:</p>
 
 <ul>
 	<li><a href="#snapshot">Snapshot</a></li>
@@ -560,6 +549,28 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <figure class=“bcls-figure"><img class="bcls-image--no-border" alt="" width="200" height="200" src="/assets/images/general/18843/node18843-export-data.png" /></figure>
   </section>
+
+  <section class="bcls-section">
+    <h2 id="Notes">Notes</h2>
+    
+    <p>Here are notes related to live analytics:</p>
+    
+    <ul>
+      <li>Only <strong>Concurrent Viewers</strong> will be presented in real-time; other metrics will be collected and aggregated with a delay similar to standard analytics</li>
+      <li><strong>Concurrent Viewers</strong> is only accurate for streams that are delivered with the Brightcove Player and SDKs</li>
+      <li>Data will be available for up to 32 days after the event</li>
+      <li>Real-time is defined by the aggregated sessions over a one-minute interval</li>
+      <li>With recurring events (static entry points), analytics will be provided from the start of the most recent activation</li>
+      <li>At the moment, the analytics module cannot fetch the precise "unique viewer" data and has a discrepancy between LIVE module analytics. Please use the LIVE Analytics UI to confirm the number of viewers.</li>
+      <li>
+        <p>Certain ad blockers will prevent Live analytics data from loading properly, as shown below:</p>
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/live-module/ad-blocker-blocks-live-analytics.png" alt="Ad Blocker Blocks Analytics Data">
+          <figcaption class="bcls-caption--image">Ad Blocker Blocks Analytics Data</figcaption>
+        </figure>
+        <p>Disabling the ad blocker should resolve the issue.</p>
+      </li>
+    </ul>
 
 </article>
 <!-- complete bootstrap layout -->

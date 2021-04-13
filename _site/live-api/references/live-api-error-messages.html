@@ -634,6 +634,20 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 </pre>
       </td>
     </tr>
+    <tr>
+      <td><code translate="No">400 Bad Request</code></td>
+      <td>The following message is displayed when the limit of RTMP Outputs per Live Job is reached.
+      </td>
+      <td>RTMP outputs are limited to 5 outputs per live job</td>
+      <td>
+      <pre class="line-numbers">
+<code class="language-json" translate="No">{ 
+  "error":"RTMP outputs limit reached, failed to add" 
+}
+</code>
+</pre>
+      </td>
+    </tr>
   </tbody>
 </table>
 </section>

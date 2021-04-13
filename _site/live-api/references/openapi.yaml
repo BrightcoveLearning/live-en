@@ -55,18 +55,18 @@ paths:
                 $ref: '#/components/schemas/LiveJob'
         '400':
           description: >-
-            BAD_REQUEST: Invalid input value - see Live API Error Messages for
+            BAD_REQUEST: Invalid input value - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for
             more details
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more
             details
         '404':
           description: >-
             RESOURCE_NOT_FOUND: The api could not find the resource you
-            requested - see Live API Error Messages for more details
+            requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
-          description: 'INTERNAL_SERVER_ERROR: see Live API Error Messages for more details'
+          description: 'INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details'
       deprecated: false
       security: []
       x-operation-settings:
@@ -107,15 +107,15 @@ paths:
                 $ref: '#/components/schemas/ListLiveJobsResponse'
         '400':
           description: >-
-            BAD_REQUEST: Invalid input value - see Live API Error Messages for more details
+            BAD_REQUEST: Invalid input value - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more details
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '404':
           description: >-
-            RESOURCE_NOT_FOUND: The api could not find the resource you requested - see Live API Error Messages for more details
+            RESOURCE_NOT_FOUND: The api could not find the resource you requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
-          description: 'INTERNAL_SERVER_ERROR: see Live API Error Messages for more details'
+          description: 'INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details'
       deprecated: false
       security: []
       x-operation-settings:
@@ -143,13 +143,13 @@ paths:
                 $ref: '#/components/schemas/Job'
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more details
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '404':
           description: >-
-            RESOURCE_NOT_FOUND: The api could not find the resource you requested - see Live API Error Messages for more details
+            RESOURCE_NOT_FOUND: The api could not find the resource you requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
           description: >-
-            INTERNAL_SERVER_ERROR: see Live API Error Messages for more details
+            INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
       deprecated: false
       security: []
       x-operation-settings:
@@ -188,13 +188,13 @@ paths:
                 $ref: '#/components/schemas/PlaybackToken'
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more details
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '404':
           description: >-
-            RESOURCE_NOT_FOUND: The api could not find the resource you requested - see Live API Error Messages for more details
+            RESOURCE_NOT_FOUND: The api could not find the resource you requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
           description: >-
-             INTERNAL_SERVER_ERROR: see Live API Error Messages for more details
+             INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
       deprecated: false
       security: []
       x-operation-settings:
@@ -222,13 +222,13 @@ paths:
                 $ref: '#/components/schemas/ActivateSepStreamResponse'
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more details
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '404':
           description: >-
-            RESOURCE_NOT_FOUND: The api could not find the resource you requested - see Live API Error Messages for more details
+            RESOURCE_NOT_FOUND: The api could not find the resource you requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
           description: >-
-            INTERNAL_SERVER_ERROR: see Live API Error Messages for more details
+            INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
       deprecated: false
       security: []
       x-operation-settings:
@@ -256,13 +256,13 @@ paths:
                 $ref: '#/components/schemas/DeactivateSepStreamResponse'
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more details
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '404':
           description: >-
-            RESOURCE_NOT_FOUND: The api could not find the resource you requested - see Live API Error Messages for more details
+            RESOURCE_NOT_FOUND: The api could not find the resource you requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
           description: >-
-            INTERNAL_SERVER_ERROR: see Live API Error Messages for more details
+            INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
       deprecated: false
       security: []
       x-operation-settings:
@@ -298,16 +298,16 @@ paths:
                 $ref: '#/components/schemas/ManualAdCuePointInsertionResponse'
         '400':
           description: >-
-            BAD_REQUEST: Invalid input value - see Live API Error Messages for more details
+            BAD_REQUEST: Invalid input value - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more details
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '404':
           description: >-
-            RESOURCE_NOT_FOUND: The api could not find the resource you requested - see Live API Error Messages for more details
+            RESOURCE_NOT_FOUND: The api could not find the resource you requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
           description: >-
-            INTERNAL_SERVER_ERROR: DB getItem, no results found - see Live API Error Messages for more details
+            INTERNAL_SERVER_ERROR: DB getItem, no results found - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
       deprecated: false
       security: []
       x-operation-settings:
@@ -339,16 +339,16 @@ paths:
           description: '200'
         '400':
           description: >-
-            BAD_REQUEST: Invalid input value - see Live API Error Messages for more details
+            BAD_REQUEST: Invalid input value - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more details
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '404':
           description: >-
-            RESOURCE_NOT_FOUND: The api could not find the resource you requested - see Live API Error Messages for more details
+            RESOURCE_NOT_FOUND: The api could not find the resource you requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
           description: >-
-            INTERNAL_SERVER_ERROR: DB getItem, no results found - see Live API Error Messages for more details
+            INTERNAL_SERVER_ERROR: DB getItem, no results found - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
       deprecated: false
       security: []
       x-operation-settings:
@@ -372,16 +372,16 @@ paths:
           description: '204 NO CONTENT'
         '400':
           description: >-
-            BAD_REQUEST: Invalid input value - see Live API Error Messages for more details
+            BAD_REQUEST: Invalid input value - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more details
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '404':
           description: >-
-            RESOURCE_NOT_FOUND: The api could not find the resource you requested - see Live API Error Messages for more details
+            RESOURCE_NOT_FOUND: The api could not find the resource you requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
           description: >-
-            INTERNAL_SERVER_ERROR: DB getItem, no results found - see Live API Error Messages for more details
+            INTERNAL_SERVER_ERROR: DB getItem, no results found - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
       deprecated: false
       security: []
       x-operation-settings:
@@ -424,16 +424,16 @@ paths:
                 $ref: '#/components/schemas/InsertId3TimedMetadataResponse'
         '400':
           description: >-
-            BAD_REQUEST: Invalid input value - see Live API Error Messages for more details
+            BAD_REQUEST: Invalid input value - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more details
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '404':
           description: >-
-            RESOURCE_NOT_FOUND: The api could not find the resource you requested - see Live API Error Messages for more details
+            RESOURCE_NOT_FOUND: The api could not find the resource you requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
           description: >-
-            INTERNAL_SERVER_ERROR: see Live API Error Messages for more details
+            INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
       deprecated: false
       security: []
       x-operation-settings:
@@ -461,14 +461,14 @@ paths:
                 $ref: '#/components/schemas/CancelLiveJob'
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more
             details
         '404':
           description: >-
             RESOURCE_NOT_FOUND: The api could not find the resource you
-            requested - see Live API Error Messages for more details
+            requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
-          description: 'INTERNAL_SERVER_ERROR: see Live API Error Messages for more details'
+          description: 'INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details'
       deprecated: false
       security: []
       x-operation-settings:
@@ -496,13 +496,13 @@ paths:
                 $ref: '#/components/schemas/StopLiveJob'
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more details
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '404':
           description: >-
-            RESOURCE_NOT_FOUND: The api could not find the resource you requested - see Live API Error Messages for more details
+            RESOURCE_NOT_FOUND: The api could not find the resource you requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
           description: >-
-            INTERNAL_SERVER_ERROR: see Live API Error Messages for more details
+            INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
       deprecated: false
       security: []
       x-operation-settings:
@@ -530,13 +530,13 @@ paths:
                 $ref: '#/components/schemas/ListRTMPOutputs'
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more details
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '404':
           description: >-
-            RESOURCE_NOT_FOUND: The api could not find the resource you requested - see Live API Error Messages for more details
+            RESOURCE_NOT_FOUND: The api could not find the resource you requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
           description: >-
-            INTERNAL_SERVER_ERROR: see Live API Error Messages for more details
+            INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
       deprecated: false
       security: []
       x-operation-settings:
@@ -568,15 +568,18 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/CreateRTMPOutputResponse'
+        '400':
+          description: >-
+            BAD_REQUEST: Bad Request - RTMP outputs limit reached, failed to add (most likely you have reached the limit of active RTMP outputs for your account; the default limit is 5)
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more details
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '404':
           description: >-
-            RESOURCE_NOT_FOUND: The api could not find the resource you requested - see Live API Error Messages for more details
+            RESOURCE_NOT_FOUND: The api could not find the resource you requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
           description: >-
-            INTERNAL_SERVER_ERROR: see Live API Error Messages for more details
+            INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
       deprecated: false
       security: []
       x-operation-settings:
@@ -605,13 +608,13 @@ paths:
                 $ref: '#/components/schemas/StopRTMPOutputResponse'
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more details
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '404':
           description: >-
-            RESOURCE_NOT_FOUND: The api could not find the resource you requested - see Live API Error Messages for more details
+            RESOURCE_NOT_FOUND: The api could not find the resource you requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
           description: >-
-            INTERNAL_SERVER_ERROR: see Live API Error Messages for more details
+            INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
       deprecated: false
       security: []
       x-operation-settings:
@@ -645,18 +648,18 @@ paths:
                 $ref: '#/components/schemas/CreateRedundantGroupResponse'
         '400':
           description: >-
-            BAD_REQUEST: Invalid input value - see Live API Error Messages for
+            BAD_REQUEST: Invalid input value - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for
             more details
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more
             details
         '404':
           description: >-
             RESOURCE_NOT_FOUND: The api could not find the resource you
-            requested - see Live API Error Messages for more details
+            requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
-          description: 'INTERNAL_SERVER_ERROR: see Live API Error Messages for more details'
+          description: 'INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details'
       deprecated: false
       security: []
       x-operation-settings:
@@ -684,18 +687,18 @@ paths:
                 $ref: '#/components/schemas/GetRedundantGroupResponse'
         '400':
           description: >-
-            BAD_REQUEST: Invalid input value - see Live API Error Messages for
+            BAD_REQUEST: Invalid input value - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for
             more details
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more
             details
         '404':
           description: >-
             RESOURCE_NOT_FOUND: The api could not find the resource you
-            requested - see Live API Error Messages for more details
+            requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
-          description: 'INTERNAL_SERVER_ERROR: see Live API Error Messages for more details'
+          description: 'INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details'
       deprecated: false
       security: []
       x-operation-settings:
@@ -726,18 +729,18 @@ paths:
           description: A success response will just contain the group id
         '400':
           description: >-
-            BAD_REQUEST: Invalid input value - see Live API Error Messages for
+            BAD_REQUEST: Invalid input value - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for
             more details
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more
             details
         '404':
           description: >-
             RESOURCE_NOT_FOUND: The api could not find the resource you
-            requested - see Live API Error Messages for more details
+            requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
-          description: 'INTERNAL_SERVER_ERROR: see Live API Error Messages for more details'
+          description: 'INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details'
       deprecated: false
       security: []
       x-operation-settings:
@@ -764,18 +767,18 @@ paths:
           description: 204 NO_CONTENT
         '400':
           description: >-
-            BAD_REQUEST: Invalid input value - see Live API Error Messages for
+            BAD_REQUEST: Invalid input value - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for
             more details
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more
             details
         '404':
           description: >-
             RESOURCE_NOT_FOUND: The api could not find the resource you
-            requested - see Live API Error Messages for more details
+            requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
-          description: 'INTERNAL_SERVER_ERROR: see Live API Error Messages for more details'
+          description: 'INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details'
       deprecated: false
       security: []
       x-operation-settings:
@@ -803,18 +806,18 @@ paths:
                 $ref: '#/components/schemas/GetStatusRedundantGroupResponse'
         '400':
           description: >-
-            BAD_REQUEST: Invalid input value - see Live API Error Messages for
+            BAD_REQUEST: Invalid input value - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for
             more details
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more
             details
         '404':
           description: >-
             RESOURCE_NOT_FOUND: The api could not find the resource you
-            requested - see Live API Error Messages for more details
+            requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
-          description: 'INTERNAL_SERVER_ERROR: see Live API Error Messages for more details'
+          description: 'INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details'
       deprecated: false
       security: []
       x-operation-settings:
@@ -839,18 +842,18 @@ paths:
           description: '204 NO_CONTENT'
         '400':
           description: >-
-            BAD_REQUEST: Invalid input value - see Live API Error Messages for
+            BAD_REQUEST: Invalid input value - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for
             more details
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more
             details
         '404':
           description: >-
             RESOURCE_NOT_FOUND: The api could not find the resource you
-            requested - see Live API Error Messages for more details
+            requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
-          description: 'INTERNAL_SERVER_ERROR: see Live API Error Messages for more details'
+          description: 'INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details'
       deprecated: false
       security: []
       x-operation-settings:
@@ -891,18 +894,18 @@ paths:
                     description: ID of the redundant group
         '400':
           description: >-
-            BAD_REQUEST: Invalid input value - see Live API Error Messages for
+            BAD_REQUEST: Invalid input value - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for
             more details
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more
             details
         '404':
           description: >-
             RESOURCE_NOT_FOUND: The api could not find the resource you
-            requested - see Live API Error Messages for more details
+            requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
-          description: 'INTERNAL_SERVER_ERROR: see Live API Error Messages for more details'
+          description: 'INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details'
       deprecated: false
       security: []
       x-operation-settings:
@@ -938,18 +941,18 @@ paths:
                 $ref: '#/components/schemas/RedundantGroupCuePointInsertionResponse'
         '400':
           description: >-
-            BAD_REQUEST: Invalid input value - see Live API Error Messages for
+            BAD_REQUEST: Invalid input value - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for
             more details
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more
             details
         '404':
           description: >-
             RESOURCE_NOT_FOUND: The api could not find the resource you
-            requested - see Live API Error Messages for more details
+            requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
-          description: 'INTERNAL_SERVER_ERROR: see Live API Error Messages for more details'
+          description: 'INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details'
       deprecated: false
       security: []
       x-operation-settings:
@@ -983,18 +986,18 @@ paths:
                 $ref: '#/components/schemas/CreateVodJobResponse'
         '400':
           description: >-
-            BAD_REQUEST: Invalid input value - see Live API Error Messages for
+            BAD_REQUEST: Invalid input value - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for
             more details
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more
             details
         '404':
           description: >-
             RESOURCE_NOT_FOUND: The api could not find the resource you
-            requested - see Live API Error Messages for more details
+            requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
-          description: 'INTERNAL_SERVER_ERROR: see Live API Error Messages for more details'
+          description: 'INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details'
       deprecated: false
       security: []
       x-operation-settings:
@@ -1022,18 +1025,18 @@ paths:
                 $ref: '#/components/schemas/GetVodJob'
         '400':
           description: >-
-            BAD_REQUEST: Invalid input value - see Live API Error Messages for
+            BAD_REQUEST: Invalid input value - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for
             more details
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more
             details
         '404':
           description: >-
             RESOURCE_NOT_FOUND: The api could not find the resource you
-            requested - see Live API Error Messages for more details
+            requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
-          description: 'INTERNAL_SERVER_ERROR: see Live API Error Messages for more details'
+          description: 'INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details'
       deprecated: false
       security: []
       x-operation-settings:
@@ -1061,18 +1064,18 @@ paths:
                 $ref: '#/components/schemas/GetVodJob'
         '400':
           description: >-
-            BAD_REQUEST: Invalid input value - see Live API Error Messages for
+            BAD_REQUEST: Invalid input value - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for
             more details
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more
             details
         '404':
           description: >-
             RESOURCE_NOT_FOUND: The api could not find the resource you
-            requested - see Live API Error Messages for more details
+            requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
-          description: 'INTERNAL_SERVER_ERROR: see Live API Error Messages for more details'
+          description: 'INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details'
       deprecated: false
       security: []
       x-operation-settings:
@@ -1114,18 +1117,18 @@ paths:
                 $ref: '#/components/schemas/ListVodJobs'
         '400':
           description: >-
-            BAD_REQUEST: Invalid input value - see Live API Error Messages for
+            BAD_REQUEST: Invalid input value - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for
             more details
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more
             details
         '404':
           description: >-
             RESOURCE_NOT_FOUND: The api could not find the resource you
-            requested - see Live API Error Messages for more details
+            requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
-          description: 'INTERNAL_SERVER_ERROR: see Live API Error Messages for more details'
+          description: 'INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details'
       deprecated: false
       security: []
       x-operation-settings:
@@ -1162,18 +1165,18 @@ paths:
                 $ref: '#/components/schemas/VodJobs'
         '400':
           description: >-
-            BAD_REQUEST: Invalid input value - see Live API Error Messages for
+            BAD_REQUEST: Invalid input value - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for
             more details
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more
             details
         '404':
           description: >-
             RESOURCE_NOT_FOUND: The api could not find the resource you
-            requested - see Live API Error Messages for more details
+            requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
-          description: 'INTERNAL_SERVER_ERROR: see Live API Error Messages for more details'
+          description: 'INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details'
       deprecated: false
       security: []
       x-operation-settings:
@@ -1216,18 +1219,18 @@ paths:
                 $ref: '#/components/schemas/Application'
         '400':
           description: >-
-            BAD_REQUEST: Invalid input value - see Live API Error Messages for
+            BAD_REQUEST: Invalid input value - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for
             more details
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more
             details
         '404':
           description: >-
             RESOURCE_NOT_FOUND: The api could not find the resource you
-            requested - see Live API Error Messages for more details
+            requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
-          description: 'INTERNAL_SERVER_ERROR: see Live API Error Messages for more details'
+          description: 'INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details'
       deprecated: false
       security: []
       x-operation-settings:
@@ -1253,18 +1256,18 @@ paths:
                 $ref: '#/components/schemas/Application'
         '400':
           description: >-
-            BAD_REQUEST: Invalid input value - see Live API Error Messages for
+            BAD_REQUEST: Invalid input value - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for
             more details
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more
             details
         '404':
           description: >-
             RESOURCE_NOT_FOUND: The api could not find the resource you
-            requested - see Live API Error Messages for more details
+            requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
-          description: 'INTERNAL_SERVER_ERROR: see Live API Error Messages for more details'
+          description: 'INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details'
       deprecated: false
       security: []
       x-operation-settings:
@@ -1292,14 +1295,14 @@ paths:
                 $ref: '#/components/schemas/Application'
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more
             details
         '404':
           description: >-
             RESOURCE_NOT_FOUND: The api could not find the resource you
-            requested - see Live API Error Messages for more details
+            requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
-          description: 'INTERNAL_SERVER_ERROR: see Live API Error Messages for more details'
+          description: 'INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details'
       deprecated: false
       security: []
       x-operation-settings:
@@ -1327,14 +1330,14 @@ paths:
                 $ref: '#/components/schemas/Application'
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more
             details
         '404':
           description: >-
             RESOURCE_NOT_FOUND: The api could not find the resource you
-            requested - see Live API Error Messages for more details
+            requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
-          description: 'INTERNAL_SERVER_ERROR: see Live API Error Messages for more details'
+          description: 'INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details'
       deprecated: false
       security: []
       x-operation-settings:
@@ -1368,18 +1371,18 @@ paths:
                 $ref: '#/components/schemas/Application'
         '400':
           description: >-
-            BAD_REQUEST: Invalid input value - see Live API Error Messages for
+            BAD_REQUEST: Invalid input value - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for
             more details
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more
             details
         '404':
           description: >-
             RESOURCE_NOT_FOUND: The api could not find the resource you
-            requested - see Live API Error Messages for more details
+            requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
-          description: 'INTERNAL_SERVER_ERROR: see Live API Error Messages for more details'
+          description: 'INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details'
       deprecated: false
       security: []
       x-operation-settings:
@@ -1406,14 +1409,14 @@ paths:
                 $ref: '#/components/schemas/DeleteAdConfigurationResponse'
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more
             details
         '404':
           description: >-
             RESOURCE_NOT_FOUND: The api could not find the resource you
-            requested - see Live API Error Messages for more details
+            requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
-          description: 'INTERNAL_SERVER_ERROR: see Live API Error Messages for more details'
+          description: 'INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details'
       deprecated: false
       security: []
       x-operation-settings:
@@ -1451,18 +1454,18 @@ paths:
                 $ref: '#/components/schemas/CreateBeaconSetResponse'
         '400':
           description: >-
-            BAD_REQUEST: Invalid input value - see Live API Error Messages for
+            BAD_REQUEST: Invalid input value - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for
             more details
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more
             details
         '404':
           description: >-
             RESOURCE_NOT_FOUND: The api could not find the resource you
-            requested - see Live API Error Messages for more details
+            requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
-          description: 'INTERNAL_SERVER_ERROR: see Live API Error Messages for more details'
+          description: 'INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details'
       deprecated: false
       security: []
       x-operation-settings:
@@ -1488,14 +1491,14 @@ paths:
                 $ref: '#/components/schemas/BeaconSets'
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more
             details
         '404':
           description: >-
             RESOURCE_NOT_FOUND: The api could not find the resource you
-            requested - see Live API Error Messages for more details
+            requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
-          description: 'INTERNAL_SERVER_ERROR: see Live API Error Messages for more details'
+          description: 'INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details'
       deprecated: false
       security: []
       x-operation-settings:
@@ -1530,18 +1533,18 @@ paths:
                 $ref: '#/components/schemas/BeaconSet'
         '400':
           description: >-
-            BAD_REQUEST: Invalid input value - see Live API Error Messages for
+            BAD_REQUEST: Invalid input value - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for
             more details
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more
             details
         '404':
           description: >-
             RESOURCE_NOT_FOUND: The api could not find the resource you
-            requested - see Live API Error Messages for more details
+            requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
-          description: 'INTERNAL_SERVER_ERROR: see Live API Error Messages for more details'
+          description: 'INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details'
       deprecated: false
       security: []
       x-operation-settings:
@@ -1568,14 +1571,14 @@ paths:
                 $ref: '#/components/schemas/DeleteBeaconSetResponse'
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more
             details
         '404':
           description: >-
             RESOURCE_NOT_FOUND: The api could not find the resource you
-            requested - see Live API Error Messages for more details
+            requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
-          description: 'INTERNAL_SERVER_ERROR: see Live API Error Messages for more details'
+          description: 'INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details'
       deprecated: false
       security: []
       x-operation-settings:
@@ -1603,14 +1606,14 @@ paths:
                 $ref: '#/components/schemas/BeaconSet'
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more
             details
         '404':
           description: >-
             RESOURCE_NOT_FOUND: The api could not find the resource you
-            requested - see Live API Error Messages for more details
+            requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
-          description: 'INTERNAL_SERVER_ERROR: see Live API Error Messages for more details'
+          description: 'INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details'
       deprecated: false
       security: []
       x-operation-settings:
@@ -1644,18 +1647,18 @@ paths:
                 $ref: '#/components/schemas/IngestSlateMediaSourceAssetResponse'
         '400':
           description: >-
-            BAD_REQUEST: Invalid input value - see Live API Error Messages for
+            BAD_REQUEST: Invalid input value - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for
             more details
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more
             details
         '404':
           description: >-
             RESOURCE_NOT_FOUND: The api could not find the resource you
-            requested - see Live API Error Messages for more details
+            requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
-          description: 'INTERNAL_SERVER_ERROR: see Live API Error Messages for more details'
+          description: 'INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details'
       deprecated: false
       security: []
       x-operation-settings:
@@ -1681,14 +1684,14 @@ paths:
                 $ref: '#/components/schemas/GetSlateMediaSourceAssetsResponse'
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more
             details
         '404':
           description: >-
             RESOURCE_NOT_FOUND: The api could not find the resource you
-            requested - see Live API Error Messages for more details
+            requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
-          description: 'INTERNAL_SERVER_ERROR: see Live API Error Messages for more details'
+          description: 'INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details'
       deprecated: false
       security: []
       x-operation-settings:
@@ -1716,14 +1719,14 @@ paths:
                 $ref: '#/components/schemas/DeleteSlateMediaSourceAssetResponse'
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more
             details
         '404':
           description: >-
             RESOURCE_NOT_FOUND: The api could not find the resource you
-            requested - see Live API Error Messages for more details
+            requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
-          description: 'INTERNAL_SERVER_ERROR: see Live API Error Messages for more details'
+          description: 'INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details'
       deprecated: false
       security: []
       x-operation-settings:
@@ -1751,14 +1754,14 @@ paths:
                 $ref: '#/components/schemas/GetSlateMediaSourceAssetsResponse'
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more
             details
         '404':
           description: >-
             RESOURCE_NOT_FOUND: The api could not find the resource you
-            requested - see Live API Error Messages for more details
+            requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
-          description: 'INTERNAL_SERVER_ERROR: see Live API Error Messages for more details'
+          description: 'INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details'
       deprecated: false
       security: []
       x-operation-settings:
@@ -1787,14 +1790,14 @@ paths:
                 $ref: '#/components/schemas/ListCredentials'
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more
             details
         '404':
           description: >-
             RESOURCE_NOT_FOUND: The api could not find the resource you
-            requested - see Live API Error Messages for more details
+            requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
-          description: 'INTERNAL_SERVER_ERROR: see Live API Error Messages for more details'
+          description: 'INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details'
       deprecated: false
       security: []
       x-operation-settings:
@@ -1827,18 +1830,18 @@ paths:
                 $ref: '#/components/schemas/CreateCredential'
         '400':
           description: >-
-            BAD_REQUEST: Invalid input value - see Live API Error Messages for
+            BAD_REQUEST: Invalid input value - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for
             more details
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more
             details
         '404':
           description: >-
             RESOURCE_NOT_FOUND: The api could not find the resource you
-            requested - see Live API Error Messages for more details
+            requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
-          description: 'INTERNAL_SERVER_ERROR: see Live API Error Messages for more details'
+          description: 'INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details'
       deprecated: false
       security: []
       x-operation-settings:
@@ -1873,18 +1876,18 @@ paths:
                 $ref: '#/components/schemas/UpdateCredential'
         '400':
           description: >-
-            BAD_REQUEST: Invalid input value - see Live API Error Messages for
+            BAD_REQUEST: Invalid input value - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for
             more details
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more
             details
         '404':
           description: >-
             RESOURCE_NOT_FOUND: The api could not find the resource you
-            requested - see Live API Error Messages for more details
+            requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
-          description: 'INTERNAL_SERVER_ERROR: see Live API Error Messages for more details'
+          description: 'INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details'
       deprecated: false
       security: []
       x-operation-settings:
@@ -1907,14 +1910,14 @@ paths:
           description: 'NO_CONTENT: the credential was deleted'
         '401':
           description: >-
-            UNAUTHORIZED: Unauthorized - see Live API Error Messages for more
+            UNAUTHORIZED: Unauthorized - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more
             details
         '404':
           description: >-
             RESOURCE_NOT_FOUND: The api could not find the resource you
-            requested - see Live API Error Messages for more details
+            requested - see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details
         '500':
-          description: 'INTERNAL_SERVER_ERROR: see Live API Error Messages for more details'
+          description: 'INTERNAL_SERVER_ERROR: see [Live API Error Messages](/live-api/references/live-api-error-messages.html) for more details'
       deprecated: false
       security: []
       x-operation-settings:

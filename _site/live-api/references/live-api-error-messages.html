@@ -496,12 +496,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <td>The <code translate="No">region </code> specified in the request does not exist or is not supported</td>
       <td>Create live job</td>
       <td>
-      <pre class="line-numbers">
+      
 <code class="language-json" translate="No">{
 "error": "Invalid region"
 }
 </code>
-</pre>
+
       </td>
     </tr>
     <tr>
@@ -509,12 +509,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <td>The duration of the cue point being inserted needs to be, at least, twice the length of the segments in the job</td>
       <td>Insert cuepoint</td>
       <td>
-      <pre class="line-numbers">
+      
 <code class="language-json" translate="No">{
   "error": "The parameter duration should be greater than or equal to (2 * target duration) of the job"
 }
 </code>
-    </pre>
+    
       </td>
     </tr>
     <tr>
@@ -522,12 +522,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <td>The JSON included an invalid value for some field</td>
       <td>Create live job, create VOD clip, create/update ad configuration, create/update beacon set, ingest slate, create beacon set</td>
       <td>
-      <pre class="line-numbers">
+      
 <code class="language-json" translate="No">{
 "error": "Invalid input value"
 }
 </code>
-</pre>
+
       </td>
     </tr>
     <tr>
@@ -535,12 +535,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <td>The notification url was missing the protocol or the protocol is not a supported type</td>
       <td>Create live job, create VOD clip, create/update ad configuration, create/update beacon set, ingest slate, create beacon set</td>
       <td>
-      <pre class="line-numbers">
+      
 <code class="language-json" translate="No">{
 "error": "The notification target type is not supported currently"
 }
 </code>
-</pre>
+
       </td>
     </tr>
     <tr>
@@ -548,12 +548,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <td>The number of SEP jobs allowed is limited. You will also receive this error if you include <code translate="No">"channel_type": "24x7"</code> in the create job request, and have purchased only SEPs, not events.</td>
       <td>Create live job</td>
       <td>
-      <pre class="line-numbers">
+      
 <code class="language-json" translate="No">{
     "error": "You've reached the number of static entry points jobs you can create in this region for your account"
 }
 </code>
-</pre>
+
       </td>
     </tr>
     <tr>
@@ -561,12 +561,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <td>Only 5 jobs in a waiting state (waiting for an encoder to be connected) are allowed. To create additional jobs, you will need to connect an encoder to one of the waiting jobs or cancel it</td>
       <td>Create live job</td>
       <td>
-      <pre class="line-numbers">
+      
 <code class="language-json" translate="No">{
 "error" : "You've reached the number of waiting jobs you can create for your account"
 }
 </code>
-</pre>
+
       </td>
     </tr>
     <tr>
@@ -574,12 +574,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <td>To create VOD assets you need to use our own delivery</td>
       <td>The most likely cause is that you are requesting a full VOD asset or a clip on an encrypted stream. VOD assets for encrypted streams are not supported</td>
       <td>
-      <pre class="line-numbers">
+      
 <code class="language-json" translate="No">{
 "error": "The notification target type is not supported currently"
 }
 </code>
-</pre>
+
       </td>
     </tr>
     <tr>
@@ -587,12 +587,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <td>The <code translate="No">X-API-KEY </code> header was not sent with the request, or the key value was not valid</td>
       <td>All requests</td>
       <td>
-      <pre class="line-numbers">
+      
 <code class="language-json" translate="No">{
 "message": "Unauthorized"
 }
 </code>
-</pre>
+
       </td>
     </tr>
     <tr>
@@ -600,12 +600,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <td>The request URL was faulty</td>
       <td>All requests</td>
       <td>
-      <pre class="line-numbers">
+      
 <code class="language-json" translate="No">{
 "message": "Unauthorized"
 }
 </code>
-</pre>
+
       </td>
     </tr>
     <tr>
@@ -613,12 +613,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <td>You attempted to stop a live job that has already been stopped</td>
       <td>Cancel live job</td>
       <td>
-      <pre class="line-numbers">
+      
 <code class="language-json" translate="No">{
 "error": "After filtering, there is no job to process"
 }
 </code>
-</pre>
+
       </td>
     </tr>
     <tr>
@@ -626,12 +626,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <td>You specified a job or asset id that does not exist</td>
       <td>Get job details, cancel live job, activate SEP job, insert cuepoint, insert ID3 timed metadata, create VOD clip</td>
       <td>
-      <pre class="line-numbers">
+      
 <code class="language-json" translate="No">{
 "error": "DB getItem, no results found"
 }
 </code>
-</pre>
+
       </td>
     </tr>
     <tr>
@@ -640,12 +640,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       </td>
       <td>RTMP outputs are limited to 5 outputs per Live job</td>
       <td>
-      <pre class="line-numbers">
+      
 <code class="language-json" translate="No">{ 
   "error":"RTMP outputs limit reached, failed to add" 
 }
 </code>
-</pre>
+
       </td>
     </tr>
   </tbody>

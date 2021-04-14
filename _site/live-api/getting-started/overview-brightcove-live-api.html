@@ -863,6 +863,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <p>If captions are inside the h264 input signal (correctly signaled in the user_data packet) those are passed through to the h264 outputs.</p>
 
       <p>If you are using a broadcast Elemental live encoder you can get captions from SDI (EIA-608/CEA-608) or other sources (SCTE-20, SCC, Teletext, DVB-Sub, Ancillary, ARIB, TTML, SCTE-27, STL, SRT, SMI) and put them into the h264 stream that you send to us. Other broadcast grade encoders probably can do the same, but we have not formally tested them.</p>
+
+      <aside class="bcls-aside bcls-aside--information">As a current limitation, Safari will display the CC controls for Live streams, even when there are no captions to display.</aside>
+
     </section>
 
     <section class="bcls-section">

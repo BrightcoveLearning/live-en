@@ -395,11 +395,6 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/search-test.html",
-      "oldURL": "/search-test"
-  },
-
-  {
       "newURL": "https://live.support.brightcove.com/search.html",
       "oldURL": "/search"
   },

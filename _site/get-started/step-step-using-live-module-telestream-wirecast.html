@@ -481,8 +481,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 
     <p>To learn about all of the features and functionality available in the Live module, see <a href="/live-module/creating-and-managing-live-events-using-live-module.html">Creating and Managing Live Events using the Live Module</a>. For a series of best practices and recommendations to help ensure a high quality, stable live streaming experience, see <a href="/get-started/live-module-guidelines-and-best-practices.html">Live Module Guidelines and Best Practices</a>. For a list of all the options available from Brightcove for delivering live streaming video, see <a href="/get-started/delivering-live-streams.html">Delivering Live Streams</a>.</p>
-    <aside class="bcls-aside bcls-aside--information"> Note: For a version of this document that uses the OBS encoder, see <a href="/get-started/step-step-using-live-module-open-broadcaster-software-obs.html">Step-by-Step: Using the Live Module with Open Broadcaster Software (OBS)</a>.</aside>
-    <aside class="bcls-aside bcls-aside--information"> Note: Live streaming support is available only for Video Cloud Enterprise publishers.</aside>
+    <aside class="bcls-aside bcls-aside--information"> 
+      Notes: 
+      <ul>
+      <li>For a version of this document that uses the OBS encoder, see <a href="/get-started/step-step-using-live-module-open-broadcaster-software-obs.html">Step-by-Step: Using the Live Module with Open Broadcaster Software (OBS)</a>.</li>
+      <li>Note: Live streaming support is available only for Video Cloud Enterprise publishers.</li>
+      </ul>
+    </aside>
     <p>After completing this Quick Start, you should be able to:</p>
     <ul>
       <li>Use the Video Cloud Live module to create a live event</li>
@@ -553,9 +558,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <section class="bcls-section">
     <h2 id="encoder">Configuring your encoder</h2>
     <p>In this section, we will configure and use the Telestream Wirecast encoder to support a live streaming event. Telestream Wirecast software is a desktop application that captures input from your camera and produces a stream that can be delivered by a CDN. Note that there are hardware and other software based encoding solutions available that may be better suited for delivering your live streaming event. You can download a trial version of the Wirecast software from the <a href="https://www.telestream.net/controls/wirecast/download-wirecast.htm">Telestream website</a>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: You should have the Wirecast software installed and a camera connected to your computer before proceeding</aside>
-    <aside class="bcls-aside bcls-aside--information">Note: This example uses a DSLR connected to a laptop using the Blackmagic Design UltraStudio Mini Recorder.</aside>
-    <aside class="bcls-aside bcls-aside--information">Note: Wirecast offers the ability to record a local copy of the stream. By choosing to do this, you will have a local copy of the stream that you can create clips from in case any networking issues occur during the broadcast of the event. For information on how to record a local file, see the <a href="http://telestream.force.com/kb/articles/Knowledge_Article/Record-to-Disk">Wirecast documentation</a>.</aside>
+    <aside class="bcls-aside bcls-aside--information">
+      Notes: 
+      <ul>
+      <li>You should have the Wirecast software installed and a camera connected to your computer before proceeding.</li>
+      <li>This example uses a DSLR connected to a laptop using the Blackmagic Design UltraStudio Mini Recorder.</li>
+      <li>Wirecast offers the ability to record a local copy of the stream. By choosing to do this, you will have a local copy of the stream that you can create clips from in case any networking issues occur during the broadcast of the event. For information on how to record a local file, see the <a href="http://telestream.force.com/kb/articles/Knowledge_Article/Record-to-Disk">Wirecast documentation</a>.</li>
+      </aside>
+      </ul>
     <p>This example uses a DSLR connected to a laptop using the Blackmagic Design UltraStudio Mini Recorder.</p>
     <ol class="bcls-tasklist-restart">
       <li>Open Wirecast.</li>

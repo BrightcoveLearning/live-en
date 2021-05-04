@@ -127,6 +127,8 @@
         url: /live-api/guides/managing-credentials-live-api.html
       - name: Notifications
         url: /live-api/guides/live-api-notifications.html
+      - name: Playback Restrictions with Live Streams
+        url: /live-api/guides/live-playback-restrictions.html
       - name: Reducing Latency for Live Streams
         url: /general/reducing-latency-live-streams.html
       - name: RTMP Outputs

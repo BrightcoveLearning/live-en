@@ -5,6 +5,11 @@
   },
 
   {
+      "newURL": "https://live.support.brightcove.com/live-api/guides/brightcove-live-best-practices-stage.html",
+      "oldURL": "/brightcove-live-best-practices-stage"
+  },
+
+  {
       "newURL": "https://live.support.brightcove.com/live-api/guides/brightcove-live-best-practices.html",
       "oldURL": "/brightcove-live-best-practices"
   },
@@ -95,7 +100,7 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/general/",
+      "newURL": "https://live.support.brightcove.com/get-started/",
       "oldURL": "/index"
   },
 
@@ -150,7 +155,7 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/get-started/",
+      "newURL": "https://live.support.brightcove.com/general/",
       "oldURL": "/index"
   },
 
@@ -382,6 +387,11 @@
   {
       "newURL": "https://live.support.brightcove.com/support/register-training.html",
       "oldURL": "/register-training"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/support/reset-support-portal-password.html",
+      "oldURL": "/reset-support-portal-password"
   },
 
   {

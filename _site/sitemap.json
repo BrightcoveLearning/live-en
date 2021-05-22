@@ -5,11 +5,6 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/live-api/guides/brightcove-live-best-practices-stage.html",
-      "oldURL": "/brightcove-live-best-practices-stage"
-  },
-
-  {
       "newURL": "https://live.support.brightcove.com/live-api/guides/brightcove-live-best-practices.html",
       "oldURL": "/brightcove-live-best-practices"
   },
@@ -100,7 +95,7 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/get-started/",
+      "newURL": "https://live.support.brightcove.com/general/",
       "oldURL": "/index"
   },
 
@@ -155,7 +150,7 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/general/",
+      "newURL": "https://live.support.brightcove.com/get-started/",
       "oldURL": "/index"
   },
 
@@ -195,12 +190,12 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/live-api/references/live-api-release-notes.html",
+      "newURL": "https://live.support.brightcove.com/release-notes/live-api-release-notes.html",
       "oldURL": "/live-api-release-notes"
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/release-notes/live-api-release-notes.html",
+      "newURL": "https://live.support.brightcove.com/live-api/references/live-api-release-notes.html",
       "oldURL": "/live-api-release-notes"
   },
 
@@ -420,12 +415,12 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/live-api/references/standard-live-ingest-profiles.html",
+      "newURL": "https://live.support.brightcove.com/admin/standard-live-ingest-profiles.html",
       "oldURL": "/standard-live-ingest-profiles"
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/admin/standard-live-ingest-profiles.html",
+      "newURL": "https://live.support.brightcove.com/live-api/references/standard-live-ingest-profiles.html",
       "oldURL": "/standard-live-ingest-profiles"
   },
 

@@ -85,8 +85,6 @@
         url: 'https://apis.support.brightcove.com/live-api/code-samples/quick-start-create-live-job-mpeg2-ts-input.html'
       - name: Using RTMP Outputs for Live Events
         url: 'https://apis.support.brightcove.com/live-api/code-samples/quick-start-using-rtmp-outputs-live-events.html'
-      - name: Simulated Live Event
-        url: 'https://apis.support.brightcove.com/live-api/code-samples/simulated-live.html'
     - name: 'Live API: References'
       url: 'https://apis.support.brightcove.com/live-api/references/index.html'
       docs:

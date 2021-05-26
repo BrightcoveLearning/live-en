@@ -95,7 +95,7 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/general/",
+      "newURL": "https://live.support.brightcove.com/get-started/",
       "oldURL": "/index"
   },
 
@@ -150,7 +150,7 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/get-started/",
+      "newURL": "https://live.support.brightcove.com/general/",
       "oldURL": "/index"
   },
 
@@ -407,11 +407,6 @@
   {
       "newURL": "https://live.support.brightcove.com/live-api/guides/signed-urls-and-token-auth-live-stream.html",
       "oldURL": "/signed-urls-and-token-auth-live-stream"
-  },
-
-  {
-      "newURL": "https://live.support.brightcove.com/live-api/code-samples/simulated-live.html",
-      "oldURL": "/simulated-live"
   },
 
   {

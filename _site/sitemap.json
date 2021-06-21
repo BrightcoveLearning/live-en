@@ -60,6 +60,11 @@
   },
 
   {
+      "newURL": "https://live.support.brightcove.com/general/forensic-watermarking-live.html",
+      "oldURL": "/forensic-watermarking-live"
+  },
+
+  {
       "newURL": "https://live.support.brightcove.com/live-api/guides/getting-list-live-or-vod-jobs.html",
       "oldURL": "/getting-list-live-or-vod-jobs"
   },

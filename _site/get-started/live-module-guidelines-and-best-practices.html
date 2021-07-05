@@ -596,10 +596,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h3>Input restrictions</h3>
     <p>In order to ensure the highest quality, most consistent streaming experience, Brightcove Live limits input stream settings to:</p>
     <ul>
-      <li>Maximum 1920x1080</li>
+      <li>Protocol: <code translate="No">rtmp</code>, <code translate="No">rtp</code>, <code translate="No">rtp-fec</code>, or <code translate="No">srt</code> (all except <code translate="No">rtmp</code> are for MPEG2-TS inputs)<sup><strong><a href="#note1-1">[1-1]</a></strong></sup></li>
+      <li>Resolution: Maximum 1920x1080</li>
       <li>Maximum 30 fps, which is typical. Brightcove supports up to 60 fps, but you will need to <a href="https://supportportal.brightcove.com/create">Contact Brightcove Support</a> to have the limit increased. When using 60fps, Brightcove recommends increasing the bitrate to achieve the desired visual quality for the content and a constant frame rate.</li>
       <li>Less than 10 Mbps</li>
       <li>Constant Bitrate (CBR) greatly reduces the chance of problems</li>
+      <li>Video codec must be H.264</li>
+      <li>Slices: If your encoder has this option, set it to <code translate="no">1</code></li>
+      <li>Audio codec must be <code translate="No">AAC</code></li>
       <li>Audio sampling rate: 44.1khz and 48khz are the recommended sample audio rates to use</li>
       <li>Keyframe Rate or GOP (Group of Pictures) aligned:
         <ol type="a">
@@ -612,10 +616,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             </ul>
           </li>
         </ol>
-      <li>If there is an option for <strong>Keyframe Aligned</strong>, <strong>Sync GOP</strong>, <strong>Align Keyframes</strong>, or something along those lines, make sure Keyframes are aligned. When Keyframes are not aligned, it causes synchronization issues with HLS segmentation. </li>
-
+      <li>If there is an option for <strong>Keyframe Aligned</strong>, <strong>Sync GOP</strong>, <strong>Align Keyframes</strong>, or something along those lines, make sure Keyframes are aligned. When Keyframes are not aligned, it causes synchronization issues with HLS segmentation.</li>
     </ul>
-
+    <h4>Notes</h4>
+    <ul>
+      <li id="note1-1"><sup><strong>[1-1]</strong></sup> If you have multiple video/audio tracks in your TS input, we will pick the first for each. We also strongly recommend using FEC, as plain TS over UDP over the internet is very unreliable. For FEC, we could note that the <em>smaller</em> the values you use for rows/columns, the more reliable the error correction will be (at the cost of increased bandwidth.</li>
+    </ul>
   </section>
 
   <section class="bcls-section">
@@ -846,7 +852,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </table>
   </section>
 
-  <section class="bcls-section">
+  <!-- <section class="bcls-section">
     <h2 id="input_requirements">Input requirements</h2>
 
     <p>The following table shows requirements for the input live stream.</p>
@@ -902,7 +908,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <ul>
       <li id="note1-1"><sup><strong>[1-1]</strong></sup> If you have multiple video/audio tracks in your TS input, we will pick the first for each. We also strongly recommend using FEC, as plain TS over UDP over the internet is very unreliable. For FEC, we could note that the <em>smaller</em> the values you use for rows/columns, the more reliable the error correction will be (at the cost of increased bandwidth.</li>
     </ul>
-  </section>
+  </section> -->
 
   <section class="bcls-section">
     <h2 id="slate_source_file_recommendations">Slate source file recommendations</h2>
@@ -916,7 +922,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </section>
 
   <section class="bcls-section">
-    <h2 id="output_recommendations" class="bcls-section">Output recommendations</h2>
+    <h2 id="output_recommendations">Output recommendations</h2>
 
     <p>Below are recommended output settings, but note that for many encoders, the RTMP input is limited to 10 MBPS (video + audio) and a framerate of 30fps.</p>
 

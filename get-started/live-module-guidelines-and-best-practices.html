@@ -272,6 +272,7 @@ parent: Getting Started
   <section class="bcls-section">
     <h2 id="Protocol">Protocol</h2>
     <p>It is important to note that the internet is not a guaranteed delivery network, and that while an internet connection may be considered "good", it may not be good enough for reliable live video streaming at high quality. A small disruption in the path between the customer encoder and the Brightcove transcoding platform such as a small amount of congestion at an ISP, an unplanned failover between routers, or similar issues can cause a disruption in the video output. In high stakes live broadcast it is normal practice to have multiple dedicated networks consisting of either dedicated fibre, booked satellite bandwidth, or committed bandwidth on a managed network. This comes with a substantial cost, and in most cases it is possible to achieve a good enough outcome over the internet. If, however, it is critical to maintain fault-free transport please consider AWS Direct Connect or an ISP that can provide some level of dedicated bandwidth.</p>
+    <p>Generally, we recommend dedicating bandwidth two times the encoder's expected stream size to completely avoid any bandwidth-related network issues.</p>
     <p>The options we recommend are (in order):</p>
     <ol>
       <li><strong>SRT</strong> - provides a good combination of speed of transport (UDP) with some control and error resilience. Not available on all encoders, though there are tools that can translate from local RTP such as srt-transmit.</li>

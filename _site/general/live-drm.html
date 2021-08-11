@@ -562,6 +562,68 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <li id="note1-1"><sup><strong>[1-1]</strong></sup> Widevine can be applied to DASH outputs instead of HLS. To make Widevine with DASH the default requires an account-level override. Contact Support if you want this override applied to your account. Using the <a href="/live-api/guides/live-drm-live-api.html#create_live_job_example">Live API</a> you can also specify <code translate="No">widevine:hls</code> or <code translate="No">widevine:dash</code> for particular jobs, regardless of the default for your account. <strong><em>Note that depending on how your account/job is configured, the API response (like the one shown below) will include either <code translate="No">widevine:hls</code> or <code translate="No">widevine:dash</code> outputs, but not both.</em></strong></li>
   </ul>
 	</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Playback_technologies_used">Playback technologies used</h2>
+    <p>Brightcove Player utilizes different DRM playback technologies with different browsers. The following details the DRM technologies used with Brightcove Player:</p>
+    <ul>
+      <li><strong>FairPlay</strong>: Apple's DRM system</li>
+      <li><strong>PlayReady</strong>: Microsoft's DRM system</li>
+      <li><strong>Widevine</strong>: Google's DRM system</li>
+    </ul>
+    <p>The following table details the relationship between the browser (latest version), format and playback technology used in Brightcove Player:</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Browser</th>
+          <th>Format</th>
+          <th>Playback Technology</th>
+          <th>Rendition Type Used<br />
+            to Deliver DRM Content</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>Chrome Desktop</td>
+          <td>DASH with Widevine</td>
+          <td>Native/EME</td>
+          <td>MPEG-DASH</td>
+        </tr>
+        <tr>
+          <td>Chrome Mobile<sup>1</sup></td>
+          <td>DASH with Widevine</td>
+          <td>Native/EME</td>
+          <td>MPEG-DASH</td>
+        </tr>
+        <tr>
+          <td>Internet Explorer<sup>2</sup></td>
+          <td>DASH with PlayReady</td>
+          <td>Silverlight</td>
+          <td>MPEG-DASH</td>
+        </tr>
+        <tr>
+          <td>Edge</td>
+          <td>DASH with PlayReady</td>
+          <td>Native/EME</td>
+          <td>MPEG-DASH</td>
+        </tr>
+        <tr>
+          <td>Safari</td>
+          <td>HLS with FairPlay</td>
+          <td>Native HLS</td>
+          <td>HLS</td>
+        </tr>
+        <tr>
+          <td>Firefox</td>
+          <td>DASH with Widevine</td>
+          <td>Native/EME</td>
+          <td>MPEG-DASH</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><em><sup>1</sup>DRM playback using Chrome Mobile on iOS is not supported.</em></p>
+    <p><em><sup>2</sup>IE11 on Windows 10 and 8.1, and IE11 on Win8 Metro, use Native/EME. All other IE versions and configurations use the Silverlight plugin.</em></p>
+
 
 <p>To enable DRM for your Live content follow these steps:</p>
 

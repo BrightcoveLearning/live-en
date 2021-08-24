@@ -1,0 +1,22 @@
+Active (Billing applies)
+
+Processing
+Standby
+Stopping
+Cancelling
+Waiting
+Finishing
+
+Inactive
+
+Processing Error
+Completed
+Cancelled
+Disconnected
+Deactivated
+Not Activated
+Failed
+Abandoned
+Error
+Finished
+

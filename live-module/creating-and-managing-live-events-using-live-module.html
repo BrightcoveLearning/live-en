@@ -8,7 +8,7 @@ parent: Live Module
   <summary>{{ page.description }}</summary>
   <section class="bcls-section">
     <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="2403492012001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
+    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script> 
   </section>
   <section class="bcls-section">
     <h2 id="introduction">Introduction</h2>
@@ -76,7 +76,11 @@ parent: Live Module
   </section>
   <section class="bcls-section">
     <h2 id="create">Creating a new event</h2>
-    <p>For a complete step-by-step guide to creating and streaming a live event using the Live module, see <a href="/get-started/step-step-using-live-module-telestream-wirecast.html">Step-by-Step: Using the Live Module with Telestream Wirecast</a> or <a href="/get-started/step-step-using-live-module-open-broadcaster-software-obs.html">Step-by-Step: Using the Live Module with Open Broadcaster Software (OBS)</a>.</p>
+    <p>For a complete step-by-step guide to creating and streaming a live event using the Live module, see one of the following topics:</p>
+    <ul>
+      <li><a href="/get-started/step-step-using-live-module-telestream-wirecast.html">Step-by-Step: Using the Live Module with Telestream Wirecast</a></li>
+      <li><a href="/get-started/step-step-using-live-module-open-broadcaster-software-obs.html">Step-by-Step: Using the Live Module with Open Broadcaster Software (OBS)</a></li>
+    </ul>
     <p>To create a new event, follow these steps.</p>
     <ol class="bcls-tasklist-restart">
       <li>From the Manage Events page click <strong>Create Event</strong>. The Create Live Event or Create Live Channel page will open. The properties when creating events and channels are the same. The screen shots in this document cover creating an event.
@@ -92,7 +96,7 @@ parent: Live Module
       </li>
       <li>Any required custom fields for the account will be displayed. Assign values to the custom fields.</li>
       <li>Setting <strong>Streaming to Social Media</strong> to <strong>Allowed</strong> will make the event available for streaming to social media platforms. This can be done <a href="#social">once the event has started streaming</a> or by using the <a href="/live-module/publishing-live-event-facebook.html">Social module</a>.</li>
-      <li>Select a <strong>Live Ingest Profile</strong>. The dropdown list will list all Live ingest profiles. The ingest profile will control the quality and number of live renditions that are created. Clicking the <strong>Manage Profiles</strong> link will open the ingest profile editor in another browser tab. Note that you must be an account administrator to access the ingest profile editor. Click the <strong>RENDITIONS</strong> link to view the renditions that will be created using the selected ingest profile.
+      <li>Select a <strong>Live Ingest Profile</strong>. The dropdown list will list all Live ingest profiles. The ingest profile will control the quality and number of live renditions that are created. Clicking the <strong>Manage Profiles</strong> link will open the ingest profile editor in another browser tab. Note that you must be an account administrator to access the ingest profile editor. Click the <strong>Renditions</strong> link to view the renditions that will be created using the selected ingest profile.
         <aside class="bcls-aside bcls-aside--information">The bitrate and billing details of the three tiers are as follows:
           <ul>
             <li>Tier 1 allows up to 5,500 Kbps and is charged at 1.0x hours</li>
@@ -101,13 +105,24 @@ parent: Live Module
           </ul>
         </aside>
         <aside class="bcls-aside bcls-aside--information"> For information on creating Live ingest profiles, see <a href="/admin/creating-custom-live-ingest-profiles.html">Creating Custom Live Ingest Profiles</a>.</aside>
-
       </li>
       <li>Select <strong>Convert event to video asset when complete</strong> to save a VOD version of the live video to your Video Cloud account. When this option is selected, the highest quality rendition from the selected <strong>Live Ingest Profile</strong> is used as the source for the VOD video. The default ingest profile for the account is used when creating renditions. <strong>Note that the VOD version is not available as soon as the live event ends, the video will be available once the ingestion process is complete.</strong>
-        <aside class="bcls-aside bcls-aside--information">This option is not supported when using a recurring event.</aside>
+        <aside class="bcls-aside bcls-aside--information">Note: This option is not supported when using a recurring event.</aside>
       </li>
-      <li>Click <strong>INTEGRATIONS</strong> to add the integration of a Zoom meeting into Brightcove Live. For information, please refer to the <a href="https://live.support.brightcove.com/live-module/zoom-live-integration.html" target="_blank">Integrating a Zoom meeting documentation</a>. </li>
-      <li>Click <strong>ADVANCED OPTIONS</strong> and <a href="#advanced">configure the advanced options</a>.</li>
+      <li>Click <strong>Integrations</strong> to add an integration with a Zoom meeting. For information, please refer to the <a href="https://live.support.brightcove.com/live-module/zoom-live-integration.html" target="_blank">Integrating a Zoom meeting documentation</a>.</li>
+      <li>Click <strong>Stream Options</strong> and select a <strong>Region. </strong>The Region is the  Amazon Web Services (AWS) region to use. To reduce latency, you should select the region that is closest to where your encoder is located. <strong>By default, the region is set to Oregon (US West) which will produce bad results if you are streaming from another continent.</strong> The following regions are supported:
+        <ul>
+          <li>Oregon (US West) (default)</li>
+          <li>Virginia (US East)</li>
+          <li>Tokyo (Asia Pacific)</li>
+          <li>Singapore (Asia Pacific)</li>
+          <li>Sydney (Asia Pacific)</li>
+          <li>Mumbai (Asia Pacific)</li>
+          <li>Frankfurt (EU)</li>
+          <li>Ireland (EU)</li>
+        </ul>
+      </li>
+      <li>Click <strong>Advanced Options</strong> and <a href="#advanced">configure the advanced options</a>.</li>
       <li>Click<strong> Create Event </strong>to start the live event. The <a href="#controlroom">Control Room page</a> will open with details about the live event including the <strong>Streaming Endpoint (RTMP URL)</strong> and <strong>Stream Name</strong> which will be used by your encoder.
         <aside class="bcls-aside bcls-aside--information"> It will take about a minute to process your streams.</aside>
         <p>By default, the encoder must be started within 30 minutes from when a new event is created.</p>
@@ -118,15 +133,30 @@ parent: Live Module
   </section>
   <section class="bcls-section">
     <h2 id="advanced">Configuring advanced options</h2>
-    <p>When creating a new event, advanced options can be configured. To configure the advanced options, click the <strong>ADVANCED OPTIONS</strong> link when creating the event.</p>
+    <p>When creating a new event, advanced options can be configured. To configure the advanced options, click the <strong>Advanced Options</strong> link when creating the event.</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/live-module/node18470-advanced-options.png" /></figure>
     <p>The following options can be configured:</p>
-    <aside class="bcls-aside bcls-aside--information"> For VOD clips, no notification will be sent.</aside>
-    <aside class="bcls-aside bcls-aside--information">Please contact Brightcove Support in the case you are interested in a custom edge CDN hostname.</aside>
+    <aside class="bcls-aside bcls-aside--information">Note: For VOD clips, no notification will be sent.</aside>
+    <aside class="bcls-aside bcls-aside--information">Note: Please contact Brightcove Support in the case you are interested in a custom edge CDN hostname.</aside>
     <ul>
+      <li><strong>Content Encryption</strong> - Select the type of encryption to apply to the live stream:
+        <ul>
+          <li><strong>None</strong> - No encryption is applied</li>
+          <li><strong>AES-128</strong> - Secure the stream using AES-128 encryption. If this option is selected, you must enter your <strong>Encryption Key</strong>. The key must be 32 hexadecimal characters. For best results, use a <a href="https://www.allkeysgenerator.com/Random/Security-Encryption-Key-Generator.aspx">key generator</a>, choosing the <code translate="No">128-bit</code> and <code translate="No">Hex</code> options.
+            <aside class="bcls-aside bcls-aside--information">Note: Clips can't be created from encrypted live streams.</aside>
+          </li>
+          <li><strong>Digital Rights Management (DRM)</strong> - Secure Premium content stream with Digital Rights Management technologies. For details, see the <a href="/general/live-drm.html">Live DRM</a> document.
+            <ul>
+              <li>HLS + <a href="https://developer.apple.com/streaming/fps/">FairPlay</a></li>
+              <li>HLS (fMP4) + Widevine Modular</li>
+            </ul>
+            <aside class="bcls-aside bcls-aside--information"> Your Live account must be enabled first by Brightcove Support in order to use DRM. To publish a DRM-enabled event, it is necessary to create and use a DRM enabled player v6.37.1 or greater.</aside>
+          </li>
+        </ul>
+      </li>
       <li><strong>Reconnect Time</strong> - If the encoder is disconnected, this is the amount of time that the live stream will be kept available. This setting has no effect on how soon the encoder must be started when a new event is created.</li>
       <li><strong>Enable Server Side Ad Insertion (SSAI)</strong> - Enables server side ad insertion. Ads are configured as part of the <a href="https://studio.support.brightcove.com/admin/configuring-server-side-ad-settings.html">server-side ad settings</a>. For information on working with server-side ads in the Live module, see <a href="/live-module/implementing-server-side-ads-live-module.html">Implementing Server-Side Ads in the Live Module.</a>
-<ul>
+        <ul>
           <li><strong>Fill Slate</strong> - Select a fill slate. The fill slate will be displayed when there are gaps in a live stream ad break that cannot be filled with a dynamically-served ad. Create fill slates as part of the <a href="/admin/managing-live-settings.html">live settings</a>.</li>
           <li><strong>Ad Audio</strong> - When checked, normalizes the audio levels on ads based on the adjustment that is set. This can be used as a way to help make sure ads aren’t significantly louder than the content.</li>
         </ul>
@@ -145,39 +175,10 @@ parent: Live Module
       </li>
       <li><strong>RTMP credentials to use</strong> - Select the RTMP credential used to secure the Streaming Endpoint. Note this option will only appear if the Input Format is RTMP and at least one RTMP credential was created as part of the <a href="/admin/managing-live-settings.html">Live settings</a>.</li>
       <li><strong>RTMP IP whitelist</strong> - Enter a set of IP addresses that are allowed to connect to the RTMP endpoint. This controls who can connect to the RTMP endpoint. Note this option will only appear if the Input Format is RTMP.</li>
-      <li>
-        <strong>CIDR Whitelist</strong> - Enter a set of IP addresses that are allowed to connect to the RTP or SRT endpoint. This controls who can connect to the RTP or SRT endpoints. Note this option will only appear if the Input Format is RTP or SRT.
-        <strong>You can specify <code translate="No">0.0.0.0/0</code> to allow all networks.</strong>
-      </li>
-      <li><strong>Region</strong> - The Amazon Web Services (AWS) region to use. To reduce latency, you should select the region that is closest to where your encoder is located. <strong>By default, the region is set to Oregon (US West) which will produce bad results if you are streaming from another continent.</strong> The following regions are supported:
-        <ul>
-          <li>Oregon (US West) (default)</li>
-          <li>Virginia (US East)</li>
-          <li>Tokyo (Asia Pacific)</li>
-          <li>Singapore (Asia Pacific)</li>
-          <li>Sydney (Asia Pacific)</li>
-          <li>Mumbai (Asia Pacific)</li>
-          <li>Frankfurt (EU)</li>
-          <li>Ireland (EU)</li>
-        </ul>
-      </li>
-      <li><strong>Content Encryption</strong> - Select the type of encryption to apply to the live stream:
-        <ul>
-          <li><strong>None</strong> - No encryption is applied</li>
-          <li><strong>AES-128</strong> - Secure the stream using AES-128 encryption. If this option is selected, you must enter your <strong>Encryption Key</strong>. The key must be 32 hexadecimal characters. For best results, use a <a href="https://www.allkeysgenerator.com/Random/Security-Encryption-Key-Generator.aspx">key generator</a>, choosing the <code translate="No">128-bit</code> and <code translate="No">Hex</code> options.
-            <aside class="bcls-aside bcls-aside--information">Clips can't be created from encrypted live streams.</aside>
-          </li>
-          <li><strong>Digital Rights Management (DRM)</strong> - Secure Premium content stream with Digital Rights Management technologies. For details, see the <a href="/general/live-drm.html">Live DRM</a> document.
-            <ul>
-              <li>HLS + <a href="https://developer.apple.com/streaming/fps/">FairPlay</a></li>
-              <li>HLS (fMP4) + Widevine Modular</li>
-            </ul>
-            <aside class="bcls-aside bcls-aside--information"> Your Live account must be enabled first by Brightcove Support in order to use DRM. To publish a DRM-enabled event, it is necessary to create and use a DRM enabled player v6.37.1 or greater.</aside>
-          </li>
-        </ul>
-      </li>
       <li><strong>Enable stream status notifications</strong> - When checked, enter a <strong>Notification URL</strong>. An http request will be made to the <strong>Notification URL</strong> when there is a change in the job status. This can be used to update a server in response to changes in the job status. For more information on using API notifications, see the <a href="/live-api/guides/live-api-notifications.html">Live API Notifications</a> topic.</li>
-      <li><strong>+ Add multi CDN configuration</strong> - Enter a <strong>label</strong> and <strong>URL</strong> for additional CDNs. This is a whitelist of CDNs that are allowed to ask our primary CDN for the video segments. You are responsible for configuring the secondary CDN correctly.</li>
+      <li> <strong>CIDR Whitelist</strong> - Enter a set of IP addresses that are allowed to connect to the RTP or SRT endpoint. This controls who can connect to the RTP or SRT endpoints. Note this option will only appear if the Input Format is RTP or SRT.
+        You can specify <code translate="No">0.0.0.0/0</code> to allow all networks.</li>
+      <li><strong>+ Add Multi CDN configuration</strong> - Enter a <strong>label</strong> and <strong>URL</strong> for additional CDNs. This is a whitelist of CDNs that are allowed to ask our primary CDN for the video segments. You are responsible for configuring the secondary CDN correctly.</li>
       <li><strong>Create this as a recurring event using a Static Entry Point (SEP)</strong> - Allows a single live stream to be created and then activated/deactivated when needed. For information, see the <a href="#intro_recurring">Introduction to recurring events</a> section of this document.</li>
     </ul>
     <p>Click <strong>Edit Configuration </strong> to view/edit the API request that will be made to create the live stream. Caution should be used when editing the API call directly.</p>
@@ -197,7 +198,7 @@ parent: Live Module
       <li>When you deactivate a recurring event, the last few seconds of the stream remain playable for some time, related to clipping purposes.  .</li>
       <li>Accounts are limited to a total of 34 SEP events (3 per region, except for us-west-2, where 10 allowed). If you reach the limit, you must end one SEP event in the region where you want to create a new one before you can proceed.</li>
       <li>If you attempt to activate more than 5 SEP jobs at once, you will receive an error like the following:
-<pre class="line-numbers"><code class="language-json" translate="No">{
+        <pre class="line-numbers"><code class="language-json" translate="No">{
   “message”:“Allocating additional streaming capacity to the region. Please retry your request.: no_streaming_capacity_in_region”,
   “statusCode”:500,
   “name”:“ApiError”,
@@ -317,11 +318,9 @@ parent: Live Module
       <p>Enter the <strong>RTMP Output URL</strong> and the <strong>Rendition</strong> to send. Note that the format of the output URL may change depending on where the RTMP stream is being used. For more information, see <a href="/live-module/using-live-rtmp-outputs-stream-facebook-and-youtube.html">Using Live RTMP Outputs to Stream to Facebook and YouTube</a>.</p>
       <aside class="bcls-aside bcls-aside--information">
         <ul>
-        <li>RTMP outputs are limited to 5 outputs per live job. This limitation includes connections marked as an error.</li>
-      </ul>
-      
+          <li>RTMP outputs are limited to 5 outputs per live job. This limitation includes connections marked as an error.</li>
+        </ul>
       </aside>
-
     </div>
     <div>
       <h3 id="social_event">Social Event</h3>
@@ -369,7 +368,6 @@ parent: Live Module
           </ul>
         </aside>
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="700" height="500" src="/assets/images/live-module/allow-dvr.png" /></figure>
-
       </li>
       <li>Click the <strong>Player URL</strong> to preview the event in a browser or copy the appropriate embed code to use.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/live-module/node18470-publish-event.png" /></figure>
@@ -421,7 +419,6 @@ parent: Live Module
     <h2 id="captions">Captions</h2>
     <p>Brightcove Live currently supports 608 captions in-band (inside h.264 headers). If captions are inside the h.264 input signal (correctly signaled in the user_data packet) those are passed through to the h.264 outputs.</p>
     <aside class="bcls-aside bcls-aside--information">You can provide up to 4 different languages with 608 captions within the same live job.</aside>
-
     <p>If you are using a broadcast Elemental live encoder you can get captions from SDI (EIA-608/CEA-608) or other sources (SCTE-20, SCC, Teletext, DVB-Sub, Ancillary, ARIB, TTML, SCTE-27, STL, SRT, SMI) and put them into the h.264 stream that you send to us. Other broadcast grade encoders probably can do the same, but we have not formally tested them.</p>
     <p>WebVTT captions are <strong>not</strong> supported for Live streams.</p>
     <p>The Brightcove Player has support for in-band captions.</p>

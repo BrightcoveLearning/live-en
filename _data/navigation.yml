@@ -56,9 +56,9 @@
     - name: Live Redundancy
       url: /live-module/live-redundancy.html
     - name: Publishing a Live Event to Facebook
-      url: /live-module/publishing-live-event-facebook.html
+      url: 'https://studio.support.brightcove.com/social/publishing-live-event-facebook.html'
     - name: Publishing a Live Event to YouTube
-      url: /live-module/publishing-live-event-youtube.html
+      url: 'https://studio.support.brightcove.com/social/publishing-live-event-youtube.html'
     - name: Reviewing Live Analytics
       url: /live-module/reviewing-live-analytics.html
     - name: Using Live RTMP Outputs

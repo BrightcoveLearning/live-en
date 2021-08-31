@@ -585,18 +585,18 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <tbody class="bcls-table__body">
         <tr>
           <td>Chrome Desktop</td>
-          <td>DASH with Widevine</td>
-          <td>Native/EME</td>
-          <td>MPEG-DASH</td>
+          <td>HLS with Widevine</td>
+          <td>Native HLS</td>
+          <td>HLS</td>
         </tr>
         <tr>
           <td>Chrome Mobile<sup>1</sup></td>
-          <td>DASH with Widevine</td>
-          <td>Native/EME</td>
-          <td>MPEG-DASH</td>
+          <td>HLS with Widevine</td>
+          <td>Native HLS</td>
+          <td>HLS</td>
         </tr>
         <tr>
-          <td>Internet Explorer<sup>2</sup></td>
+          <td>Internet Explorer</td>
           <td colspan="3">No versions of IE are supported by Brightcove</td>
         </tr>
         <tr>
@@ -613,13 +613,15 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         </tr>
         <tr>
           <td>Firefox</td>
-          <td>DASH with Widevine</td>
-          <td>Native/EME</td>
-          <td>MPEG-DASH</td>
+          <td>HLS with Widevine</td>
+          <td>Native HLS</td>
+          <td>HLS</td>
         </tr>
       </tbody>
     </table>
     <p><em><sup>1</sup>DRM playback using Chrome Mobile on iOS is not supported.</em></p>
+
+    <aside class="bcls-aside bcls-aside--information">Widevine can be applied to DASH outputs instead of HLS. To make Widevine with DASH the default requires an account-level override. Contact Support if you want this override applied to your account.</aside>
 
 
 <p>To enable DRM for your Live content follow these steps:</p>
@@ -666,7 +668,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 17 Aug 2021
+  Page last updated on 26 Aug 2021
 </div>
 
 

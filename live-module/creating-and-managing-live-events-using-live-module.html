@@ -34,6 +34,7 @@ parent: Live Module
       <li>Streaming must begin within 30 minutes of the event start (default-level account setting).</li>
       <li>Live streams with DVR are not supported when using the Brightcove Player SDKs. In this case, you should add the DVR playback URL to a remote asset and then use the remote asset URL with the SDK.</li>
       <li>Output settings <strong>cannot</strong> be modified after the event has been created.</li>
+      <li>Brightcove scales live streaming capacity up or down to match demand, and generally this is transparent. When an account attempts to create several live jobs in a region in a short time, however, there may be a short delay while additional capacity is prepared. If you try the request again in a few minutes, it should succeed.</li>
     </ul>
   </section>
   <section class="bcls-section">

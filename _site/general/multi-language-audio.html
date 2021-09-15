@@ -531,8 +531,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="Prerequisites">Prerequisites:</h2>
     <ul>
         <li>Define the <strong>PID (Packet Identifier)</strong> for each audio track in your encoder.</li>
-        <li>At this moment, only the RTP input format is supported. For this section to be enabled in the <strong>Create Live Event</strong> page, go to the <strong>ADVANCED OPTIONS</strong> section and select <strong>Real-Time Transport Protocol (RTP)</strong> under the <strong>Input Format</strong> selector. </li>
-        <li>In the <strong>CIDR Whitelist</strong> section, enter the IP: <strong>0.0.0.0/0 </strong> to connect to the RTP endpoint. The Multi-Language button will be disabled if the Input Format is not set to RTP. </li>
+        <li>At this moment, only the RTP and SRT input formats are supported. For this section to be enabled in the <strong>Create Live Event</strong> page, go to the <strong>ADVANCED OPTIONS</strong> section and select <strong>Real-Time Transport Protocol (RTP)</strong> or <strong>Secure Reliable Transport (SRT)</strong> under the <strong>Input Format</strong> selector. </li>
+        <li>In the <strong>CIDR Whitelist</strong> section, enter the IP: <strong>0.0.0.0/0</strong> to connect to the RTP endpoint to allow all networks, or enter any CIDR Whitelist you want (this controls who can connect to the RTP or SRT endpoints). The Multi-Language button will be disabled if the Input Format is not set to RTP. </li>
 
 
         <aside class="bcls-aside bcls-aside--information">Notes: 

@@ -61,6 +61,8 @@
       url: 'https://studio.support.brightcove.com/social/publishing-live-event-youtube.html'
     - name: Reviewing Live Analytics
       url: /live-module/reviewing-live-analytics.html
+    - name: Scheduling Live Events
+      url: /live-module/scheduling-live-event.html
     - name: Using Live RTMP Outputs
       url: /live-module/using-live-rtmp-outputs-stream-facebook-and-youtube.html
     - name: Integrating a Zoom Meeting

@@ -593,7 +593,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>Click the <strong>Advanced Options</strong> link to expand the advanced options.</li>
       <li>Set the <strong>Reconnect Time</strong> to 10 minutes (default). </li>
       <li>For the <strong>Input Format</strong>, select <strong>Secure Reliable Transport (SRT)</strong>.</li>
-      <li>In the <strong>CIDR Whitelist</strong> section, enter a set of IP addresses that are allowed to connect to the SRT endpoint. This controls who can connect to the SRT endpoints. Note this option will only appear if the <strong>Input Format</strong> is RTP or SRT. You can specify <code translate="No">0.0.0.0/0</code> to allow all networks.
+      <li>In the <strong>CIDR Whitelist</strong> section, enter a set of IP addresses that are allowed to connect to the SRT endpoint. This controls who can connect to the SRT endpoints. Note this option will only appear if the <strong>Input Format</strong> is RTP or SRT. You can specify <code translate="No">0.0.0.0/0</code> to allow all networks. To allow specific IP addresses, use <code translate="No">{IP address}/32</code> (example: 255.160.10.1/32).
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/sbs-srt-adv-options.png" /></figure>
       </li>
       <li>Click <strong>Start Streaming</strong>. The Live module will return a <strong>Stream Endpoint (SRT URL)</strong>. The SRT URL will be used in the encoder settings.

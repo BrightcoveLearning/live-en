@@ -597,7 +597,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>In Facebook, the <strong>Video</strong> section should display a preview of the stream.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/live-module/live-rtmp/fb-video-preview.png" /></figure>
       </li>
-      <li>In facebook, <strong>Add live video details</strong>.
+      <li>In Facebook, <strong>Add live video details</strong>.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/live-module/live-rtmp/fb-live-video-details.png" /></figure>
       </li>
       <li>Click <strong>Go Live</strong>. </li>
@@ -605,7 +605,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/live-module/live-rtmp/fb-live.png" /></figure>
       </li>
     </ol>
-    <p>To return to the <strong>Live Dashbord</strong>, in Facebook, locate the post in your newsfeed, click on the ellipsis (...) next to the post and click <strong>Edit Live Video</strong>.</p>
+    <p>To return to the <strong>Live Dashboard</strong>, in Facebook, locate the post in your news feed, click on the ellipsis (...) next to the post and click <strong>Edit Live Video</strong>.</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/live-module/live-rtmp/fb-edit-live-video.png" /></figure>
     <p>Click <strong>End Live Video </strong> to end the Facebook live stream. <strong>Remember to stop the encoder as well when the event is complete.</strong></p>
   </section>
@@ -618,30 +618,31 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <ol class="bcls-tasklist-restart">
       <li>Login to your YouTube account.</li>
       <li>Go to the <a href="https://studio.youtube.com">YouTube Studio</a> page at https://studio.youtube.com.</li>
-      <li>In the left navigation, click <strong>Other Features &gt; Live stream now</strong>.</li>
-      <li>YouTube may prompt for access to your computer camera and mic. This topic is using an external DSLR camera for the event so click on <strong>Connect</strong>.</li>
-      <li>YouTube will display a <strong>Server URL</strong> and <strong>Stream name/key</strong>. These values will be used in the Live module.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/18726/node18726-yt-stream-info.png" /></figure>
+      <li>At the top right of the page, click <strong>CREATE &gt; Go live</strong>.</li>
+      <li>In the left navigation, click <strong>Stream</strong>.</li>
+      <li>YouTube will display a <strong>Stream key and Stream URL</strong>. These values will be used in the Live module.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/live-module/live-rtmp/yt-stream-info.png" /></figure>
       </li>
-      <li>Copy the <strong>Server URL</strong> to the clipboard.</li>
+      <li>Copy the <strong>Stream URL</strong> to the clipboard.</li>
       <li> In the Live module, paste the <strong>Server URL</strong> into the <strong>RTMP Output URL</strong> field on the Control Room page.
-        <aside class="bcls-aside bcls-aside--warning">Note: the <strong>only format current supported for RTMP URLs</strong> is <code translate="No">rtmps://host:port/application/streamName</code>.</aside>
+        <aside class="bcls-aside bcls-aside--warning">Note: The only format current supported for RTMP URLs is <code translate="No">rtmps://host:port/application/streamName</code>.</aside>
       </li>
-      <li>Copy the <strong>Stream name/key</strong> from YouTube to the clipboard.</li>
-      <li>In the Live module, paste the <strong>Stream name/key</strong> at the end of the <strong>RTMP Output URL</strong> field. The <strong>RTMP Output URL</strong> field will be the YouTube <strong>Server URL</strong> with the <strong>Stream name/key</strong> appended, all as one value.</li>
-      <li>Select a rendition from the <strong>Select Rendition</strong> dropdown and click <strong>Add RTMP Output</strong>.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/18726/node18726-yt-live-rtmp.png" /></figure>
+      <li>Copy the <strong>Stream key</strong> from YouTube to the clipboard.</li>
+      <li>In the Live module, paste the <strong>Stream key</strong> at the end of the <strong>RTMP Output URL</strong> field. The <strong>RTMP Output URL</strong> field will be the YouTube <strong>Stream URL</strong> with the <strong>Stream key</strong> appended, all as one value.</li>
+      <li>Select a rendition from the <strong>Select Rendition</strong> dropdown.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/live-module/live-rtmp/yt-rtmp.png" /></figure>
       </li>
+      <li>Click <strong>Add RTMP Output</strong>. </li>
       <li>Below the RTMP section, confirm that the connection was successful.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/18726/node18726-yt-rtmp-connected.png" /></figure>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/live-module/live-rtmp/yt-rtmp-connected.png" /></figure>
       </li>
       <li>Confirm the live stream appears in YouTube.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/18726/node18726-yt-preview.png" /></figure>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/live-module/live-rtmp/yt-video-preview.png" /></figure>
       </li>
     </ol>
     <p>The live stream will begin in YouTube.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/18726/node18726-yt-live.png" /></figure>
-    <p>Click <strong>Return to YouTube Studio </strong> and then stop the encoder to end the live stream. When your stream is complete, a public video will be automatically created and uploaded for people to view later.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/live-module/live-rtmp/yt-live.png" /></figure>
+    <p>In YouTube Studio, click <strong>END STREAM</strong> to end the live stream. When your stream is complete, a public video will be automatically created and uploaded for people to view later. <strong>Remember to stop the encoder as well when the event is complete.</strong></p>
   </section>
 </article>
 
@@ -660,7 +661,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 19 Jun 2021
+  Page last updated on 22 Sep 2021
 </div>
 
 

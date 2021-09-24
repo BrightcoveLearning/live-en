@@ -53,8 +53,8 @@
       url: 'https://integrations.support.brightcove.com/web-conferencing/host-inxpo-live.html'
     - name: Implementing Server-Side Ads (SSAI)
       url: /live-module/implementing-server-side-ads-live-module.html
-    - name: Live Redundancy
-      url: /live-module/live-redundancy.html
+    - name: Integrating a Zoom Meeting
+      url: /live-module/zoom-live-integration.html
     - name: Publishing a Live Event to Facebook
       url: 'https://studio.support.brightcove.com/social/publishing-live-event-facebook.html'
     - name: Publishing a Live Event to YouTube
@@ -63,10 +63,10 @@
       url: /live-module/reviewing-live-analytics.html
     - name: Scheduling Live Events
       url: /live-module/scheduling-live-event.html
+    - name: Using Live Redundancy
+      url: /live-module/live-redundancy.html
     - name: Using Live RTMP Outputs
       url: /live-module/using-live-rtmp-outputs-stream-facebook-and-youtube.html
-    - name: Integrating a Zoom Meeting
-      url: /live-module/zoom-live-integration.html
 - section:
   name: 'Working with the Live API'
   url: 'https://apis.support.brightcove.com/live-api/index.html'

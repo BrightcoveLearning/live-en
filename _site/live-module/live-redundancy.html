@@ -538,19 +538,18 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <ul>
         <li>Every account has a Static Entry Point (SEP) limit of 3, with the exception of us-west-2 which will have a limit of 10. If you need more SEPs, contact Brightcove support.</li>
         <li>If you are using live redundancy with SSAI, you must insert ads into all jobs in the group at the same time.</li>
-        <li>Live redundancy <strong>cannot</strong> be used with DRM-protected live streams.</li>
+        <li>Live redundancy <strong>cannot</strong> be used with DRM-protected live streams at this time.</li>
       </ul>
     </aside>
     <ol class="bcls-tasklist-restart">
       <li>Create a live event using the Live module. For complete information on creating a live event, see <a href="/live-module/creating-and-managing-live-events-using-live-module.html">Creating and Managing Live Events using the Live Module</a>.</li>
-      <li>Expand the <strong>Stream Options</strong> section.  Stream Options will allow you to name and select the region of your streams. Click <strong>+ Add a Backup Stream </strong>to add additional backup streams.
+      <li>In the <strong>Stream Options</strong> section, name and select the region of your streams. Click <strong>+ Add a Backup Stream </strong>to add additional backup streams.
         <aside class="bcls-aside bcls-aside--information">Note: If you don't see the Add a Backup Stream button then live redundancy has not been enabled for your account.</aside>
       </li>
       <li>Click <strong>+ Add a Backup Stream</strong> to add a backup (redundant) stream  to the live event. You can add as many backup streams as your account  supports.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt=""  src="/assets/images/live-module/redundancy/stream-options.png" /></figure>
-        <aside class="bcls-aside bcls-aside--information">Note: You may have redundant groups counting against your account limit. Once an event with redundant streams completes or is canceled, it is no longer visible in the Live module.</aside>
       </li>
-      <li>Name your primary and backup streams, and select a <strong>Region</strong> that is closest to where your encoder is located. By default, the <strong>Region</strong> is set to Oregon (US West) which will produce bad results if you are streaming from another continent. The <strong>Reference ID </strong> is an optional identifier for internal use and must be unique (max 150 characters).
+      <li>Name your primary and backup streams, and select a <strong>Region</strong> that is closest to where your encoder is located. By default, the <strong>Region</strong> is set to Oregon (US West) which may result in degraded performance if you are streaming from another continent. The <strong>Reference ID </strong> is an optional identifier for internal use and must be unique (max 150 characters).
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/live-module/redundancy/redundant-stream-options.png" /></figure>
       </li>
       <li>Complete the live event setup.</li>
@@ -582,7 +581,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </section>
   <section class="bcls-section">
     <h2 id="stop-stream">Stopping a stream</h2>
-    <p>To stop a backup stream, on the Control Room page, select the stream from the dropdown list and then click <strong>Stop This Stream</strong>.</p>
+    <p>To stop a backup stream, on the Control Room page, select the stream from the dropdown list and then click <strong>Stop This Stream</strong>. Stopping a stream will immediately remove that stream from the group.</p>
     <p>
       <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/live-module/redundancy/stop-stream.png" /></figure>
     </p>

@@ -14,8 +14,11 @@ parent: Live Module
         <li>Every account has a Static Entry Point (SEP) limit of 3, with the exception of us-west-2 which will have a limit of 10. If you need more SEPs, contact Brightcove support.</li>
         <li>If you are using live redundancy with SSAI, you must insert ads into all jobs in the group at the same time.</li>
         <li>Live redundancy <strong>cannot</strong> be used with DRM-protected live streams at this time.</li>
+        <li>The primary stream should be published in the region closest to the encoder. The backup stream should be published in the region next closest to the encoder.</li>
+        <li>Backup streams cannot be deleted.</li>
       </ul>
     </aside>
+    <aside class="bcls-aside bcls-aside--warning language-editable">Note that for live redundancy to actually work, <strong>you need to publish with the new video ID that is generated when you add a backup stream</strong>.</aside>
     <ol class="bcls-tasklist-restart">
       <li>Create a live event using the Live module. For complete information on creating a live event, see <a href="/live-module/creating-and-managing-live-events-using-live-module.html">Creating and Managing Live Events using the Live Module</a>.</li>
       <li>In the <strong>Stream Options</strong> section, name and select the region of your streams. Click <strong>+ Add a Backup Stream </strong>to add additional backup streams.
@@ -41,7 +44,11 @@ parent: Live Module
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/live-module/redundancy/stream-info-streaming.png" /></figure>
       </li>
     </ol>
-    <aside class="bcls-aside bcls-aside--information">Note: If you created a single stream event and you add a backup stream in the Control Room page, you will need to republish your player embed code to benefit from redundancy.</aside>
+    <aside class="bcls-aside bcls-aside--information">
+      Notes: 
+      <li>If you created a single stream event and you add a backup stream in the Control Room page, you will need to <strong>republish your player embed code</strong> with the new video ID to benefit from redundancy.</li>
+      <li>If you do not republish the player, you will also <strong>not</strong> see the analytics data from the reporting tab.</li>
+    </aside>
   </section>
   <section class="bcls-section">
     <h2 id="clipping">Clipping</h2>

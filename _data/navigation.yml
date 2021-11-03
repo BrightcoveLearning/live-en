@@ -37,36 +37,48 @@
   name: Using the Live Module
   url: /live-module/index.html
   docs:
-    - name: 'Client-Side Preroll Ads with Live SSAI'
-      url: /live-module/client-side-preroll-with-live-ssai.html
-    - name: Creating and Managing Live Events
-      url: /live-module/creating-and-managing-live-events-using-live-module.html
-    - name: Creating a Video Clip
-      url: /live-module/creating-video-clip-using-live-module.html
-    - name: Host Avaya Conference on Brightcove Live
-      url: 'https://integrations.support.brightcove.com/web-conferencing/host-avaya-conference-brightcove-live.html'
-    - name: Host Cisco Webex to Brightcove Live
-      url: 'https://integrations.support.brightcove.com/web-conferencing/host-cisco-webex-conference-brightcove-live.html'
-    - name: Host Zoom to Brightcove Live
-      url: 'https://integrations.support.brightcove.com/web-conferencing/host-zoom-conference-brightcove-live.html'
-    - name: Host an INXPO Event on Brightcove Live
-      url: 'https://integrations.support.brightcove.com/web-conferencing/host-inxpo-live.html'
-    - name: Implementing Server-Side Ads (SSAI)
-      url: /live-module/implementing-server-side-ads-live-module.html
-    - name: Integrating a Zoom Meeting
-      url: /live-module/zoom-live-integration.html
-    - name: Publishing a Live Event to Facebook
-      url: 'https://studio.support.brightcove.com/social/publishing-live-event-facebook.html'
-    - name: Publishing a Live Event to YouTube
-      url: 'https://studio.support.brightcove.com/social/publishing-live-event-youtube.html'
-    - name: Reviewing Live Analytics
-      url: /live-module/reviewing-live-analytics.html
-    - name: Scheduling Live Events
-      url: /live-module/scheduling-live-event.html
-    - name: Using Live Redundancy
-      url: /live-module/live-redundancy.html
-    - name: Using Live RTMP Outputs
-      url: /live-module/using-live-rtmp-outputs-stream-facebook-and-youtube.html
+    - name: "Getting Started"
+      url: '/live-module/index.html'
+      docs:
+        - name: Creating and Managing Live Events
+          url: /live-module/creating-and-managing-live-events-using-live-module.html
+        - name: Creating a Video Clip
+          url: /live-module/creating-video-clip-using-live-module.html
+    - name: "Advertising"
+      url: '/live-module/index.html'
+      docs:
+        - name: Implementing Server-Side Ads (SSAI)
+          url: /live-module/implementing-server-side-ads-live-module.html
+        - name: Client-Side Preroll Ads with Live SSAI
+          url: /live-module/client-side-preroll-with-live-ssai.html
+    - name: "Guides"
+      url: '/live-module/index.html'
+      docs:
+        - name: Reviewing Live Analytics
+          url: /live-module/reviewing-live-analytics.html
+        - name: Scheduling Live Events
+          url: /live-module/scheduling-live-event.html
+        - name: Using Live Redundancy
+          url: /live-module/live-redundancy.html
+        - name: Using Live RTMP Outputs
+          url: /live-module/using-live-rtmp-outputs-stream-facebook-and-youtube.html
+    - name: "Hosting Platforms"
+      url: '/live-module/index.html'
+      docs:
+        - name: Host Avaya Conference on Brightcove Live
+          url: 'https://integrations.support.brightcove.com/web-conferencing/host-avaya-conference-brightcove-live.html'
+        - name: Host Cisco Webex to Brightcove Live
+          url: 'https://integrations.support.brightcove.com/web-conferencing/host-cisco-webex-conference-brightcove-live.html'
+        - name: Host Zoom to Brightcove Live
+          url: 'https://integrations.support.brightcove.com/web-conferencing/host-zoom-conference-brightcove-live.html'
+        - name: Host an INXPO Event on Brightcove Live
+          url: 'https://integrations.support.brightcove.com/web-conferencing/host-inxpo-live.html'
+        - name: Integrating a Zoom Meeting
+          url: /live-module/zoom-live-integration.html
+        - name: Publishing a Live Event to Facebook
+          url: 'https://studio.support.brightcove.com/social/publishing-live-event-facebook.html'
+        - name: Publishing a Live Event to YouTube
+          url: 'https://studio.support.brightcove.com/social/publishing-live-event-youtube.html'
 - section:
   name: 'Working with the Live API'
   url: 'https://apis.support.brightcove.com/live-api/index.html'

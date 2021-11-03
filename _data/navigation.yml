@@ -44,6 +44,10 @@
           url: /live-module/creating-and-managing-live-events-using-live-module.html
         - name: Creating a Video Clip
           url: /live-module/creating-video-clip-using-live-module.html
+        - name: Reviewing Live Analytics
+          url: /live-module/reviewing-live-analytics.html
+        - name: Scheduling Live Events
+          url: /live-module/scheduling-live-event.html
     - name: "Advertising"
       url: '/live-module/index.html'
       docs:
@@ -54,10 +58,6 @@
     - name: "Guides"
       url: '/live-module/index.html'
       docs:
-        - name: Reviewing Live Analytics
-          url: /live-module/reviewing-live-analytics.html
-        - name: Scheduling Live Events
-          url: /live-module/scheduling-live-event.html
         - name: Using Live Redundancy
           url: /live-module/live-redundancy.html
         - name: Using Live RTMP Outputs

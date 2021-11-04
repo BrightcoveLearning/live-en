@@ -569,45 +569,51 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <section class="bcls-section">
 <h2 id="Introduction">Introduction</h2>
+  <p>
+    By default, live streams talk to the Brightcove Live API to stream your event. A new system to manage playback rights and restrictions sits in front of the Live API and provides playback authorization using DRM licenses.
+  </p>
+  <p>You can use Playback Rights with or without DRM, but if you choose to use runtime restrictions, then you will need to use a JSON Web Token (JWT).</p>
+  <p>License Keys Protection offers an extra level of security when using Dynamic Delivery with DRM-protected or HTTP Live Streaming Encryption (HLSe) content. License requests can be authenticated using a signed <a href="https://general.support.brightcove.com/developer/create-json-web-token.html">JSON Web Token (JWT)</a>. </p>
 
-<p>The Live module supports Server-Side Ad Insertion (SSAI) so server-side ads can be requested and displayed during a live stream. SSAI provides these main features during live events:</p>
+  <p>The token is used when requesting the video license, once the video has been loaded to the player and the source has been selected.</p>
 
+  <aside class="bcls-aside bcls-aside--information">With HLSe content, when the player changes rendition, due to improved connectivity or after the first segment is loaded, a new license request is made.</aside>
+
+  <p>If you are not familiar with this feature, see the <a href="https://apis.support.brightcove.com/playback-restrictions/getting-started/overview-playback-restrictions.html">Overview: Brightcove Playback Restrictions</a> document.</p>
+
+</section>
+
+<section class="bcls-section">
+<h2 id="Workflow">Workflow</h2>
+<p>To use playback restrictions with a live event, follow these steps:</p>
+<ol class="bcls-tasklist">
+  <li><a href="#Define_playback_rights">Define playback rights</a></li>
+  <li><a href="">Create a live event with playback rights enabled</a></li>
+  <li><a href="">(Optional) Include run-time restrictions</a></li>
+</ol>
+</section>
+
+<section class="bcls-section">
+<h2 id="Define_playback_rights">Define playback rights</h2>
+<p>Brightcove's Playback Rights Management Service allows you to manage video playback with the following:</p>
 <ul>
-	<li>Since ads are stitched into the live video stream on the server side, they are not affected by ad blockers</li>
-	<li>Ads are inserted at cue points sent from your encoder or you can create an instant cue point using the&nbsp;Live module Control Room</li>
-	<li>You can configure&nbsp;<a href="#fill_slate">fill slates</a>&nbsp;to fill any unused ad time</li>
+  <li>Geographic checks</li>
+  <li>Schedule checks</li>
+  <li>Proxy checks</li>
+  <li>Domain checks</li>
 </ul>
+<p>Here are the steps to define playback rights in Studio:</p>
+<ol class="bcls-tasklist-restart">
+  <li>Review the validation diagrams for playback rights in the <a href="https://apis.support.brightcove.com/playback-restrictions/getting-started/implementing-playback-rights.html">Implementing Playback Rights</a> document.</li>
+  <li>
+    <p>In Video Cloud Studio, expand the <strong>Admin</strong> dropdown menu and select <strong>Playback Rights</strong>.</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image--no-border" alt="Admin menu" src="/assets/images/live-module/playback-restrictions/admin-menu.png" />
+    </figure>
 
-<aside class="bcls-aside bcls-aside--information">
-  <ul>
-    <li>Before you can use SSAI, your Video Cloud account needs to be configured for Dynamic Delivery and enabled for SSAI. Contact your account manager for details.</li>
-    <li>The Live SSAI + DRM feature is not enabled at the moment.</li>
-    <li>SSAI for encrypted (AES) live streams uses <strong>segment-accurate</strong> (not frame-accurate) ad insertion by default. If you require frame-accurate ad insertion, you must contact Support to have your account configured for it.</li>
-  </ul>
+  </li>
 
-</aside>
-
-<p>This topic focuses on the settings required and the process to request a server-side ad during a live event.</p>
-</section>
-
-<section class="bcls-section">
-<h2 id="Configuring_the_server_side_ad_settings">Configuring the server-side ad settings</h2>
-
-<p>Before server-side ads can be delivered, server-side ad settings must be configured. The server-side ad settings define various aspects of ad playback, including ad calls, timing, beacons and other ad configuration options. These settings are configured as part of the Server-Side Ad Settings in the Admin module. In this example, a simple ad tag is defined.</p>
-
-<figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/18753/node18753-live-ad-config.png" width="600" height="900" /></figure>
-
-<p>For more information, see <a href="https://studio.support.brightcove.com/admin/configuring-server-side-ad-settings.html">Configuring Server-Side Ad Settings</a>.</p>
-</section>
-
-<section class="bcls-section">
-<h2 id="fill_slate">Configuring the fill slate</h2>
-
-<p>Fill slates are videos that will be displayed when there are gaps in a live stream ad break that cannot be filled with a dynamically-served ad. If the requested ad is shorter than the ad break time, the fill slate will be displayed so viewers don't see a blank player. You should configure at least one fill slate before requesting a server-side ad. Ad slates are configured as part of the Live Settings in the Admin module. In this example, a fill slate that displays the Brightcove logo was defined.</p>
-
-<figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/18753/node18753-fill-slate.png" /></figure>
-
-<p>For information on creating ad slates, see <a href="/admin/managing-live-settings.html">Managing Live Settings</a>.</p>
+</ol>
 </section>
 
 <section class="bcls-section">

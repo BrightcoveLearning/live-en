@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <meta name="robots" content="noindex,nofollow"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="In this topic, you will learn how to set playback restrictions with a live event.">
+  <meta name="description" content="In this topic, you will learn how to use Video Cloud Studio to create a Live Event with Playback Restrictions.">
   
-  <title>Playback Restrictions for Live Events</title>
+  <title>Creating Live Events with Playback Restrictions</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -64,7 +64,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       <li class="breadcrumb-item"><a href="/live-module/">Live Module</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Playback Restrictions for Live Events</li>
+      <li class="breadcrumb-item active" aria-current="page">Creating Live Events with Playback Restrictions</li>
     </ol>
   </nav>
 </header>
@@ -563,14 +563,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     
 
 
-<h1>Playback Restrictions for Live Events</h1>
+<h1>Creating Live Events with Playback Restrictions</h1>
 <article class="bcls-article">
-  <summary>In this topic, you will learn how to set playback restrictions with a live event.</summary>
+  <summary>In this topic, you will learn how to use Video Cloud Studio to create a Live Event with Playback Restrictions.</summary>
 
 <section class="bcls-section">
 <h2 id="Introduction">Introduction</h2>
   <p>
-    By default, live streams talk to the Brightcove Live API to stream your event. A new system to manage playback rights and restrictions sits in front of the Live API and provides playback authorization using DRM licenses.
+    By default, live streams talk to the Brightcove Live API to stream your event. A new system to manage Playback Rights and Restrictions sits in front of the Live API and provides playback authorization using DRM licenses.
   </p>
   <p>You can use Playback Rights with or without DRM, but if you choose to use runtime restrictions, then you will need to use a JSON Web Token (JWT).</p>
   <p>License Keys Protection offers an extra level of security when using Dynamic Delivery with DRM-protected or HTTP Live Streaming Encryption (HLSe) content. License requests can be authenticated using a signed <a href="https://general.support.brightcove.com/developer/create-json-web-token.html">JSON Web Token (JWT)</a>. </p>
@@ -585,26 +585,26 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <section class="bcls-section">
 <h2 id="Workflow">Workflow</h2>
-<p>To use playback restrictions with a live event, follow these steps:</p>
+<p>To use Playback Restrictions with a live event, follow these steps:</p>
 <ol class="bcls-tasklist">
-  <li><a href="#Define_playback_rights">Define playback rights</a></li>
-  <li><a href="">Create a live event with playback rights enabled</a></li>
+  <li><a href="#Define_playback_rights">Define Playback Rights</a></li>
+  <li><a href="#Create_a_live_event_with_playback_rights_enabled">Create a live event with Playback Rights enabled</a></li>
   <li><a href="">(Optional) Include run-time restrictions</a></li>
 </ol>
 </section>
 
 <section class="bcls-section">
-<h2 id="Define_playback_rights">Define playback rights</h2>
-<p>Brightcove's Playback Rights Management Service allows you to manage video playback with the following:</p>
+<h2 id="Define_playback_rights">Define Playback Rights</h2>
+<p>Brightcove's Playback Rights Management Service allows you to manage video playback based on the following:</p>
 <ul>
-  <li>Geographic checks</li>
-  <li>Schedule checks</li>
-  <li>Proxy checks</li>
-  <li>Domain checks</li>
+  <li>Geography</li>
+  <li>Domain</li>
+  <li>Proxy</li>
+  <li>Schedule dates</li>
 </ul>
-<p>Here are the steps to define playback rights in Studio:</p>
+<p>Here are the steps to define Playback Rights in Studio:</p>
 <ol class="bcls-tasklist-restart">
-  <li>Review the validation diagrams for playback rights in the <a href="https://apis.support.brightcove.com/playback-restrictions/getting-started/implementing-playback-rights.html">Implementing Playback Rights</a> document.</li>
+  <li>Review the validation diagrams for Playback Rights in the <a href="https://apis.support.brightcove.com/playback-restrictions/getting-started/implementing-playback-rights.html">Implementing Playback Rights</a> document.</li>
   <li>
     <p>In Video Cloud Studio, expand the <strong>Admin</strong> dropdown menu and select <strong>Playback Rights</strong>.</p>
     <figure class="bcls-figure">
@@ -612,58 +612,42 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </figure>
   </li>
   <li>
-    <p>Here, you can create a new playback right and manage existing rights.</p>
+    <p>To create a new right, click <strong>New Playback Rights</strong>.</p>
     <figure class="bcls-figure">
       <img class="bcls-image--no-border" alt="Manage playback rights" src="/assets/images/live-module/playback-restrictions/manage-playback-rights.png" />
     </figure>
   </li>
+  <li>Add a <strong>Playback Rights Name</strong> and click <strong>Save</strong>.</li>
   <li>
-    <p>To edit a playback right, click on the <strong>Name</strong> link. In the left navigation, select each category of playback right, and edit changes.</p>
+    <p>In the left navigation, select each category and edit changes.</p>
     <figure class="bcls-figure">
       <img class="bcls-image--no-border" alt="Playback rights detail" src="/assets/images/live-module/playback-restrictions/playback-rights-detail.png" />
     </figure>
   </li>
-  <li>For details, see the <a href="https://studio.support.brightcove.com/admin/managing-playback-rights.html">Managing Playback Rights</a> document.</li>
   <li>Click <strong>Save</strong>.</li>
-
+  <li>To edit a Playback Right, click on the <strong>Name</strong> link.</li>
+  <li>For details, see the <a href="https://studio.support.brightcove.com/admin/managing-playback-rights.html">Managing Playback Rights</a> document.</li>
 </ol>
 </section>
 
 <section class="bcls-section">
-<h2 id="Creating_a_live_event_that_supports_server_side_ads">Creating a live event that supports server-side ads</h2>
+<h2 id="Create_a_live_event_with_playback_rights_enabled">Create a live event with Playback Rights enabled</h2>
+<p>Use the <strong>Live</strong> module in Video Cloud Studio to create a live event with Playback Rights enabled. To associate a defined Playback Right with a live event, use the <strong>Media</strong> module with the video ID generated during the live job creation.</p>
 
-<p>In order for a live event to display server-side ads, the <strong>Enable Server Side Ad Insertion (SSAI)</strong> setting must be selected when the event is created. For complete information on creating a live event using the Live module, see <a href="/live-module/creating-and-managing-live-events-using-live-module.html">Creating and Managing Live Events using the Live Module</a>.</p>
-
-<aside class="bcls-aside bcls-aside--information">You should have configured the Server-Side Ad Settings and added at least one fill slate before creating an event.</aside>
-
-<p>To create a new live event that supports server-side ads, follow these steps.</p>
-
+<p>To create a Live Event, follow these steps:</p>
 <ol class="bcls-tasklist-restart">
-	<li>Open the Live module.</li>
-	<li>From the Manage Events page click <strong>Create Event</strong>.</li>
+	<li>In Video Cloud Studio, open the <strong>Live</strong> module.</li>
+	<li>From the <strong>Manage Events</strong> page click <strong>Create Event</strong>.</li>
 	<li>Enter the event details as needed.</li>
-	<li>Click <strong>ADVANCED OPTIONS</strong> to expand the advanced options.</li>
-	<li>Check <strong>Enable Server Side Ad Insertion (SSAI)</strong>. This will enable server side ad insertion.</li>
-	<li>Select a <strong>Fill Slate</strong>. The fill slate will be displayed when there are gaps in a live stream ad break that cannot be filled with a dynamically-served ad.</li>
-	<li>When the <strong>Ad Audio</strong> setting is checked, the audio levels on ads will be normalized based on the adjustment that is set. This can be used as a way to help make sure ads aren’t significantly louder than the content. Brightcove recommends selecting this option.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/18753/node18753-event-ssai-settings.png" width="600" height="900" /></figure>
-	</li>
-	<li>Click <strong>Create Event</strong>.</li>
-	<li>The&nbsp;Control Room page&nbsp;will open with details about the live event including the&nbsp;<strong>Streaming Endpoint (RTMP URL)</strong>&nbsp;and&nbsp;<strong>Stream Name</strong>. These values will be used by the encoder.</li>
-	<li>Configure the encoder and start the live stream.</li>
-	<li>By default, &nbsp;the Control Room preview player shows the ad-free stream. Ads will not be shown in the Control Room unless a Live ad configuration is selected. Use the dropdown below to the player to select an ad configuration.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/18753/node18753-select-ad-config.png" /></figure>
-	</li>
-	<li><strong>(Optional)</strong> Click the plus button (<img alt="" src="/assets/images/general/18753/node18753-plus-icon.png" width="15" height="15" />) to select an additional ad configuration. Doing this will add another preview player on the Control Room page.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/18753/node18753-two-preview-players.png" /></figure>
-	</li>
+	<li>Expand the <strong>ADVANCED OPTIONS</strong> section.</li>
+  <li>For <strong>Content Encryption</strong>, select either <strong>AES-128</strong> or <strong>Digital Rights Management (DRM)</strong>.</li>
+
+
+
+
+	
 </ol>
 
-<p>Click the volume button below the preview player to control which player audio stream is active.</p>
-
-<aside class="bcls-aside bcls-aside--information">If the event is using RTMP outputs, ads will not be streamed to the RTMP output. The ad-free stream will be streamed instead.</aside>
-
-<aside class="bcls-aside bcls-aside--information">If the event is being used by the <a href="https://studio.support.brightcove.com/social/publishing-live-event-facebook.html">Live to Facebook</a> feature in the Social module, ads will not be streamed to Facebook. The ad-free stream will be streamed instead.</aside>
 </section>
 
 <section class="bcls-section">

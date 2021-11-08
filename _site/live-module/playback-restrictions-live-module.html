@@ -588,8 +588,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <ol class="bcls-tasklist">
   <li><a href="#Define_Playback_Rights">Define Playback Rights</a></li>
   <li><a href="#Create_a_live_event_with_Playback_Restrictions">Create a live event with Playback Restrictions</a></li>
-  <li><a href="">(Optional) Include run-time restrictions</a></li>
+  <li><a href="#Publish_the_live_event">Publish the live event</a></li>
 </ol>
+<p>Alternatively, you can use the Brightcove APis to create the live event and associate Playback Restrictions. For details, see the <a href="https://apis.support.brightcove.com/live-api/guides/live-playback-restrictions.html">Playback Restrictions with Live Streams</a> document.</p>
 </section>
 
 <section class="bcls-section">
@@ -684,108 +685,34 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>Configure the player</p>
     <p>The token is passed with the playback request. If the token is invalid or expired, access to the content will be restricted. The player must be configured to use the token.</p>
 
-    <strong>Web player</strong>
+    <h4>Web player</h4>
     <p>
-      For details about configuring the Brightcove web player, see the <a href="https://player.support.brightcove.com/playback/license-protection-with-bcp.html">Key/License Protection with Brightcove Player</a> document.
+      To configure the Brightcove web player, see the <a href="https://player.support.brightcove.com/playback/playback-restrictions-with-bcp.html">Playback Restrictions with Brightcove Player</a> document.
     </p>
-    <strong>Native Android or iOS player</strong>
+    <h4>Native Android or iOS player</h4>
     <p>
-      For details about configuring the native player for Android or iOS, see the <a href="https://sdks.support.brightcove.com/features/license-protection-with-sdks.html">Key/License Protection with the Native SDKs</a> document.
+      To configure the native player for Android or iOS, see the <a href="https://sdks.support.brightcove.com/features/playback-restrictions-with-sdks.html">Playback Restrictions with the Native SDKs</a> document.
     </p>
-    <strong>Your own player</strong>
+    <h4>Your own player</h4>
     <p>
-      If you are only using the JWT with your player, there is no extra configuration needed. If you are using Playback Rights with your player, then see the <a href="/playback-restrictions/getting-started/implementing-playback-rights.html#Configure_your_player">Configure your player</a> section of the Implementing Playback Rights document.
+      If your content is in the Video Cloud library, but you are using your own player, you can make calls to the Playback API as shown in the <a href="/playback/getting-started/overview-playback-api.html">Overview: Playback API</a> document. Replace the base URL with the following:
     </p>
+    <pre ><code class="language-http" translate="No">https://edge-auth.api.brigthcove.com</code></pre>
+    <p>
+      Instead of using a Policy Key, you will use the JSON Web Token (JWT) for authentication:
+    </p>
+    <pre ><code class="language-http" translate="No">Authorization: Bearer {JWT}</code></pre>
+    <p>
+      Here is a Curl example:
+    </p>
+    <pre class="line-numbers"><code class="language-curl">curl -X GET \
+    -H 'Authorization: Bearer {JWT}' \
+    https://edge-auth.api.brightcove.com/playback/v1/accounts/{your_account_id}/videos/{your_video_id}</code></pre>
   </li>
-
   
 </ol>
 </section>
 
-<section class="bcls-section">
-<h2 id="Publishing_a_remote_live_event">Publishing a remote live event</h2>
-
-<p>If you want to publish a remote live event, follow these steps:</p>
-
-<ol class="bcls-tasklist-restart">
-  <li>
-    <p>After creating your live event by following the steps <a href="#Creating_a_live_event_that_supports_server_side_ads">listed above</a>, return to the <strong>Live</strong> module's <strong>Control Room</strong>.
-	</li>
-	<li>
-    <p>If you know the value of your ad config id, then you can insert it into the playlist URL.</p>
-    <p>In the <strong>Live</strong> module's <strong>Control Room</strong>, copy the <strong>Playback URL</strong>.</p>
-    <p></p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Playback URL" src="/assets/images/live-module/remote/playback-url.png" />
-    <figcaption class="bcls-caption--image">Playback URL</figcaption>
-    </figure>
-    <p>Next, insert the ad config id (045f90cfd55187ff6e60c8) that you want to use to the URL as follows:</p>
-
-	<pre>
-<code class="language-html" translate="No">https://bcovlive-a.akamaihd.net/21e83ff8c229478e8c81416838eb6e1f/us-west-2/NA/<span class="bcls-highlight">045f90cfd55187ff6e60c8/</span>playlist.m3u8</code></pre>
-<p>Then, rename the playlist from <code translate="No">playlist.m3u8</code> to <code translate="No">playlist_ssaiM.m3u8</code>. The remote asset should look similar to this:</p>
-
-	<pre>
-<code class="language-html" translate="No">https://bcovlive-a.akamaihd.net/21e83ff8c229478e8c81416838eb6e1f/us-west-2/NA/045f90cfd55187ff6e60c8/<span class="bcls-highlight">playlist_ssaiM.m3u8</span></code></pre>
-<p>Skip to step 6 and use this playlist URL.</p>
-	</li>
-  <li>
-    <p>If you don't know the value of your ad config id, you can get the complete playlist URL as follows. Select the ad configuration that you want to use. </p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Select ad config" src="/assets/images/live-module/remote/select-ad-config.png" />
-    <figcaption class="bcls-caption--image">Select ad config</figcaption>
-    </figure>
-	</li>
-  <li>
-    <p>For your browser, open the network console tab. In this case, we are using the Chrome browser.</p>
-	</li>
-  <li>
-    <p>In the network console, search for "playlist_ssaiM". Copy the URL that ends with "playlist_ssaiM.m3u8". You may have to refresh the page and re-open your network tab.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Network console" src="/assets/images/live-module/remote/network-console.png" />
-    <figcaption class="bcls-caption--image">Network console</figcaption>
-    </figure>
-    <aside class="bcls-aside bcls-aside--information">Since the ad config id is contained within the URL, your SSAI URL will be different depending on the ad config you have selected.</aside>
-    <p>In this example, the URL is:</p>
-    <pre>
-<code class="language-html" translate="No">https://bcovlive-a.akamaihd.net/21e83ff8c229478e8c81416838eb6e1f/us-west-2/NA/582ea6fafea84bf595f610b8ebbeeda8/playlist_ssaiM.m3u8</code></pre>
-	</li>
-  <li>
-    <p>
-      In Studio, navigate to the <strong>Media</strong> module and create a new Remote asset pointing to the playlist URL from the previous step. In the left-side menu, select <strong>+ Add Remote Video</strong>.
-    </p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Add Remote Video" src="/assets/images/live-module/remote/add-remote-video.png" width="300" height="500"/>
-    <figcaption class="bcls-caption--image">Add Remote Video</figcaption>
-    </figure>
-  </li>
-  <li>
-    <p>
-      In the <strong>Add Remote Video</strong> enter a <strong>Video Name</strong> and the playlist URL. Select the <strong>Save</strong> button.
-    </p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Add Remote Video dialog" src="/assets/images/live-module/remote/remote-dialog.png" />
-    <figcaption class="bcls-caption--image">Add Remote Video dialog</figcaption>
-    </figure>
-  </li>
-  <li>
-    <p>
-      You now have a video Id pointing to your remote live stream. You can use this with any player in your account to stream live content with server-side ads.
-    </p>
-  </li>
-</ol>
-</section>
-
-<section class="bcls-section">
-<h2 id="Troubleshooting_live_stream_issues">Troubleshooting live stream issues</h2>
-
-<p>If you need further help getting your live event to work, you can <a href="https://supportportal.brightcove.com/create">contact us</a>. To make sure you get the fastest response possible, below is a list of what support will need to solve the problem.</p>
-
-<ul>
-	<li>The specific symptoms the stream is having. For example, does it not play at all or does it stutter or freeze?</li>
-	<li>Whether this stream worked correctly in the past</li>
-	<li>The entry point URL you are using in your encoder</li>
-	<li>The encoding software and hardware are you using</li>
-	<li>The URL to the player to which you have published the live event</li>
-	<li>The video ID of your live asset in Video Cloud Studio</li>
-	<li>The results of a trace-route from your encoder to the publishing point host</li>
-</ul>
-</section>
 </article>
 
 <!-- complete bootstrap layout -->

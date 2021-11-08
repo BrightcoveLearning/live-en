@@ -13,14 +13,13 @@ layout: staging
   <p>
     By default, live streams talk to the Brightcove Live API to stream your event. A new system to manage Playback Rights and Restrictions sits in front of the Live API and provides playback authorization using DRM licenses.
   </p>
-  <p>You can use Playback Rights with or without DRM, but if you choose to use runtime restrictions, then you will need to use a JSON Web Token (JWT).</p>
-  <p>License Keys Protection offers an extra level of security when using Dynamic Delivery with DRM-protected or HTTP Live Streaming Encryption (HLSe) content. License requests can be authenticated using a signed <a href="https://general.support.brightcove.com/developer/create-json-web-token.html">JSON Web Token (JWT)</a>. </p>
+  <p>Live streams use runtime restrictions, so you will need a JSON Web Token (JWT) with specific permissions (claims) for your stream request.</p>
 
   <p>The token is used when requesting the video license, once the video has been loaded to the player and the source has been selected.</p>
 
   <aside class="bcls-aside bcls-aside--information">With HLSe content, when the player changes rendition, due to improved connectivity or after the first segment is loaded, a new license request is made.</aside>
 
-  <p>If you are not familiar with this feature, see the <a href="https://apis.support.brightcove.com/playback-restrictions/getting-started/overview-playback-restrictions.html">Overview: Brightcove Playback Restrictions</a> document.</p>
+  <p>If you are not familiar with this feature, see the <a href="https://apis.support.brightcove.com/playback-restrictions/getting-started/overview-playback-restrictions.html#Runtime_restrictions">Overview: Brightcove Playback Restrictions</a> document.</p>
 
 </section>
 
@@ -97,11 +96,20 @@ layout: staging
   <li>Enter any additional event details.</li>
   <li>Click <strong>Create Event</strong>.</li>
   <li>
-    <p>In the Live <strong>Control Room</strong>, copy the <strong>Video ID</strong> associated with the event.</p>
+    <p>In the Live <strong>Control Room</strong>, click the <strong>Video ID</strong> associated with the event.</p>
     <figure class="bcls-figure">
       <img class="bcls-image--no-border" alt="Event Video ID" src="/assets/images/live-module/playback-restrictions/event-video-id.png" />
     </figure>
   </li>
+  <li>You will be redirected to the <strong>Media</strong> module for this Video ID.</li>
+  <li>
+    <p>In the <strong>Playback Restrictions</strong> section, select the Playback Restriction that you defined in the <a href="#Define_playback_rights">Define Playback Rights</a> section.</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image--no-border" alt="Assign Playback Restriction" src="/assets/images/live-module/playback-restrictions/assign-playback-right.png" />
+    </figure>
+  </li>
+  <li>In the Admin module, you can edit the Playback Right after it has been assigned to an event.</li>
+  <li>Start streaming your live event. For details, see the <a href="/get-started/index.html">Getting Started</a> index page.</li>
 
 
 

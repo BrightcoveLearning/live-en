@@ -13,13 +13,13 @@ layout: staging
   <p>
     By default, live streams talk to the Brightcove Live API to stream your event. A new system to manage Playback Rights and Restrictions sits in front of the Live API and provides playback authorization using DRM licenses.
   </p>
-  <p>Live streams use runtime restrictions, so you will need a JSON Web Token (JWT) with specific permissions (claims) for your stream request.</p>
+  <p>Live streams use <a href="https://apis.support.brightcove.com/playback-restrictions/getting-started/overview-playback-restrictions.html#Runtime_restrictions">runtime restrictions</a>, so you will need a JSON Web Token (JWT) with specific permissions (claims) for your stream request.</p>
 
   <p>The token is used when requesting the video license, once the video has been loaded to the player and the source has been selected.</p>
 
   <aside class="bcls-aside bcls-aside--information">With HLSe content, when the player changes rendition, due to improved connectivity or after the first segment is loaded, a new license request is made.</aside>
 
-  <p>If you are not familiar with this feature, see the <a href="https://apis.support.brightcove.com/playback-restrictions/getting-started/overview-playback-restrictions.html#Runtime_restrictions">Overview: Brightcove Playback Restrictions</a> document.</p>
+  <p>If you are not familiar with this feature, see the <a href="https://apis.support.brightcove.com/playback-restrictions/getting-started/overview-playback-restrictions.html">Overview: Brightcove Playback Restrictions</a> document.</p>
 
 </section>
 
@@ -121,18 +121,36 @@ layout: staging
 <p>To publish a live stream with Playback Restrictions, follow these steps:</p>
 
 <ol class="bcls-tasklist-restart">
-	<li>Create a JSON Web Token (JWT) and register the public key with Brightcove. For details, see the <a href="https://general.support.brightcove.com/developer/create-json-web-token.html">Creating a JSON Web Token (JWT)</a> document.</li>
+	<li>
+    <p>Create a JSON Web Token (JWT) and register the public key with Brightcove.</p> 
+    <p>For details, see the <a href="https://general.support.brightcove.com/developer/create-json-web-token.html">Creating a JSON Web Token (JWT)</a> document.</p>
+  </li>
+  <li>In Video Cloud Studio, return to the <strong>Live</strong> module.</li>
+  <li>In the left navigation, select <strong>Publish and Embed</strong>.</li>
   <li>
-    <p>Configure the player</p>
-    <p>The token is passed with the playback request. If the token is invalid or expired, access to the content will be restricted. The player must be configured to use the token.</p>
+    <p>In the <strong>Live Player Options</strong> section, select your player configured in the previous step.</p>
+  </li>
+  <li>
+    <p>Copy the <strong>Advanced Embed Code</strong> and paste it into your HTML page.</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image--no-border" alt="Player embed code" src="/assets/images/live-module/playback-restrictions/embed-code.png" />
+    </figure>
+  </li>
+  <li>
+    <p>Create a custom script with the Advanced embed code.</p>
+    <p>The JWT token is passed with the playback request. If the token is invalid or expired, access to the content will be restricted. The player must be configured to use the token.</p>
 
-    <h4>Web player</h4>
+    <!-- <h4>Web player</h4> -->
     <p>
-      To configure the Brightcove web player, see the <a href="https://player.support.brightcove.com/playback/playback-restrictions-with-bcp.html">Playback Restrictions with Brightcove Player</a> document.
+      To configure the Brightcove web player, see the <a href="https://player.support.brightcove.com/playback/playback-restrictions-with-bcp.html#Using_Playback_Rights">Playback Restrictions with Brightcove Player</a> document.
     </p>
-    <h4>Native Android or iOS player</h4>
+    <!-- <h4>Native Android player</h4>
     <p>
-      To configure the native player for Android or iOS, see the <a href="https://sdks.support.brightcove.com/features/playback-restrictions-with-sdks.html">Playback Restrictions with the Native SDKs</a> document.
+      To configure the native player for Android, see the <a href="https://sdks.support.brightcove.com/features/playback-restrictions-with-sdks.html#Android_Using_Playback_Rights">Playback Restrictions with the Native SDKs : Android</a> document.
+    </p>
+    <h4>Native iOS player</h4>
+    <p>
+      To configure the native player for iOS, see the <a href="https://sdks.support.brightcove.com/features/playback-restrictions-with-sdks.html#iOS_Using_Playback_Rights">Playback Restrictions with the Native SDKs : iOS</a> document.
     </p>
     <h4>Your own player</h4>
     <p>
@@ -148,8 +166,10 @@ layout: staging
     </p>
     <pre class="line-numbers"><code class="language-curl">curl -X GET \
     -H 'Authorization: Bearer {JWT}' \
-    https://edge-auth.api.brightcove.com/playback/v1/accounts/{your_account_id}/videos/{your_video_id}</code></pre>
+    https://edge-auth.api.brightcove.com/playback/v1/accounts/{your_account_id}/videos/{your_video_id}</code></pre> -->
   </li>
+  <li>Confirm playback in your web page.</li>
+  <li>Confirm that playback can be blocked by changing the settings for the Playback Right assigned to the video (live event).</li>
   
 </ol>
 </section>

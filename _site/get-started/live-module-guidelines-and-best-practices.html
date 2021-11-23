@@ -613,8 +613,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         </tr>
         <tr>
           <td>Keyframe rate</td>
-          <td> The most efficient setting for this is the segment duration x frame rate - for example, if you have 6 second segments and 30fps making the keyframe rate 180 (6x30) would result in the lowest decoder load.
-            <p>However, to account for any fluctuations this is set to 2 x the frame rate - for example, 60 for a framerate of 30 fps.</p></td>
+          <td>
+            The most efficient setting for this is the segment duration x frame rate - for example, if you have 6 second segments and 30fps making the keyframe rate 180 (6x30) would result in the lowest decoder load.
+            <p>However, to account for any fluctuations this is set to 2 x the frame rate - for example, 60 for a framerate of 30 fps.</p>
+            <aside class="bcls-aside bcls-aside--information language-editable">Note that the default ingest profiles for Live assume a framerate of 30 fps and therefore set the keyframe rate to 60. If your input stream has a different framerate (25 fps or 60 fps, for example) you should create a custom ingest profile by duplicating the default one and setting the keyframe rate to twice the framerate (for example, set it to 120 if the input framerate is 60 fps).</aside>
+          </td>
         </tr>
         <tr>
           <td>GOP structure</td>

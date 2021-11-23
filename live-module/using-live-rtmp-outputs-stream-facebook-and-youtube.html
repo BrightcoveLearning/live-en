@@ -4,10 +4,10 @@ parent: Live Module
 ---
 <article class="bcls-article">
   <h1>Using Live RTMP Outputs to Stream to Facebook and YouTube</h1>
-  <summary>In this topic you will learn how to use RTMP outputs in the Live module to stream live events to Facebook and YouTube.</summary>
+  <summary>In this topic you will learn how to use RTMP outputs in the Live module to stream live events to destinations such as Facebook and YouTube.</summary>
   <section class="bcls-section">
     <h2 id="introduction">Introduction</h2>
-    <p>The Live module can be used to broadcast a live event to both desktop and mobile devices. After entering your event information into the Live module, you will be provided with a set of encoder settings that you plug into your on-site encoder. Typically, the live stream will be published inside of a Brightcove Player. The Live module Control Room page provides the ability to enter additional RTMP output URLs. The RTMP output settings can be used to send the live stream to social media sites. Note that RTMP output hours will be billed against event hours.&nbsp;This topic will cover the steps to create a simple live event and then show how the RTMP outputs can be used to stream a live event to Facebook and YouTube.</p>
+    <p>The Live module can be used to broadcast a live event to both desktop and mobile devices. After entering your event information into the Live module, you will be provided with a set of encoder settings that you plug into your on-site encoder. Typically, the live stream will be published inside of a Brightcove Player. The Live module Control Room page provides the ability to enter additional RTMP output URLs. The RTMP output settings can be used to send the live stream to social media sites. Note that RTMP output hours will be billed against event hours. This topic will cover the steps to create a simple live event and then show how the RTMP outputs can be used to stream a live event to Facebook and YouTube.</p>
     <aside class="bcls-aside bcls-aside--information">Notes:
       <ul>
         <li>Ads, including server-side ads (SSAI), will not be streamed to RTMP outputs. The ad-free stream will be used instead.</li>
@@ -58,7 +58,7 @@ parent: Live Module
       <li>In the Live module, paste the <strong>Server URL</strong> into the <strong>RTMP Output URL</strong> field on the Control Room page.</li>
       <li>Copy the <strong>Stream Key</strong> from Facebook to the clipboard.</li>
       <li> In the Live module, paste the <strong>Stream Key</strong> at the end of the <strong>RTMP Output URL</strong> field. The <strong>RTMP Output URL</strong> field will be the Facebook <strong>Server URL</strong> with the <strong>Stream Key</strong> appended, all as one value.
-        <aside class="bcls-aside bcls-aside--warning">Note: The only format currently supported for RTMP URLs is <code translate="No">rtmps://host:port/application/streamName</code>.</aside>
+        <aside class="bcls-aside bcls-aside--warning">Note: The only format currently supported for RTMP URLs is <code translate="No">rtmps://host:port/application/streamName/streamkey</code>.</aside>
       </li>
       <li>Select a rendition from the <strong>Select Rendition</strong> dropdown
         .
@@ -99,7 +99,7 @@ parent: Live Module
       </li>
       <li>Copy the <strong>Stream URL</strong> to the clipboard.</li>
       <li> In the Live module, paste the <strong>Server URL</strong> into the <strong>RTMP Output URL</strong> field on the Control Room page.
-        <aside class="bcls-aside bcls-aside--warning">Note: The only format current supported for RTMP URLs is <code translate="No">rtmps://host:port/application/streamName</code>.</aside>
+        <aside class="bcls-aside bcls-aside--warning">Note: The only format current supported for RTMP URLs is <code translate="No">rtmps://host:port/application/streamName/streamkey</code>.</aside>
       </li>
       <li>Copy the <strong>Stream key</strong> from YouTube to the clipboard.</li>
       <li>In the Live module, paste the <strong>Stream key</strong> at the end of the <strong>RTMP Output URL</strong> field. The <strong>RTMP Output URL</strong> field will be the YouTube <strong>Stream URL</strong> with the <strong>Stream key</strong> appended, all as one value.</li>

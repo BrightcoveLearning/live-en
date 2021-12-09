@@ -618,21 +618,18 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <p>Here are the steps to define Playback Rights in Studio:</p>
 <ol class="bcls-tasklist-restart">
   <li>Review the validation diagrams for Playback Rights in the <a href="https://apis.support.brightcove.com/playback-restrictions/getting-started/implementing-playback-rights.html">Implementing Playback Rights</a> document.</li>
-  <li>
-    <p>In Video Cloud Studio, expand the <strong>Admin</strong> dropdown menu and select <strong>Playback Rights</strong>.</p>
+  <li>In Video Cloud Studio, expand the <strong>Admin</strong> dropdown menu and select <strong>Playback Rights</strong>.
     <figure class="bcls-figure">
       <img class="bcls-image--no-border" alt="Admin menu" src="/assets/images/live-module/playback-restrictions/admin-menu.png" />
     </figure>
   </li>
-  <li>
-    <p>To create a new right, click <strong>New Playback Rights</strong>.</p>
+  <li>To create a new right, click <strong>New Playback Rights</strong>.
     <figure class="bcls-figure">
       <img class="bcls-image--no-border" alt="Manage playback rights" src="/assets/images/live-module/playback-restrictions/manage-playback-rights.png" />
     </figure>
   </li>
   <li>Add a <strong>Playback Rights Name</strong> and click <strong>Save</strong>.</li>
-  <li>
-    <p>In the left navigation, select each category and edit changes.</p>
+  <li>In the left navigation, select each category and edit changes.
     <figure class="bcls-figure">
       <img class="bcls-image--no-border" alt="Playback rights detail" src="/assets/images/live-module/playback-restrictions/playback-rights-detail.png" />
     </figure>
@@ -653,31 +650,27 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 	<li>From the <strong>Manage Events</strong> page click <strong>Create Event</strong>.</li>
 	<li>Enter the event data as needed. For details, see the <a href="/live-module/creating-and-managing-live-events-using-live-module.html">Creating and Managing Live Events using the Live Module</a> document.</li>
 	<li>Expand the <strong>ADVANCED OPTIONS</strong> section.</li>
-  <li>
-    <p>For <strong>Content Encryption</strong>, select either <strong>AES-128</strong> or <strong>Digital Rights Management (DRM)</strong>.</p>
+  <li>For <strong>Content Encryption</strong>, select either <strong>AES-128</strong> or <strong>Digital Rights Management (DRM)</strong>.
     <ul>
       <li>For <strong>AES-128</strong>. enter an Encryption Key.</li>
       <li>For <strong>Digital Rights Management (DRM)</strong>, enter the Token Expiration.</li>
     </ul>
     <aside class="bcls-aside bcls-aside--information"><strong>Content Encryption</strong> options will only appear if your account is configured for them.</aside>
   </li>
-  <li>
-    <p>To use Playback Restrictions, select <strong>Enable Playback Restrictions</strong>. For details, see the <a href="https://apis.support.brightcove.com/playback-restrictions/getting-started/overview-playback-restrictions.html">Overview: Brightcove Playback Restrictions</a> document.</p>
+  <li>To use Playback Restrictions, select <strong>Enable Playback Restrictions</strong>. For details, see the <a href="https://apis.support.brightcove.com/playback-restrictions/getting-started/overview-playback-restrictions.html">Overview: Brightcove Playback Restrictions</a> document.
     <figure class="bcls-figure">
       <img class="bcls-image--no-border" alt="Enable Playback Restrictions" src="/assets/images/live-module/playback-restrictions/enable-restrictions.png" />
     </figure>
   </li>
   <li>Enter any additional event details.</li>
   <li>Click <strong>Create Event</strong>.</li>
-  <li>
-    <p>In the Live <strong>Control Room</strong>, click the <strong>Video ID</strong> associated with the event.</p>
+  <li>In the Live <strong>Control Room</strong>, click the <strong>Video ID</strong> associated with the event.
     <figure class="bcls-figure">
       <img class="bcls-image--no-border" alt="Event Video ID" src="/assets/images/live-module/playback-restrictions/event-video-id.png" />
     </figure>
   </li>
   <li>You will be redirected to the <strong>Media</strong> module for this Video ID.</li>
-  <li>
-    <p>In the <strong>Playback Restrictions</strong> section, select the Playback Restriction that you defined in the <a href="#Define_playback_rights">Define Playback Rights</a> section.</p>
+  <li>In the <strong>Playback Restrictions</strong> section, select the Playback Restriction that you defined in the <a href="#Define_playback_rights">Define Playback Rights</a> section.
     <figure class="bcls-figure">
       <img class="bcls-image--no-border" alt="Assign Playback Restriction" src="/assets/images/live-module/playback-restrictions/assign-playback-right.png" />
     </figure>
@@ -700,8 +693,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </li>
   <li>In Video Cloud Studio, return to the <strong>Live</strong> module.</li>
   <li>In the left navigation, select <strong>Publish and Embed</strong>.</li>
-  <li>
-    <p>In the <strong>Live Player Options</strong> section, select your player configured in the previous step.</p>
+  <li>In the <strong>Live Player Options</strong> section, select your player configured in the previous step.
   </li>
   <li>
     <p>Copy the <strong>Advanced Embed Code</strong> and paste it into your HTML page.</p>
@@ -709,8 +701,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <img class="bcls-image--no-border" alt="Player embed code" src="/assets/images/live-module/playback-restrictions/embed-code.png" />
     </figure>
   </li>
-  <li>
-    <p>Create a custom script with the Advanced embed code.</p>
+  <li>Create a custom script with the Advanced embed code.
     <p>The JWT token is passed with the playback request. If the token is invalid or expired, access to the content will be restricted. The player must be configured to use the token.</p>
 
     <!-- <h4>Web player</h4> -->
@@ -764,7 +755,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 06 Dec 2021
+  Page last updated on 07 Dec 2021
 </div>
 
 

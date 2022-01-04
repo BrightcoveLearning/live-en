@@ -17,6 +17,8 @@ parent: Live Module
       <li>You have found that shorter videos perform better on social media</li>
     </ul>
     <p>Clipping can be done with all types of live events and it can also be done <em>during</em> and <em>after</em> the live stream using the Live API or the Live Module.</p>
+    <p>Both the Live Module and the <a href="https://apis.support.brightcove.com/live-api/guides/live-api-creating-vod-clips.html">Live API</a> support creating clips from encrypted or DRM-protected jobs.</p>
+
     <h3>Notes</h3>
     <ul>
       <li>Legacy ingest profiles no longer support live clipping. To create a video clip from a live stream, make sure your account is enabled for Dynamic Delivery and use a Dynamic Delivery ingest profile.</li>
@@ -26,7 +28,6 @@ parent: Live Module
       <li>Clips will be frame-accurate <strong>provided that the encoder is sending SMPTE timecodes for the stream</strong> - otherwise, they will be accurate within a couple of frames. Note that to provide clips as quickly as possible, a segment-accurate clip is first created, and replaced by a frame-accurate clip as soon as it is available.</li>
       <li>Clips with a start time less than 10 seconds into the stream cannot be created.</li>
       <li>Clipping is not supported when using the Safari browser.</li>
-      <li>Currently, the Live Module does not support creating clips from encrypted or DRM-protected jobs. The <a href="https://apis.support.brightcove.com/live-api/guides/live-api-creating-vod-clips.html">Live API</a> does support this.</li>
     </ul>
     <aside class="bcls-aside bcls-aside--information">Note:  When you create a recurring event, a video is automatically created for it in the Media module. Do <strong>not</strong> delete this video, as it will be needed every time the event reactivated.</aside>
   </section>

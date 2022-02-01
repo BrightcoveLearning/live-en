@@ -129,7 +129,7 @@ parent: Live Module
 </section>
 <section class="bcls-section">
   <h2 id="Triggering_SSAI_events">Triggering SSAI events</h2>
-  <p>When using this feature to trigger an IMA pre-roll ad, the SSAI custom events will not be triggered by default.</p>
+  <p>When using this feature to trigger an IMA pre-roll ad, custom player events will not be triggered during SSAI playback.</p>
   <p>The <code translate="No">ima_preroll_with_ssai</code> feature is designed to dispose of the player after displaying the IMA3 ad. Then, another player with the same id is re-initialized. This is why custom ad events won't be triggered with the initial player.</p>
   <p>A reasonable workaround to ensure that custom ad listeners are triggered is to wrap them in a player dispose event listener and a videojs setup hook which is called after a player is created.</p>
   <p>Here is a code example:</p>

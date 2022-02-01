@@ -157,7 +157,7 @@ parent: Live Module
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/live-module/node18470-advanced-options.png" /></figure>
     <aside class="bcls-aside bcls-aside--information">Note: For VOD clips, no notification will be sent.</aside>
     <aside class="bcls-aside bcls-aside--information">Note: Please contact Brightcove Support if you are interested in a custom edge CDN hostname.</aside>
-          <p>The following options can be configured:</p>
+    <p>The following options can be configured:</p>
     <ul>
       <li><strong>Content Encryption</strong> - Select the type of encryption to apply to the live output stream:
         <ul>
@@ -210,7 +210,7 @@ parent: Live Module
   <section class="bcls-section">
     <h2 id="intro_recurring">Introduction to recurring events</h2>
     <p>Selecting the <strong>Create this as a recurring event using a Static Entry Point (SEP)</strong> option allows for a long-running live stream that can be activated and deactivated while keeping the same entry point URL and playback URL. When using recurring events, the streaming endpoint URL and video ID will not change.</p>
-    <aside class="bcls-aside bcls-aside--information">Note that when you create a recurring event, a video is automatically created for it in the Media module. Do <strong>not</strong> delete this video, as it will be needed every time the event recurs.</aside>
+    <aside class="bcls-aside bcls-aside--information">Note: When you create a recurring event, a video is automatically created for it in the Media module. Do <strong>not</strong> delete this video as it will be needed every time the event recurs.</aside>
     <h3  id="recurring_limitations">Limitations</h3>
     <p>The following limitations apply when working with recurring events:</p>
     <ul>
@@ -282,6 +282,7 @@ parent: Live Module
       <li><a href="#eventstatus">Event Status</a></li>
       <li><a href="#eventinfo">Event Information</a></li>
       <li><a href="#clips">Clips</a></li>
+      <li><a href="#monitor">Monitor</a></li>
       <li><a href="#renditions">Renditions</a></li>
       <li><a href="#rtmp">RTMP</a></li>
       <li><a href="#social_event">Social Event</a></li>
@@ -332,6 +333,12 @@ parent: Live Module
       <p>The Clips section displays all of the clips that were created from the live stream. Clicking the clip name will open the clip in the Media module. For information on creating a clip, see <a href="/live-module/creating-video-clip-using-live-module.html">Creating a Video Clip Using the Live Module</a>.</p>
     </div>
     <div>
+      <h3 id="monitor">Monitor</h3>
+      <p>The Monitor section displays the Input and Output Drift for the stream. Click <strong>Retrieve updated data and graphs</strong> to view updated graphs. If the account is enabled for extended monitoring, the Monitor section will be replaced with a <strong>Monitoring</strong> tab below the preview player. See the <a href="#ext-monitoring">extended monitoring</a> section for details.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/live-module/node18470-monitor.png" /></figure>
+      </p>
+    </div>
+    <div>
       <h3 id="renditions">Renditions</h3>
       <p>The Renditions section displays details about the renditions that were created. Clicking on a rendition link will show the encoding settings for the rendition.</p>
     </div>
@@ -340,11 +347,7 @@ parent: Live Module
       <p>The RTMP section can be used to add RTMP Outputs. This allows the live stream to be sent to other RTMP entry points. This can be used to send the live to stream to Facebook or YouTube for example.</p>
       <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/live-module/node18470-rtmp.png" /></figure>
       <p>Enter the <strong>RTMP Output URL</strong> and the <strong>Rendition</strong> to send. Note that the format of the output URL may change depending on where the RTMP stream is being used. For more information, see <a href="/live-module/using-live-rtmp-outputs-stream-facebook-and-youtube.html">Using Live RTMP Outputs to Stream to Facebook and YouTube</a>.</p>
-      <aside class="bcls-aside bcls-aside--information">
-        <ul>
-          <li>RTMP outputs are limited to 5 outputs per live job. This limitation includes connections marked as an error.</li>
-        </ul>
-      </aside>
+      <aside class="bcls-aside bcls-aside--information">Note: RTMP outputs are limited to 5 outputs per live job. This limitation includes connections marked as an error.</aside>
     </div>
     <div>
       <h3 id="social_event">Social Event</h3>
@@ -353,12 +356,28 @@ parent: Live Module
     </div>
   </section>
   <section class="bcls-section">
-    <h2 id="monitor">Monitoring an event</h2>
-    <p>Click the <strong>Monitoring</strong> tab below the preview player to view monitoring information. The monitoring information is available while an event is in progress and for up to 1 hour after the event ends.</p>
-    <aside class="bcls-aside bcls-aside--information">By default, the Monitor module will only display the Output and Input Drift graphs. If you would like the extended Monitor version, please contact your Brightcove account representative.</aside>
-    <p>Click <strong>Reporting</strong> in the left navigation to view <a href="/live-module/reviewing-live-analytics.html">Live analytics</a>.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/live-module/node18470-monitoring.png" /></figure>
+    <h2 id="ext-monitoring">Viewing extended monitoring</h2>
+    <p>By default, the Live module will  display a <strong>Monitor</strong> section with  Output and Input Drift graphs. If you would like   extended monitoring  enabled, please contact your Brightcove account representative. Extended monitoring will display a <strong>Monitoring</strong> tab below the preview player. The monitoring information is available while an event is in progress and for up to 1 hour after the event ends. </p>
     <p>Click <strong>Select Graphs</strong> to select which graphs appear and for a description of what each graph contains.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/live-module/node18470-monitoring.png" /></figure>
+    <p>The following graphs are available:</p>
+    <ul>
+      <li><strong>Input Drift</strong> - Input drift can be an indicator of stream health, and represents the stream currently being sent from the encoder to the Brightcove entry point.</li>
+      <li><strong>Output Drift</strong> - Output drift is the processing of each rendition in the stream. Higher values could increase the latency of the stream and/or cause viewing problems for end users.</li>
+      <li><strong>Client Disconnections</strong> - Disconnections from the encoder connected to the entry point. This is an indication of connectivity issues or incorrect output settings in your encoder.</li>
+      <li><strong>Validation Disconnections</strong> - Forced stream disconnections due to unexpected input settings from your encoder.</li>
+      <li><strong>Input Reconnections</strong> - Reconnections from the encoder to the entry point. This indicates a reestablished connection from your encoder to the entry point.</li>
+      <li><strong>VOD Process Time</strong> - Live to VOD processing time. This is the time before syndicating the clip to a content management system, including Brightcove Video Cloud.</li>
+      <li><strong>Cuepoint Detected</strong> - Detected ad triggers sent in the input stream via inband SCTE-35 or Live API triggers.</li>
+      <li><strong>Cuepoint Missed</strong> - Detected Ad triggers that could not be executed. This may be a result of incorrect formatting. See <a href="https://support.brightcove.com/live-api-server-side-ad-insertion-ssai#Cuepoints">documentation</a> for formatting.</li>
+      <li><strong>SSAI Tracking Event Counts</strong> - Server-side tracking pixel response time by HTTP status code and host.</li>
+      <li><strong>Variant Response Time</strong> - HLS master manifest response time for session-based streams.</li>
+      <li><strong>Chunklist Response Time</strong> - HLS variant (rendition) manifest response time for session-based streams.</li>
+      <li><strong>Inserted Ad Counts</strong> - Total number of inserted ads.</li>
+      <li><strong>RTMP Output Drift</strong> - Output drift is the processing of each RTMP rendition in the stream. Higher values could increase the latency of the stream and/or cause viewing problems for end users.</li>
+      <li><strong>RTMP Output Disconnection</strong> - Disconnections encountered for the RTMP output. This is an indicator of connection problems between the RTMP server and the destination server.</li>
+      <li><strong>RTMP Output Connection</strong> - Reconnections for the RTMP output stream. This occurs typically after being disconnected from the destination server.</li>
+    </ul>
   </section>
   <section class="bcls-section">
     <h2 id="duplicate">Duplicating an event</h2>
@@ -431,6 +450,10 @@ parent: Live Module
         </li>
       </ul>
     </aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="reporting">Live event reporting</h2>
+    <p>Click <strong>Reporting</strong> in the left navigation to view <a href="/live-module/reviewing-live-analytics.html">Live analytics</a>.</p>
   </section>
   <section class="bcls-section">
     <h2 id="ad">Requesting an ad</h2>

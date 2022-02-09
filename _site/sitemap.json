@@ -35,12 +35,32 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/creating-and-managing-live-events-using-live-module.html",
-      "oldURL": "/creating-and-managing-live-events-using-live-module"
+      "newURL": "https://live.support.brightcove.com/help/control-room-channels.html",
+      "oldURL": "/control-room-channels"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/help/control-room.html",
+      "oldURL": "/control-room"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/help/create-channel-event.html",
+      "oldURL": "/create-channel-event"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/help/create-live-event.html",
+      "oldURL": "/create-live-event"
   },
 
   {
       "newURL": "https://live.support.brightcove.com/live-module/creating-and-managing-live-events-using-live-module.html",
+      "oldURL": "/creating-and-managing-live-events-using-live-module"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/creating-and-managing-live-events-using-live-module.html",
       "oldURL": "/creating-and-managing-live-events-using-live-module"
   },
 
@@ -110,37 +130,7 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/release-notes/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://live.support.brightcove.com/live-api/guides/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://live.support.brightcove.com/live-api/getting-started/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://live.support.brightcove.com/live-api/code-samples/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://live.support.brightcove.com/support/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://live.support.brightcove.com/live-api/references/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://live.support.brightcove.com/get-started/",
+      "newURL": "https://live.support.brightcove.com/general/",
       "oldURL": "/index"
   },
 
@@ -150,7 +140,12 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/",
+      "newURL": "https://live.support.brightcove.com/release-notes/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/support/",
       "oldURL": "/index"
   },
 
@@ -160,17 +155,42 @@
   },
 
   {
+      "newURL": "https://live.support.brightcove.com/live-api/references/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/live-api/code-samples/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/live-api/getting-started/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/live-api/guides/",
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://live.support.brightcove.com/live-api/ssai/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/general/",
+      "newURL": "https://live.support.brightcove.com/live-api/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/live-api/",
+      "newURL": "https://live.support.brightcove.com/get-started/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/",
       "oldURL": "/index"
   },
 
@@ -305,6 +325,21 @@
   },
 
   {
+      "newURL": "https://live.support.brightcove.com/help/manage-completed.html",
+      "oldURL": "/manage-completed"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/help/manage-live-event.html",
+      "oldURL": "/manage-live-event"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/help/manage-standby.html",
+      "oldURL": "/manage-standby"
+  },
+
+  {
       "newURL": "https://live.support.brightcove.com/admin/managing-api-authentication-credentials.html",
       "oldURL": "/managing-api-authentication-credentials"
   },
@@ -347,6 +382,11 @@
   {
       "newURL": "https://live.support.brightcove.com/live-module/playback-restrictions-live-module.html",
       "oldURL": "/playback-restrictions-live-module"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/help/player-configuration.html",
+      "oldURL": "/player-configuration"
   },
 
   {

@@ -58,6 +58,8 @@
     - name: "Guides"
       url: '/live-module/index.html'
       docs:
+        - name: Playback Restrictions with Live events
+          url: /live-module/playback-restrictions-live-module.html
         - name: Using Live Redundancy
           url: /live-module/live-redundancy.html
         - name: Using Live RTMP Outputs

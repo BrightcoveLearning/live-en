@@ -668,7 +668,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </ul>
     <p>To create a new event, follow these steps.</p>
     <ol class="bcls-tasklist-restart">
-      <li>From the Manage Events page click <strong>Create Event</strong>. The Create Live Event or Create Live Channel page will open. The properties when creating events and channels are the same. The screen shots in this document cover creating an event.
+      <li>From the Manage Events page click <span class="button-blue">Create Event</span>. The Create Live Event or Create Live Channel page will open. The properties when creating events and channels are the same. The screen shots in this document cover creating an event.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/live-module/node18470-new-event2.png" /></figure>
       </li>
       <li>Enter the event details:
@@ -686,9 +686,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <li><strong>Regular</strong> - Live delay can be approximately 30-45 seconds</li>
         <li><strong>Low Latency</strong> - Live delay reduced to approximately 5-10 seconds (see the <a href="#low-latency">Using Low Latency streaming</a> section below)</li>
       </ul>
-      <li>Select a <strong>Live Ingest Profile</strong>. The dropdown list will list all Live ingest profiles. The ingest profile will control the quality and number of live renditions that are created. Clicking the <strong>Manage Profiles</strong> link will open the ingest profile editor in another browser tab. Note that you must be an account administrator to access the ingest profile editor. Click the <strong>Renditions</strong> link to view the renditions that will be created using the selected ingest profile. </li>
-    </ol>
-    <ol class="bcls-tasklist-restart">
+      <li>Select a <strong>Live Ingest Profile</strong>. The dropdown list will list all Live ingest profiles. The ingest profile will control the quality and number of live renditions that are created. Clicking the <strong>Manage Profiles</strong> link will open the ingest profile editor in another browser tab. Note that you must be an account administrator to access the ingest profile editor. Click the <strong>Renditions</strong> link to view the renditions that will be created using the selected ingest profile.
       <aside class="bcls-aside bcls-aside--information">The bitrate and billing details of the three tiers are as follows:
         <ul>
           <li>Tier 1 allows up to 5,500 Kbps and is charged at 1.0x hours</li>
@@ -696,7 +694,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           <li>Tier 3 allows up to 20,000 Kbps and is charged at 2.0x hours</li>
         </ul>
       </aside>
-      <aside class="bcls-aside bcls-aside--information">Note: For information on creating Live ingest profiles, see <a href="/admin/creating-custom-live-ingest-profiles.html">Creating Custom Live Ingest Profiles</a>.</aside>
+      <aside class="bcls-aside bcls-aside--information">Note: For information on creating Live ingest profiles, see <a href="/admin/creating-custom-live-ingest-profiles.html">Creating Custom Live Ingest Profiles</a>.</aside></li>
       <li>Select <strong>Convert event to video asset when complete</strong> to save a VOD version of the live video to your Video Cloud account. When this option is selected, the highest quality rendition from the selected <strong>Live Ingest Profile</strong> is used as the source for the VOD video. The default ingest profile for the account is used when creating renditions. <strong>Note that the VOD version is not available as soon as the live event ends, the video will be available once the ingestion process is complete.</strong>
         <aside class="bcls-aside bcls-aside--information">Note: This option is not supported when using a recurring event.</aside>
       </li>
@@ -714,12 +712,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         </ul>
       </li>
       <li>Click <strong>Advanced Options</strong> and <a href="#advanced">configure the advanced options</a>.</li>
-      <li>Click<strong> Create Event </strong>to start the live event. The <a href="#controlroom">Control Room page</a> will open with details about the live event including the <strong>Streaming Endpoint (RTMP URL)</strong> and <strong>Stream Name</strong> which will be used by your encoder.
+      <li>Click <span class="button-blue">Create Event</span> to start the live event. The <a href="#controlroom">Control Room page</a> will open with details about the live event including the <strong>Streaming Endpoint (RTMP URL)</strong> and <strong>Stream Name</strong> which will be used by your encoder.
         <aside class="bcls-aside bcls-aside--information"> It will take about a minute to process your streams.</aside>
         <p>By default, the encoder must be started within 30 minutes from when a new event is created.</p>
       </li>
     </ol>
-    <p>Click the <strong>Stop Streaming</strong> button to end the event.</p>
+    <p>Click  <strong>Stop Streaming</strong> to end the event.</p>
     <aside class="bcls-aside bcls-aside--information">Note: Make sure the encoder is closed/stopped when the live stream is complete. Leaving a connection open between any encoder and Brightcove, even when no data is being sent, may result in unexpected connection charges.</aside>
   </section>
   <section class="bcls-section">

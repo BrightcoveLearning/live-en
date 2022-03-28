@@ -13,6 +13,19 @@ layout: staging
   <p>
     Audio-only live streams allow you to tap into the sizeable audio entertainment ecosystem, including podcasts and radio. With Brightcove, you can ingest and live stream audio-specific content without a video component. Brightcove's player technology has been optimized for audio to mobile, web, and connected home devices. You will even get relevant analytics for audio-only playback.
   </p>
+  <h3>Constraints</h3>
+  <p>The following functions are not available with audio-only streams:</p>
+  <ul>
+    <li>Streaming to social media</li>
+    <li>Low latency</li>
+    <li>Live ingest profile selection</li>
+    <li>Redundancy</li>
+    <li>Audio tracks</li>
+    <li>Server-Side Ad Insertion (SSAI)</li>
+    <li>Clip creation</li>
+    <li>Backup stream</li>
+    <li>Zoom integration</li>
+  </ul>
 
   <!-- <aside class="bcls-aside bcls-aside--information">With HLSe content, when the player changes rendition, due to improved connectivity or after the first segment is loaded, a new license request is made.</aside> -->
 </section>
@@ -29,48 +42,55 @@ layout: staging
   </ul>
 </section> -->
 
-<section class="bcls-section">
+<!-- <section class="bcls-section">
 <h2 id="Workflow">Workflow</h2>
-<p>To use Playback Restrictions with a live event, follow these steps:</p>
+<p>To create an audio-only live stream, follow these steps:</p>
 <ol class="bcls-tasklist">
   <li><a href="#Define_Playback_Rights">Define Playback Rights</a></li>
   <li><a href="#Create_a_live_event_with_Playback_Restrictions">Create a live event with Playback Restrictions</a></li>
   <li><a href="#Publish_the_live_event">Publish the live event</a></li>
 </ol>
 <p>Alternatively, you can use the Brightcove APis to create the live event and associate Playback Restrictions. For details, see the <a href="https://apis.support.brightcove.com/live-api/guides/live-playback-restrictions.html">Playback Restrictions with Live Streams</a> document.</p>
-</section>
+</section> -->
 
 <section class="bcls-section">
-<h2 id="Define_Playback_Rights">Define Playback Rights</h2>
-<p>Brightcove's Playback Rights Management Service allows you to manage video playback based on the following:</p>
-<ul>
-  <li>Geography</li>
-  <li>Domain</li>
-  <li>Proxy</li>
-  <li>Schedule dates</li>
-</ul>
-<p>Here are the steps to define Playback Rights in Studio:</p>
+<h2 id="Create_a_live_stream">Create a live stream</h2>
+<p>To create an audio-only live stream, follow these steps:</p>
 <ol class="bcls-tasklist-restart">
-  <li>Review the validation diagrams for Playback Rights in the <a href="https://apis.support.brightcove.com/playback-restrictions/getting-started/implementing-playback-rights.html">Implementing Playback Rights</a> document.</li>
-  <li>In Video Cloud Studio, expand the <strong>Admin</strong> dropdown menu and select <strong>Playback Rights</strong>.
+  <li>In Video Cloud Studio, navigate to the <strong>Live</strong> module.</li>
+  <li>Click <span class="button-blue">Create Event</span>.</li>
+  <li>
+    <p>Enter values for your live stream event.</p>
     <figure class="bcls-figure">
-      <img class="bcls-image--no-border" alt="Admin menu" src="/assets/images/live-module/playback-restrictions/admin-menu.png" />
+      <img class="bcls-image--no-border" alt="Create live event" src="/assets/images/live-module/audio-only/create-event1.png" />
+    </figure> 
+    <ul>
+      <li><strong>Event Name</strong> - Name for the event; this name will also appear in the Media module if the video is saved as a video asset (max 255 characters)</li>
+      <li><strong>Short Description</strong> - Description of the event (max 250 characters)</li>
+      <li><strong>Tags</strong> - Tags to associate with the event; tags will be assigned to the video if the video is saved as a video asset (max 128 characters and 1200 tags)</li>
+      <li><strong>Reference ID</strong> - Reference ID for the event; must be unique (max 150 characters)</li>
+    </ul>
+  </li>
+  <li>Any required custom fields for the account will be displayed. Assign values to the custom fields.</li>
+  <li>
+    <p>Select <strong>Create an audio only event</strong>. Notice the following options are grayed out:</p>
+    <ul>
+      <li><strong>Streaming to Social Media</strong></li>
+      <li><strong>Streaming Latency</strong></li>
+      <li><strong>Live Ingest Profile</strong></li>
+    </ul>
+    <figure class="bcls-figure">
+      <img class="bcls-image--no-border" alt="Create audio only event" src="/assets/images/live-module/audio-only/create-event2.png" />
     </figure>
   </li>
-  <li>To create a new right, click <strong>New Playback Rights</strong>.
+  <li>
+    <p>Complete the rest of the options for your live stream.</p>
     <figure class="bcls-figure">
-      <img class="bcls-image--no-border" alt="Manage playback rights" src="/assets/images/live-module/playback-restrictions/manage-playback-rights.png" />
-    </figure>
+      <img class="bcls-image--no-border" alt="Live stream options" src="/assets/images/live-module/audio-only/create-event3.png" />
+    </figure> 
+    <p>For details about these options, see the <a href="/live-module/creating-and-managing-live-events-using-live-module.html#create">Creating and Managing Live Events</a> document.</p>
   </li>
-  <li>Add a <strong>Playback Rights Name</strong> and click <strong>Save</strong>.</li>
-  <li>In the left navigation, select each category and edit changes.
-    <figure class="bcls-figure">
-      <img class="bcls-image--no-border" alt="Playback rights detail" src="/assets/images/live-module/playback-restrictions/playback-rights-detail.png" />
-    </figure>
-  </li>
-  <li>Click <strong>Save</strong>.</li>
-  <li>To edit a Playback Right, click on the <strong>Name</strong> link.</li>
-  <li>For details, see the <a href="https://studio.support.brightcove.com/admin/managing-playback-rights.html">Managing Playback Rights</a> document.</li>
+  <li>Click <span class="button-blue">Create Event</span>.</li>
 </ol>
 </section>
 

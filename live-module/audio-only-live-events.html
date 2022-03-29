@@ -13,6 +13,10 @@ layout: staging
   <p>
     Audio-only live streams allow you to tap into the sizeable audio entertainment ecosystem, including podcasts and radio. With Brightcove, you can ingest and live stream audio-specific content without a video component. Brightcove's player technology has been optimized for audio to mobile, web, and connected home devices. You will even get relevant analytics for audio-only playback.
   </p>
+  <figure class="bcls-figure">
+    <img class="bcls-image--no-border" alt="Audio-only player" src="/assets/images/live-module/audio-only/audio-only-player.png" />
+  </figure>
+
   <h3>Constraints</h3>
   <p>The following functions are not available with audio-only streams:</p>
   <ul>
@@ -42,20 +46,20 @@ layout: staging
   </ul>
 </section> -->
 
-<!-- <section class="bcls-section">
+<section class="bcls-section">
 <h2 id="Workflow">Workflow</h2>
 <p>To create an audio-only live stream, follow these steps:</p>
 <ol class="bcls-tasklist">
-  <li><a href="#Define_Playback_Rights">Define Playback Rights</a></li>
-  <li><a href="#Create_a_live_event_with_Playback_Restrictions">Create a live event with Playback Restrictions</a></li>
-  <li><a href="#Publish_the_live_event">Publish the live event</a></li>
+  <li><a href="#Create_a_live_stream">Create a live stream</a></li>
+  <li><a href="#Stream_your_audio_event">Stream your audio event</a></li>
+  <li><a href="#Publish_to_a_player">Publish to a player</a></li>
 </ol>
-<p>Alternatively, you can use the Brightcove APis to create the live event and associate Playback Restrictions. For details, see the <a href="https://apis.support.brightcove.com/live-api/guides/live-playback-restrictions.html">Playback Restrictions with Live Streams</a> document.</p>
-</section> -->
+<!-- <p>Alternatively, you can use the Brightcove APis to create the live event and associate Playback Restrictions. For details, see the <a href="https://apis.support.brightcove.com/live-api/guides/live-playback-restrictions.html">Playback Restrictions with Live Streams</a> document.</p> -->
+</section>
 
 <section class="bcls-section">
 <h2 id="Create_a_live_stream">Create a live stream</h2>
-<p>To create an audio-only live stream, follow these steps:</p>
+<p>Create an audio-only live stream.</p>
 <ol class="bcls-tasklist-restart">
   <li>In Video Cloud Studio, navigate to the <strong>Live</strong> module.</li>
   <li>Click <span class="button-blue">Create Event</span>.</li>
@@ -95,75 +99,42 @@ layout: staging
 </section>
 
 <section class="bcls-section">
-<h2 id="Create_a_live_event_with_Playback_Restrictions">Create a live event with Playback Restrictions</h2>
-<p>First, use the <strong>Live</strong> module in Video Cloud Studio to create a live event with Playback Restrictions. Then, associate a defined Playback Right with the live event using the <strong>Media</strong> module and the Video ID generated during the live job creation.</p>
+<h2 id="Stream_your_audio_event">Stream your audio event</h2>
+<p>Use the encoder of your choice to stream your audio-only event.</p>
 
-<p>To create a Live Event, follow these steps:</p>
+<p>To stream your Live event, follow these steps:</p>
 <ol class="bcls-tasklist-restart">
-	<li>In Video Cloud Studio, open the <strong>Live</strong> module.</li>
-	<li>From the <strong>Manage Events</strong> page click <strong>Create Event</strong>.</li>
-	<li>Enter the event data as needed. For details, see the <a href="/live-module/creating-and-managing-live-events-using-live-module.html">Creating and Managing Live Events using the Live Module</a> document.</li>
-	<li>Expand the <strong>ADVANCED OPTIONS</strong> section.</li>
-  <li>For <strong>Content Encryption</strong>, select either <strong>AES-128</strong> or <strong>Digital Rights Management (DRM)</strong>.
+	<li>
+    <p>In Video Cloud Studio, return to the <strong>Control Room</strong> for your audio stream.</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image--no-border" alt="Live control room" src="/assets/images/live-module/audio-only/control-room.png" />
+    </figure> 
+  </li>
+  <li>Copy the following:
     <ul>
-      <li>For <strong>AES-128</strong>. enter an Encryption Key.</li>
-      <li>For <strong>Digital Rights Management (DRM)</strong>, enter the Token Expiration.</li>
+      <li>Stream Endpoint (RTMP URL)</li>
+      <li>Sream Name</li>
     </ul>
-    <aside class="bcls-aside bcls-aside--information"><strong>Content Encryption</strong> options will only appear if your account is configured for them.</aside>
   </li>
-  <li>To use Playback Restrictions, select <strong>Enable Playback Restrictions</strong>. For details, see the <a href="https://apis.support.brightcove.com/playback-restrictions/getting-started/overview-playback-restrictions.html">Overview: Brightcove Playback Restrictions</a> document.
-    <figure class="bcls-figure">
-      <img class="bcls-image--no-border" alt="Enable Playback Restrictions" src="/assets/images/live-module/playback-restrictions/enable-restrictions.png" />
-    </figure>
-  </li>
-  <li>Enter any additional event details.</li>
-  <li>Click <strong>Create Event</strong>.</li>
-  <li>In the Live <strong>Control Room</strong>, click the <strong>Video ID</strong> associated with the event.
-    <figure class="bcls-figure">
-      <img class="bcls-image--no-border" alt="Event Video ID" src="/assets/images/live-module/playback-restrictions/event-video-id.png" />
-    </figure>
-  </li>
-  <li>You will be redirected to the <strong>Media</strong> module for this Video ID.</li>
-  <li>In the <strong>Playback Restrictions</strong> section, select the Playback Restriction that you defined in the <a href="#Define_playback_rights">Define Playback Rights</a> section.
-    <figure class="bcls-figure">
-      <img class="bcls-image--no-border" alt="Assign Playback Restriction" src="/assets/images/live-module/playback-restrictions/assign-playback-right.png" />
-    </figure>
-  </li>
-  <li>In the Admin module, you can edit the Playback Right after it has been assigned to an event.</li>
-  <li>Start streaming your live event. For details, see the <a href="/get-started/index.html">Getting Started</a> index page.</li>	
+  <li>Paste the values above into the settings for your encoder and start streaming.</li>
 </ol>
 </section>
 
 <section class="bcls-section">
 <h2 id="Publish_the_live_event">Publish the live event</h2>
-<p>Live streams with Playback Restrictions require a JSON Web Token (JWT) with specific permissions (claims) for your stream request.</p>
-
-<p>To publish a live stream with Playback Restrictions, follow these steps:</p>
+<p>To publish a live stream, follow these steps:</p>
 
 <ol class="bcls-tasklist-restart">
-	<li>
-    <p>Create a JSON Web Token (JWT) and register the public key with Brightcove.</p> 
-    <p>For details, see the <a href="https://general.support.brightcove.com/developer/create-json-web-token.html">Creating a JSON Web Token (JWT)</a> document.</p>
-  </li>
   <li>In Video Cloud Studio, return to the <strong>Live</strong> module.</li>
   <li>In the left navigation, select <strong>Publish and Embed</strong>.</li>
-  <li>In the <strong>Live Player Options</strong> section, select your player configured in the previous step.
-  </li>
+  <li>In the <strong>Live Player Options</strong> section, select your player.</li>
   <li>
-    <p>Copy the <strong>Advanced Embed Code</strong> and paste it into your HTML page.</p>
+    <p>Copy either the <strong>Standard</strong> or <strong>Advanced</strong> embed code, and paste it into your HTML page.</p>
     <figure class="bcls-figure">
       <img class="bcls-image--no-border" alt="Player embed code" src="/assets/images/live-module/playback-restrictions/embed-code.png" />
     </figure>
   </li>
-  <li>Create a custom script with the Advanced embed code.
-    <p>The JWT token is passed with the playback request. If the token is invalid or expired, access to the content will be restricted. The player must be configured to use the token.</p>
-    <p>
-      To configure the Brightcove web player, see the <a href="https://player.support.brightcove.com/playback/playback-restrictions-with-bcp.html#Using_Playback_Rights">Playback Restrictions with Brightcove Player</a> document.
-    </p>
-  </li>
   <li>Confirm playback in your web page.</li>
-  <li>Confirm that playback can be blocked by changing the settings for the Playback Right assigned to the video (live event).</li>
-  
 </ol>
 </section>
 

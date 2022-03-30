@@ -701,6 +701,286 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 </ol>
 </section>
 
+<section class="bcls-section">
+  <h2 id="Create_a_live_event_using_the_API">Create a live event using the API</h2>
+  <p>Optionally, you can use the Live API to create an audio-only live event.</p>
+  <p>Review the following documents:</p>
+  <ul>
+    <li><a href="https://apis.support.brightcove.com/live-api/getting-started/quick-start-create-live-stream-using-brightcove-live-api.html">Create a Live Stream Using the Brightcove Live API</a></li>
+    <li><a href="https://apis.support.brightcove.com/live-api/references/reference.html">Live API Reference</a></li>
+  </ul>
+
+  <details>
+    <summary><h3 id="Sample_request_body">Sample request body</h3></summary> 
+    <pre class="line-numbers"><code class="language-json" translate="No">{
+  &quot;live_stream&quot;: true,
+  &quot;region&quot;:&quot;us-west-2&quot;,
+  &quot;reconnect_time&quot;: 1800,
+  &quot;live_dvr_sliding_window_duration&quot;:600,
+  &quot;audio_only&quot;: true,
+  &quot;audio_only_storage_format&quot;: &quot;mpeg-ts&quot;,    //or &quot;aac&quot;
+  &quot;outputs&quot;: [
+    {
+      &quot;live_stream&quot;: true,
+      &quot;segment_seconds&quot;: 6,
+      &quot;audio_bitrate&quot;: 196
+    },
+    {
+      &quot;live_stream&quot;: true,
+      &quot;segment_seconds&quot;: 6,
+      &quot;audio_bitrate&quot;: 128
+    },
+    {
+      &quot;live_stream&quot;: true,
+      &quot;segment_seconds&quot;: 6,
+      &quot;audio_bitrate&quot;: 96
+    },
+    {
+      &quot;live_stream&quot;: true,
+      &quot;segment_seconds&quot;: 6,
+      &quot;audio_bitrate&quot;: 64
+    },
+    {
+      &quot;live_stream&quot;: true,
+      &quot;segment_seconds&quot;: 6,
+      &quot;audio_bitrate&quot;: 32
+    }
+  ]
+}</code></pre>
+  </details>  
+
+  <details>
+    <summary><h3 id="Sample_response_body">Sample response body</h3></summary> 
+    <pre class="line-numbers"><code class="language-json" translate="No">{
+      &quot;job&quot;: {
+        &quot;created_at&quot;: &quot;2022-02-21T13:49:30.512Z&quot;,
+        &quot;finished_at&quot;: null,
+        &quot;id&quot;: &quot;d123456789a123456789b1&quot;,
+        &quot;privacy&quot;: false,
+        &quot;state&quot;: &quot;standby&quot;,
+        &quot;ssai_state&quot;: &quot;none&quot;,
+        &quot;sep_state&quot;: &quot;waiting&quot;,
+        &quot;submitted_at&quot;: &quot;2022-02-21T13:49:30.512Z&quot;,
+        &quot;test&quot;: false,
+        &quot;updated_at&quot;: &quot;2022-02-21T13:59:37.826Z&quot;,
+        &quot;region&quot;: &quot;us-west-2&quot;,
+        &quot;stream_key&quot;: &quot;alive&quot;,
+        &quot;protocol&quot;: &quot;rtmp&quot;,
+        &quot;reconnect_time&quot;: 600,
+        &quot;live_stream&quot;: true,
+        &quot;low_latency&quot;: false,
+        &quot;static&quot;: true,
+        &quot;ad_insertion&quot;: false,
+        &quot;metadata_passthrough&quot;: false,
+        &quot;out_worker_bytes&quot;: 21010938,
+        &quot;out_worker_bytes_rate&quot;: 0,
+        &quot;channel_type&quot;: &quot;event&quot;,
+        &quot;state_history&quot;: [
+            {
+                &quot;state&quot;: &quot;standby&quot;,
+                &quot;transition_timestamp&quot;: 1645451977826
+            },
+            {
+                &quot;state&quot;: &quot;disconnected&quot;,
+                &quot;transition_timestamp&quot;: 1645451748246
+            },
+            {
+                &quot;state&quot;: &quot;processing&quot;,
+                &quot;transition_timestamp&quot;: 1645451498407
+            },
+            {
+                &quot;state&quot;: &quot;waiting&quot;,
+                &quot;transition_timestamp&quot;: 1645451386677
+            },
+            {
+                &quot;state&quot;: &quot;standby&quot;,
+                &quot;transition_timestamp&quot;: 1645451370512
+            }
+        ],
+        &quot;state_history_is_truncated&quot;: false,
+        &quot;account_id&quot;: &quot;11a1234556789b1111ef&quot;,
+        &quot;user_id&quot;: &quot;bfe56cc6084f4136b168980010eaca39&quot;,
+        &quot;pass_through&quot;: {
+            &quot;stream_to_social_media&quot;: true,
+            &quot;dvr&quot;: false
+        },
+        &quot;job_videocloud_asset_id&quot;: &quot;6298381216001&quot;,
+        &quot;live_dvr_sliding_window_duration_ms&quot;: 0,
+        &quot;live_sliding_window_duration_ms&quot;: 0,
+        &quot;outputs&quot;: [
+            {
+                &quot;live_stream&quot;: true,
+                &quot;audio_bitrate&quot;: 196,
+                &quot;label&quot;: &quot;hls1080p&quot;,
+                &quot;segment_seconds&quot;: 6
+            },
+            {
+                &quot;live_stream&quot;: true,
+                &quot;audio_bitrate&quot;: 128,
+                &quot;label&quot;: &quot;hls720p&quot;,
+                &quot;segment_seconds&quot;: 6
+            }
+        ],
+        &quot;videocloud&quot;: {
+            &quot;video&quot;: {
+                &quot;name&quot;: &quot;audio-only test&quot;,
+                &quot;link&quot;: {},
+                &quot;schedule&quot;: {},
+                &quot;state&quot;: &quot;ACTIVE&quot;,
+                &quot;custom_fields&quot;: {}
+            }
+        },
+        &quot;randomize_chunk_url&quot;: true,
+        &quot;rtmp_outputs&quot;: [],
+        &quot;playback_url&quot;: &quot;https://bcovlive-a.akamaihd.net/d123456789a123456789b1/us-west-2/6243585733001/playlist.m3u8&quot;,
+        &quot;playback_url_dvr&quot;: &quot;https://bcovlive-a.akamaihd.net/d123456789a123456789b1/us-west-2/6243585733001/playlist_dvr.m3u8&quot;,
+        &quot;playback_added_cdns&quot;: [],
+        &quot;encryption&quot;: {},
+        &quot;audio_only&quot;: true,
+        &quot;audio_only_storage_format&quot;: &quot;mpeg-ts&quot;,
+        &quot;input_media_file&quot;: {
+            &quot;audio_bitrate_in_kbps&quot;: null,
+            &quot;audio_codec&quot;: null,
+            &quot;audio_sample_rate&quot;: null,
+            &quot;audio_tracks&quot;: null,
+            &quot;channels&quot;: null,
+            &quot;created_at&quot;: &quot;2022-02-21T13:49:30.512Z&quot;,
+            &quot;duration_in_ms&quot;: null,
+            &quot;error_class&quot;: null,
+            &quot;error_message&quot;: null,
+            &quot;file_size_bytes&quot;: null,
+            &quot;finished_at&quot;: null,
+            &quot;format&quot;: null,
+            &quot;frame_rate&quot;: null,
+            &quot;height&quot;: null,
+            &quot;id&quot;: &quot;input-d123456789a123456789b1&quot;,
+            &quot;md5_checksum&quot;: null,
+            &quot;privacy&quot;: false,
+            &quot;state&quot;: &quot;standby&quot;,
+            &quot;test&quot;: false,
+            &quot;updated_at&quot;: &quot;2022-02-21T13:59:37.826Z&quot;,
+            &quot;video_bitrate_in_kbps&quot;: null,
+            &quot;video_codec&quot;: null,
+            &quot;width&quot;: null,
+            &quot;total_bitrate_in_kbps&quot;: null,
+            &quot;url&quot;: null
+        },
+        &quot;stream&quot;: {
+            &quot;created_at&quot;: &quot;2022-02-21T13:51:38.407Z&quot;,
+            &quot;finished_at&quot;: null,
+            &quot;height&quot;: null,
+            &quot;id&quot;: &quot;stream-d123456789a123456789b1&quot;,
+            &quot;name&quot;: &quot;alive&quot;,
+            &quot;protocol&quot;: null,
+            &quot;state&quot;: null,
+            &quot;test&quot;: false,
+            &quot;updated_at&quot;: &quot;2022-02-21T13:59:37.826Z&quot;,
+            &quot;width&quot;: null,
+            &quot;total_bitrate_in_kbps&quot;: null,
+            &quot;duration&quot;: null,
+            &quot;region&quot;: &quot;us-west-2&quot;,
+            &quot;url&quot;: &quot;rtmp://d123456789a123456789b1.sep.bcovlive.io:1935/d123456789a123456789b1&quot;,
+            &quot;location&quot;: {
+                &quot;source&quot;: {
+                    &quot;latitude&quot;: null,
+                    &quot;longitude&quot;: null,
+                    &quot;location&quot;: null
+                },
+                &quot;destination&quot;: {
+                    &quot;latitude&quot;: null,
+                    &quot;longitude&quot;: null,
+                    &quot;location&quot;: null
+                },
+                &quot;distance&quot;: null
+            },
+            &quot;in_worker_bytes&quot;: 12058775,
+            &quot;in_worker_bytes_rate&quot;: 0
+        },
+        &quot;output_media_files&quot;: [
+            {
+                &quot;audio_bitrate_in_kbps&quot;: 196,
+                &quot;audio_codec&quot;: &quot;AAC&quot;,
+                &quot;audio_sample_rate&quot;: null,
+                &quot;channels&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-21T13:49:30.512Z&quot;,
+                &quot;duration_in_ms&quot;: null,
+                &quot;error_class&quot;: null,
+                &quot;error_message&quot;: null,
+                &quot;file_size_bytes&quot;: null,
+                &quot;finished_at&quot;: null,
+                &quot;format&quot;: null,
+                &quot;fragment_duration_in_ms&quot;: null,
+                &quot;frame_rate&quot;: null,
+                &quot;height&quot;: null,
+                &quot;id&quot;: &quot;0-d123456789a123456789b1&quot;,
+                &quot;md5_checksum&quot;: null,
+                &quot;privacy&quot;: false,
+                &quot;rfc_6381_audio_codec&quot;: null,
+                &quot;rfc_6381_video_codec&quot;: null,
+                &quot;state&quot;: &quot;standby&quot;,
+                &quot;test&quot;: false,
+                &quot;updated_at&quot;: &quot;2022-02-21T13:59:37.826Z&quot;,
+                &quot;video_bitrate_in_kbps&quot;: null,
+                &quot;video_codec&quot;: null,
+                &quot;video_codec_profile&quot;: null,
+                &quot;width&quot;: null,
+                &quot;label&quot;: &quot;hls1080p&quot;,
+                &quot;total_bitrate_in_kbps&quot;: 196,
+                &quot;keyframe_interval&quot;: null,
+                &quot;keyframe_interval_follow_source&quot;: null,
+                &quot;segment_seconds&quot;: 6,
+                &quot;live_stream&quot;: true
+            },
+            {
+                &quot;audio_bitrate_in_kbps&quot;: 128,
+                &quot;audio_codec&quot;: &quot;AAC&quot;,
+                &quot;audio_sample_rate&quot;: null,
+                &quot;channels&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-21T13:49:30.512Z&quot;,
+                &quot;duration_in_ms&quot;: null,
+                &quot;error_class&quot;: null,
+                &quot;error_message&quot;: null,
+                &quot;file_size_bytes&quot;: null,
+                &quot;finished_at&quot;: null,
+                &quot;format&quot;: null,
+                &quot;fragment_duration_in_ms&quot;: null,
+                &quot;frame_rate&quot;: null,
+                &quot;height&quot;: null,
+                &quot;id&quot;: &quot;1-d123456789a123456789b1&quot;,
+                &quot;md5_checksum&quot;: null,
+                &quot;privacy&quot;: false,
+                &quot;rfc_6381_audio_codec&quot;: null,
+                &quot;rfc_6381_video_codec&quot;: null,
+                &quot;state&quot;: &quot;standby&quot;,
+                &quot;test&quot;: false,
+                &quot;updated_at&quot;: &quot;2022-02-21T13:59:37.826Z&quot;,
+                &quot;video_bitrate_in_kbps&quot;: null,
+                &quot;video_codec&quot;: null,
+                &quot;video_codec_profile&quot;: null,
+                &quot;width&quot;: null,
+                &quot;label&quot;: &quot;hls720p&quot;,
+                &quot;total_bitrate_in_kbps&quot;: 128,
+                &quot;keyframe_interval&quot;: null,
+                &quot;keyframe_interval_follow_source&quot;: null,
+                &quot;segment_seconds&quot;: 6,
+                &quot;live_stream&quot;: true
+            },
+            {
+                &quot;playlist_type&quot;: &quot;defaultS3&quot;,
+                &quot;type&quot;: &quot;playlist&quot;,
+                &quot;filename&quot;: &quot;playlist.m3u8&quot;,
+                &quot;dvr_filename&quot;: &quot;playlist_dvr.m3u8&quot;,
+                &quot;playback_url&quot;: &quot;https://bcovlive-a.akamaihd.net/d123456789a123456789b1/us-west-2/6243585733001/playlist.m3u8&quot;,
+                &quot;playback_url_dvr&quot;: &quot;https://bcovlive-a.akamaihd.net/d123456789a123456789b1/us-west-2/6243585733001/playlist_dvr.m3u8&quot;,
+                &quot;playback_added_cdns&quot;: []
+            }
+        ]
+    }
+  }</code></pre>
+  </details>
+  
+  </section>
+
 </article>
 
 <!-- complete bootstrap layout -->

@@ -61,29 +61,21 @@ parent: Live Module
 <h2 id="Notes">Notes</h2>
 <p>General notes related to live analytics:</p>
 <ul>
-  <li>
-    <p>Analytics are recorded for the default live video ID generated with a Live event. If a customer takes the m3u8 playlist for playback, or creates a remote asset with it (a new video ID), the analytics won't be collected for the new asset.</p>
+  <li>Analytics are recorded for the default live video ID generated with a Live event. If a customer takes the m3u8 playlist for playback, or creates a remote asset with it (a new video ID), the analytics won't be collected for the new asset.
   </li>
-  <li>
-    <p>Only <strong>Concurrent Viewers</strong> will be presented in real-time; other metrics will be collected and aggregated with a delay similar to standard analytics</p>
+  <li>Only <strong>Concurrent Viewers</strong> will be presented in real-time; other metrics will be collected and aggregated with a delay similar to standard analytics
   </li>
-  <li>
-    <p><strong>Concurrent Viewers</strong> is only accurate for streams that are delivered with the Brightcove Player and SDKs (or non-Brightcove Players using the Brightcove Data Collection API)</p>
+  <li><strong>Concurrent Viewers</strong> is only accurate for streams that are delivered with the Brightcove Player and SDKs (or non-Brightcove Players using the Brightcove Data Collection API)
   </li>
-  <li>
-    <p>Data will be available for up to 32 days after the event</p>
+  <li>Data will be available for up to 32 days after the event
   </li>
-  <li>
-    <p>Real-time is defined by the aggregated sessions over a one-minute interval</p>
+  <li>Real-time is defined by the aggregated sessions over a one-minute interval
   </li>
-  <li>
-    <p>With recurring events (static entry points), analytics will be provided from the start of the most recent activation</p>
+  <li>With recurring events (static entry points), analytics will be provided from the start of the most recent activation
   </li>
-  <li>
-    <p>At the moment, the analytics module cannot fetch the precise "unique viewer" data and has a discrepancy between LIVE module analytics. Please use the LIVE Analytics UI to confirm the number of viewers.</p>
+  <li>At the moment, the analytics module cannot fetch the precise "unique viewer" data and has a discrepancy between LIVE module analytics. Please use the LIVE Analytics UI to confirm the number of viewers.
   </li>
-  <li>
-    <p>Certain ad blockers will prevent Live analytics data from loading properly, as shown below:</p>
+  <li>Certain ad blockers will prevent Live analytics data from loading properly, as shown below:
     <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/live-module/ad-blocker-blocks-live-analytics.png" alt="Ad Blocker Blocks Analytics Data">
       <figcaption class="bcls-caption--image">Ad Blocker Blocks Analytics Data</figcaption>
     </figure>

@@ -680,12 +680,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <ol class="bcls-tasklist-restart">
       <li>When creating a live event, in ADVANCED OPTIONS &gt; Content Encryption. Select <strong> Digital Rights Management(DRM) </strong> from the Encryption dropdown.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/live-drm-adv-options.png" /></figure>
-      </li>
-      <li><strong>AES-128</strong> - Secures the live HLS outputs using AES-128 encryption. If this option is selected, you must enter your <strong>Encryption Key</strong>. The key must be 32 hexadecimal characters. For best results, use a <a href="https://www.allkeysgenerator.com/Random/Security-Encryption-Key-Generator.aspx">key generator</a>, choosing the <code translate="No">128-bit</code> and <code translate="No">Hex</code> options.  The encryption key value is only entered in the Live module, it is not used as part of your encoder settings.
-        <aside class="bcls-aside bcls-aside--information">Note: When using this option, you should not send an encrypted stream to Brightcove. Configure your encoder as you normally would. Selecting this option will encrypt the HLS output streams sent from Brightcove Live.</aside>
-        <aside class="bcls-aside bcls-aside--information">Note: Clips can't be created from encrypted live streams.</aside>
-      </li>
-      <li><strong>Digital Rights Management (DRM)</strong> - Secure Premium content stream with Digital Rights Management technologies. For details, see the <a href="/general/live-drm.html">Live DRM</a> document.
+        <strong>Digital Rights Management (DRM)</strong> - Secure Premium content stream with Digital Rights Management technologies.
         <ul>
           <li>HLS + <a href="https://developer.apple.com/streaming/fps/">FairPlay</a></li>
           <li>HLS (fMP4) + Widevine Modular</li>
@@ -727,7 +722,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 06 Apr 2022
+  Page last updated on 20 Apr 2022
 </div>
 
 

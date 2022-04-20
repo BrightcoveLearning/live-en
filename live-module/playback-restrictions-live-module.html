@@ -88,13 +88,21 @@ parent: Live Module
 	<li>In Video Cloud Studio, open the <strong>Live</strong> module.</li>
 	<li>From the <strong>Manage Events</strong> page click <strong>Create Event</strong>.</li>
 	<li>Enter the event data as needed. For details, see the <a href="/live-module/creating-and-managing-live-events-using-live-module.html">Creating and Managing Live Events using the Live Module</a> document.</li>
-	<li>Expand the <strong>ADVANCED OPTIONS</strong> section.</li>
+	<li>Expand the <strong>ADVANCED OPTIONS</strong> section.</li> 
   <li>For <strong>Content Encryption</strong>, select either <strong>AES-128</strong> or <strong>Digital Rights Management (DRM)</strong>.
     <ul>
-      <li>For <strong>AES-128</strong>. enter an Encryption Key.</li>
-      <li>For <strong>Digital Rights Management (DRM)</strong>, enter the Token Expiration.</li>
+      <li><strong>AES-128</strong> - Secures the live HLS outputs using AES-128 encryption. If this option is selected, you must enter your <strong>Encryption Key</strong>. The key must be 32 hexadecimal characters. For best results, use a <a href="https://www.allkeysgenerator.com/Random/Security-Encryption-Key-Generator.aspx">key generator</a>, choosing the <code translate="No">128-bit</code> and <code translate="No">Hex</code> options.  The encryption key value is only entered in the Live module, it is not used as part of your encoder settings.
+        <aside class="bcls-aside bcls-aside--information">Note: When using this option, you should not send an encrypted stream to Brightcove. Configure your encoder as you normally would. Selecting this option will encrypt the HLS output streams sent from Brightcove Live.</aside>
+        <aside class="bcls-aside bcls-aside--information">Note: Clips can't be created from encrypted live streams.</aside>
+      </li>
+      <li><strong>Digital Rights Management (DRM)</strong> - Secure Premium content stream with Digital Rights Management technologies. For details, see the <a href="/general/live-drm.html">Live DRM</a> document.
+        <ul>
+          <li>HLS + <a href="https://developer.apple.com/streaming/fps/">FairPlay</a></li>
+          <li>HLS (fMP4) + Widevine Modular</li>
+        </ul>
+        <aside class="bcls-aside bcls-aside--information"> Your Live account must be enabled first by Brightcove Support in order to use DRM. To publish a DRM-enabled event, it is necessary to create and use a DRM enabled player v6.37.1 or greater.</aside>
+      </li>
     </ul>
-    <aside class="bcls-aside bcls-aside--information"><strong>Content Encryption</strong> options will only appear if your account is configured for them.</aside>
   </li>
   <li>To use Playback Restrictions, select <strong>Enable Playback Restrictions</strong>. For details, see the <a href="https://apis.support.brightcove.com/playback-restrictions/getting-started/overview-playback-restrictions.html">Overview: Brightcove Playback Restrictions</a> document.
     <figure class="bcls-figure">

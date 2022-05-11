@@ -89,6 +89,16 @@
       
         <url>
           
+            <loc>https://live.support.brightcove.com/general/captions-with-live-streams.html</loc>
+          
+            <lastmod>2022-05-11</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+      
+        <url>
+          
             <loc>https://live.support.brightcove.com/general/live-drm.html</loc>
           
             <lastmod>2022-05-11</lastmod>

@@ -21,6 +21,8 @@
   name: General Information
   url: /general/index.html
   docs:
+    - name:  Captions with Live Streams
+      url: /general/captions-with-live-streams.html
     - name: Live DRM
       url: /general/live-drm.html
     - name: Live Platforms Comparison Matrix

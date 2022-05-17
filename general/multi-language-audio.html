@@ -1,13 +1,21 @@
 ---
-title: Multi Language Audio
+title: Multi Language Audio with Live Streams
+description: 'In this topic, you will learn about using multiple language audio tracks with live streams.'
 parent: General Information
 layout: staging
 ---
+<h1>{{ page.title }}</h1>
 <article class="bcls-article">
-  <h1>Multi-Language Audio</h1>
-  <summary>This feature allows ingesting multiple audio languages, descriptive or ambient audio experience tracks to be available for live playback.</summary>
-  <section class="bcls-section">
+  <summary>{{ page.description }}</summary>
+  <br/>
+  <aside class="bcls-aside bcls-aside--tip">This feature is available for a specific set of customers with access to the Limited Availability phase of Multiple Language Audio.</aside>
 
+<section class="bcls-section">
+<h2 id="Introduction">Introduction</h2>
+<p>This feature allows ingesting multiple audio languages, descriptive or ambient audio experience tracks to be available for live playback.</p>
+</section>
+
+  <section class="bcls-section">
     <h2 id="Prerequisites">Prerequisites:</h2>
     <ul>
         <li>Define the <strong>PID (Packet Identifier)</strong> for each audio track in your encoder.</li>
@@ -25,44 +33,40 @@ layout: staging
         
         </aside>
     </ul>
-
-
     </section>
-    <section class="bcls-section">
 
+    <section class="bcls-section">
         <h2 id="add-audio">Adding Audio Tracks to a Live Event </h2>
 
         <p>When creating a new Live event:</p>
 
-    <ol class="bcls-tasklist-restart">
+        <ol class="bcls-tasklist-restart">
 
-        <li>Open the <strong>Audio Tracks</strong> section.</li>
-        <li>Click the <strong>Add Audio Tracks</strong> button.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/multi-language-audio/audio-track-section.png" /></figure>
+            <li>Open the <strong>Audio Tracks</strong> section.</li>
+            <li>Click the <strong>Add Audio Tracks</strong> button.
+            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/multi-language-audio/audio-track-section.png" /></figure>
 
-        </li>
-        <li>Fill in the fields to add a new Audio track. Fields with an asterisk (*) are required.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/multi-language-audio/audio-track-fields.png" /></figure>
-            <ul>
-                <li><strong>Default</strong>: Select which audio track is the default.</li>
-                <li><strong>Language*</strong>: Type the language code of the new audio track. Example: en, es, cy-GB, etc.</li>
-                <li><strong>PID*</strong>: Enter the PID code previously defined in your Encoder to sync the audio tracks in your incoming stream to the correct language and variant.
-                    Note: Unique PID's are required for each audio track. </li>
-                <li><strong>Variant</strong>: Represents the variant of the audio track. These can be: <strong>main, commentary, alternate, caption, subtitle, supplementary, dub</strong>. </li>
-                <li><strong>Label</strong>: Type a name for the track. Example: English, Spanish etc. Note that ff the label field is left empty, the language code will be used as a label.</li>
-            </ul>
-        </li>
-        <li>By clicking on the <strong>+</strong> and <strong>-</strong> buttons, you can add or remove audio tracks.
-            <aside class="bcls-aside bcls-aside--information">Note: You can add up to six Audio Tracks. If there is a need to add more tracks, please contact support.</aside>
+            </li>
+            <li>Fill in the fields to add a new Audio track. Fields with an asterisk (*) are required.
+            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/multi-language-audio/audio-track-fields.png" /></figure>
+                <ul>
+                    <li><strong>Default</strong>: Select which audio track is the default.</li>
+                    <li><strong>Language*</strong>: Type the language code of the new audio track. Example: en, es, cy-GB, etc.</li>
+                    <li><strong>PID*</strong>: Enter the PID code previously defined in your Encoder to sync the audio tracks in your incoming stream to the correct language and variant.
+                        Note: Unique PID's are required for each audio track. </li>
+                    <li><strong>Variant</strong>: Represents the variant of the audio track. These can be: <strong>main, commentary, alternate, caption, subtitle, supplementary, dub</strong>. </li>
+                    <li><strong>Label</strong>: Type a name for the track. Example: English, Spanish etc. Note that ff the label field is left empty, the language code will be used as a label.</li>
+                </ul>
+            </li>
+            <li>By clicking on the <strong>+</strong> and <strong>-</strong> buttons, you can add or remove audio tracks.
+                <aside class="bcls-aside bcls-aside--information">Note: You can add up to six Audio Tracks. If there is a need to add more tracks, please contact support.</aside>
+            
+            </li>
         
-        </li>
-    
-    </ol>
-
+        </ol>
     </section>
 
     <section class="bcls-section">
-
         <h2 id="change-audio">Changing the Audio Track</h2>
 
         <ol class="bcls-tasklist-restart">
@@ -75,7 +79,5 @@ layout: staging
         </ol>
 
         </section>
-
-
 
 </article>

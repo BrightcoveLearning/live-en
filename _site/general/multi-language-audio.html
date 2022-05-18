@@ -592,16 +592,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <section class="bcls-section">
 <h2 id="Introduction">Introduction</h2>
 <p>This feature allows ingesting multiple audio languages, descriptive or ambient audio experience tracks to be available for live playback.</p>
-<aside class="bcls-aside bcls-aside--information">Currently, only the RTP and SRT input formats are supported.</aside>
+<aside class="bcls-aside bcls-aside--information">Currently, the input formats supported include Real-Time Transport Protocol (RTP) and Secure Reliable Transport (SRT).</aside>
 </section>
 
   <section class="bcls-section">
     <h2 id="Prerequisites">Prerequisites:</h2>
     <ul>
         <li>Define the <strong>PID (Packet Identifier)</strong> for each audio track in your encoder. For details, refer to your Encoder documentation.</li>
-        <!-- <li> At this moment, only the RTP and SRT input formats are supported. For this section to be enabled in the <strong>Create Live Event</strong> page, go to the <strong>ADVANCED OPTIONS</strong> section and select <strong>Real-Time Transport Protocol (RTP)</strong> or <strong>Secure Reliable Transport (SRT)</strong> under the <strong>Input Format</strong> selector.</li> -->
-        <li>In the <strong>CIDR Whitelist</strong> section, enter the IP: <strong>0.0.0.0/0</strong> to connect to the RTP endpoint to allow all networks, or enter any CIDR Whitelist you want (this controls who can connect to the RTP or SRT endpoints). The Multi-Language button will be disabled if the Input Format is not set to RTP or SRT. </li>
-        <li>For more information about advanced input formats, see the <a href="https://live.support.brightcove.com/live-module/creating-and-managing-live-events-using-live-module.html#advanced">Configuring advanced options</a> document.</li>
+        
     </ul>
     </section>
 
@@ -623,6 +621,19 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
               <img class="bcls-image" alt="Expand audio tracks" src="/assets/images/general/multi-language-audio/expand-audio-tracks.png" />
             </figure>
           </li>
+          <li>
+            <p>Expand the <strong>Advanced Options</strong> section and change the <strong>Input Format</strong> to either <strong>RTP</strong> or <strong>SRT</strong>. Now, the <strong>Add Audio Tracks</strong> button will be enabled.</p>
+            <figure class="bcls-figure">
+              <img class="bcls-image" alt="Select input format" src="/assets/images/general/multi-language-audio/input-format.png" />
+            </figure>
+          </li>
+          <li>
+            <p>For <strong>CIDR Whitelist</strong>, enter either <strong>0.0.0.0/0</strong> to connect to the RTP endpoint to allow all networks, or a specific value. This controls who can connect to the RTP or SRT endpoints.</p>
+            <figure class="bcls-figure">
+              <img class="bcls-image" alt="CIDR Whitelist" src="/assets/images/general/multi-language-audio/cidr-whitelist.png" />
+            </figure>
+          </li>
+          <li>For more information about advanced input formats, see the <a href="https://live.support.brightcove.com/live-module/creating-and-managing-live-events-using-live-module.html#advanced">Configuring advanced options</a> document.</li>
 
 
             <li>Open the .</li>
@@ -679,7 +690,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 17 May 2022
+  Page last updated on 18 May 2022
 </div>
 
 

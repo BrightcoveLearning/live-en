@@ -633,30 +633,48 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
               <img class="bcls-image" alt="CIDR Whitelist" src="/assets/images/general/multi-language-audio/cidr-whitelist.png" />
             </figure>
           </li>
-          <li>For more information about advanced input formats, see the <a href="https://live.support.brightcove.com/live-module/creating-and-managing-live-events-using-live-module.html#advanced">Configuring advanced options</a> document.</li>
-
-
-            <li>Open the .</li>
-            <li>Click the <strong>Add Audio Tracks</strong> button.
-            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/multi-language-audio/audio-track-section.png" /></figure>
-
-            </li>
-            <li>Fill in the fields to add a new Audio track. Fields with an asterisk (*) are required.
-            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/multi-language-audio/audio-track-fields.png" /></figure>
+          <li>For more information about advanced input formats, see the <a href="https://live.support.brightcove.com/live-module/creating-and-managing-live-events-using-live-module.html#advanced">Configuring advanced options</a> document.
+          </li>
+          <li>
+            <p>Click <strong>Add Audio Tracks</strong>.</p>
+            <figure class="bcls-figure">
+              <img class="bcls-image" alt="Add Audio Tracks" src="/assets/images/general/multi-language-audio/add-audio-tracks.png" />
+            </figure>
+          </li>
+          <li>
+            <p>Enter field values for each audio track. Fields with an asterisk (*) are required.</p>
+            <figure class="bcls-figure">
+              <img class="bcls-image" alt="Enter audio track data" src="/assets/images/general/multi-language-audio/enter-audio-tracks.png" />
+            </figure>
+            <ul>
+              <li><strong>Default</strong> - Select the default audio track</li>
+              <li><strong>Language*</strong> - The language code for the audio track; Example: en, es, cy-GB, etc.</li>
+              <li><strong>PID*</strong> - The Packet Identifier (PID) code defined in your encoder to sync audio tracks in your incoming stream to the correct language and variant
+                <aside class="bcls-aside bcls-aside--information">Unique PID values are required for each audio track.</aside>
+              </li>
+              <li><strong>Video PID*</strong> - The Packet Identifier (PID) code associated with the video; this value is the same for all audio tracks
+              </li>
+              <li><strong>Variant</strong> - The variant of the audio track; values are: 
                 <ul>
-                    <li><strong>Default</strong>: Select which audio track is the default.</li>
-                    <li><strong>Language*</strong>: Type the language code of the new audio track. Example: en, es, cy-GB, etc.</li>
-                    <li><strong>PID*</strong>: Enter the PID code previously defined in your Encoder to sync the audio tracks in your incoming stream to the correct language and variant.
-                        Note: Unique PID's are required for each audio track. </li>
-                    <li><strong>Variant</strong>: Represents the variant of the audio track. These can be: <strong>main, commentary, alternate, caption, subtitle, supplementary, dub</strong>. </li>
-                    <li><strong>Label</strong>: Type a name for the track. Example: English, Spanish etc. Note that ff the label field is left empty, the language code will be used as a label.</li>
+                  <li><strong>main</strong></li>
+                  <li><strong>alternate</strong></li>
+                  <li><strong>caption</strong></li>
+                  <li><strong>subtitle</strong></li>
+                  <li><strong>supplementary</strong></li>
+                  <li><strong>commentary</strong></li>
+                  <li><strong>dub</strong></li>
                 </ul>
-            </li>
-            <li>By clicking on the <strong>+</strong> and <strong>-</strong> buttons, you can add or remove audio tracks.
-                <aside class="bcls-aside bcls-aside--information">Note: You can add up to six Audio Tracks. If there is a need to add more tracks, please contact support.</aside>
-            
-            </li>
-        
+              </li>
+              <li><strong>Label</strong> - It is highly recommended to enter a label value (example: English, Spanish, etc.); if the label field is blank, the language code will be used as the label
+              </li>
+            </ul>
+          </li>
+          <li>Click the <strong>+</strong> and <strong>-</strong> buttons, to add or remove audio tracks.
+            <aside class="bcls-aside bcls-aside--information">You can add up to six Audio Tracks. If there is a need to add more tracks, please contact support.</aside>
+          </li>
+          <li>Fill in the rest of the fields for a new channel or event. For details, see the <a href="/live-module/creating-and-managing-live-events-using-live-module.html">Creating and Managing Live Events</a> document.
+          </li>
+          <li>Click either <strong>Create Event</strong> or <strong>Create Channel</strong>.</li>
         </ol>
     </section>
 

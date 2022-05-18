@@ -13,36 +13,40 @@ layout: staging
 <section class="bcls-section">
 <h2 id="Introduction">Introduction</h2>
 <p>This feature allows ingesting multiple audio languages, descriptive or ambient audio experience tracks to be available for live playback.</p>
+<aside class="bcls-aside bcls-aside--information">Currently, only the RTP and SRT input formats are supported.</aside>
 </section>
 
   <section class="bcls-section">
     <h2 id="Prerequisites">Prerequisites:</h2>
     <ul>
-        <li>Define the <strong>PID (Packet Identifier)</strong> for each audio track in your encoder.</li>
-        <li>At this moment, only the RTP and SRT input formats are supported. For this section to be enabled in the <strong>Create Live Event</strong> page, go to the <strong>ADVANCED OPTIONS</strong> section and select <strong>Real-Time Transport Protocol (RTP)</strong> or <strong>Secure Reliable Transport (SRT)</strong> under the <strong>Input Format</strong> selector. </li>
+        <li>Define the <strong>PID (Packet Identifier)</strong> for each audio track in your encoder. For details, refer to your Encoder documentation.</li>
+        <!-- <li> At this moment, only the RTP and SRT input formats are supported. For this section to be enabled in the <strong>Create Live Event</strong> page, go to the <strong>ADVANCED OPTIONS</strong> section and select <strong>Real-Time Transport Protocol (RTP)</strong> or <strong>Secure Reliable Transport (SRT)</strong> under the <strong>Input Format</strong> selector.</li> -->
         <li>In the <strong>CIDR Whitelist</strong> section, enter the IP: <strong>0.0.0.0/0</strong> to connect to the RTP endpoint to allow all networks, or enter any CIDR Whitelist you want (this controls who can connect to the RTP or SRT endpoints). The Multi-Language button will be disabled if the Input Format is not set to RTP or SRT. </li>
-
-
-        <aside class="bcls-aside bcls-aside--information">Notes: 
-            <ul>
-            
-            <li>For information on how to define the <strong>PID (Packet Identifier)</strong>, for the audio tracks please refer to your Encoder documentation.</li>
-            <li>For more information on how to set up advanced input formats, please visit the <a href="https://live.support.brightcove.com/live-module/creating-and-managing-live-events-using-live-module.html#advanced" target="_blank">Configuring advanced options documentation</a>.
-            </li>
-        </ul>
-        
-        </aside>
+        <li>For more information about advanced input formats, see the <a href="https://live.support.brightcove.com/live-module/creating-and-managing-live-events-using-live-module.html#advanced">Configuring advanced options</a> document.</li>
     </ul>
     </section>
 
     <section class="bcls-section">
         <h2 id="add-audio">Adding Audio Tracks to a Live Event </h2>
 
-        <p>When creating a new Live event:</p>
+        <p>When creating a new Live event or channel:</p>
+        <ol class="bcls-tasklist">
+          <li>In Video Cloud Studio, navigate to the <strong>Live</strong> module.</li>
+          <li>
+            <p>Click either <strong>Create Channel</strong> or <strong>Create Event</strong>.</p>
+            <figure class="bcls-figure">
+              <img class="bcls-image" alt="Manage events" src="/assets/images/general/multi-language-audio/manage-events.png" />
+            </figure>
+          </li>
+          <li>
+            <p>Expand the <strong>Audio Tracks</strong> section. You may see that the <strong>Add Audio Tracks</strong> button is grayed out. This is because multiple audio tracks are only supported for RTP and SRT input formats.</p>
+            <figure class="bcls-figure">
+              <img class="bcls-image" alt="Expand audio tracks" src="/assets/images/general/multi-language-audio/expand-audio-tracks.png" />
+            </figure>
+          </li>
 
-        <ol class="bcls-tasklist-restart">
 
-            <li>Open the <strong>Audio Tracks</strong> section.</li>
+            <li>Open the .</li>
             <li>Click the <strong>Add Audio Tracks</strong> button.
             <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/multi-language-audio/audio-track-section.png" /></figure>
 

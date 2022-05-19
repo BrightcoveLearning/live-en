@@ -159,6 +159,33 @@ Input #0, mpegts, from &apos;/tmp/ma.ts&apos;:
       <h2 id="Using_the_Live_API">Using the Live API</h2>
       <p>You can also use the <a href="https://apis.support.brightcove.com/live-api/references/reference.html">Live API</a> to manage multiple language audio tracks with your live streams.</p>
 
+      <h3>Example audio track</h3>
+      <p>Here's an example of an alternate audio track:</p>
+      <pre class="line-numbers" data-start="1"><code class="language-json" translate="No">{
+  &quot;alternate_audio&quot;: {
+    &quot;tracks&quot;: [
+      {
+        &quot;label&quot;: &quot;English&quot;,
+        &quot;language&quot;: &quot;en&quot;,
+        &quot;variant&quot;: &quot;main&quot;,
+        &quot;video_pid&quot;: 256,
+        &quot;pid&quot;: 257,
+        &quot;default&quot;: true
+      },
+      {
+        &quot;label&quot;: &quot;Spanish&quot;,
+        &quot;language&quot;: &quot;es&quot;,
+        &quot;variant&quot;: &quot;main&quot;,
+        &quot;video_pid&quot;: 256,
+        &quot;pid&quot;: 258
+      }
+    ]
+  }
+}
+</code></pre>
+
+
+
     </section>
 
 </article>

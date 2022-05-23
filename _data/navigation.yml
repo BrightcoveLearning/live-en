@@ -62,6 +62,8 @@
     - name: "Guides"
       url: '/live-module/index.html'
       docs:
+        - name: Multi Language Audio with Live Module
+          url: /live-module/multi-language-audio.html
         - name: Playback Restrictions with Live events
           url: /live-module/playback-restrictions-live-module.html
         - name: Using Live Redundancy
@@ -142,6 +144,8 @@
         url: 'https://apis.support.brightcove.com/live-api/guides/live-drm-live-api.html'
       - name: Managing Credentials for the Live API
         url: 'https://apis.support.brightcove.com/live-api/guides/managing-credentials-live-api.html'
+      - name: Multi Language Audio with the Live API
+        url: /live-api/guides/live-multi-language-audio.html
       - name: Notifications
         url: 'https://apis.support.brightcove.com/live-api/guides/live-api-notifications.html'
       - name: Playback Restrictions with Live Streams

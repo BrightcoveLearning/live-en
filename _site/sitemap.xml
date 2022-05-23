@@ -250,6 +250,15 @@
         
           <url>
             
+              <loc>https://live.support.brightcove.com/live-module/multi-language-audio.html</loc>
+            
+            <lastmod>2022-05-23</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
               <loc>https://live.support.brightcove.com/live-module/playback-restrictions-live-module.html</loc>
             
             <lastmod>2022-05-23</lastmod>
@@ -571,6 +580,15 @@
           <url>
             
               <loc>https://apis.support.brightcove.com/live-api/guides/managing-credentials-live-api.html</loc>
+            
+            <lastmod>2022-05-23</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://live.support.brightcove.com/live-api/guides/live-multi-language-audio.html</loc>
             
             <lastmod>2022-05-23</lastmod>
             <changefreq>daily</changefreq>

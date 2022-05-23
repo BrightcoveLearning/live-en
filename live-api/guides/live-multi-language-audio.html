@@ -58,7 +58,7 @@ layout: staging
           </tr>
           <tr>
             <td><code translate="No">pid</code></td>
-            <td><strong>Required</strong>. The Packet Identifier (PID) from the MPEG-TS input stream for an audio track</td>
+            <td><strong>Required</strong>. The Packet Identifier (PID) from the MPEG-TS input stream for a specific audio track</td>
           </tr>
           <tr>
               <td><code translate="No">language</code></td>
@@ -248,6 +248,36 @@ layout: staging
   <section class="bcls-section">
     <h2 id="Configure_your_encoder">Configure your encoder</h2>
     <p>Configure your encoder to deliver MPEG-TS over RTP to the stream_url from the create response. Make sure that the audio tracks provided in the request body are configured with the correct PID in your encoder.</p>
+    <h3>Example with ffprobe</h3>
+      <p>If you don't know the PIDs from your encoder, you can use a tool such as ffprobe (included with ffmpeg) to inspect the PIDs in the stream.</p>
+      <pre class="line-numbers" data-start="1"><code class="language-http" translate="No">ffprobe /tmp/ma.ts
+ffprobe version 5.0.1 Copyright (c) 2007-2022 the FFmpeg developers
+  built with Apple clang version 13.0.0 (clang-1300.0.29.3)
+  configuration: --prefix=/usr/local/Cellar/ffmpeg/5.0.1-with-options_1 --enable-shared --cc=clang --host-cflags= --host-ldflags= --enable-gpl --enable-libaom --enable-libdav1d --enable-libmp3lame --enable-libopus --enable-libsnappy --enable-libtheora --enable-libvorbis --enable-libvpx --enable-libx264 --enable-libx265 --enable-libfontconfig --enable-libfreetype --enable-frei0r --enable-libass --enable-demuxer=dash --enable-opencl --enable-audiotoolbox --enable-videotoolbox --disable-htmlpages --enable-libvmaf --enable-version3
+  libavutil      57. 17.100 / 57. 17.100
+  libavcodec     59. 18.100 / 59. 18.100
+  libavformat    59. 16.100 / 59. 16.100
+  libavdevice    59.  4.100 / 59.  4.100
+  libavfilter     8. 24.100 /  8. 24.100
+  libswscale      6.  4.100 /  6.  4.100
+  libswresample   4.  3.100 /  4.  3.100
+  libpostproc    56.  3.100 / 56.  3.100
+Input #0, mpegts, from &apos;/tmp/ma.ts&apos;:
+  Duration: 00:00:04.86, start: 1.400000, bitrate: 502 kb/s
+  Program 1
+    Metadata:
+      service_name    : Service01
+      service_provider: FFmpeg
+  Stream #0:0[0xff]: Video: h264 (Constrained Baseline) ([27][0][0][0] / 0x001B), yuv420p(progressive), 360x240 [SAR 1:1 DAR 3:2], 30 fps, 30 tbr, 90k tbn
+  Stream #0:1[0x100]: Audio: aac (LC) ([15][0][0][0] / 0x000F), 44100 Hz, mono, fltp, 98 kb/s
+  Stream #0:2[0x102]: Audio: aac (LC) ([15][0][0][0] / 0x000F), 44100 Hz, mono, fltp, 98 kb/s
+</code></pre>
+      <p>The hex number after the stream will indicate the PID. For example:</p>
+      <ul>
+        <li><code translate="No">0xff == 255</code></li>
+        <li><code translate="No">0x100 == 256</code></li>
+        <li><code translate="No">0x101 == 257</code></li>
+      </ul>
   </section>
   <section class="bcls-section">
     <h2 id="Test_Playback">Test Playback</h2>

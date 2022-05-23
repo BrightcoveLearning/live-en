@@ -631,8 +631,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       </thead>
       <tbody class="bcls-table__body">
           <tr>
-              <td><code translate="No">pid</code></td>
-              <td><strong>Required</strong>. The PID to pick from the incoming TS.</td>
+            <td><code translate="No">video_pid</code></td>
+            <td><strong>Required</strong>. The Packet Identifier (PID) from the MPEG-TS input stream for the video track</td>
+          </tr>
+          <tr>
+            <td><code translate="No">pid</code></td>
+            <td><strong>Required</strong>. The Packet Identifier (PID) from the MPEG-TS input stream for an audio track</td>
           </tr>
           <tr>
               <td><code translate="No">language</code></td>
@@ -680,49 +684,53 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   Content-Type: application/json
   X-API-KEY: <span class="bcls-input">your_API_key</span></code></pre>
     <h3>Request body</h3>
-<pre class="line-numbers"><code class="language-json" translate="No>{
-  "live_stream": true,
-  "region": "us-west-2",
-  "protocol": "rtp",
-  "cidr_whitelist": [
-    "0.0.0.0/0"
+
+    <pre class="line-numbers"><code class="language-java" translate="No">{
+  &quot;live_stream&quot;: true,
+  &quot;region&quot;: &quot;us-west-2&quot;,
+  &quot;protocol&quot;: &quot;rtp&quot;,
+  &quot;cidr_whitelist&quot;: [
+    &quot;0.0.0.0/0&quot;
   ],
-  "outputs": [
+  &quot;outputs&quot;: [
     {
-      "label": "hls720p",
-      "live_stream": true,
-      "height": 720,
-      "video_bitrate": 2400,
-      "segment_seconds": 6,
-      "keyframe_interval": 90
+      &quot;label&quot;: &quot;hls720p&quot;,
+      &quot;live_stream&quot;: true,
+      &quot;height&quot;: 720,
+      &quot;video_bitrate&quot;: 2400,
+      &quot;segment_seconds&quot;: 6,
+      &quot;keyframe_interval&quot;: 90
     },
     {
-      "label": "hls540p",
-      "live_stream": true,
-      "height": 540,
-      "video_bitrate": 1200,
-      "segment_seconds": 6,
-      "keyframe_interval": 90
+      &quot;label&quot;: &quot;hls540p&quot;,
+      &quot;live_stream&quot;: true,
+      &quot;height&quot;: 540,
+      &quot;video_bitrate&quot;: 1200,
+      &quot;segment_seconds&quot;: 6,
+      &quot;keyframe_interval&quot;: 90
     }
   ],
-  <span class="bcls-highlight">"alternate_audio": {
-    "tracks": [
+  &quot;alternate_audio&quot;: {
+    &quot;tracks&quot;: [
       {
-        "label": "English",
-        "language": "en",
-        "variant": "main",
-        "pid": 257,
-        "default": true
+        &quot;label&quot;: &quot;English&quot;,
+        &quot;language&quot;: &quot;en&quot;,
+        &quot;variant&quot;: &quot;main&quot;,
+        &quot;video_pid&quot;: 256,
+        &quot;pid&quot;: 257,
+        &quot;default&quot;: true
       },
       {
-        "label": "Spanish",
-        "language": "es",
-        "variant": "main",
-        "pid": 258
+        &quot;label&quot;: &quot;Spanish&quot;,
+        &quot;language&quot;: &quot;es&quot;,
+        &quot;variant&quot;: &quot;main&quot;,
+        &quot;video_pid&quot;: 256,
+        &quot;pid&quot;: 258
       }
     ]
-  }</span>
+  }
 }</code></pre>
+
     <details>
       <summary><h2>Sample response</h2></summary>
 <pre class="line-numbers"><code class="language-json" translate="No">{
@@ -857,7 +865,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 19 Apr 2022
+  Page last updated on 20 May 2022
 </div>
 
 

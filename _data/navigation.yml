@@ -144,8 +144,8 @@
         url: 'https://apis.support.brightcove.com/live-api/guides/live-drm-live-api.html'
       - name: Managing Credentials for the Live API
         url: 'https://apis.support.brightcove.com/live-api/guides/managing-credentials-live-api.html'
-      - name: Multi Language Audio with the Live API
-        url: /live-api/guides/live-multi-language-audio.html
+      - name: Multi Language Audio with Live API
+        url: 'https://apis.support.brightcove.com/live-api/guides/live-multi-language-audio.html'
       - name: Notifications
         url: 'https://apis.support.brightcove.com/live-api/guides/live-api-notifications.html'
       - name: Playback Restrictions with Live Streams

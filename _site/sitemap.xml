@@ -296,6 +296,15 @@
         
           <url>
             
+              <loc>https://live.support.brightcove.com/live-module/overview-hosting-platforms.html</loc>
+            
+            <lastmod>2022-06-07</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
               <loc>https://integrations.support.brightcove.com/web-conferencing/host-avaya-conference-brightcove-live.html</loc>
             
             <lastmod>2022-06-07</lastmod>

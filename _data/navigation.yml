@@ -73,6 +73,8 @@
     - name: "Hosting Platforms"
       url: '/live-module/index.html'
       docs:
+        - name: 'Overview: Hosting Platforms'
+          url: '/live-module/overview-hosting-platforms.html'
         - name: Host Avaya Conference on Brightcove Live
           url: 'https://integrations.support.brightcove.com/web-conferencing/host-avaya-conference-brightcove-live.html'
         - name: Host Cisco Webex to Brightcove Live

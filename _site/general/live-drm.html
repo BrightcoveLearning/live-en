@@ -606,8 +606,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <p>By default DRM is applied to outputs as follows:</p>
       <ul>
         <li>Your Live account must be enabled first&nbsp;by Brightcove Support in order to use DRM.</li>
-        <li>
-          <p>To publish a DRM-enabled event, use any of the following:</p>
+        <li>To publish a DRM-enabled event, use any of the following:
           <ul>
             <li>A DRM-enabled Brightcove Player v6.37.1 or later</li>
             <li>The Brightcove Native SDK for iOS v6.5.0 or later</li>
@@ -619,7 +618,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <li>If you want to override the DRM default settings you can do it via API or please contact Brightcove support to change them in the Live Platform.
           <ul>
             <li>FairPlay: applied to HLS outputs</li>
-            <li>Playready: applied to DASH outputs</li>
+            <li>PlayReady: applied to DASH outputs</li>
             <li>Widevine: applied to HLS outputs<sup><strong><a href="#note1-1">[1-1]</a></strong></sup></li>
           </ul>
         </li>
@@ -632,7 +631,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </section>
   <section class="bcls-section">
     <h2 id="Playback_technologies_used">Playback technologies used</h2>
-    <p>Brightcove Player utilizes different DRM playback technologies with different browsers. The following details the DRM technologies used with Brightcove Player:</p>
+    <p>The Brightcove Player utilizes different DRM playback technologies with different browsers. The DRM technologies used with Brightcove Player are:</p>
     <ul>
       <li><strong>FairPlay</strong>: Apple's DRM system</li>
       <li><strong>PlayReady</strong>: Microsoft's DRM system</li>
@@ -690,7 +689,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <aside class="bcls-aside bcls-aside--information">Widevine can be applied to DASH outputs instead of HLS. To make Widevine with DASH the default requires an account-level override. Contact Support if you want this override applied to your account.</aside>
     <p>To enable DRM for your Live content follow these steps:</p>
     <ol class="bcls-tasklist-restart">
-      <li>When creating a live event, in ADVANCED OPTIONS &gt; Content Encryption. Select <strong> Digital Rights Management(DRM) </strong> from the Encryption dropdown.
+      <li>When creating a live event, in Advanced Options &gt; Content Encryption. Select <strong> Digital Rights Management(DRM) </strong> from the Encryption dropdown.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/live-drm-adv-options.png" /></figure>
         <strong>Digital Rights Management (DRM)</strong> - Secure Premium content stream with Digital Rights Management technologies.
         <ul>
@@ -702,18 +701,18 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>An additional <strong>Token Expiration</strong> option will appear, allowing you to select the time in seconds with a minimum expiration time frame of 900 seconds and a maximum of 2592000 seconds (the last equal to 30 days).
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt=""  src="/assets/images/general/live-drm-adv-options-token.png" /></figure>
       </li>
-      <li>In the Event Information Panel, you will be able to see the DRM URLs for Fairplay and Widevine.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="600" height="730" src="/assets/images/general/2.png" /></figure>
+      <li>When the event is created, in the event information panel, you will be able to see the DRM URLs for Fairplay and Widevine.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/live-drm-urls.png" /></figure>
       </li>
-      <li>To publish a DRM-enabled event, click Publish and Embed &gt; Player Configuration in the left navigation.
+      <li>To publish a DRM-enabled event, click Publish and Embed  in the left navigation.
         <ul>
-          <li>In <strong>Live Player Options</strong>, select a DRM enabled player. (For Live DRM playback you will need to select or create a <a target="_blank" href="https://studio.support.brightcove.com/players/configuring-player-playback-properties.html#drm">DRM enabled player v6.37.1 or greater).</a></li>
-          <li>If you don’t have a DRM player available, go to the <strong>Player Module</strong> &gt; Select or Create a Player &gt; Playback in the left navigation. Select the <strong> “Enable DRM”</strong> option. (The Player for Live DRM playback has to be v6.37.1 or greater).</li>
+          <li>In <strong>Live Player Options</strong> section, select a DRM enabled player. (For Live DRM playback you will need to select or create a <a target="_blank" href="https://studio.support.brightcove.com/players/configuring-player-playback-properties.html#drm">DRM enabled player v6.37.1 or greater).</a></li>
+          <li>If you don’t have a DRM player available, create one using the <strong>Players</strong> module. In the Playback settings, make sure that  the <strong> Enable DRM </strong>option is selected. (The Player for Live DRM playback has to be v6.37.1 or greater).</li>
         </ul>
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="800" height="400" src="/assets/images/general/3.png" /></figure>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/live-drm-player-drm-setting.png" /></figure>
       </li>
-      <li>Back in the Live module, you will be able to select your DRM enabled player and Publish your DRM event.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="800" height="450" src="/assets/images/general/4.png" /></figure>
+      <li>Back in the <strong>Live</strong> module, you will be able to select your DRM enabled player and publish the event.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/live-drm-select-player.png" /></figure>
       </li>
     </ol>
   </section>
@@ -734,7 +733,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 20 Apr 2022
+  Page last updated on 29 Jun 2022
 </div>
 
 

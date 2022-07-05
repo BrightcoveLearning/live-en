@@ -3,18 +3,20 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="robots" content="noindex,nofollow"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
+  <meta name="description" content="In this topic, you will learn how to stream a Zoom conference or webinar on Brightcove Live.">
   
-  <title>Brightcove Live Program Ad Metadata API</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">  
+  <title>Host a Zoom Conference on Brightcove Live</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/s-site-assets-favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/s-site-assets-favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/s-site-assets-favicons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/s-site-assets-favicons/site.webmanifest">  
+<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/prism.css">
   <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/styles.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/learning-paths/learning-paths.css">
   <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/landing-page.css">
   <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/tabs.css">
   <link rel="stylesheet" href="/assets/css/local.css">
@@ -31,9 +33,8 @@
   gtag('config', 'UA-2728311-17');
 </script>
   <script src="/assets/js/sajari-head.js"></script>
-	<script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
 </head>
-
 
 <body class="body">
 
@@ -62,9 +63,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item"><a href="/live-api/guides/">Guides</a></li>
+      <li class="breadcrumb-item"><a href="/web-conferencing/">Web Conferencing</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Brightcove Live Program Ad Metadata API</li>
+      <li class="breadcrumb-item active" aria-current="page">Host a Zoom Conference on Brightcove Live</li>
     </ol>
   </nav>
 </header>
@@ -602,83 +603,60 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     
 
 
-<h1>This page has moved - you will be directed to the <a href="https://apis.support.brightcove.com/live-api/guides/brightcove-live-program-ad-metadata-api.html">new location</a> in 3 seconds. Please update your bookmarks!</h1>
-<script type="text/javascript">
-var t = setTimeout(function() {
-    window.location.href = 'https://apis.support.brightcove.com/live-api/guides/brightcove-live-program-ad-metadata-api.html';
-}, 3000);
-</script>
 <article class="bcls-article">
-  <h1>Brightcove Live Program Ad Metadata API</h1>
-  <summary>The program ad metadata API exposes an API for content metadata to be pushed and constantly updated out-of-band from a customer live stream.</summary>
-
-  
-
-
-
-<section class="bcls-section">
-<h2 id="introduction">Introduction</h2>
-
-<p>The ad metadata (ad_server_data) schema supports a flat JSON syntax without nested elements (key-value pairs only). Ad server data set via the API is used for all ad breaks received after updating until the data is overwritten or reset. Customers can update and/or reset the data at any time during their live stream.</p>
-
-<p>This metadata does not persist between steam activations. Ad metadata that needs to persist between stream activations should be set on the SSAI application ad configuration. Data set via the API is configurable for use as macros on ad server and server-side beacon replacement.</p>
-
-<p>Ad program metadata is delivered to the SSAI system via custom playlist tags and follows existing Dynamic Ad Parameter (DAP) precedence in the SSAI system. Ad server data sent on a cuepoint takes precedence over metadata assigned to the job. If key collisions occur between cuepoint data and ad metadata on the job the cuepoint values are considered higher priority and used in the merged collection</p>
-
-<p>Ad metadata provided on a cuepoint is only used for that cuepoint and does not persist for subsequent cuepoint insertions. Only ad metadata set via the program ad metadata API will persist for all subsequently received ad breaks until it is updated or reset.</p>
-</section>
-
-<section class="bcls-section">
-<h2 id="endpoints">Endpoints</h2>
-
-<p>For full details of the endpoints, see the <a href="/live-api/references/reference.html#operation/AddAdMatadata">Live API Reference</a>.</p>
-
-<h3>Add/Update</h3>
-
-<p>To add or update live program ad metadata, send a <code translate="No">POST</code> request to:</p>
-
-<pre>
-<code class="language-http" translate="No">https://api.bcovlive.io/v1/jobs/<span class="bcls-input">{job_id}</span>/cuepointdata</code></pre>
-
-<h4><request body=""></request></h4>
-
-<table class="bcls-table">
-	<caption class="bcls-caption--table">Add/Update Fields</caption>
-	<thead class="bcls-table__head">
-		<tr>
-			<th>Field</th>
-			<th>Type</th>
-			<th>Description</th>
-			<th>Example</th>
-		</tr>
-	</thead>
-	<tbody class="bcls-table__body">
-		<tr>
-			<td><code translate="No">ad_server_data</code></td>
-			<td>Object</td>
-			<td>An object containing key/value pairs.</td>
-			<td>
-			<pre class="line-numbers">
-<code class="language-json" translate="No">{
-  "ad_server_data": {
-  	"one":"won",
-  	"two":2,
-  	"three":false
-  }
-}
-</code></pre>
-			</td>
-		</tr>
-	</tbody>
-</table>
-
-<h3>Delete</h3>
-
-<p>To delete live program ad metadata, send a <code translate="No">DELETE</code> request to:</p>
-
-<pre>
-<code class="language-http" translate="No">https://api.bcovlive.io/v1/jobs/<span class="bcls-input">{job_id}</span>/cuepointdata</code></pre>
-</section>
+  <h1>Host a Zoom Conference on Brightcove Live</h1>
+  <summary>In this topic, you will learn how to stream a Zoom conference or webinar on Brightcove Live.
+    <aside class="bcls-aside bcls-aside--information">To integrate and stream a Zoom meeting directly from Brightcove Live, please visit the <a href="https://live.support.brightcove.com/live-module/zoom-live-integration.html" target="_blank">following documentation</a>.</aside>
+  </summary>
+  <section class="bcls-section">
+    <h2 id="Introduction">Introduction</h2>
+    <p>Zoom Video Communications is a technology company that offers a cloud-based, peer-to-peer software platform for teleconferencing, telecommuting, and distance education. To reach a larger audience, you can leverage Brightcove Live to stream your meeting for others to see. </p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Steps">Steps</h2>
+    <p> Follow these steps to host a conference or webinar to Brightcove Live: </p>
+    <ol class="bcls-tasklist-restart">
+      <li>For <strong>Zoom conferences</strong>, do the following:
+        <ol>
+          <li> Navigate to your Zoom Meeting <a target="_blank" href="https://zoom.us/profile/setting">Settings</a> and scroll to the <strong>In Meeting (Advanced</strong> section. </li>
+          <li> Enable the <strong>Allow live streaming meetings</strong> option by clicking the toggle switch. If you don’t see this option, talk to your Zoom Account Manager about how to add this feature to your account. </li>
+          <li>Select <strong>Custom Live Streaming Service</strong>, and optionally enter text notes in the box.
+            <figure class="bcls-figure"><img class="bcls-image" alt="" src="/assets/images/s-web-conferencing-img/zoom/0.png" /></figure>
+          </li>
+        </ol>
+        <p>For <strong>Zoom webinars</strong>, do the following:</p>
+        <ol>
+          <li> Navigate to your our Zoom Webinar Settings and scroll to the <strong>In Webinar Settings</strong> section. </li>
+          <li> Enable the ​​<strong>Allow hosts to live stream their webinars</strong> option. </li>
+          <li>Select <strong>Custom Streaming Service</strong>, and save. </li>
+        </ol>
+      </li>
+      <li>In Video Cloud Studio, create a <a target="_blank" href="https://live.support.brightcove.com//live-module/creating-and-managing-live-events-using-live-module.html">Live event using the Media module</a>.
+        <aside class="bcls-aside bcls-aside--information">Note: If you want to save the broadcast after it’s complete, make sure to check the <strong>Convert event to video asset when complete</strong> checkbox.</aside>
+      </li>
+      <li>When you create a live event, you will have access to the Streaming URL and Streaming Key.
+        <ul>
+          <li><strong>Streaming URL</strong> - Streaming endpoint URL (You can find the endpoint URL in the Brightcove Live Control Room</li>
+          <li><strong>Streaming Key</strong> - Stream Name (In Brightcove, the Stream Name is always <strong>"alive"</strong>)</li>
+        </ul>
+      </li>
+      <li>Publish and embed the player for this live event in your website/intranet page, and note the page URL.
+        <ul>
+          <li><strong>Conferences</strong> - For Zoom conferences, navigate to your <a target="_blank" href="https://zoom.us/meeting">scheduled meeting</a> list and select the meeting that you would like to stream.</li>
+          <li><strong>Webinars</strong> - For Zoom webinars, return to the <a target="_blank" href="https://zoom.us/webinar/list">Webinars screen</a>, and schedule a Webinar. Select the <strong>Live Streaming</strong> tab.</li>
+        </ul>
+      </li>
+      <li>Scroll to the <strong>Live Streaming</strong> section
+        <figure class="bcls-figure"><img class="bcls-image" alt="" src="/assets/images/s-web-conferencing-img/zoom/1.png" /></figure>
+      </li>
+      <li>Select the <strong>configure live stream settings</strong> link. Here you will enter the Streaming URL, Streaming Key and the URL of the page where you are hosting the player.
+        <figure class="bcls-figure"><img class="bcls-image" alt="" src="/assets/images/s-web-conferencing-img/zoom/2.png" /></figure>
+      </li>
+      <li>From your Zoom call, click the <strong>MORE</strong> button, and select the <strong>Live on Custom Live Streaming Service</strong> option. This will start the live stream.
+        <figure class="bcls-figure"><img class="bcls-image" alt="" src="/assets/images/s-web-conferencing-img/zoom/3.png" /></figure>
+      </li>
+    </ol>
+  </section>
 </article>
 
 <!-- complete bootstrap layout -->
@@ -696,7 +674,7 @@ var t = setTimeout(function() {
 
 <hr>
 <div class="last-updated">
-  Page last updated on 15 Sep 2021
+  Page last updated on 05 Jul 2022
 </div>
 
 

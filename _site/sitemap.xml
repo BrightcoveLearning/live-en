@@ -305,42 +305,6 @@
         
           <url>
             
-              <loc>https://integrations.support.brightcove.com/web-conferencing/host-avaya-conference-brightcove-live.html</loc>
-            
-            <lastmod>2022-07-05</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-        
-          <url>
-            
-              <loc>https://integrations.support.brightcove.com/web-conferencing/host-cisco-webex-conference-brightcove-live.html</loc>
-            
-            <lastmod>2022-07-05</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-        
-          <url>
-            
-              <loc>https://integrations.support.brightcove.com/web-conferencing/host-zoom-conference-brightcove-live.html</loc>
-            
-            <lastmod>2022-07-05</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-        
-          <url>
-            
-              <loc>https://integrations.support.brightcove.com/web-conferencing/host-inxpo-live.html</loc>
-            
-            <lastmod>2022-07-05</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-        
-          <url>
-            
               <loc>https://live.support.brightcove.com/live-module/zoom-live-integration.html</loc>
             
             <lastmod>2022-07-05</lastmod>
@@ -365,6 +329,54 @@
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
+        
+      
+    
+      <url>
+        <loc>https://live.support.brightcove.com/web-conferencing/index.html</loc>
+        <lastmod>2022-07-05</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+      </url>
+      
+        <url>
+          
+            <loc>https://live.support.brightcove.com/web-conferencing/host-zoom-conference-brightcove-live.html</loc>
+          
+            <lastmod>2022-07-05</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+      
+        <url>
+          
+            <loc>https://live.support.brightcove.com/web-conferencing/host-cisco-webex-conference-brightcove-live.html</loc>
+          
+            <lastmod>2022-07-05</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+      
+        <url>
+          
+            <loc>https://live.support.brightcove.com/web-conferencing/host-avaya-conference-brightcove-live.html</loc>
+          
+            <lastmod>2022-07-05</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+      
+        <url>
+          
+            <loc>https://live.support.brightcove.com/web-conferencing/host-inxpo-live.html</loc>
+          
+            <lastmod>2022-07-05</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
         
       
     

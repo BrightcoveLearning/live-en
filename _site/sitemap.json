@@ -110,22 +110,22 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/live-module/host-avaya-conference-brightcove-live.html",
+      "newURL": "https://live.support.brightcove.com/web-conferencing/host-avaya-conference-brightcove-live.html",
       "oldURL": "/host-avaya-conference-brightcove-live"
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/live-module/host-cisco-webex-conference-brightcove-live.html",
+      "newURL": "https://live.support.brightcove.com/web-conferencing/host-cisco-webex-conference-brightcove-live.html",
       "oldURL": "/host-cisco-webex-conference-brightcove-live"
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/live-module/host-inxpo-live.html",
+      "newURL": "https://live.support.brightcove.com/web-conferencing/host-inxpo-live.html",
       "oldURL": "/host-inxpo-live"
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/live-module/host-zoom-conference-brightcove-live.html",
+      "newURL": "https://live.support.brightcove.com/web-conferencing/host-zoom-conference-brightcove-live.html",
       "oldURL": "/host-zoom-conference-brightcove-live"
   },
 
@@ -137,11 +137,6 @@
   {
       "newURL": "https://live.support.brightcove.com/live-module/implementing-server-side-ads-live-module.html",
       "oldURL": "/implementing-server-side-ads-live-module"
-  },
-
-  {
-      "newURL": "https://live.support.brightcove.com/live-api/guides/",
-      "oldURL": "/index"
   },
 
   {
@@ -160,22 +155,7 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/release-notes/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://live.support.brightcove.com/support/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://live.support.brightcove.com/get-started/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://live.support.brightcove.com/live-api/",
       "oldURL": "/index"
   },
 
@@ -185,7 +165,12 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/live-api/ssai/",
+      "newURL": "https://live.support.brightcove.com/release-notes/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/live-api/",
       "oldURL": "/index"
   },
 
@@ -195,12 +180,32 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/live-api/code-samples/",
+      "newURL": "https://live.support.brightcove.com/live-api/guides/",
       "oldURL": "/index"
   },
 
   {
       "newURL": "https://live.support.brightcove.com/live-api/getting-started/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/live-api/code-samples/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/web-conferencing/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/live-api/ssai/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/support/",
       "oldURL": "/index"
   },
 

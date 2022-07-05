@@ -75,20 +75,24 @@
       docs:
         - name: 'Overview: Hosting Platforms'
           url: '/live-module/overview-hosting-platforms.html'
-        - name: Host Avaya Conference on Brightcove Live
-          url: 'https://integrations.support.brightcove.com/web-conferencing/host-avaya-conference-brightcove-live.html'
-        - name: Host Cisco Webex to Brightcove Live
-          url: 'https://integrations.support.brightcove.com/web-conferencing/host-cisco-webex-conference-brightcove-live.html'
-        - name: Host Zoom to Brightcove Live
-          url: 'https://integrations.support.brightcove.com/web-conferencing/host-zoom-conference-brightcove-live.html'
-        - name: Host an INXPO Event on Brightcove Live
-          url: 'https://integrations.support.brightcove.com/web-conferencing/host-inxpo-live.html'
         - name: Integrating a Zoom Meeting
           url: /live-module/zoom-live-integration.html
         - name: Publishing a Live Event to Facebook
           url: 'https://studio.support.brightcove.com/social/publishing-live-event-facebook.html'
         - name: Publishing a Live Event to YouTube
           url: 'https://studio.support.brightcove.com/social/publishing-live-event-youtube.html'
+- section:
+  name: 'Web Conferencing'
+  url: '/web-conferencing/index.html'
+  docs:
+    - name: Zoom Conference on Brightcove Live
+      url: '/web-conferencing/host-zoom-conference-brightcove-live.html'
+    - name: Cisco Webex Conference to Brightcove Live
+      url: '/web-conferencing/host-cisco-webex-conference-brightcove-live.html'
+    - name: Avaya Conference on Brightcove Live
+      url: '/web-conferencing/host-avaya-conference-brightcove-live.html'
+    - name: INXPO Event on Brightcove Live
+      url: '/web-conferencing/host-inxpo-live.html'
 - section:
   name: 'Working with the Live API'
   url: 'https://apis.support.brightcove.com/live-api/index.html'

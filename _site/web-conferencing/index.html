@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="In this topic, you will learn how to stream an INXPO event on Brightcove Live.">
+  <meta name="description" content="This section contains topics that apply to integrating Brightcove Live with different web conferencing platforms.">
   
-  <title>Host an INXPO Event on Brightcove Live</title>
+  <title>Web Conferencing</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/s-site-assets-favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/s-site-assets-favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/s-site-assets-favicons/favicon-16x16.png">
@@ -63,9 +63,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item"><a href="/live-module/">Live Module</a></li>
-      
-      <li class="breadcrumb-item active" aria-current="page">Host an INXPO Event on Brightcove Live</li>
+      <li class="breadcrumb-item active" aria-current="page">Web Conferencing</li>
     </ol>
   </nav>
 </header>
@@ -313,22 +311,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                           
                         
                           
-                            <li><a href="https://integrations.support.brightcove.com/web-conferencing/host-avaya-conference-brightcove-live.html">Host Avaya Conference on Brightcove Live</a></li>
-                          
-                        
-                          
-                            <li><a href="https://integrations.support.brightcove.com/web-conferencing/host-cisco-webex-conference-brightcove-live.html">Host Cisco Webex to Brightcove Live</a></li>
-                          
-                        
-                          
-                            <li><a href="https://integrations.support.brightcove.com/web-conferencing/host-zoom-conference-brightcove-live.html">Host Zoom to Brightcove Live</a></li>
-                          
-                        
-                          
-                            <li><a href="https://integrations.support.brightcove.com/web-conferencing/host-inxpo-live.html">Host an INXPO Event on Brightcove Live</a></li>
-                          
-                        
-                          
                             <li><a href="/live-module/zoom-live-integration.html">Integrating a Zoom Meeting</a></li>
                           
                         
@@ -342,6 +324,29 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                         
                       </ul>
                     </li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/web-conferencing/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Web Conferencing</a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/web-conferencing/host-zoom-conference-brightcove-live.html">Zoom Conference on Brightcove Live</a></li>
+                  
+                
+                  
+                    <li><a href="/web-conferencing/host-cisco-webex-conference-brightcove-live.html">Cisco Webex Conference to Brightcove Live</a></li>
+                  
+                
+                  
+                    <li><a href="/web-conferencing/host-avaya-conference-brightcove-live.html">Avaya Conference on Brightcove Live</a></li>
+                  
+                
+                  
+                    <li><a href="/web-conferencing/host-inxpo-live.html">INXPO Event on Brightcove Live</a></li>
                   
                 
               </ul>
@@ -596,59 +601,54 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     
 
 
-<!-- this is a legacy doc - the current doc now resides on the Integrations site -->
-
+<h1>Web Conferencing</h1>
 <article class="bcls-article">
-  <h1>Host an INXPO Event on Brightcove Live</h1>
-  <summary>In this topic, you will learn how to stream an INXPO event on Brightcove Live.</summary>
-  <script translate="no">
-    var BCLS = ( function (window, document) {
-      var newURL = 'https://integrations.support.brightcove.com/web-conferencing/host-inxpo-live.html',
-      message = '<aside class="bcls-aside bcls-aside--warning"> This page has moved to the Integrations site. The new url is: <strong>' + newURL + '</strong> You will be redirected in 5 seconds. Please update your bookmarks.</aside>',
-          t;
-      function goToNewURL() {
-        window.location.href = newURL;
-      }
-      document.write(message);
-      t = window.setTimeout(goToNewURL, 5000);
-    })(window, document);
-  </script>
-  <section class="bcls-section">
-    <h2 id="Introduction">Introduction</h2>
-    <p> <a href="https://www.inxpo.com/" target="_blank">INXPO</a> is a video streaming platform, for creating TV-style event experiences. To reach a larger audience, you can leverage Brightcove Live to stream your event.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Steps">Steps</h2>
-    <p>Follow these steps to host a meeting to Brightcove Live:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>In Video Cloud Studio, create a <a href="creating-and-managing-live-events-using-live-module.html" target="_blank">Live event using the Live module</a>.
-        <aside class="bcls-aside bcls-aside--information">Note: If you want to save the broadcast after it’s complete, make sure to check the <strong>Convert event to video asset when complete</strong> checkbox!</aside>
-      </li>
-      <li>Once you create the Live event, copy the Streaming RTMP URL and Streaming Key from the <strong>Control Room</strong> panel.
+  <summary>This section contains topics that apply to integrating Brightcove Live with different web conferencing platforms.</summary>
+  <section class="card-wrapper">
+    <section class="bcls-card">
+      <div class="card-content">
+        <h2 id="Topics_in_this_section">Topics</h2>
         <ul>
-          <li>Streaming RTMP URL - <strong>Streaming Endpoint URL</strong> (You can find the endpoint URL in the Brightcove Live Control Room</li>
-          <li>Streaming Key - <strong>Stream Name</strong> (In Brightcove, the Stream Name is always <strong>"alive"</strong>)</li>
-        </ul>
-      </li>
-      <li>Publish and Embed the player for this Live event in your website/intranet page, and note the page URL.</li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Streaming Session">Configure the Streaming Session</h2>
-    <p>With the Streaming RTMP URL and Streaming Key you must configure them on the INXPO producer tool.</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Go to the INXPO producer tool and click the 3 dots icon to reach the Output Details section.
-        <figure class="bcls-figure"><img class="bcls-image" alt="" width="300" height="250" src="/assets/images/general/inxpo/3dots.png" /></figure>
-      </li>
-      <li>Click the pencil icon. </li>
-      <li>Fill the following details with your Brightcove Live event credentials.
-        <figure class="bcls-figure"><img class="bcls-image" alt="" width="300" height="250" src="/assets/images/general/inxpo/RTMPOuput.png" /></figure>
-      </li>
-      <li>In the <strong>Title</strong> field, add the Brightcove Live Stream Name.</li>
-      <li>In the <strong>Encoding Profile</strong> field, select the default encoding profile which settings define how the encoder compresses and delivers the webcast to attendees.</li>
-      <li>In the <strong>RTMP URL</strong> field, insert the Brightcove Streaming Endpoint URL.</li>
-      <li>Click the <strong>OK</strong> button, and that's it. You're live!</li>
-    </ol>
+        
+        
+      
+        
+      
+        
+      
+        
+      
+        
+              
+                <li><a href="/web-conferencing/host-zoom-conference-brightcove-live.html">Zoom Conference on Brightcove Live</a>
+                
+                </li>
+              
+                <li><a href="/web-conferencing/host-cisco-webex-conference-brightcove-live.html">Cisco Webex Conference to Brightcove Live</a>
+                
+                </li>
+              
+                <li><a href="/web-conferencing/host-avaya-conference-brightcove-live.html">Avaya Conference on Brightcove Live</a>
+                
+                </li>
+              
+                <li><a href="/web-conferencing/host-inxpo-live.html">INXPO Event on Brightcove Live</a>
+                
+                </li>
+              
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+
+      </div>
+    </section>
   </section>
 </article>
 
@@ -656,18 +656,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </div>
     <div class="col-sm-2 right-side-bar">
       
-      <nav class="right-side-nav" id="right_side_nav">
-        <h6 class="toc">Page Contents</h6>
-        <ul id="in_page_nav" class="list-none"></ul>
-      </nav>
-      
     </div>
   </div>
 </div>
 
 <hr>
 <div class="last-updated">
-  Page last updated on 09 Dec 2021
+  Page last updated on 05 Jul 2022
 </div>
 
 

@@ -34,3 +34,11 @@
 	path = assets/s-site-assets-images
 	url = https://github.com/BrightcoveLearning/s-site-assets-images
   branch = main
+[submodule "_includes/web-conferencing"]
+	path = _includes/web-conferencing
+	url = https://github.com/BrightcoveLearning/web-conferencing
+  branch = main
+[submodule "assets/images/web-conferencing-img"]
+	path = assets/images/web-conferencing-img
+	url = https://github.com/BrightcoveLearning/web-conferencing-img
+  branch = main

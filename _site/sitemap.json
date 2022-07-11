@@ -65,23 +65,18 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/creating-and-managing-live-events-using-live-module.html",
+      "newURL": "https://live.support.brightcove.com/live-module/creating-and-managing-live-events-using-live-module.html",
       "oldURL": "/creating-and-managing-live-events-using-live-module"
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/live-module/creating-and-managing-live-events-using-live-module.html",
+      "newURL": "https://live.support.brightcove.com/creating-and-managing-live-events-using-live-module.html",
       "oldURL": "/creating-and-managing-live-events-using-live-module"
   },
 
   {
       "newURL": "https://live.support.brightcove.com/admin/creating-custom-live-ingest-profiles.html",
       "oldURL": "/creating-custom-live-ingest-profiles"
-  },
-
-  {
-      "newURL": "https://live.support.brightcove.com/general/creating-live-stream-using-akamai-stream-packaging-and-telestream-wirecast.html",
-      "oldURL": "/creating-live-stream-using-akamai-stream-packaging-and-telestream-wirecast"
   },
 
   {

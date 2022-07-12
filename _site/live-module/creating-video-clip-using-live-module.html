@@ -633,7 +633,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="Navigating_the_clip_editor">Navigating the clip editor</h2>
     <p>To open the clip editor, open the Live module, click on an event name and then click <strong>Create Clip</strong> in the left navigation. The clip editor will open.</p>
     <p>Note that all times in the clipping interface are based around the UTC time that the video data was received by Brightcove. This is a necessary adjustment to account for streams that have exceeded the VOD window (run more than 24 hours). When a video has exceeded that window, the time we get back from the player can no longer reliably be used to generate clips.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/live-module/clipping/node18551-clip-editor-numbered.png" /></figure>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/clipping/node18551-clip-editor-numbered.png" /></figure>
     <p>The clip editor is organized as follows:</p>
     <ul>
       <li>A - <a href="#preview">Preview player</a></li>
@@ -655,7 +655,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>Follow these steps to create a clip.</p>
     <ol class="bcls-tasklist-restart">
       <li>Using the clipping buttons or shortcut keys, set the start and end points for the clip.
-        <figure><img class="bcls-image--no-border" alt="" src="/assets/images/live-module/clipping/node18551-clip-portion.png" /></figure>
+        <figure><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/clipping/node18551-clip-portion.png" /></figure>
       </li>
       <li>Click <strong>Save</strong>.</li>
       <li>Enter the clip video properties.
@@ -669,12 +669,17 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>Enter any required custom field values.</li>
       <li>Check <strong>Remove Source Ad Break Content</strong> to remove ad breaks triggered within the clip, keeping only program content.  This option will only appear when the stream is SSAI enabled.</li>
       <li>Check <strong>Create clip using fast VOD pipeline</strong> to generate the clip more quickly. This option speeds up the turn around time by creating a single <strong>segment-accurate</strong> rendition..  The system will then replace this clip with a <strong>frame-accurate</strong> clip  with the full rendition set when it is available.
-        <figure><img class="bcls-image--no-border" alt="" src="/assets/images/live-module/clipping/node18551-create-clip-dialog.png" /></figure>
+        <figure><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/clipping/node18551-create-clip-dialog.png" /></figure>
       </li>
       <li>Enter any required custom fields that are displayed.</li>
       <li>Click <span class="button-blue">Create Clip</span>. The transcoding process for the clip will begin. Clips are transcoded using the default ingest profile for the account.</li>
     </ol>
-    <p>A list of all clips will appear below the clip editor. Clicking the <strong>Clip Name</strong> will open the clip in the Media module in another browser tab. Click <strong>Publish to Social</strong> to open the clip in the social module to publish it to a social media account. For information on publishing videos using the Social module, see <a href="https://studio.support.brightcove.com/social/publishing-videos-social-media-platforms.html">Publishing Videos to Social Media Platforms</a>.</p>
+    <p>A list of all clips will appear below the clip editor. Clicking the <strong>Clip Name</strong> will open the clip in the Media module in another browser tab. Click <strong>Publish to Social</strong> to open the clip in the social module to publish it to a social media account. 
+    
+    
+    For information on publishing videos using the Social module, see <a href="https://studio.support.brightcove.com/social/publishing-videos-social-media-platforms.html">Publishing Videos to Social Media Platforms</a>.
+              
+      </p>
   </section>
   <section class="bcls-section">
     <h2 id="preview">Preview player</h2>
@@ -692,27 +697,27 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td><img alt="" src="/assets/images/live-module/clipping/node18551-start-button.png" /></td>
+          <td><img alt="" src="/assets/images/s-live-img/live-module/clipping/node18551-start-button.png" /></td>
           <td>Jumps to start of video</td>
         </tr>
         <tr>
-          <td><img alt="" src="/assets/images/live-module/clipping/node18551-back15-button.png" /></td>
+          <td><img alt="" src="/assets/images/s-live-img/live-module/clipping/node18551-back15-button.png" /></td>
           <td>Jumps the playhead back 15 seconds</td>
         </tr>
         <tr>
-          <td><img alt="" src="/assets/images/live-module/clipping/node18551-play-button.png" /></td>
+          <td><img alt="" src="/assets/images/s-live-img/live-module/clipping/node18551-play-button.png" /></td>
           <td>Starts video playback from the playhead position</td>
         </tr>
         <tr>
-          <td><img alt="" src="/assets/images/live-module/clipping/node18551-forward15-button.png" /></td>
+          <td><img alt="" src="/assets/images/s-live-img/live-module/clipping/node18551-forward15-button.png" /></td>
           <td>Jumps the playhead forward 15 seconds</td>
         </tr>
         <tr>
-          <td><img alt="" src="/assets/images/live-module/clipping/node18551-end-button.png" /></td>
+          <td><img alt="" src="/assets/images/s-live-img/live-module/clipping/node18551-end-button.png" /></td>
           <td>Jumps to end of video</td>
         </tr>
         <tr>
-          <td><img alt="" src="/assets/images/live-module/clipping/node18551-live-button.png" /></td>
+          <td><img alt="" src="/assets/images/s-live-img/live-module/clipping/node18551-live-button.png" /></td>
           <td>Jumps to live point in the video (only available when the live stream is active)</td>
         </tr>
       </tbody>
@@ -721,7 +726,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <section class="bcls-section">
     <h2 id="clip_time">Clip time</h2>
     <p>The clip time displays the current UTC time for the playhead and the clippable time. Clicking on the UTC link will switch to the local time display.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/live-module/clipping/node18551-clip-time.png" /></figure>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/clipping/node18551-clip-time.png" /></figure>
   </section>
   <section class="bcls-section">
     <h2 id="clipping">Clipping buttons</h2>
@@ -735,48 +740,48 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td><img alt="" src="/assets/images/live-module/clipping/node18551-go-cue-in-button.png" /></td>
+          <td><img alt="" src="/assets/images/s-live-img/live-module/clipping/node18551-go-cue-in-button.png" /></td>
           <td>Jumps to cue in point of the video</td>
         </tr>
         <tr>
-          <td><img alt="" src="/assets/images/live-module/clipping/node18551-set-cue-in-button.png" /></td>
+          <td><img alt="" src="/assets/images/s-live-img/live-module/clipping/node18551-set-cue-in-button.png" /></td>
           <td>Sets the starting point of the clip. The start point can also be set by dragging the handle at the beginning of the focus timeline.</td>
         </tr>
         <tr>
-          <td><img alt="" src="/assets/images/live-module/clipping/node18551-set-cue-out-button.png" /></td>
+          <td><img alt="" src="/assets/images/s-live-img/live-module/clipping/node18551-set-cue-out-button.png" /></td>
           <td>Sets the ending point of the clip. The end point can also be set by dragging the handle at the end of the focus timeline.</td>
         </tr>
         <tr>
-          <td><img alt="" src="/assets/images/live-module/clipping/node18551-go-cue-out-button.png" /></td>
+          <td><img alt="" src="/assets/images/s-live-img/live-module/clipping/node18551-go-cue-out-button.png" /></td>
           <td>Jumps to the cue out point of the video</td>
         </tr>
       </tbody>
     </table>
     <p>The cue in and cue out points are the start and end of a clip. Each of these points is represented on the focus timeline with a draggable handle, and the time between the points is filled-in green. The points are also represented in the context timeline as the left and right edges of the green rectangle indicating the clip space.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/live-module/clipping/node18551-cue-in-out-example.png" /></figure>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/clipping/node18551-cue-in-out-example.png" /></figure>
   </section>
   <section class="bcls-section">
     <h2 id="preview_clip">Preview clip</h2>
     <p>Click the preview clip button to play the clip.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/live-module/clipping/node18551-preview-clip-button.png" /></figure>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/clipping/node18551-preview-clip-button.png" /></figure>
   </section>
   <section class="bcls-section">
     <h2 id="playhead">Playhead</h2>
     <p>The playhead is an indicator of where in time the player is playing. The playhead is represented in the focus timeline by a red line with a red circle on top and with a red vertical line in the context timeline.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/live-module/clipping/node18551-playhead.png" /></figure>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/clipping/node18551-playhead.png" /></figure>
     <p>On the focus timeline, the playhead may be dragged to scrub through the video. Double-clicking on the focus timeline will move the playhead to that point. The playhead can also be used to set cue in and cue out points using the cue-in/cue-out buttons or by using the keyboard shortcuts.</p>
   </section>
   <section class="bcls-section">
     <h2 id="focus_timeline">Focus timeline</h2>
     <p>The focus timeline is the top timeline in the interface.</p>
     <p>The playhead is an indicator of where in time the player is playing. The playhead is represented in the focus timeline by a red line with a red circle on top.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/live-module/clipping/node18551-focus-timeline.png" /></figure>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/clipping/node18551-focus-timeline.png" /></figure>
     <p>The green shaded area represents the selected clipping time, where the edges are also draggable. Please note that the UI pre-selects the clip duration according to the total available clipping time. For example, in events greater than 10 minutes, the last 10 minutes will be pre-selected, similarly, for 30 and 60 minutes.</p>
   </section>
   <section class="bcls-section">
     <h2 id="context_timeline">Context timeline</h2>
     <p>The context timeline is the bottom timeline in the clip editor. The context timeline shows the entire duration of the video, regardless of zoom level, the selected area of the clip, the location of the playhead, and the current focus viewport. The timeline is indicated with a red line.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/live-module/clipping/node18551-context-timeline.png" /></figure>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/clipping/node18551-context-timeline.png" /></figure>
   </section>
   <section class="bcls-section">
     <h2 id="zoom_buttons">Zoom buttons</h2>
@@ -790,11 +795,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td><img alt="" src="/assets/images/live-module/clipping/node18551-zoom-in-button.png" /></td>
+          <td><img alt="" src="/assets/images/s-live-img/live-module/clipping/node18551-zoom-in-button.png" /></td>
           <td>Zooms in the focus timeline. The focus viewport (white box) in the context timeline will show the area of the clip that is being displayed in the focus timeline.</td>
         </tr>
         <tr>
-          <td><img alt="" src="/assets/images/live-module/clipping/node18551-zoom-out-button.png" /></td>
+          <td><img alt="" src="/assets/images/s-live-img/live-module/clipping/node18551-zoom-out-button.png" /></td>
           <td>Zooms out the focus timeline. The focus viewport (white box) in the context timeline will show the area of the clip that is being displayed in the focus timeline.</td>
         </tr>
       </tbody>
@@ -802,7 +807,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </section>
   <section class="bcls-section">
     <h2 id="list_of_clips">List of clips</h2>
-    <p>A list of clips will appear below the clip editor. Click <strong>Publish to Social</strong> to publish the clip to one of your social destinations using Brightcove Social. For information on publishing videos using the Social module, see <a href="https://studio.support.brightcove.com/social/publishing-videos-social-media-platforms.html">Publishing Videos to Social Media Platforms</a>.</p>
+    <p>A list of clips will appear below the clip editor. Click <strong>Publish to Social</strong> to publish the clip to one of your social destinations using Brightcove Social. 
+      
+    
+    For information on publishing videos using the Social module, see <a href="https://studio.support.brightcove.com/social/publishing-videos-social-media-platforms.html">Publishing Videos to Social Media Platforms</a>.
+              
+      
+      </p>
   </section>
   <section class="bcls-section">
     <h2 id="Keyboard_shortcuts">Keyboard shortcuts</h2>

@@ -2,10 +2,16 @@ git submodule add https://github.com/BrightcoveLearning/s-scripts
 cd _includes
 git submodule add https://github.com/BrightcoveLearning/s-jekyll-page-includes
 git submodule add https://github.com/BrightcoveLearning/s-support
+git submodule add https://github.com/BrightcoveLearning/s-web-conferencing
+git submodule add https://github.com/BrightcoveLearning/s-admin
+git submodule add https://github.com/BrightcoveLearning/s-live
 cd ..
 cd assets/images
 git submodule add https://github.com/BrightcoveLearning/s-support-img
 git submodule add https://github.com/BrightcoveLearning/s-feather-img
+git submodule add https://github.com/BrightcoveLearning/s-web-conferencing-img
+git submodule add https://github.com/BrightcoveLearning/s-admin-img
+git submodule add https://github.com/BrightcoveLearning/s-live-img
 cd ..
 echo 'Adding site assets'
 git submodule add https://github.com/BrightcoveLearning/s-site-assets-favicons

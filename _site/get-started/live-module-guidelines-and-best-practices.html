@@ -210,10 +210,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/general/live-platforms-comparison-matrix.html">Live Platforms Comparison Matrix</a></li>
-                  
-                
-                  
                     <li><a href="/general/live-video-glossary.html">Live Video Glossary</a></li>
                   
                 
@@ -223,10 +219,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 
                   
                     <li><a href="/general/supported-encoders-live-events.html">Supported Encoders for Live Events</a></li>
-                  
-                
-                  
-                    <li><a href="/general/creating-live-stream-using-akamai-stream-packaging-and-telestream-wirecast.html">Using Akamai Stream Packaging and Wirecast</a></li>
                   
                 
               </ul>
@@ -313,22 +305,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                           
                         
                           
-                            <li><a href="https://integrations.support.brightcove.com/web-conferencing/host-avaya-conference-brightcove-live.html">Host Avaya Conference on Brightcove Live</a></li>
-                          
-                        
-                          
-                            <li><a href="https://integrations.support.brightcove.com/web-conferencing/host-cisco-webex-conference-brightcove-live.html">Host Cisco Webex to Brightcove Live</a></li>
-                          
-                        
-                          
-                            <li><a href="https://integrations.support.brightcove.com/web-conferencing/host-zoom-conference-brightcove-live.html">Host Zoom to Brightcove Live</a></li>
-                          
-                        
-                          
-                            <li><a href="https://integrations.support.brightcove.com/web-conferencing/host-inxpo-live.html">Host an INXPO Event on Brightcove Live</a></li>
-                          
-                        
-                          
                             <li><a href="/live-module/zoom-live-integration.html">Integrating a Zoom Meeting</a></li>
                           
                         
@@ -342,6 +318,29 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                         
                       </ul>
                     </li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/web-conferencing/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Web Conferencing</a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/web-conferencing/host-zoom-conference-brightcove-live.html">Zoom Conference on Brightcove Live</a></li>
+                  
+                
+                  
+                    <li><a href="/web-conferencing/host-cisco-webex-conference-brightcove-live.html">Cisco Webex Conference to Brightcove Live</a></li>
+                  
+                
+                  
+                    <li><a href="/web-conferencing/host-avaya-conference-brightcove-live.html">Avaya Conference on Brightcove Live</a></li>
+                  
+                
+                  
+                    <li><a href="/web-conferencing/host-inxpo-live.html">INXPO Event on Brightcove Live</a></li>
                   
                 
               </ul>
@@ -596,8 +595,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     
 
 
-<h1>Brightcove Live: Best Practices</h1>
 <article class="bcls-article">
+  <h1>Brightcove Live: Best Practices</h1>
   <summary>With Video Cloud Live, you can easily set up live events and deliver multi-bitrate streams to the web, iOS, and Android devices.  This topic outlines a series of best practices and recommendations to help ensure a high quality, stable live streaming experience.</summary>
   <section class="bcls-section">
     <h2 id="Overview">Overview</h2>
@@ -645,11 +644,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         </tr>
         <tr>
           <td>Keyframe rate</td>
-          <td>
-            The most efficient setting for this is the segment duration x frame rate - for example, if you have 6 second segments and 30fps making the keyframe rate 180 (6x30) would result in the lowest decoder load.
+          <td> The most efficient setting for this is the segment duration x frame rate - for example, if you have 6 second segments and 30fps making the keyframe rate 180 (6x30) would result in the lowest decoder load.
             <p>However, to account for any fluctuations this is set to 2 x the frame rate - for example, 60 for a framerate of 30 fps.</p>
-            <aside class="bcls-aside bcls-aside--information language-editable">Note that the default ingest profiles for Live assume a framerate of 30 fps and therefore set the keyframe rate to 60. If your input stream has a different framerate (25 fps or 60 fps, for example) you should create a custom ingest profile by duplicating the default one and setting the keyframe rate to twice the framerate (for example, set it to 120 if the input framerate is 60 fps).</aside>
-          </td>
+            <aside class="bcls-aside bcls-aside--information language-editable">Note that the default ingest profiles for Live assume a framerate of 30 fps and therefore set the keyframe rate to 60. If your input stream has a different framerate (25 fps or 60 fps, for example) you should create a custom ingest profile by duplicating the default one and setting the keyframe rate to twice the framerate (for example, set it to 120 if the input framerate is 60 fps).</aside></td>
         </tr>
         <tr>
           <td>GOP structure</td>
@@ -793,7 +790,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <aside class="bcls-aside bcls-aside--information">Note: For the best user experience, match your output renditions to the quality of your encoder stream.</aside>
     <h3>Determining encoder capabilities</h3>
     <p>Understanding the capabilities of the software and hardware used to encode the live stream and send it to the Live module is also important. There may be plenty of bitrate to send a high-quality, 1080p input stream, but the hardware also needs to be able to encode in faster-than-realtime speeds. Some encoding tools display information about the total CPU usage and bandwidth being used. For example, Telestream Wirecast will display the output statistics at the bottom of the Wirecast window.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/wirecast-status-bar.png" /></figure>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/get-started/wirecast-status-bar.png" /></figure>
     <p>This information is useful when determining the most stable, highest quality stream that is possible on given hardware. Things to watch in Wirecast:</p>
     <ul>
       <li>CPU should be less than 80%</li>
@@ -849,7 +846,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </section>
   <section class="bcls-section">
     <h2 id="Certified_encoders">Supported encoders</h2>
-    <p>See <a href="/general/supported-encoders-live-events.html">Supported Encoders for Live Events</a> for list of encoders known to work with Live. Note that other encoders may also work, but have not been tested.</p>
+    
+
   </section>
   <section class="bcls-section">
     <h2 id="Supported_CDNs">Supported CDNs</h2>
@@ -1058,7 +1056,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 17 May 2022
+  Page last updated on 12 Jul 2022
 </div>
 
 

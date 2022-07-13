@@ -34,7 +34,7 @@ parent: null
       <div class="card-content">
         <h2>{{ section.name }}</h2>
         <ul>
-          {% for doc in section.docs limit:4 %}
+          {% for doc in section.docs  %}
           <li><a href="{{ doc.url }}">{{ doc.name }}</a></li>
           {% endfor %}
         </ul>

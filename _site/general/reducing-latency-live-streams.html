@@ -210,10 +210,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/general/live-platforms-comparison-matrix.html">Live Platforms Comparison Matrix</a></li>
-                  
-                
-                  
                     <li><a href="/general/live-video-glossary.html">Live Video Glossary</a></li>
                   
                 
@@ -223,10 +219,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 
                   
                     <li><a href="/general/supported-encoders-live-events.html">Supported Encoders for Live Events</a></li>
-                  
-                
-                  
-                    <li><a href="/general/creating-live-stream-using-akamai-stream-packaging-and-telestream-wirecast.html">Using Akamai Stream Packaging and Wirecast</a></li>
                   
                 
               </ul>
@@ -313,22 +305,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                           
                         
                           
-                            <li><a href="https://integrations.support.brightcove.com/web-conferencing/host-avaya-conference-brightcove-live.html">Host Avaya Conference on Brightcove Live</a></li>
-                          
-                        
-                          
-                            <li><a href="https://integrations.support.brightcove.com/web-conferencing/host-cisco-webex-conference-brightcove-live.html">Host Cisco Webex to Brightcove Live</a></li>
-                          
-                        
-                          
-                            <li><a href="https://integrations.support.brightcove.com/web-conferencing/host-zoom-conference-brightcove-live.html">Host Zoom to Brightcove Live</a></li>
-                          
-                        
-                          
-                            <li><a href="https://integrations.support.brightcove.com/web-conferencing/host-inxpo-live.html">Host an INXPO Event on Brightcove Live</a></li>
-                          
-                        
-                          
                             <li><a href="/live-module/zoom-live-integration.html">Integrating a Zoom Meeting</a></li>
                           
                         
@@ -342,6 +318,29 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                         
                       </ul>
                     </li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/web-conferencing/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Web Conferencing</a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/web-conferencing/host-zoom-conference-brightcove-live.html">Zoom Conference on Brightcove Live</a></li>
+                  
+                
+                  
+                    <li><a href="/web-conferencing/host-cisco-webex-conference-brightcove-live.html">Cisco Webex Conference to Brightcove Live</a></li>
+                  
+                
+                  
+                    <li><a href="/web-conferencing/host-avaya-conference-brightcove-live.html">Avaya Conference on Brightcove Live</a></li>
+                  
+                
+                  
+                    <li><a href="/web-conferencing/host-inxpo-live.html">INXPO Event on Brightcove Live</a></li>
                   
                 
               </ul>
@@ -603,14 +602,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="Introduction">Introduction</h2>
     <p>Latency is the time lag between the when something is recorded in real life and when it is seen in a video player. There is, of course, some real time required to transmit a signal from the source through the internet to a viewers player. Latency is aggravated by the fact that online video is transmitted in discreet chunks, called segments.</p>
     <p>Latency can be reduced by shortening the length of the video segments, and the following sections will detail how you can do this. Be aware, however, that there is a tradeoff: to insure uninterrupted playback, the player downloads a few video segments ahead of the current playback position (this is called buffering), so that they are ready when needed. If you shorten the length of segments, the player will be pre-fetching less video data, and chances of playback pausing while the player loads additional segments into the buffer will be increased.</p>
-    <h3>Additional limitations</h3>
-    <p>The following limitations apply to Live streams using reduced latency:</p>
-    <ul>
-      <li>SSAI is <strong>not</strong> supported</li>
-      <li>DRM is <strong>not</strong> supported</li>
-      <li>The DVR window must be less than <strong>5 minutes</strong></li>
-      <li>No more than <strong>4</strong> renditions</li>
-    </ul>
   </section>
   <section class="bcls-section">
     <h2 id="Creating_Reduced_Latency_Live_Profile">Creating Reduced Latency Live Profile</h2>
@@ -620,7 +611,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>Open the <strong>Admin</strong> module.</li>
       <li>In the left navigation, click <strong>Ingest Profiles</strong>.</li>
       <li>Select one of the <strong>Live</strong> ingest profiles with no more than <strong>4</strong> renditions.
-        <figure class="bcls-figure"><img class="bcls-image" alt="Select a Live Profile" src="/assets/images/general/select_ingest_profile.png" /> </figure>
+        <figure class="bcls-figure"><img class="bcls-image" alt="Select a Live Profile" src="/assets/images/s-live-img/general/select_ingest_profile.png" /> </figure>
       </li>
       <li>Click on the link to open the profile.</li>
       <li>Click <span class="button-blue">Duplicate</span> to create a new profile based on the selected one.</li>
@@ -691,13 +682,28 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 }</code></pre>
       </li>
       <li>To use the profile, select it when creating a new Live Event in the Live module.
-        <figure class="bcls-figure"><img class="bcls-image" alt="Create Live Event" src="/assets/images/general/create-live-event.png" /> </figure>
+        <figure class="bcls-figure"><img class="bcls-image" alt="Create Live Event" src="/assets/images/s-live-img/general/create-live-event.png" /> </figure>
       </li>
     </ol>
   </section>
   <section class="bcls-section">
     <h2 id="Using_the_Live_API">Using the Live API</h2>
     <p>If you want reduced latency, and you use the Live API to create your live jobs, just create the job as you normally do, but include <strong>no more than 4 renditions</strong>, and set <code translate="No">segment_seconds</code> for each rendition to <code translate="No">2</code>. Also, make sure that observe the other limitations listed in the <a href="#Introduction">Introduction</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Limitations">Limitations</h2>
+    <p>The following features are NOT supported with Live streams using reduced latency:</p>
+    <ul>
+      <li>SSAI</li>
+      <li>DRM</li>
+      <li>Multi-language audio tracks</li>
+      <li>Redundancy</li>
+    </ul>
+    <p>Additional limitations include:</p>
+    <ul>
+      <li>The DVR window must be less than <strong>5 minutes</strong></li>
+      <li>No more than <strong>4</strong> renditions</li>
+    </ul>
   </section>
 </article>
 
@@ -716,7 +722,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 06 Apr 2022
+  Page last updated on 12 Jul 2022
 </div>
 
 

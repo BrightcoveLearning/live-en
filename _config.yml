@@ -35,6 +35,7 @@ site_domain: "live.support.brightcove.com"
 port: 7500
 
 product: Brightcove Live
+product_short: Live
 color: rgb(51, 51, 51)
 product_color: rgb(149, 192, 57)
 product_icon: "COVE004_Brightcove_Live_Logo_RGB_K.svg"

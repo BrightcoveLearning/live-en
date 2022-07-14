@@ -182,8 +182,6 @@
       url: /admin/creating-custom-live-ingest-profiles.html
     - name: Fields for Custom Live Ingest Profiles
       url: /admin/fields-custom-live-ingest-profiles.html
-    - name: Managing Account Settings
-      url: /admin/managing-account-settings.html
     - name: Managing Live Settings
       url: /admin/managing-live-settings.html
     - name: Managing API Authentication Credentials

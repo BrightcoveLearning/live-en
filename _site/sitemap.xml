@@ -679,6 +679,16 @@
       
         <url>
           
+            <loc>https://live.support.brightcove.com/admin/configuring-server-side-ad-settings.html</loc>
+          
+            <lastmod>2022-07-14</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+      
+        <url>
+          
             <loc>https://live.support.brightcove.com/admin/creating-custom-live-ingest-profiles.html</loc>
           
             <lastmod>2022-07-14</lastmod>
@@ -690,6 +700,16 @@
         <url>
           
             <loc>https://live.support.brightcove.com/admin/fields-custom-live-ingest-profiles.html</loc>
+          
+            <lastmod>2022-07-14</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+      
+        <url>
+          
+            <loc>https://live.support.brightcove.com/admin/managing-account-settings.html</loc>
           
             <lastmod>2022-07-14</lastmod>
             <changefreq>daily</changefreq>

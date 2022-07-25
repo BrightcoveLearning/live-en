@@ -58,6 +58,8 @@
     - name: "Guides"
       url: '/live-module/index.html'
       docs:
+        - name: Audio-Only Live Events
+          url: /live-module/audio-only-live-events.html
         - name: Multi Language Audio with Live Module
           url: /live-module/multi-language-audio.html
         - name: Playback Restrictions with Live events

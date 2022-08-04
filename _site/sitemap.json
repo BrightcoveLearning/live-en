@@ -70,12 +70,12 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/live-module/creating-and-managing-live-events-using-live-module.html",
+      "newURL": "https://live.support.brightcove.com/creating-and-managing-live-events-using-live-module.html",
       "oldURL": "/creating-and-managing-live-events-using-live-module"
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/creating-and-managing-live-events-using-live-module.html",
+      "newURL": "https://live.support.brightcove.com/live-module/creating-and-managing-live-events-using-live-module.html",
       "oldURL": "/creating-and-managing-live-events-using-live-module"
   },
 
@@ -140,17 +140,17 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/release-notes/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://live.support.brightcove.com/general/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/admin/",
+      "newURL": "https://live.support.brightcove.com/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/live-module/",
       "oldURL": "/index"
   },
 
@@ -165,22 +165,7 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/live-module/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://live.support.brightcove.com/live-api/references/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://live.support.brightcove.com/live-api/code-samples/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://live.support.brightcove.com/live-api/getting-started/",
+      "newURL": "https://live.support.brightcove.com/admin/",
       "oldURL": "/index"
   },
 
@@ -190,7 +175,12 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/live-api/ssai/",
+      "newURL": "https://live.support.brightcove.com/get-started/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/release-notes/",
       "oldURL": "/index"
   },
 
@@ -200,12 +190,22 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/get-started/",
+      "newURL": "https://live.support.brightcove.com/live-api/code-samples/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/",
+      "newURL": "https://live.support.brightcove.com/live-api/ssai/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/live-api/references/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/live-api/getting-started/",
       "oldURL": "/index"
   },
 
@@ -512,6 +512,11 @@
   {
       "newURL": "https://live.support.brightcove.com/live-module/using-live-rtmp-outputs-stream-facebook-and-youtube.html",
       "oldURL": "/using-live-rtmp-outputs-stream-facebook-and-youtube"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/general/using-mtr-to-look-at-network-traffic.html",
+      "oldURL": "/using-mtr-to-look-at-network-traffic"
   },
 
   {

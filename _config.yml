@@ -34,6 +34,8 @@ language: "en-US"
 # local server (for "jekyll serve") will be localhost:{PORT number below}
 port: 7500
 
+live_prefix: "/"
+
 product: Brightcove Live
 product_short: Live
 color: rgb(51, 51, 51)

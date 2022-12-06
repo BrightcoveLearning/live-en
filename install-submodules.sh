@@ -8,6 +8,7 @@ git submodule add https://github.com/BrightcoveLearning/s-support
 git submodule add https://github.com/BrightcoveLearning/s-web-conferencing
 git submodule add https://github.com/BrightcoveLearning/s-admin
 git submodule add https://github.com/BrightcoveLearning/s-live
+git submodule add https://github.com/BrightcoveLearning/s-template-page-includes
 cd ..
 cd assets/images
 git submodule add https://github.com/BrightcoveLearning/s-support-img

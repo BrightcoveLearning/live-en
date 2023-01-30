@@ -4,6 +4,8 @@
 - section:
   name: Getting Started
   url: /get-started/index.html
+  icon: fa-regular fa-map-pin
+  description: Guides to help you get started with Live streaming.
   docs:
     - name: Brightcove Live Training Videos
       url: /get-started/brightcove-live-training-videos.html
@@ -20,6 +22,8 @@
 - section:
   name: General Information
   url: /general/index.html
+  icon: fa-regular fa-circle-info
+  description: General information for working with the Live module and Live API.
   docs:
     - name:  Captions with Live Streams
       url: /general/captions-with-live-streams.html
@@ -36,9 +40,11 @@
 - section:
   name: Using the Live Module
   url: /live-module/index.html
+  icon: fa-regular fa-satellite-dish
+  description: Learn how to broadcast a live event using the Live module.
   docs:
     - name: "Getting Started"
-      url: '/live-module/index.html'
+      url: '/live-module/getting-started-index.html'
       docs:
         - name: Creating and Managing Live Events
           url: /live-module/creating-and-managing-live-events-using-live-module.html
@@ -51,14 +57,14 @@
         - name: Scheduling Live Events
           url: /live-module/scheduling-live-event.html
     - name: "Advertising"
-      url: '/live-module/index.html'
+      url: '/live-module/advertising-index.html'
       docs:
         - name: Implementing Server-Side Ads (SSAI)
           url: /live-module/implementing-server-side-ads-live-module.html
         - name: Client-Side Preroll Ads with Live SSAI
           url: /live-module/client-side-preroll-with-live-ssai.html
     - name: "Guides"
-      url: '/live-module/index.html'
+      url: '/live-module/guides-index.html'
       docs:
         - name: Audio-Only Live Events
           url: /live-module/audio-only-live-events.html
@@ -71,7 +77,7 @@
         - name: Using Live RTMP Outputs
           url: /live-module/using-live-rtmp-outputs-stream-facebook-and-youtube.html
     - name: "Hosting Platforms"
-      url: '/live-module/index.html'
+      url: '/live-module/hosting-platforms-index.html'
       docs:
         - name: 'Overview: Hosting Platforms'
           url: '/live-module/overview-hosting-platforms.html'
@@ -84,6 +90,8 @@
 - section:
   name: 'Web Conferencing'
   url: '/web-conferencing/index.html'
+  icon: fa-regular fa-camera-web
+  description: This section contains topics that apply to integrating Brightcove Live with different web conferencing platforms.
   docs:
     - name: Zoom Conference on Brightcove Live
       url: '/web-conferencing/host-zoom-conference-brightcove-live.html'
@@ -96,6 +104,8 @@
 - section:
   name: 'Working with the Live API'
   url: 'https://apis.support.brightcove.com/live-api/index.html'
+  icon: fa-regular fa-satellite-dish
+  description: The Live API allows you to create and manage live steams.
   docs:
     - name: 'Live API: Getting Started'
       url: 'https://apis.support.brightcove.com/live-api/getting-started/index.html'
@@ -179,6 +189,8 @@
 - section:
   name: Administering Accounts
   url: /admin/index.html
+  icon: fa-regular fa-gear
+  description: Administering your Live account.
   docs:
     - name: Configuring Server-Side Ad Settings
       url: /admin/configuring-server-side-ad-settings.html
@@ -195,6 +207,8 @@
 - section:
   name: Release Notes
   url: /release-notes/index.html
+  icon: fa-regular fa-memo-pad
+  description: Learn about new features.
   docs:
     - name: Live Release Notes
       url: /release-notes/live-api-release-notes.html
@@ -203,6 +217,8 @@
 - section:
   name: 'Support'
   url: '/support/index.html'
+  icon: fa-regular fa-comments-question-check
+  description: Working with Brightcove Support.
   docs:
     - name: 'Viewing the Brightcove System Status Page'
       url: '/support/viewing-brightcove-system-status-page.html'

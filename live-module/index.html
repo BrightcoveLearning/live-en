@@ -3,23 +3,34 @@ title: Using the Live Module
 description: Learn how to broadcast a live event using the Live module.
 parent: Home
 ---
-<article class="bcls-article"> 
-  <h1>{{ page.title }}</h1>
-  <summary>{{ page.description }}</summary>
-  <section class="bcls-section">
-    <ul>
-      <li><a href="/live-module/client-side-preroll-with-live-ssai.html">Client-Side Pre-roll Ads with Live SSAI</a></li>
-      <li><a href="/live-module/creating-and-managing-live-events-using-live-module.html">Creating and Managing Live Events using the Live Module</a></li>
-      <li><a href="/live-module/creating-video-clip-using-live-module.html">Creating a Video Clip</a></li>
-      <li><a href="/live-module/implementing-server-side-ads-live-module.html">Implementing Server-Side Ads</a></li>
-      <li><a href="/live-module/live-redundancy.html">Live Redundancy</a></li>
-      <li><a href="/live-module/multi-language-audio.html">Multi Language Audio</a></li>
-      <li><a href="/live-module/playback-restrictions-live-module.html">Playback Restrictions with Live Events</a></li>
-      <li><a href="/live-module/reviewing-live-analytics.html">Reviewing Live Analytics</a></li>
-      <li><a href="/live-module/scheduling-clips.html">Scheduling Clips</a></li>
-      <li><a href="/live-module/scheduling-live-event.html">Scheduling Live Events</a></li>
-      <li><a href="/live-module/using-live-rtmp-outputs-stream-facebook-and-youtube.html">Using RTMP Outputs to Stream to Facebook and YouTube</a></li>
-      <li><a href="/live-module/zoom-live-integration.html">Brightcove Live - Zoom Integration</a></li>
-    </ul>
-  </section>
-</article>
+<!-- Template for section that just has sub-sections -->
+{% for item in site.data.navigation %}
+  {% if item.name == page.title %}
+    <h1><i class="{{ item.icon }}"></i> {{ page.title }}</h1>
+    <article class="bcls-article">
+    <summary>{{ page.description }}</summary>
+    <div class="row">
+      {% for entry in item.docs %}
+        <div class="col-12 col-lg-4 py-3">
+          <div class="card shadow-sm" style="background: white" onclick="window.location.href = '{{ entry.url }}'">
+            <div class="card-body">
+              <div>
+                {% if entry.docs %}
+                <h5 class="card-title text-center m-2">{{ entry.name }}</h5>
+                <ul class="list-group list-group-flush">
+                  {% for subdoc in entry.docs %}
+                  <li class="list-group-item"><a href="{{ subdoc.url }}" style="text-decoration: none;">{{ subdoc.name }}</a></li>
+                  {% endfor %}
+                </ul>
+                {% else %}
+                <h5 class="card-title">{{ entry.name }}</h5>
+                {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </article>
+  {% endif %}
+{% endfor %}

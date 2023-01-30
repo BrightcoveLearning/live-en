@@ -66,11 +66,12 @@
 
       <div class="docs-top-utilities d-flex justify-content-end
         align-items-center">
+        
         <!-- Search bar -->
         <div id="nav-search-box" class="top-search-box d-none d-lg-flex" style="margin-right: 10px ;"></div>
 
-        <select id="site_select" class="form-select select-focus" style="width:
-          20%; margin-right: 10px;">
+<select id="site_select" class="form-select select-focus" style="width:
+          20%; margin-right: 10px;" translate="no">
           <option value="">Other Brightcove Docs</option>
           
           
@@ -168,7 +169,7 @@
         </select>
 
         <select id="language_select" class="form-select select-focus" style="width: 10%;"
-          onchange="doGTranslate(this);">
+          onchange="doGTranslate(this);" translate="no">
           <!-- <option value="">Select Language</option> -->
           <option value="en|en" translate="No">English</option>
           <option value="en|zh-TW" translate="No">繁體中文</option>
@@ -855,18 +856,9 @@
     <div class="docs-overview py-5">
       
       
-<!-- search bar -->
-<div id="nav-search-box" style="margin-top: 1rem;display: none;"></div>
-
-<!-- open in new tab/window -->
-<a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/s-feather-img/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a>
-  
-    
-
-
 <h1>Search Results</h1>
     <!-- This div is used to host the search box -->
-    <div id="results-search-box"></div>
+    <!-- <div id="results-search-box" style="display: hidden"></div> -->
     <!-- This div is used to host the search response -->
     <div id="results-search-response"></div>
 
@@ -894,7 +886,7 @@
           <ul class="list-unstyled text-small">
             <li><a class="a-text" href="https://studio.support.brightcove.com/get-started/training/online-training-courses.html">Online courses</a></li>
             <li><a class="a-text" href="https://studio.support.brightcove.com/get-started/training/register-training.html">Register for a course</a></li>
-            <li><a class="a-text" href="https://university.brightcove.com/">Brightcove Academy</a></li>
+            <li><a class="a-text" href="https://academy.brightcove.com/">Brightcove Academy</a></li>
           </ul>
         </div>
       
@@ -935,38 +927,7 @@
   </div>
 </div>
 
-<script translate="no">
-      
-  var searchBox = sajari.init({
-    mode: "search-box",
-    project: "1588255093746585379", // Set this to your project.
-    collection: "brightcove-documentation", // Set this to your collection.
-    instantPipeline: "autocomplete", // Pipeline used as you type
-    inputPlaceholder: "Search in the docs...", // Input element placeholder,
-    styling: {
-      components: {
-        
-        input: {
-          container: {
-          backgroundColor: 'white',
-          }
-        
-        }
-      }
-    },
-    maxSuggestions: 5, // Maximum number of suggestions to show
-      attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
-  });
 
-  
-
-
-    searchBox("sub", "pipeline.search-sent", function (_, query) {
-    window.location = "/search.html?q=" + encodeURIComponent(query.q);
-    });
-  
-  </script>
-  
   <!-- Javascript -->          
   <script src="/assets/s-site-assets-template-stylesheets/plugins/popper.min.js"></script>
   <script src="/assets/s-site-assets-template-stylesheets/plugins/bootstrap/js/bootstrap.min.js"></script>  

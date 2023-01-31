@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Configuring Server-Side Ad Settings</title>
+        <title>Managing Live Settings</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how to manage and create Live and VOD server-side ad configurations.">
+        <meta name="description" content="In this topic you will learn how to manage the settings for Brightcove Live.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -429,7 +429,7 @@
                   
                   
                   
-                  <li class="nav-item"><a class="nav-link" href="https://studio.support.brightcove.com/social/publishing-live-event-facebook.html">Publishing a Live Event to Facebook</a></li>
+                  <li class="nav-item"><a class="nav-link" href="https://studio.support.brightcove.com/social/general/publishing-live-event-facebook.html">Publishing a Live Event to Facebook</a></li>
                   
                   
                   
@@ -733,39 +733,67 @@
               <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
               
               
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/admin/general/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;General Information</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/admin/general/configuring-server-side-ad-settings.html">Configuring Server-Side Ad Settings</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item section-doc"><a class="nav-link" href="/admin/general/managing-live-settings.html" aria-current="page">Managing Live Settings</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/admin/general/managing-api-authentication-credentials.html">Managing API Authentication Credentials</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
               
-              <li class="nav-item"><a class="nav-link" href="/admin/configuring-server-side-ad-settings.html" aria-current="page">Configuring Server-Side Ad Settings</a></li>
               
               
-              
-              
-              
-              <li class="nav-item"><a class="nav-link" href="/admin/creating-custom-live-ingest-profiles.html">Creating Custom Live Ingest Profiles</a></li>
-              
-              
-              
-              
-              
-              <li class="nav-item"><a class="nav-link" href="/admin/fields-custom-live-ingest-profiles.html">Fields for Custom Live Ingest Profiles</a></li>
-              
-              
-              
-              
-              
-              <li class="nav-item"><a class="nav-link" href="/admin/managing-live-settings.html">Managing Live Settings</a></li>
-              
-              
-              
-              
-              
-              <li class="nav-item"><a class="nav-link" href="/admin/managing-api-authentication-credentials.html">Managing API Authentication Credentials</a></li>
-              
-              
-              
-              
-              
-              <li class="nav-item"><a class="nav-link" href="/admin/standard-live-ingest-profiles.html">Standard Live Ingest Profiles</a></li>
-              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/admin/ingest-profiles/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Managing Ingest Profiles</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/admin/ingest-profiles/creating-custom-live-ingest-profiles.html">Creating Custom Live Ingest Profiles</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/admin/ingest-profiles/fields-custom-live-ingest-profiles.html">Fields for Custom Live Ingest Profiles</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/admin/ingest-profiles/standard-live-ingest-profiles.html">Standard Live Ingest Profiles</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
               
               
             </ul>
@@ -842,7 +870,11 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Configuring Server-Side Ad Settings</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/admin/general/">General</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Managing Live Settings</li>
             
             
           </ol>
@@ -863,122 +895,78 @@
       <br>
       
       
-<h1>Configuring Server-Side Ad Settings</h1>
 <article class="bcls-article">
-  <summary>In this topic you will learn how to manage and create Live and VOD server-side ad configurations.</summary>
+  <h1>Managing Live Settings</h1>
+  <summary>In this topic you will learn how to manage the settings for Brightcove Live.</summary>
   <section class="bcls-section">
-    <p>Ad configurations define various aspects of ad playback, including ad calls, timing, beacons and other ad configuration options. The Server-Side Ad Settings define the ads that can be requested during video on demand (VOD) videos and during live events. Server-side ads take advantage of Brightcove's Server-Side Ad Insertion (SSAI) technology and provide these main features:</p>
-    <ul>
-      <li>Since ads are stitched into the on-demand or live video stream on the server side, they are not affected by ad blockers</li>
-      <li>For live events, ads are inserted at cue points sent from your encoder or you can create an instant cue point using the 
-       
-    
-           <a href="/live-module/creating-and-managing-live-events-using-live-module.html#ad">Live module Control Room</a>
-       
-        </li>
-      <li>You can configure fill slates to fill any unused ad time</li>
-    </ul>
-    <p>To learn more about server-side advertising, see <a href="https://player.support.brightcove.com/plugins/implementing-server-side-ads-brightcove-player.html">Implementing Server-Side Ads with the Brightcove Player</a>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note:
-      <ul>
-        <li>Before you can use SSAI, your Live account needs to be configured for Dynamic Delivery and enabled for SSAI. Contact your Customer Success Manager for details.</li>
-        <li>VMAP for Brightcove Live SSAI is not currently supported.</li>
-        <li>Although there is no prefetch functionality for SSAI ads, we delegate the ad position logic to the ad provider. Dynamic Delivery makes all the add calls up front. If we get an ad from the ad provider and it is transcoded in our system we will insert it into the stream.</li>
-      </ul>
-    </aside>
-    <p>The Server-Side Ad Settings page is used to manage the Live and VOD ad configurations. Note that to access the Server-Side Ad Settings page, you must be a user with the Administrator role.</p>
-    <p>To access the Server-Side Ad Settings page:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Login to Studio.</li>
-      <li>Open the <strong>Admin</strong> module and then<strong> Server-Side Ad Settings</strong>. A list of all ad configurations will be displayed.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/node18748-list-of-ad-configs.png" /></figure>
-      </li>
-    </ol>
-    <p>To create a new add configuration, click <span class="button-blue">+ Add configuration ∧</span> and then click the specific type of ad to create:</p>
-    <ul>
-      <li><a href="#vod">Video on Demand (VOD)</a></li>
-      <li><a href="#live">Live</a></li>
-    </ul>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/node18748-create-ad.png" /></figure>
+    <p>The Live settings allow you to manage fill slates and Live credentials.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: Server-side ad configurations used by Brightcove Live are configured as part of the Server-Side Ad Settings administration. For information, see <a href="https://studio.support.brightcove.com/admin/general/configuring-server-side-ad-settings.html">Configuring Server-Side Ad Settings</a>.</aside>
   </section>
   <section class="bcls-section">
-    <h2 id="vod">Creating a Video On Demand ad configuration</h2>
-    <aside class="bcls-aside bcls-aside--information">Note: Server-side ad configurations can also be managed using the Server-Side Ad Insertion API. For information, see the <a href="https://ssai.support.brightcove.com/vod/guides/video-cloud-ssai-ad-config-api.html">Video Cloud SSAI Ad Config API</a> topic.</aside>
-    <p>To add a Video On Demand (VOD) ad configuration, follow these steps.</p>
+    <h2 id="fill_slate">Managing fill slates</h2>
+    <p>Fill slates are content that can be served when there are gaps in a live stream ad break. Slates can be used to provide a "Be right back" message or any other content you want to display. All Zencoder <a href="https://zencoder.support.brightcove.com/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html#format">input formats</a> are supported.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: Fill slates can also be managed using the Live API. For information, see <a href="/live-api/ssai/live-api-server-side-ad-insertion-ssai.html#Managing_slates">Brightcove Live API: Server-Side Ad Insertion (SSAI)</a>.</aside>
+    <p>To add a fill slate, follow these steps.</p>
     <ol class="bcls-tasklist-restart">
-      <li>On the Server-Side Ad Settings page, click <span class="button-blue">+ Add configuration ∧</span> &gt; <strong>VOD</strong>.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/node18748-create-vod-ad.png" /></figure>
+      <li>Open the <strong>Admin</strong> module.</li>
+      <li>In the left navigation, click <strong> Live Settings</strong>.
+        <aside class="bcls-aside bcls-aside--information">Note: You must be an account administrator to access the Admin menu.</aside>
+      </li>
+      <li>Click <span class="button-blue">+ Add Fill Slate</span>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/node18588-fill-slate.png" /></figure>
       </li>
       <li>Enter a <strong>Name</strong>.</li>
-      <li>Select the <strong>Ad Server Response</strong>:
-        <ul>
-          <li><strong>DFP Ad Rules</strong> - Proprietary format for Google DFP, which has been rebranded as Google Ad Manager(GAM)</li>
-          <li><strong>DFP VMAP</strong> - <a href="https://www.iab.com/guidelines/vmap/">Video Multiple Ad Playlist (VMAP)</a></li>
-          <li><strong>Smart XML</strong> - Proprietary format for FreeWheel</li>
-          <li><strong>VAST</strong> - <a href="https://www.iab.com/guidelines/vast/">Digital Video Ad Serving Template (VAST)</a></li>
-        </ul>
-        <p>For details, see the <a href="https://apis.support.brightcove.com/ssai/getting-started/video-cloud-ssai-ad-config-api.html#Ad_response_types">Video Cloud SSAI API</a> document.</p>
-      </li>
-      <li>Enter the<strong> Ad Tag</strong>.</li>
-      <li>Check <strong>Disable server-side beacons</strong> to disable server-side beacons. When disabled, SSAI will not fire any beacons server-side and will include all beacons in the VMAP output.</li>
-      <li>Click <span class="button-blue">Save</span>.</li>
+      <li>Enter the <strong>Source URL</strong> for the slate.</li>
+      <li>Click <span class="button-blue">Save</span>. The ingestion process for the slate will begin.</li>
     </ol>
-    <p>To edit an ad configuration, click the ad name, make the changes and then click <span class="button-blue">Save</span>. To delete an ad config, check the box next to the ad and then click <strong>Delete</strong>. To duplicate an ad config, check the box next to the ad and then click <strong>Duplicate</strong>.</p>
-    <p>Once VOD ad configurations have been created, open the Players module and click on a player to view the properties. When the <strong>Enable Server-Side (SSAI)</strong> advertising property is enabled, an ad configuration can be selected. For information on configuring player advertising, see 
-        
-    
-        <a href="https://studio.support.brightcove.com/players/configuring-player-advertising-using-players-module.html">Configuring Player Advertising using the Players Module</a>.
-            
-      </p>
+    <p>To delete a fill slate, click the delete button (<img alt="" src="/assets/images/s-admin-img/general/node1050-delete-icon.png" />) next to the fill slate.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="live">Creating a Live ad configuration</h2>
-    <aside class="bcls-aside bcls-aside--information"> Note: Server-side Live ad configurations can also be managed using the Live API. For information, see <a href="https://apis.support.brightcove.com/live-api/ssai/live-api-server-side-ad-insertion-ssai.html#Create_an_ad_configuration">Brightcove Live API: Server-Side Ad Insertion (SSAI)</a>.</aside>
-    <p>To add a Live ad configuration, follow these steps.</p>
+    <h2 id="credentials">Managing credentials</h2>
+    <p>Credentials are used by both the Live API and Live module. If you are creating a new Live Video Cloud credential, you must first create an API Authentication credential. The client ID and client secret that are created will be used when creating the Live Video Cloud credential. When creating FTP, S3 or RTMP credentials, an API Authentication credential is not needed.</p>
+    <p>If you are creating an S3, FTP or RTMP credential, skip to <strong>step 5</strong>. To create a Live Video Cloud credential, start by creating an API credential.</p>
     <ol class="bcls-tasklist-restart">
-      <li>On the Server-Side Ad Settings page, click <span class="button-blue">+ Add configuration ∧</span> &gt; <strong>Live</strong>.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/node18748-create-live-ad.png" /></figure>
+      <li>Open the <strong>Admin</strong> module.
+        <aside class="bcls-aside bcls-aside--information">Note: You must be an account administrator to access the ADMIN menu.</aside>
       </li>
-      <li>Enter a <strong>Name</strong>.</li>
-      <li>Select the <strong>Ad Server Response</strong>:
+      <li>In the left navigation, click <strong>API Authentication</strong>. The API Authentication page will open displaying your current client registrations.</li>
+      <li>Click <span class="button-blue">+ Add aplication</span> to create a new API credential. The following APIs should be selected.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/node18588-apis-to-select.png" /></figure>
+        <aside class="bcls-aside bcls-aside--information">Note: For information on creating API Authentication Credentials, see <a href="/admin/general/managing-api-authentication-credentials.html">Managing API Authentication Credentials</a>.</aside>
+      </li>
+      <li>When the credential is created, save the <strong>Client ID</strong> and <strong>Client secret</strong> values. These will be needed when creating the Live Video Cloud credential.</li>
+      <li>In the left navigation, click <strong>Live Settings</strong>.</li>
+      <li>Click <span class="button-blue">+ Add Credential</span>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/node18588-create-credential.png" /></figure>
+      </li>
+      <li>Enter a <strong>Label</strong>. This is the name that will be used internally to refer to the credential.</li>
+      <li>Select a <strong>Type</strong>:
         <ul>
-          <li><strong>VAST</strong> - <a href="https://www.iab.com/guidelines/vast/">Digital Video Ad Serving Template (VAST)</a></li>
-          <li><strong>DFP (Ad Rules)</strong> - Proprietary format for Google DFP, which has been rebranded as Google Ad Manager(GAM)</li>
-          <li><strong>Smart XML</strong> - Proprietary format for FreeWheel</li>
+          <li><strong>FTP</strong> - Used to save the VOD asset to an ftp location (API use)</li>
+          <li><strong>RTMP</strong> - Used to create RTMP credentials to be used by the encoder</li>
+          <li><strong>S3</strong> - Used to save the VOD asset to an Amazon S3 account (API use)</li>
+          <li><strong>Video Cloud</strong> - Used to save the VOD asset to a Video Cloud account (API use)</li>
         </ul>
       </li>
-      <li>Enter the<strong> Ad Tag</strong>.</li>
-      <li>(Optional) Enable <strong>Ad Tracking</strong>. This feature must be configured with the help of Brightcove Support. The Ad Tracking % gives you the ability to select a &quot;sample rate&quot;, this can be useful when you just need to view averages.</li>
-      <li>(Optional) Enable <strong>Client Options</strong>. For information, see the <a href="#player-ssai">Player Enhancements for Live SSAI</a> section below.</li>
+      <li>For the <strong>Public Key / Username</strong>, enter the following depending on the type of credential:
+        <ul>
+          <li><strong>FTP</strong> - Enter the username for the FTP site</li>
+          <li><strong>RTMP</strong> - Enter the username that the encoder will use to authenticate</li>
+          <li><strong>S3</strong> - Enter the username for the S3 account</li>
+          <li><strong>Video Cloud</strong> - Enter the <strong>Client ID</strong> generated for the API Authentication credential</li>
+        </ul>
+      </li>
+      <li>For the <strong>Private Key / Password</strong>, enter the following depending on the type of credential:
+        <ul>
+          <li><strong>FTP </strong>- Enter the password for the FTP site</li>
+          <li><strong>RTMP</strong> - Enter the password that the encoder will use to authenticate</li>
+          <li><strong>S3</strong> - Enter the password for the S3 account</li>
+          <li><strong>Video Cloud</strong> - Enter the <strong>Client secret</strong> generated for the API Authentication credential</li>
+        </ul>
+      </li>
       <li>Click <span class="button-blue">Save</span>.</li>
     </ol>
-    <p>To edit an ad configuration, click the ad name, make the changes and then click <strong>Save</strong>. To delete an ad config, check the box next to the ad and then click <strong>Delete</strong>. To duplicate an ad config, check the box next to the ad and then click <strong>Duplicate</strong>.</p>
-    <p>Once Live ad configurations have been created, when an event is created with the <strong>Enable Server-Side Ad Insertion (SSAI)</strong> property enabled, an ad configuration can be selected in the Control Room. For information on creating live events, see 
-    
-        
-        <a href="/live-module/creating-and-managing-live-events-using-live-module.html">Creating and Managing Live Events using the Live Module</a>.
-      
-    </p>
-    <h3 id="player-ssai">Player Enhancements for Live SSAI</h3>
-    <p>Brightcove's Player Enhancements for Live SSAI allows you to add client-side components to live streams, including ad counts, ad countdown timers, click through ads and companion ads. For details, see the <a href="https://apis.support.brightcove.com/live-api/ssai/overview-player-enhancements-live-ssai.html">Overview: Player Enhancements for Live SSAI</a> document.</p>
-    <p>To use this feature, contact your Customer Success Manager to enable your account for:</p>
-    <ul>
-      <li> Live streams</li>
-      <li>Server-Side Ad Insertion (SSAI)</li>
-      <li>Player Enhancements for Live SSAI</li>
-    </ul>
-    <p>To add player enhancements, follow these steps:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>On the Server-Side Ad Settings page, click <span class="button-blue">+ Add configuration ∧</span> &gt; <strong>Live</strong>.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Create Live ad configuration" src="/assets/images/s-admin-img/general/node18748-create-live-ad.png" /></figure>
-      </li>
-      <li>Enter the data as described in the <a href="#live">add a Live ad configuration</a> steps above.</li>
-      <li>Select <strong>Client Options Enabled</strong> to see a list of feature options.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Client Options Enabled" src="/assets/images/s-admin-img/general/node18748-client-options-enabled.png" /></figure>
-      </li>
-      <li>Select the client-side components that you want to add to your live stream.</li>
-      <li>Click <span class="button-blue">Save</span>.</li>
-    </ol>
+    <p>The credential will appear in the list of credentials. To delete a credential, click the delete button (<img alt="" src="/assets/images/s-admin-img/general/node1050-delete-icon.png" />) next to the credential.</p>
   </section>
 </article>
 

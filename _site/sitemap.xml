@@ -313,7 +313,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/social/publishing-live-event-facebook.html</loc>
+              <loc>https://studio.support.brightcove.com/social/general/publishing-live-event-facebook.html</loc>
             
             <lastmod>2023-01-31</lastmod>
             <changefreq>daily</changefreq>
@@ -698,62 +698,76 @@
       
         <url>
           
-            <loc>https://live.support.brightcove.com/admin/configuring-server-side-ad-settings.html</loc>
+            <loc>https://live.support.brightcove.com/admin/general/index.html</loc>
           
             <lastmod>2023-01-31</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
         
+          <url>
+            
+              <loc>https://live.support.brightcove.com/admin/general/configuring-server-side-ad-settings.html</loc>
+            
+            <lastmod>2023-01-31</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://live.support.brightcove.com/admin/general/managing-live-settings.html</loc>
+            
+            <lastmod>2023-01-31</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://live.support.brightcove.com/admin/general/managing-api-authentication-credentials.html</loc>
+            
+            <lastmod>2023-01-31</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
       
         <url>
           
-            <loc>https://live.support.brightcove.com/admin/creating-custom-live-ingest-profiles.html</loc>
+            <loc>https://live.support.brightcove.com/admin/ingest-profiles/index.html</loc>
           
             <lastmod>2023-01-31</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
         
-      
-        <url>
-          
-            <loc>https://live.support.brightcove.com/admin/fields-custom-live-ingest-profiles.html</loc>
-          
+          <url>
+            
+              <loc>https://live.support.brightcove.com/admin/ingest-profiles/creating-custom-live-ingest-profiles.html</loc>
+            
             <lastmod>2023-01-31</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
-        </url>
+          </url>
         
-      
-        <url>
-          
-            <loc>https://live.support.brightcove.com/admin/managing-live-settings.html</loc>
-          
+          <url>
+            
+              <loc>https://live.support.brightcove.com/admin/ingest-profiles/fields-custom-live-ingest-profiles.html</loc>
+            
             <lastmod>2023-01-31</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
-        </url>
+          </url>
         
-      
-        <url>
-          
-            <loc>https://live.support.brightcove.com/admin/managing-api-authentication-credentials.html</loc>
-          
+          <url>
+            
+              <loc>https://live.support.brightcove.com/admin/ingest-profiles/standard-live-ingest-profiles.html</loc>
+            
             <lastmod>2023-01-31</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
-        </url>
-        
-      
-        <url>
-          
-            <loc>https://live.support.brightcove.com/admin/standard-live-ingest-profiles.html</loc>
-          
-            <lastmod>2023-01-31</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-        </url>
+          </url>
         
       
     

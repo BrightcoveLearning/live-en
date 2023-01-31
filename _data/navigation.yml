@@ -86,7 +86,7 @@
         - name: Publishing a Live Event to Facebook
           url: 'https://studio.support.brightcove.com/social/general/publishing-live-event-facebook.html'
         - name: Publishing a Live Event to YouTube
-          url: 'https://studio.support.brightcove.com/social/publishing-live-event-youtube.html'
+          url: 'https://studio.support.brightcove.com/social/general/publishing-live-event-youtube.html'
 - section:
   name: 'Web Conferencing'
   url: '/web-conferencing/index.html'

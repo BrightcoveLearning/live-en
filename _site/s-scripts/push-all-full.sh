@@ -1,11 +1,14 @@
 bold=`tput bold`
 normal=`tput sgr0`
-if [ -v NB ]
+# uf NB exists this is a nightly build
+echo $0
+if [[ $0 == nightly-build.sh ]]
 then
-COMMITMESSAGE="Nightly Build"
+  COMMITMESSAGE="Nightly Build"
+  echo $COMMITMESSAGE
 else
-echo "Enter your ${bold}COMMIT MESSAGE${normal}:"
-read COMMITMESSAGE
+  echo "Enter your ${bold}COMMIT MESSAGE${normal}:"
+  read COMMITMESSAGE
 fi 
 cd ..
 git pull

@@ -4,7 +4,7 @@
 - section:
   name: Getting Started
   url: /get-started/index.html
-  icon: fa-regular fa-map-pin
+  icon: fa-solid fa-map-pin
   description: Guides to help you get started with Live streaming.
   docs:
     - name: Brightcove Live Training Videos
@@ -22,7 +22,7 @@
 - section:
   name: General Information
   url: /general/index.html
-  icon: fa-regular fa-circle-info
+  icon: fa-solid fa-circle-info
   description: General information for working with the Live module and Live API.
   docs:
     - name:  Captions with Live Streams
@@ -40,7 +40,7 @@
 - section:
   name: Using the Live Module
   url: /live-module/index.html
-  icon: fa-regular fa-satellite-dish
+  icon: fa-solid fa-satellite-dish
   description: Learn how to broadcast a live event using the Live module.
   docs:
     - name: "Getting Started"
@@ -90,7 +90,7 @@
 - section:
   name: 'Web Conferencing'
   url: '/web-conferencing/index.html'
-  icon: fa-regular fa-camera-web
+  icon: fa-solid fa-video
   description: This section contains topics that apply to integrating Brightcove Live with different web conferencing platforms.
   docs:
     - name: Zoom Conference on Brightcove Live
@@ -104,7 +104,7 @@
 - section:
   name: 'Working with the Live API'
   url: 'https://apis.support.brightcove.com/live-api/index.html'
-  icon: fa-regular fa-satellite-dish
+  icon: fa-solid fa-satellite-dish
   description: The Live API allows you to create and manage live steams.
   docs:
     - name: 'Live API: Getting Started'
@@ -189,7 +189,7 @@
 - section:
   name: Administering Accounts
   url: /admin/index.html
-  icon: fa-regular fa-gear
+  icon: fa-solid fa-gear
   description: Administering your Live account.
   docs:
     - name: General Information
@@ -213,7 +213,7 @@
 - section:
   name: Release Notes
   url: /release-notes/index.html
-  icon: fa-regular fa-memo-pad
+  icon: fa-solid fa-book
   description: Learn about new features.
   docs:
     - name: Live Release Notes
@@ -223,7 +223,7 @@
 - section:
   name: 'Support'
   url: '/support/index.html'
-  icon: fa-regular fa-comments-question-check
+  icon: fa-regular fa-comments
   description: Working with Brightcove Support.
   docs:
     - name: 'Viewing the Brightcove System Status Page'

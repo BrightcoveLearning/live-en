@@ -25,8 +25,8 @@
   icon: fa-solid fa-circle-info
   description: General information for working with the Live module and Live API.
   docs:
-    - name:  Captions with Live Streams
-      url: /general/captions-with-live-streams.html
+    # - name:  Captions with Live Streams
+    #   url: /general/captions-with-live-streams.html
     - name: Live DRM
       url: /general/live-drm.html
     - name: Live Video Glossary

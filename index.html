@@ -18,21 +18,323 @@ layout: landing_page
               <h5 class="card-title mb-3">
                 <span class="span-icon card-icon-holder icon-theme me-2">
                   <i class="{{ section.icon }}"></i>
-                </span><!--//card-icon-holder-->
+                </span>
                 <span class="card-title-text">{{ section.name }}</span>
               </h5>
               <div class="card-text">
                 {{ section.description }}
               </div>
               <a class="card-link-mask" href="{{ section.url }}"></a>
-            </div><!--//card-body-->
-          </div><!--//card-->
-        </div><!--//col-->
+            </div>
+          </div>
+        </div>
         {% endfor %}
-      </div><!--//row-->
-    </div><!--//container-->
-  </div><!--//container-->
-</div><!--//page-content-->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="justify-content-center">
+  
+  <nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <button class="nav-link active" id="nav-live-1-tab" data-bs-toggle="tab" data-bs-target="#nav-live-1" type="button" role="tab" aria-controls="nav-live-1" aria-selected="true"><h5>Live 1.0</h5></button>
+      <button class="nav-link" id="nav-live-2-tab" data-bs-toggle="tab" data-bs-target="#nav-live-2" type="button" role="tab" aria-controls="nav-live-2" aria-selected="false"><h5>Live 2.0</h5></button>
+    </div>
+  </nav>
+  
+  <div class="tab-content" id="nav-tabContent">
+   
+    <div class="tab-pane fade show active" id="nav-live-1" role="tabpanel" aria-labelledby="nav-live-1-tab" tabindex="0">
+      
+      <div class="container">
+        <div class="row">
+        <div class="col-12 col-lg-4 py-3">
+          <div class="card-hover card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title mb-3">
+                <span class="span-icon card-icon-holder icon-theme me-2">
+                  <i class="fa-solid fa-map-pin"></i>
+                </span>
+                <span class="card-title-text">Getting Started</span>
+              </h5>
+              <div class="card-text">
+                Guides to help you get started with Live streaming.
+              </div>
+              <a class="card-link-mask" href="/get-started/index.html"></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-12 col-lg-4 py-3">
+          <div class="card-hover card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title mb-3">
+                <span class="span-icon card-icon-holder icon-theme me-2">
+                  <i class="fa-solid fa-circle-info"></i>
+                </span>
+                <span class="card-title-text">General Information</span>
+              </h5>
+              <div class="card-text">
+                General information for working with the Live module and Live API.
+              </div>
+              <a class="card-link-mask" href="/general/index.html"></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-12 col-lg-4 py-3">
+          <div class="card-hover card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title mb-3">
+                <span class="span-icon card-icon-holder icon-theme me-2">
+                  <i class="fa-solid fa-satellite-dish"></i>
+                </span>
+                <span class="card-title-text">Using the Live Module</span>
+              </h5>
+              <div class="card-text">
+                Learn how to broadcast a live event using the Live module.
+              </div>
+              <a class="card-link-mask" href="/live-module/index.html"></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-12 col-lg-4 py-3">
+          <div class="card-hover card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title mb-3">
+                <span class="span-icon card-icon-holder icon-theme me-2">
+                  <i class="fa-solid fa-video"></i>
+                </span>
+                <span class="card-title-text">Web Conferencing</span>
+              </h5>
+              <div class="card-text">
+                This section contains topics that apply to integrating Brightcove Live with different web conferencing platforms.
+              </div>
+              <a class="card-link-mask" href="/web-conferencing/index.html"></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-12 col-lg-4 py-3">
+          <div class="card-hover card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title mb-3">
+                <span class="span-icon card-icon-holder icon-theme me-2">
+                  <i class="fa-solid fa-satellite-dish"></i>
+                </span>
+                <span class="card-title-text">Working with the Live API</span>
+              </h5>
+              <div class="card-text">
+                The Live API allows you to create and manage live steams.
+              </div>
+              <a class="card-link-mask" href="https://apis.support.brightcove.com/live-api/index.html"></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-12 col-lg-4 py-3">
+          <div class="card-hover card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title mb-3">
+                <span class="span-icon card-icon-holder icon-theme me-2">
+                  <i class="fa-solid fa-gear"></i>
+                </span>
+                <span class="card-title-text">Administering Accounts</span>
+              </h5>
+              <div class="card-text">
+                Administering your Live account.
+              </div>
+              <a class="card-link-mask" href="/admin/index.html"></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-12 col-lg-4 py-3">
+          <div class="card-hover card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title mb-3">
+                <span class="span-icon card-icon-holder icon-theme me-2">
+                  <i class="fa-solid fa-book"></i>
+                </span>
+                <span class="card-title-text">Release Notes</span>
+              </h5>
+              <div class="card-text">
+                Learn about new features.
+              </div>
+              <a class="card-link-mask" href="/release-notes/index.html"></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-12 col-lg-4 py-3">
+          <div class="card-hover card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title mb-3">
+                <span class="span-icon card-icon-holder icon-theme me-2">
+                  <i class="fa-regular fa-comments"></i>
+                </span>
+                <span class="card-title-text">Support</span>
+              </h5>
+              <div class="card-text">
+                Working with Brightcove Support.
+              </div>
+              <a class="card-link-mask" href="/support/index.html"></a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+    
+    <div class="tab-pane fade" id="nav-live-2" role="tabpanel" aria-labelledby="nav-live-2-tab" tabindex="0">
+      <div class="container">
+        <div class="row">
+
+          <div class="row">
+            <div class="col-12 col-lg-4 py-3">
+              <div class="card-hover card shadow-sm">
+                <div class="card-body">
+                  <h5 class="card-title mb-3">
+                    <span class="span-icon card-icon-holder icon-theme me-2">
+                      <i class="fa-solid fa-map-pin"></i>
+                    </span>
+                    <span class="card-title-text">Getting Started</span>
+                  </h5>
+                  <div class="card-text">
+                    Guides to help you get started with Live streaming.
+                  </div>
+                  <a class="card-link-mask" href="/get-started/index.html"></a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-12 col-lg-4 py-3">
+              <div class="card-hover card shadow-sm">
+                <div class="card-body">
+                  <h5 class="card-title mb-3">
+                    <span class="span-icon card-icon-holder icon-theme me-2">
+                      <i class="fa-solid fa-circle-info"></i>
+                    </span>
+                    <span class="card-title-text">General Information</span>
+                  </h5>
+                  <div class="card-text">
+                    General information for working with the Live module and Live API.
+                  </div>
+                  <a class="card-link-mask" href="/general/index.html"></a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-12 col-lg-4 py-3">
+              <div class="card-hover card shadow-sm">
+                <div class="card-body">
+                  <h5 class="card-title mb-3">
+                    <span class="span-icon card-icon-holder icon-theme me-2">
+                      <i class="fa-solid fa-satellite-dish"></i>
+                    </span>
+                    <span class="card-title-text">Using the Live Module</span>
+                  </h5>
+                  <div class="card-text">
+                    Learn how to broadcast a live event using the Live module.
+                  </div>
+                  <a class="card-link-mask" href="/live-module/index.html"></a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-12 col-lg-4 py-3">
+              <div class="card-hover card shadow-sm">
+                <div class="card-body">
+                  <h5 class="card-title mb-3">
+                    <span class="span-icon card-icon-holder icon-theme me-2">
+                      <i class="fa-solid fa-video"></i>
+                    </span>
+                    <span class="card-title-text">Web Conferencing</span>
+                  </h5>
+                  <div class="card-text">
+                    This section contains topics that apply to integrating Brightcove Live with different web conferencing platforms.
+                  </div>
+                  <a class="card-link-mask" href="/web-conferencing/index.html"></a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-12 col-lg-4 py-3">
+              <div class="card-hover card shadow-sm">
+                <div class="card-body">
+                  <h5 class="card-title mb-3">
+                    <span class="span-icon card-icon-holder icon-theme me-2">
+                      <i class="fa-solid fa-satellite-dish"></i>
+                    </span>
+                    <span class="card-title-text">Working with the Live API</span>
+                  </h5>
+                  <div class="card-text">
+                    The Live API allows you to create and manage live steams.
+                  </div>
+                  <a class="card-link-mask" href="https://apis.support.brightcove.com/live-api/index.html"></a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-12 col-lg-4 py-3">
+              <div class="card-hover card shadow-sm">
+                <div class="card-body">
+                  <h5 class="card-title mb-3">
+                    <span class="span-icon card-icon-holder icon-theme me-2">
+                      <i class="fa-solid fa-gear"></i>
+                    </span>
+                    <span class="card-title-text">Administering Accounts</span>
+                  </h5>
+                  <div class="card-text">
+                    Administering your Live account.
+                  </div>
+                  <a class="card-link-mask" href="/admin/index.html"></a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-12 col-lg-4 py-3">
+              <div class="card-hover card shadow-sm">
+                <div class="card-body">
+                  <h5 class="card-title mb-3">
+                    <span class="span-icon card-icon-holder icon-theme me-2">
+                      <i class="fa-solid fa-book"></i>
+                    </span>
+                    <span class="card-title-text">Release Notes</span>
+                  </h5>
+                  <div class="card-text">
+                    Learn about new features.
+                  </div>
+                  <a class="card-link-mask" href="/release-notes/index.html"></a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-12 col-lg-4 py-3">
+              <div class="card-hover card shadow-sm">
+                <div class="card-body">
+                  <h5 class="card-title mb-3">
+                    <span class="span-icon card-icon-holder icon-theme me-2">
+                      <i class="fa-regular fa-comments"></i>
+                    </span>
+                    <span class="card-title-text">Support</span>
+                  </h5>
+                  <div class="card-text">
+                    Working with Brightcove Support.
+                  </div>
+                  <a class="card-link-mask" href="/support/index.html"></a>
+                </div>
+              </div>
+            </div>
+  
+        </div>
+      </div>
+    </div>
+    
+  </div> -->
 
 
 <!-- <style translate="no">

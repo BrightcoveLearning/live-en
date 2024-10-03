@@ -155,37 +155,22 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/release-notes/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://live.support.brightcove.com/general/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://live.support.brightcove.com/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://live.support.brightcove.com/admin/general/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://live.support.brightcove.com/admin/ingest-profiles/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://live.support.brightcove.com/admin/",
       "oldURL": "/index"
   },
 
   {
+      "newURL": "https://live.support.brightcove.com/live-next-gen/",
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://live.support.brightcove.com/support/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/release-notes/",
       "oldURL": "/index"
   },
 
@@ -210,7 +195,22 @@
   },
 
   {
+      "newURL": "https://live.support.brightcove.com/admin/ingest-profiles/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/admin/general/",
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://live.support.brightcove.com/live-api/ssai/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/",
       "oldURL": "/index"
   },
 
@@ -221,6 +221,11 @@
 
   {
       "newURL": "https://live.support.brightcove.com/live-api/code-samples/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/general/",
       "oldURL": "/index"
   },
 

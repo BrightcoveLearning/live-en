@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <title></title>
+        
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        
+        <!-- Google Font -->
+        <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
+        <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/fonts/articulat-site.css">
+        <link href="/assets/s-site-assets-stylesheets/fonts/source-code-pro.css" rel="stylesheet">
+        
+        <!-- FontAwesome JS-->
+        
+        <!-- <script src="https://kit.fontawesome.com/d67c74a882.js" crossorigin="anonymous"></script>   -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+        <!-- Plugins CSS -->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
+        <link rel="stylesheet" href="/assets/s-site-assets-template-stylesheets/plugins/simplelightbox/simple-lightbox.min.css">
+
+        <!-- Theme CSS -->  
+        <link id="theme-style" rel="stylesheet" href="/assets/s-site-assets-template-stylesheets/css/theme.css">
+        <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/prism.css">
+        <link rel="stylesheet" href="/assets/s-site-assets-template-stylesheets/custom-css/styles.css">
+
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XBJC11HF8Z"></script>
+        <script translate="no">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-XBJC11HF8Z');
+        </script>
+        <script src="/assets/s-site-assets-scripts/sixth-sense.js"></script>
+        <script src="/assets/s-site-assets-scripts/sajari-head.js"></script>
+        <script src="/assets/s-site-assets-scripts/feather.min.js"></script>
+
+    </head> 
+
+    <body class="docs-page">
+        
+
+<header class="header fixed-top">
+  <div class="branding docs-branding">
+    <div class="container-fluid position-relative py-2">
+      <div class="docs-logo-wrapper">
+        <button id="docs-sidebar-toggler" class="docs-sidebar-toggler"
+          type="button">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="site-logo"><a class="navbar-brand"
+            href="https://support.brightcove.com/"
+            style="margin-left: 15px;">
+            <img class="logo-icon me-2"
+              src="/assets/s-site-assets-template-stylesheets/images/bc_logo_black_1@1x.png"
+              alt="logo" style="margin-bottom: 9px;">
+            <!-- <span class="logo-text">BRIGHTCOVE</span> -->
+          </a></div>
+      </div><!--//docs-logo-wrapper-->
+
+      <div class="docs-top-utilities d-flex justify-content-end
+        align-items-center">
+        
+        <!-- Search bar -->
+        <div id="nav-search-box" class="top-search-box d-none d-lg-flex" style="margin-right: 10px ;"></div>
+
+<select id="site_select" class="form-select select-focus" style="width:
+          20%; margin-right: 10px;" translate="no">
+          <option value="">Other Brightcove Docs</option>
+          
+          
+          <option value="https://support.brightcove.com" translate="no">Documentation Home</option>
+          
+          
+          
+          <option value="https://support.brightcove.com/" translate="no">-- VIDEO CLOUD --</option>
+          
+          
+          
+          <option value="https://studio.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Studio</option>
+          
+          
+          
+          <option value="https://mstudio.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Marketing Studio</option>
+          
+          
+          
+          <option value="https://player.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Player Development</option>
+          
+          
+          
+          <option value="https://apis.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Platform APIs</option>
+          
+          
+          
+          <option value="https://sdks.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Device SDKs</option>
+          
+          
+          
+          <option value="https://integrations.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Integrations and CMS Connectors</option>
+          
+          
+          
+          <option value="https://general.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud General Information</option>
+          
+          
+          
+          <option value="https://support.brightcove.com/" translate="no">-- VIDEO ESSENTIALS --</option>
+          
+          
+          
+          <option value="https://audience-insights.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Audience Insights</option>
+          
+          
+          
+          <option value="https://beacon-help.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Beacon Studio</option>
+          
+          
+          
+          <option value="https://beacon.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Beacon Classic</option>
+          
+          
+          
+          <option value="https://corptv.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;CorpTV</option>
+          
+          
+          
+          <option value="https://live.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Live</option>
+          
+          
+          
+          <option value="https://zencoder.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Zencoder</option>
+          
+          
+          
+          <option value="https://support.brightcove.com/" translate="no">-- VIDEO CLOUD ADD-ONS --</option>
+          
+          
+          
+          <option value="https://gallery.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Gallery</option>
+          
+          
+          
+          <option value="https://studio.support.brightcove.com/social/index.html" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Social</option>
+          
+          
+          
+          <option value="https://ssai.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove SSAI</option>
+          
+          
+        </select>
+
+        <select id="language_select" class="form-select select-focus" style="width: 10%;"
+          onchange="doGTranslate(this);" translate="no">
+          <!-- <option value="">Select Language</option> -->
+          <option value="en|en" translate="No">English</option>
+          <option value="en|zh-TW" translate="No">繁體中文</option>
+          <option value="en|fr" translate="No">Français</option>
+          <option value="en|de" translate="No">Deutsch</option>
+          <option value="en|ja" translate="No">日本語</option>
+          <option value="en|ko" translate="No">한국어</option>
+          <option value="en|es" translate="No">Español</option>
+        </select>
+
+        <script translate="no">
+          /* <![CDATA[ */
+          function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
+          /* ]]> */
+        </script>
+      </div>
+    </div>
+  </div>
+</header><!--//header-->
+
+<div class="docs-wrapper">
+  <div id="docs-sidebar" class="docs-sidebar" style="padding-right: 15px;">
+    <div id="nav-search-box" class="top-search-box d-lg-none p-3"></div>
+    <div class="row">
+      
+        <div id="side_nav" style="margin-left: 1em; display: inline-block; border-right: 1px solid #e5e5e6; padding-right: 1em;">
+          
+          <nav class="docs-nav sidenav" aria-label="Main">
+            <ul class="site-nav" style="list-style-type: none;">
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/index.html">Home</a></li>
+            
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/get-started/index.html"><span class="theme-icon-holder me-2">
+              <i class="fa-solid fa-plus"></i></span>&nbsp;Getting Started</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/get-started/brightcove-live-training-videos.html">Brightcove Live Training Videos</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/get-started/delivering-live-streams.html">Delivering Live Streams</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/get-started/live-module-guidelines-and-best-practices.html">Brightcove Live: Best Practices</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/get-started/step-step-using-live-module-open-broadcaster-software-obs.html">Step-by-Step: Using the Live Module with OBS</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/get-started/step-step-using-live-module-telestream-wirecast.html">Step-by-Step: Using the Live Module with Wirecast</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/get-started/step-step-live-srt.html">Step-by-Step: Streaming an SRT Live Event</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/general/index.html"><span class="theme-icon-holder me-2">
+              <i class="fa-solid fa-plus"></i></span>&nbsp;General Information</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/general/live-drm.html">Live DRM</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/general/live-video-glossary.html">Live Video Glossary</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/general/reducing-latency-live-streams.html">Reducing Latency for Live Streams</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/general/supported-encoders-live-events.html">Supported Encoders for Live Events</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/general/using-mtr-to-look-at-network-traffic.html">Using MTR (my traceroute)</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/live-module/index.html"><span class="theme-icon-holder me-2">
+              <i class="fa-solid fa-plus"></i></span>&nbsp;Using the Live Module</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/live-module/getting-started-index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Getting Started</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/live-module/creating-and-managing-live-events-using-live-module.html">Creating and Managing Live Events</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/live-module/creating-video-clip-using-live-module.html">Creating a Video Clip</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/live-module/reviewing-live-analytics.html">Reviewing Live Analytics</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/live-module/scheduling-live-event.html">Scheduling Live Events</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/live-module/advertising-index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Advertising</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/live-module/implementing-server-side-ads-live-module.html">Implementing Server-Side Ads (SSAI)</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/live-module/client-side-preroll-with-live-ssai.html">Client-Side Preroll Ads with Live SSAI</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/live-module/guides-index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Guides</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/live-module/audio-only-live-events.html">Audio-Only Live Events</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/live-module/multi-language-audio.html">Multi Language Audio with Live Module</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/live-module/playback-restrictions-live-module.html">Playback Restrictions with Live events</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/live-module/live-redundancy.html">Using Live Redundancy</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/live-module/using-live-rtmp-outputs-stream-facebook-and-youtube.html">Using Live RTMP Outputs</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/live-module/hosting-platforms-index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Hosting Platforms</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/live-module/overview-hosting-platforms.html">Overview: Hosting Platforms</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/live-module/zoom-live-integration.html">Integrating a Zoom Meeting</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="https://studio.support.brightcove.com/social/general/publishing-live-event-facebook.html">Publishing a Live Event to Facebook</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="https://studio.support.brightcove.com/social/general/publishing-live-event-youtube.html">Publishing a Live Event to YouTube</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/web-conferencing/index.html"><span class="theme-icon-holder me-2">
+              <i class="fa-solid fa-plus"></i></span>&nbsp;Web Conferencing</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/web-conferencing/host-zoom-conference-brightcove-live.html">Zoom Conference on Brightcove Live</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/web-conferencing/host-cisco-webex-conference-brightcove-live.html">Cisco Webex Conference to Brightcove Live</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/web-conferencing/host-avaya-conference-brightcove-live.html">Avaya Conference on Brightcove Live</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/web-conferencing/host-inxpo-live.html">INXPO Event on Brightcove Live</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="https://apis.support.brightcove.com/live-api/index.html"><span class="theme-icon-holder me-2">
+              <i class="fa-solid fa-plus"></i></span>&nbsp;Working with the Live API</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="https://apis.support.brightcove.com/live-api/getting-started/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Live API: Getting Started</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="https://apis.support.brightcove.com/live-api/getting-started/overview-brightcove-live-api.html">Overview: Live API</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="https://apis.support.brightcove.com/live-api/getting-started/quick-start-create-live-stream-using-brightcove-live-api.html">Creating a Live Stream using the API</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="https://apis.support.brightcove.com/live-api/code-samples/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Live API: Code Samples</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="https://apis.support.brightcove.com/live-api/code-samples/live-api-sample-create-live-job.html">Create a Live Job</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="https://apis.support.brightcove.com/live-api/code-samples/quick-start-create-live-job-mpeg2-ts-input.html">Create a Live Job for MPEG2-TS Input</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="https://apis.support.brightcove.com/live-api/code-samples/quick-start-using-rtmp-outputs-live-events.html">Using RTMP Outputs for Live Events</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="https://apis.support.brightcove.com/live-api/references/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Live API: References</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="https://apis.support.brightcove.com/live-api/references/live-api-error-messages.html">Error Messages</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="https://apis.support.brightcove.com/live-api/references/live-api-release-notes.html">Release Notes</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="https://apis.support.brightcove.com/live-api/references/reference.html">Live API Reference</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="https://apis.support.brightcove.com/live-api/ssai/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Live API: SSAI</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="https://apis.support.brightcove.com/live-api/ssai/live-api-cue-points-and-ad-beacons-ssai.html">Cue Points and Ad Beacons with SSAI</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="https://apis.support.brightcove.com/live-api/ssai/live-api-server-side-ad-insertion-ssai.html">Server-Side Ad Insertion (SSAI)</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="https://apis.support.brightcove.com/live-api/ssai/overview-player-enhancements-live-ssai.html">Overview: Player Enhancements for Live SSAI</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="https://apis.support.brightcove.com/live-api/guides/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Live API: Guides</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="https://apis.support.brightcove.com/live-api/guides/brightcove-live-best-practices.html">Brightcove Live Best Practices</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="https://apis.support.brightcove.com/live-api/guides/brightcove-live-program-ad-metadata-api.html">Brightcove Live Program Ad Metadata API</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="https://apis.support.brightcove.com/live-api/guides/live-api-creating-frame-accurate-clip.html">Creating a Frame-Accurate Clip</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="https://apis.support.brightcove.com/live-api/guides/live-api-creating-vod-clips.html">Creating VOD Clips</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="https://apis.support.brightcove.com/live-api/guides/getting-list-live-or-vod-jobs.html">Getting a List of Live or VOD Jobs</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="https://apis.support.brightcove.com/live-api/guides/live-api-insert-id3-timed-metadata.html">Insert ID3 timed metadata</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="https://apis.support.brightcove.com/live-api/guides/live-drm-live-api.html">Live DRM via the Live API</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="https://apis.support.brightcove.com/live-api/guides/managing-credentials-live-api.html">Managing Credentials for the Live API</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="https://apis.support.brightcove.com/live-api/guides/live-multi-language-audio.html">Multi Language Audio with Live API</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="https://apis.support.brightcove.com/live-api/guides/live-api-notifications.html">Notifications</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="https://apis.support.brightcove.com/live-api/guides/live-playback-restrictions.html">Playback Restrictions with Live Streams</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/general/reducing-latency-live-streams.html">Reducing Latency for Live Streams</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="https://apis.support.brightcove.com/live-api/guides/live-api-rtmp-outputs.html">RTMP Outputs</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="https://apis.support.brightcove.com/live-api/guides/live-api-static-entry-points.html">Static Entry Points</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="https://apis.support.brightcove.com/live-api/guides/signed-urls-and-token-auth-live-stream.html">Signed URLs and Token Auth with a Live Stream</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="https://apis.support.brightcove.com/live-api/guides/using-live-redundancy.html">Using Live Redundancy</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="https://apis.support.brightcove.com/live-api/guides/live-api-vod-live-event.html">VOD from Live Event</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/admin/index.html"><span class="theme-icon-holder me-2">
+              <i class="fa-solid fa-plus"></i></span>&nbsp;Administering Accounts</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/admin/general/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;General Information</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/admin/general/configuring-server-side-ad-settings.html">Configuring Server-Side Ad Settings</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/admin/general/managing-live-settings.html">Managing Live Settings</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/admin/general/managing-api-authentication-credentials.html">Managing API Authentication Credentials</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/admin/ingest-profiles/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Managing Ingest Profiles</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/admin/ingest-profiles/creating-custom-live-ingest-profiles.html">Creating Custom Live Ingest Profiles</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/admin/ingest-profiles/fields-custom-live-ingest-profiles.html">Fields for Custom Live Ingest Profiles</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/admin/ingest-profiles/standard-live-ingest-profiles.html">Standard Live Ingest Profiles</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/release-notes/index.html"><span class="theme-icon-holder me-2">
+              <i class="fa-solid fa-plus"></i></span>&nbsp;Release Notes</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/release-notes/live-api-release-notes.html">Live Release Notes</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/support/index.html"><span class="theme-icon-holder me-2">
+              <i class="fa-solid fa-plus"></i></span>&nbsp;Support</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/support/viewing-brightcove-system-status-page.html">Viewing the Brightcove System Status Page</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/support/contact-sales.html">Contact Sales</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/support/opening-case-with-brightcove-support.html">Opening a Support Case</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/support/reset-support-portal-password.html">Reset Your Support Portal Password</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+          </ul>
+          </nav>
+        </div>
+      </div>
+    </div><!--//docs-sidebar-->
+  </div>
+</div>
+
+<div style="margin-top: 20px;">
+  <div class="docs-content" style="padding-bottom: 0px;">
+    <div class="container">
+      <div class="docs-overview">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            
+            <li class="breadcrumb-item"><a class="theme-link" href="/">Home</a></li>
+            
+            
+            <li class="breadcrumb-item"><a class="theme-link" href="/live-next-gen/">Live next gen</a></li>
+            
+            
+            
+            <li class="breadcrumb-item"><a class="theme-link" href="/live-next-gen/get-started/">Get started</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page"></li>
+            
+            
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="docs-content">
+  <div class="container">
+    <div class="docs-overview py-5">
+      
+      <div class="centered-inpage-nav" id="centered_inpage_nav">
+        <nav id="centered_toc">
+          <select id="centered_in_page_toc" class="form-select select-focus"></select>
+        </nav>
+      </div>
+      <br>
+      
+      
+<article class="bcls-article">
+  <h1></h1>
+  <summary></summary>
+  
+  <section class="bcls-section">
+    <p>Brightcove Live provides a robust service for creating live streaming events or 24/7 live streams. This guide outlines best practices for optimizing your live streams</p>
+    <aside class="bcls-aside bcls-aside--information">Notes:
+      <ul>
+        <li>Live outputs are VBR.</li>
+        <li>The average video bitrate should be around the target value, but there can be brief periods when the measured video bitrate exceeds that target.</li>
+      </ul>
+    </aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Content_context">Content context</h2>
+    <p>The type of content being streamed needs to be considered as it has an impact on the required settings for maintaining the quality of the input. Note that there are trade-offs and using the highest possible settings may cause issues such as skipped frames.</p>
+    <p>Based on the information below, we recommend that you test different setting combinations for quality and performance before your live event.</p>
+    <p>The key input parameters are outlined in the following table:</p>
+    <table class="bcls-table">
+      <caption class="bcls-caption--table">
+      Key Input Parameters for Live Streaming
+      </caption>
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Parameter</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>Input bitrate</td>
+          <td>The bitrate that the encoder sends. Higher rates are more susceptible to network loss so should be kept as low as practical.</td>
+        </tr>
+        <tr>
+          <td>Input resolution</td>
+          <td>This should match the source content. There is no benefit in making this greater than the original source and the higher this value is, the higher the bitrate is required to support it.</td>
+        </tr>
+        <tr>
+          <td>Input bitrate to top profile ratio</td>
+          <td> 
+            <p>To ensure optimal performance during live events, we recommend setting the input bitrate to match the bitrate of your highest bitrate live rendition. However, exceeding the maximum rendition bitrate significantly can potentially result in buffering, high input/output drift, and other related issues. Therefore, Brightcove recommends carefully considering the following factors when determining the input bitrate:</p>
+            <ul>
+              <li>Aim to match the bitrate of your highest bitrate live rendition to maintain quality and minimize potential issues.</li>
+              <li>In certain cases, a slightly higher input bitrate than the highest rendition may be acceptable but should be approached with caution to avoid performance degradation.</li>
+              <li>Conduct thorough testing to find the optimal input bitrate that balances quality, stability, and compatibility with your specific streaming setup and content.</li>
+            </ul>
+
+            <!-- The input bitrate should be higher than the rate of the top profile, but too much higher may result in dropped frames or other issues - e.g. if your top rate is 1080p 30fps, the input should ideally be around 4 MBPS. Note that this is affected by the profile. We generally recommend an input bitrate that is 2x (twice) the bitrate of your highest bitrate live rendition.
+            <p>If you require a high bitrate top output it is worth testing the <code>copy_video</code> setting which will simply copy your input encode to the output.</p> -->
+          </td>
+        </tr>
+        <tr>
+          <td>Profiles</td>
+          <td> The different profiles (baseline, main, high) compress the data in ascending amounts (baseline: lowest, high: highest). Greater compression improves the rate of transmission, but also requires greater CPU resources to decode the data. Unless the encoder is highly constrained in available resources baseline profile should be avoided. On the other hand, using high profile at high bitrates is more likely to cause skipped frames due to the increased decode CPU resources required.
+            <p>Also see <a href="#gop_structure">GOP structure</a> below.</p></td>
+        </tr>
+        <tr>
+          <td>Frame rate</td>
+          <td> This should match the source.
+            <p>Higher rates will require proportionally higher input bitrates e.g. with action sport content a 60fps input stream carries substantially more data than a 30fps stream.</p>
+            <p>High rates such as 60fps are more likely to have skip frame issues on complex content at high bitrates.</p></td>
+        </tr>
+        <tr>
+          <td>Keyframe rate</td>
+          <td> The most efficient setting for this is the segment duration x frame rate - for example, if you have 6 second segments and 30fps making the keyframe rate 180 (6x30) would result in the lowest decoder load.
+            <p>However, to account for any fluctuations this is set to 2 x the frame rate - for example, 60 for a framerate of 30 fps.</p>
+            <aside class="bcls-aside bcls-aside--information language-editable">Note that the default ingest profiles for Live assume a framerate of 30 fps and therefore set the keyframe rate to 60. If your input stream has a different framerate (25 fps or 60 fps, for example) you should create a custom ingest profile by duplicating the default one and setting the keyframe rate to twice the framerate (for example, set it to 120 if the input framerate is 60 fps).</aside></td>
+        </tr>
+        <tr>
+          <td>GOP structure</td>
+          <td>See <a href="#gop_structure">GOP structure</a> below.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3>Input restrictions</h3>
+    <p>In order to ensure the highest quality, most consistent streaming experience, Brightcove Live limits input stream settings to:</p>
+    <ul>
+      <li>Protocol: <code translate="No">rtmp</code>, <code translate="No">rtp</code>, <code translate="No">rtp-fec</code>, or <code translate="No">srt</code> (all except <code translate="No">rtmp</code> are for MPEG2-TS inputs)<sup><strong><a href="#note1-1">[1-1]</a></strong></sup></li>
+      <li>Resolution: Maximum 1920x1080</li>
+      <li>Maximum 30 fps, which is typical. Brightcove supports up to 60 fps, but you will need to <a href="https://supportportal.brightcove.com/">Contact Brightcove Support</a> to have the limit increased. When using 60fps, Brightcove recommends increasing the bitrate to achieve the desired visual quality for the content and a constant frame rate.</li>
+      <li>The max input bitrate that can ingest is set at 30Mbps. And the max output bitrate is 20Mbps.</li>
+      <li>Constant Bitrate (CBR) greatly reduces the chance of problems</li>
+      <li>Video codec must be H.264</li>
+      <li>Slices: If your encoder has this option, set it to <code translate="no">1</code></li>
+      <li>Audio codec must be <code translate="No">AAC</code></li>
+      <li>Audio sampling rate: 44.1khz and 48khz are the recommended sample audio rates to use</li>
+      <li>Keyframe Rate or GOP (Group of Pictures) aligned:
+        <ol type="a">
+          <li>A <strong>Keyframe</strong> should always occur every 2 seconds <strong>for both inputs and outputs (including 25fps video)</strong>. Meaning a keyframe is sent to Brightcove from the encoder every two seconds of the stream itself. This process can be defined in different ways, but <strong>Keyframe Rate</strong> is the most common. </li>
+          <li>It can be calculated in different ways by different encoders. For example:
+            <ul>
+              <li>Wirecast uses the amount of frames that pass, so for a 30fps video, the setting would be 60.</li>
+              <li>Elemental encoders use seconds so that the correct setting would be '2'.</li>
+              <li>60 FPS video will only change if this setting is counted by the frames, in which case every 120 frames would equal 2 seconds.</li>
+            </ul>
+          </li>
+        </ol>
+      <li>If there is an option for <strong>Keyframe Aligned</strong>, <strong>Sync GOP</strong>, <strong>Align Keyframes</strong>, or something along those lines, make sure Keyframes are aligned. When Keyframes are not aligned, it causes synchronization issues with HLS segmentation.</li>
+      <li>Brightcove Live supports 608 captions in-band (inside h.264 headers). For more information on this topic, please reference <a href="https://live.support.brightcove.com/general/captions-with-live-streams.html">Captions with Live Streams.</a><sup><strong><a href="#note1-1">[1-2]</a></strong></sup></li>
+    </ul>
+    <h4>Notes</h4>
+    <ul>
+      <li id="note1-1"><sup><strong>[1-1]</strong></sup> If you have multiple video/audio tracks in your TS input, we will pick the first for each. We also strongly recommend using FEC, as plain TS over UDP over the internet is very unreliable. For FEC, we could note that the <em>smaller</em> the values you use for rows/columns, the more reliable the error correction will be (at the cost of increased bandwidth).</li>
+      <li id="note1-2"><sup><strong>[1-2]</strong></sup> You must set caption positioning in the 608 data when implementing 608 captions.</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="long_running_jobs">Long running jobs</h2>
+    <p>If you have long-running jobs (such as linear channels), please reactivate them on a monthly basis to get the advantage of bug fixes and new features.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Key_issues">Key issues with streaming</h2>
+    <p>There are several issues that are generally encountered that relate to problems with the streaming experience from the encoder to Brightcove:</p>
+    <ol>
+      <li> Network instability affecting the input:
+        <ol>
+          <li>While the internet is generally quite reliable it is not infallible and issues do occur. Issues are more likely to be noticed on higher bitrates.</li>
+          <li>If it takes longer to upload the video than real time then this can result in input drift (the time that the video is received is substantially later than when it was sent)</li>
+        </ol>
+      </li>
+      <li> Transcoder overload resulting in skip frames: while we do everything to make sure our transcoders have enough overhead sometimes sudden spikes in either content complexity, network hiccups/ catchups or other interruptions to our transcoders can cause skip frames. The more complex the input is then the more likely it is that skipped frames will be encountered. There is also a known issue where changes from a still image for an extended duration e.g. longer than 5 minutes and a sudden change to action content can cause an overload. </li>
+      <li>Encoder sending variable frame durations: It is recommended to use integer frame rates (such as 30fps) as this ensures consistent keyframe distribution and segment size.</li>
+      <li>Encoder sending keyframes that are not a consistent duration apart, the keyframe rate should be a minimum of 2x the frame rate in seconds. For example, for a frame rate of 30fps the keyframe interval should be 60 frames which is 2 seconds and should be a maximum interval of once per segment - for example, if you have a 6 second segment then the maximum interval would be 180 frames at 30 fps.</li>
+      <aside class="bcls-aside bcls-aside--warning language-editable">The encoder settings should not be modified during a live event. Making changes to the encoder settings while the live jobs are active is not a supported practice, and live job reactivation/recreation is required after making the changes.</aside>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Content_types">Content types</h2>
+    <p>Generally, more complex content will require using the higher of these settings and as such is more susceptible to skipped frames. The table below shows some examples in order of complexity. Note that these are examples only, and as just about every encoder setup is different. Testing and verification should be performed.</p>
+    <table class="bcls-table">
+      <caption class="bcls-caption--table">
+      Content Type Examples
+      </caption>
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Content Type</th>
+          <th>Example Settings</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>Webcam</td>
+          <td><ul>
+              <li>Resolution: 360p</li>
+              <li>Bitrate: 1 MBPS</li>
+              <li>Profile: Baseline</li>
+            </ul></td>
+        </tr>
+        <tr>
+          <td>Web conference</td>
+          <td><ul>
+              <li>Resolution: 480p</li>
+              <li>Bitrate: 2.5 MBPS</li>
+              <li>Profile: Main</li>
+            </ul></td>
+        </tr>
+        <tr>
+          <td>Animation</td>
+          <td><ul>
+              <li>Resolution: 720p</li>
+              <li>Bitrate: 2.5 MBPS</li>
+              <li>Profile: Main</li>
+            </ul></td>
+        </tr>
+        <tr>
+          <td>Talking Head / News</td>
+          <td><ul>
+              <li>Resolution: 720p</li>
+              <li>Bitrate: 4 MBPS</li>
+              <li>Profile: Main</li>
+            </ul></td>
+        </tr>
+        <tr>
+          <td>Live Concert</td>
+          <td><ul>
+              <li>Resolution: 1080p (or source)</li>
+              <li>Bitrate: 5 MBPS</li>
+              <li>Profile: High</li>
+            </ul></td>
+        </tr>
+        <tr>
+          <td>Live Sport</td>
+          <td><ul>
+              <li>Resolution: 1080p (or source)</li>
+              <li>Bitrate: 6 MBPS</li>
+              <li>Profile: High</li>
+            </ul></td>
+        </tr>
+        <tr>
+          <td>Live Sport High FPS</td>
+          <td><ul>
+              <li>Resolution: 1080p (or source)</li>
+              <li>Bitrate: 20 MBPS</li>
+              <li>Profile: High</li>
+            </ul></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="bcls-section">
+    <h2 id="transmux_live_jobs">Transmux Live jobs</h2>
+    <p>Set the insertion of key frames so that it matches the request segmentation settings. For example, if the frame rate is 25 frames per second and the desire is for a 6 second segment then set the keyframe interval to be at least once every 300 frames.</p>
+    <p>Test the encoder settings/output with desired target devices. This is particularly important if using a broadcast contribution encoder that may have advanced settings that result in a stream that may not be compatible with all consumer devices. It is also a good idea to avoid particularly advanced settings - it is hard to say what these are exactly as there are so many possible encoders and options. But a general top rate profile should be something like:</p>
+    <ul>
+      <li>6Mbps peak bitrate</li>
+      <li>H264 High profile</li>
+      <li>B frames: 2</li>
+      <li>8bit 4:2:0 color</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="verification">Verification and testing</h2>
+    <p>Ideally you should start with the lowest possible settings on your most complex (most changing content) and test with their content by increasing the various settings until the output is acceptable. This is because generally the higher the settings the more likely issues are to be encountered in either the network or transcoding.</p>
+    <h3>Testing bandwidth</h3>
+    <p>The first step towards arriving at the appropriate settings for the input stream is to determine the available bandwidth on site. There are a few tools that can help:</p>
+    <ul>
+      <li>SpeedOf.Me (<a href="https://speedof.me">https://speedof.me</a>) - Determining the total bandwidth available for HTTP connections is a good first step. However, since the input feed will be streamed to the Live module over RTMP instead of HTTP, the actual bandwidth available for RTMP connections will be significantly less.</li>
+      <li>Speedtest (<a href="https://www.speedtest.net">https://www.speedtest.net</a>) - Online tool for determining current upload and download speeds.</li>
+    </ul>
+    <h3>Input Bandwidth</h3>
+    <p>Providing a high-quality, stable input stream is the only way to ensure the best user experience for viewers. A good input stream provides the best video quality at the highest consistently available bandwidth from a location.</p>
+    <ul>
+      <li>Minimum input bandwidth: 2.5 mbps</li>
+      <li>Maximum input bandwidth: 20 mbps</li>
+    </ul>
+    <p>Input limit spikes</p>
+    <ul>
+      <li>Maximum input bitrate: 30Mbps </li>
+      <li>Maximum output bitrate: 20Mbps</li>
+    </ul>
+    <aside class="bcls-aside bcls-aside--information">Note: For the best user experience, match your output renditions to the quality of your encoder stream.</aside>
+    <h3>Determining encoder capabilities</h3>
+    <p>Understanding the capabilities of the software and hardware used to encode the live stream and send it to the Live module is also important. There may be plenty of bitrate to send a high-quality, 1080p input stream, but the hardware also needs to be able to encode in faster-than-realtime speeds. Some encoding tools display information about the total CPU usage and bandwidth being used. For example, Telestream Wirecast will display the output statistics at the bottom of the Wirecast window.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/get-started/wirecast-status-bar.png" /></figure>
+    <p>This information is useful when determining the most stable, highest quality stream that is possible on given hardware. Things to watch in Wirecast:</p>
+    <ul>
+      <li>CPU should be less than 80%</li>
+      <li>Datarate should be near the target bitrate</li>
+      <li>FPS should be at the rate of the input stream settings</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="gop_structure">GOP structure</h2>
+    <p>The Group of Pictures (GOP) structure of the video is dependent first on the profile that is used as:</p>
+    <ol>
+      <li><strong>Baseline</strong> profile only supports I and P frames and CAVLC entropy encoding</li>
+      <li><strong>Main</strong> and <strong>High</strong> support I, B and P frames and CABAC entropy encoding</li>
+    </ol>
+    <aside class="bcls-aside bcls-aside--information language-editable">Note that support for I/B/P frames depend on the H264 profile of the <strong>ingest profile</strong> of the live job, <strong>not</strong> the input source (live feed).</aside>
+    <p>Main and High profiles generally result in better compression at better quality but also require additional computation to encode and decode, as such may be more susceptible to skipped frames. In addition, as these profiles use B (bi-directional) frames, they induce some delay in the encoding process.</p>
+    <p>Baseline profile requires less CPU to encode and decode, but as it offers less compression, it requires a higher bitrate to maintain quality and as such is more susceptible to network issues.</p>
+    <h3>Notes on frame types and their likely impact on performance:</h3>
+    <ol>
+      <li><strong>I frames</strong>: uses the most bandwidth. Best added for complete scene changes or at the segment boundaries - i.e. the more the content changes the more of these you need (shorter GOP length)</li>
+      <li><strong>P frames</strong>: are the base unit between I frames</li>
+      <li><strong>B frames</strong>: use both prior and future frames, the more you add the better the compression will be but the higher the CPU and latency</li>
+    </ol>
+    <p>The use of <strong>I frames</strong> should ideally be limited to start of segments (critical if using passthrough) or scene changes. All or high numbers of I frames should be avoided as this can cause excess load leading to skipped frames.</p>
+    <h3>Additional notes:</h3>
+    <ul>
+      <li>Use options for preventing dense placement of key frames (example: <code>min_keyin</code> = 3+).</li>
+      <li>Use options ensuring a regular cadence of insertion of Key frames. For example, instead of specifying GOP length in seconds, specify it in exact fractions or frames.</li>
+      <li>Consider adjusting “Number of reference frames” to <code translate="No">4</code> for sporting / high movement content.</li>
+      <li>Consider adjusting “Number of B Frames” to <code translate="No">3</code> for sporting / high movement.</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="bitrate">Bitrate</h2>
+    <ul>
+      <li>Minimum input bandwidth: 2.5 mbps</li>
+      <li>Maximum input bandwidth: 20 mbps</li>
+    </ul>
+    <ul>
+      <li>Make the stream "almost CBR"" - with <code>max_bitrate</code> = 1.1 * target_bitrate.</li>
+      <aside class="bcls-aside bcls-aside--information language-editable">Note: This would work for most cases as content complexity increases. Increasing the factor from 1.1 to a higher value will help. For complex sports content, we recommend 2 * target_bitrate.</aside>
+      <li>Use strict HRD-compliant rate control mode, if available.</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Protocol">Protocol</h2>
+    <p>It is important to note that the internet is not a guaranteed delivery network, and that while an internet connection may be considered "good", it may not be good enough for reliable live video streaming at high quality. A small disruption in the path between the customer encoder and the Brightcove transcoding platform such as a small amount of congestion at an ISP, an unplanned failover between routers, or similar issues can cause a disruption in the video output. In high stakes live broadcast it is normal practice to have multiple dedicated networks consisting of either dedicated fibre, booked satellite bandwidth, or committed bandwidth on a managed network. This comes with a substantial cost, and in most cases it is possible to achieve a good enough outcome over the internet. If, however, it is critical to maintain fault-free transport please consider AWS Direct Connect or an ISP that can provide some level of dedicated bandwidth.</p>
+    <p>Generally, we recommend dedicating bandwidth two times the encoder's expected stream size to completely avoid any bandwidth-related network issues.</p>
+    <p>The options we recommend are (in order):</p>
+    <ol>
+      <li><strong>SRT</strong> - provides a good combination of speed of transport (UDP) with some control and error resilience. Not available on all encoders, though there are tools that can translate from local RTP such as srt-transmit.</li>
+      <li><strong>RTMP</strong> - being TCP based, it provides a good level of error resilience, downsides are that this comes with a substantial overhead. Note that not all features such as multiple audio tracks are available with RTMP.</li>
+      <li><strong>RTP-FEC</strong> - provides fast UDP based transport with some error resilience</li>
+      <li><strong>RTP</strong> - provides fast transport and advanced features with no error resilience</li>
+    </ol>
+    <aside class="bcls-aside bcls-aside--information">Note: if you use RTMP, please consider disabling slices if possible as they may result in parts of a frame arriving out of order.</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Certified_encoders">Supported encoders</h2>
+    <p>See <a href="/general/supported-encoders-live-events.html">Supported Encoders for Live Events</a> for list of encoders known to work with Live. Note that other encoders may also work, but have not been tested.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Supported_CDNs">Supported CDNs</h2>
+    <ul>
+      <li>Akamai</li>
+      <li>Amazon CloudFront</li>
+    </ul>
+    <aside class="bcls-aside bcls-aside--information">The CDNs above are officially supported, but other file-based CDNs should work.</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="retries">Retries</h2>
+    <p>We recommend enabling retries for the RTMP connection from the encoder. A large number of retry attempts with a 5-second retry interval will mitigate any intermittent connectivity issues between the encoder and the entry point.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="job_settings">Job settings (Live API only)</h2>
+    <p>Recommended job settings</p>
+    <table class="bcls-table">
+      <caption class="bcls-caption--table">
+      Job Settings
+      </caption>
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Field</th>
+          <th>Recommended Value</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td><code translate="No">ad_audio_loudness_level</code></td>
+          <td><code translate="No">-23 </code> (EBU R.128 standard)</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Start_a_live_stream_recommendations">Start a live stream recommendations</h2>
+    <p>A job must be activated before the encoder connection. Also, activating a job after starting the stream from the encoder is not a supported procedure and may cause unexpected behavior.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="update-player">Updating the Player Version</h2>
+    <p>Ensuring that you are using the latest version of the Brightcove Player is crucial for maintaining optimal performance, security, and access to the latest features. New releases often include bug fixes, performance improvements, and new functionalities that can enhance the live streaming experience.</p>
+    <aside class="bcls-aside bcls-aside--tip">Note: Before deploying a new player version across all live events, thoroughly test it in a staging environment.</aside>
+    <h3>Best Practices for Updating the Player</h3>
+    <ul>
+      <li>Regularly check the <a href="https://player.support.brightcove.com/release-notes/brightcove-player-release-notes.html">Brightcove Player Release Notes</a> to stay informed about the latest player versions.</li>
+      <li>Ensure you have backups of your current player settings and configurations.</li>
+      <li>Implement the new player version in a staging environment and test all functionalities, including customizations and integrations.</li>
+      <li>Starting with a few low-risk live events to monitor performance before a full-scale deployment.</li>
+      <li>Gather feedback from end-users and stakeholders regarding the new player version.</li>
+    </ul>
+  </section>
+  
+  <!-- <section class="bcls-section">
+    <h2 id="input_requirements">Input requirements</h2>
+
+    <p>The following table shows requirements for the input live stream.</p>
+
+    <table class="bcls-table">
+      <caption class="bcls-caption--table">Input Requirements</caption>
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Item</th>
+          <th>Requirement</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>Protocol</td>
+          <td><code translate="No">rtmp</code>, <code translate="No">rtp</code>, <code translate="No">rtp-fec</code>, or <code translate="No">srt</code> (all except <code translate="No">rtmp</code> are for MPEG2-TS inputs)<sup><strong><a href="#note1-1">[1-1]</a></strong></sup></td>
+        </tr>
+        <tr>
+          <td>Video format</td>
+          <td>h.264</td>
+        </tr>
+        <tr>
+          <td>Audio format</td>
+          <td>AAC</td>
+        </tr>
+        <tr>
+          <td>Maximum audio sampling rate</td>
+          <td>up to 48000 Hz (Brightcove Support can increase this value on request)</td>
+        </tr>
+        <tr>
+          <td>Resolution</td>
+          <td>Up to 1080p (width: 1920 pixels; height: 1080 pixels)</td>
+        </tr>
+        <tr>
+          <td>Bitrate</td>
+          <td>Must be at least as high as the highest output bitrate - maximum: 10MBPS.
+            <p>In almost all cases, Brightcove Support has found that using Constant Bitrate for the input stream greatly reduces the chance of problems.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>Framerate</td>
+          <td>30 fps (you can submit a <a href="https://supportportal.brightcove.com">Support request</a> to have the limit raised to 60fps)</td>
+        </tr>
+        <tr>
+          <td>Slices</td>
+          <td>If your encoder has this option, set it to <code translate="no">1</code></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Notes</h3>
+
+    <ul>
+      <li id="note1-1"><sup><strong>[1-1]</strong></sup> If you have multiple video/audio tracks in your TS input, we will pick the first for each. We also strongly recommend using FEC, as plain TS over UDP over the internet is very unreliable. For FEC, we could note that the <em>smaller</em> the values you use for rows/columns, the more reliable the error correction will be (at the cost of increased bandwidth.</li>
+    </ul>
+  </section> -->
+  
+  <section class="bcls-section">
+    <h2 id="slate_source_file_recommendations">Slate source file recommendations</h2>
+    <ul>
+      <li><strong>Resolution</strong>: (best in your encoding ladder)</li>
+      <li><strong>FPS</strong>: (same as your source)</li>
+      <li><strong>Bitrate</strong>: (best in your encoding ladder or better)</li>
+      <li><strong>Audio</strong>: (same bitrate, channels, sampling frequency, and bits per sample as your best rendition, or same as your input)</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="output_recommendations">Output recommendations</h2>
+    <p>Below are recommended output settings, but note that for many encoders, the RTMP input is limited to 20 MBPS (video + audio) and a framerate of 30fps.</p>
+    <table class="bcls-table">
+      <caption class="bcls-caption--table">
+      Output Recommendations
+      </caption>
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Item</th>
+          <th>Recommendation</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>Video codec</td>
+          <td><code translate="No">h264</code> is currently the only option</td>
+        </tr>
+        <tr>
+          <td>Audio codec</td>
+          <td><code translate="No">aac</code> is currently the only option</td>
+        </tr>
+        <tr>
+          <td>Width</td>
+          <td>If no <code translate="No">width</code> or <code translate="No">height</code> is supplied, the source dimensions are used. If either <code translate="No">width</code> or <code translate="No">height</code> is supplied, the other dimension will be calculated to maintain the aspect ratio of the source.</td>
+        </tr>
+        <tr>
+          <td>Height</td>
+          <td>If no <code translate="No">width</code> or <code translate="No">height</code> is supplied, the source dimensions are used. If either <code translate="No">width</code> or <code translate="No">height</code> is supplied, the other dimension will be calculated to maintain the aspect ratio of the source.</td>
+        </tr>
+        <tr>
+          <td>Bitrate</td>
+          <td>The current max output bitrate supported is 20Mbps</td>
+        </tr>
+        <tr>
+          <td>Keyframe rate</td>
+          <td>2 seconds</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="bcls-section">
+    <h2 id="FAQ">FAQ</h2>
+    <dl>
+      <details>
+        <summary>How soon do you have to start streaming after creating a live job?</summary>
+     In Brightcove Live, there are two conditions when the state transitions from <code translate="No">waiting </code> to <code translate="No">finishing </code>:
+        <ol>
+          <li>if the job is in the <strong>waiting</strong> state (not yet started) and the <code translate="No">max_waiting_time_ms</code> has elapsed, the job is finished/deactivated.</li>
+          <li>If the job is in the <strong>disconnected</strong> state (started, but disconnected) and the <code translate="No">reconnect_time</code> has elapsed, the job is finished/deactivated.</li>
+        </ol>
+        <p>If the <code translate="No">event_length </code> is greater than 30 minutes, the job will terminate in 30 minutes. If the <code translate="No">event_length </code> is less than 30 minutes, the job will terminate in <code translate="No">event_length </code>.</p>
+        <p>For example, if the <code translate="No">event_length </code> is 60 minutes, then, the live job will terminate in 30 minutes. If the <code translate="No">event_length </code> is 15 minutes, then, the live job will terminate in 15 minutes</p>
+        <p>The <code translate="No">reconnect_time </code> has no effect for waiting state.</p>
+      </details>
+      <details>
+        <summary>What are the limitations on concurrent live job_settings?</summary>
+        <p>A maximum of 5 active <strong>waiting, unstarted</strong> jobs is allowed at any time.</p>
+        <p>Additional limitations on concurrent jobs:</p>
+        <ul>
+          <li>The number of <code translate="No">channel</code> (24x7) jobs is limited to 0 or a low number per region (depending on the account type).</li>
+          <li>The number of concurrently <strong>running</strong> <code translate="No">event</code> jobs is limited by region, generally to 100.</li>
+          <li>The number of concurrently <strong>waiting to connect</strong> <code translate="No">event</code> jobs is limited to 5.</li>
+          <li>The number of SEP jobs per region is limited to 3 or 10 (see <a href="https://apis.support.brightcove.com/live-api/getting-started/overview-brightcove-live-api.html#Support_aws_regions">Supported AWS regions</a>).</li>
+        </ul>
+        <p>Any of these limits can be adjusted on an account level by Support. Contact your Customer Success Manager if you need additional capacity.</p>
+      </details>
+      <details>
+        <summary>Can Brightcove Live push 1080p quality provided the input bandwidth is sufficient?</summary>
+        Yes, 1080p input is enabled for all accounts.
+        </details>
+        <details>
+          <summary>Is DRM available?</summary>
+        Yes! Contact your Customer Success Manager if you are interested in adding DRM support to your live account.
+        </details>
+    <section class="BCL-subsection">
+      <h3>For further help</h3>
+      <p>If you need further help getting your live event to work, you can <a href="https://supportportal.brightcove.com/s/createrecord/Create_a_new_case">contact us</a>. To make sure you get the fastest response possible, below is a list of what Brightcove Support will need to solve the problem.</p>
+      <ul>
+        <li>The specific symptoms the stream is having. For example, does it not play at all or does it stutter or freeze?</li>
+        <li>Whether this stream worked correctly in the past</li>
+        <li>The entry point URL you are using in your encoder</li>
+        <li>The encoding software and hardware are you using</li>
+        <li>The URL to the player to which you have published the live event</li>
+        <li>The video ID of your live asset</li>
+        <li>The results of a trace-route from your encoder to the publishing point host</li>
+      </ul>
+    </section>
+  </section>
+</article>
+
+<!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
+  
+  <nav class="right-side-nav" id="right_side_nav">
+    <h6 class="toc">Page Contents</h6>
+    <ul id="in_page_nav" class="list-none"></ul>
+  </nav>
+  
+<!-- </div> -->
+</div>
+</div>
+</div>
+<div class="page-content" style="background-color: rgb(1, 5, 14);">
+  <div class="container" style="width: 50%;">
+    <footer class="py-5">
+      <div class="row">
+        <div class="col-6 col-md">
+          <h5 class="h5-text">Brightcove Support</h5>
+          <ul class="list-unstyled text-small" style="color: white ;">
+            <li><a class="a-text" href="https://status.brightcove.com">System Status</a></li>
+            <li><a class="a-text" href="https://supportportal.brightcove.com">Contact Support</a></li>
+            <li><a class="a-text" href="https://support.brightcove.com/search.html">Search all documentation</a></li>
+          </ul>
+        </div>
+      
+        <div class="col-6 col-md">
+          <h5 class="h5-text">Training</h5>
+          <ul class="list-unstyled text-small">
+            <!-- <li><a class="a-text" href="https://studio.support.brightcove.com/get-started/training/online-training-courses.html">Online courses</a></li> -->
+            <li><a class="a-text" href="https://academy.brightcove.com/">Brightcove Academy</a></li>
+          </ul>
+        </div>
+      
+        <div class="col-6 col-md">
+          <h5 class="h5-text">Brightcove</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="a-text" href="https://www.brightcove.com">Brightcove.com</a></li>
+            <li><a class="a-text" href="https://community.brightcove.com/">Bright Spot Community</a></li>
+            <li><a class="a-text" href="https://support.brightcove.com/product-updates.html">Product release notes</a></li>
+            <li><a class="a-text" href="https://support.brightcove.com/doc-updates.html">Documentation updates</a></li>
+          </ul>
+        </div>
+      </div>
+    
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+      <p>© Brightcove Inc. All rights reserved.</p>
+      <a class="a-text" href="https://www.brightcove.com/en/legal/privacy">Privacy</a> 
+      <a class="a-text" href="https://www.brightcove.com/en/terms-and-conditions">Terms &amp; Conditions</a>
+
+      <ul class="list-unstyled d-flex">
+        <li class="ms-3"><a href="https://www.linkedin.com/company/16439"
+        title="LinkedIn" target="_blank" class="gf-social-linkedin"
+        style="margin-right: 1rem;"><i data-feather="linkedin"
+          style="color:#8E9093;height: 1.25rem;"></i></a></li>
+
+        <li class="ms-3"><a
+        href="https://twitter.com/brightcove" title="Twitter" target="_blank"
+        class="gf-social-twitter" style="margin-right: 1rem;"><i
+          data-feather="twitter" style="color:#8E9093;height: 1.25rem;"></i></a></li>
+
+        <li class="ms-3"><a
+        href="https://www.facebook.com/Brightcove" title="Facebook"
+        target="_blank" class="gf-social-facebook"><i data-feather="facebook"
+          style="color:#8E9093;height: 1.25rem;"></i></a></li>
+      </ul>
+      </div>
+    </footer>
+  </div>
+</div>
+
+
+<script translate="no">
+  var searchBox = sajari.init({
+    mode: "search-box",
+    project: "1588255093746585379", // Set this to your project.
+    collection: "brightcove-documentation", // Set this to your collection.
+    instantPipeline: "autocomplete", // Pipeline used as you type
+    inputPlaceholder: "Search", // Input element placeholder,
+    styling: {
+      components: {
+        
+        input: {
+          container: {
+          backgroundColor: 'white',
+          }
+        
+        }
+      }
+    },
+    maxSuggestions: 5, // Maximum number of suggestions to show
+      attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
+  });
+
+  
+
+
+    searchBox("sub", "pipeline.search-sent", function (_, query) {
+    window.location = "/search.html?q=" + encodeURIComponent(query.q);
+    });
+  
+  </script>
+  
+  <!-- Javascript -->          
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/popper.min.js"></script>
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+
+
+  <!-- Page Specific JS -->
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/smoothscroll.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script> -->
+  <!-- <script src="/assets/s-site-assets-template-stylesheets/js/highlight-custom.js"></script>  -->
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+  <script src="/assets/s-site-assets-template-stylesheets/js/docs.js"></script> 
+
+  <!-- original footer components -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+  <script src="/assets/s-site-assets-scripts/https-fix.js"></script>
+  <script src="/assets/s-site-assets-scripts/setDate.js"></script>
+  <script src="/assets/s-site-assets-scripts/selector.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/prism.js"></script>
+  <script src="/assets/s-site-assets-scripts/prism-normalize.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/site.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/learning-paths/learning-paths.js"></script>
+  <!-- <script src="/assets/s-site-assets-scripts/site.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/tabs.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/toc-new-template.js"></script>
+  
+  <script src="/assets/js/sites_nav.js"></script>
+  <script src="/assets/s-site-assets-scripts/bcls-utils.js"></script>
+  <script src="/assets/s-site-assets-scripts/local-link-fix.js"></script>
+  <script src="/assets/s-site-assets-scripts/sajari-reindex.js"></script>
+  <script src="/assets/js/feedback.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/sajari-search-foot.js"></script>
+  
+  <script translate="no">
+    feather.replace()
+  </script>
+  <!-- <script src="/assets/js/sajari-index.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/in-app.js"></script>
+  <style translate="no">
+    a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
+      background-color: lightblue;
+    }
+    div.sj-tabs__tab {
+      margin-top: 3rem;
+      margin-left: .3rem;
+      border-top-left-radius: .4rem;
+      border-top-right-radius: .4rem;
+      background-color:#e8e8e8;
+    }
+
+    div.sj-tabs__tab.sj-tabs__tab--selected {
+      border-bottom-color: crimson;
+      background-color: #f8f8f8;
+    }
+
+    p.sj-results__result__description.css-p9jvyt {
+      font-size: 1rem;
+    }
+
+    .sj-result__text.css-31l7gp h3 {
+      color: navy;
+      font-size: 1.4rem;
+    }
+    </style>
+
+  </body>
+</html> 

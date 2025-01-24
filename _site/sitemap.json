@@ -70,12 +70,12 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/creating-and-managing-live-events-using-live-module.html",
+      "newURL": "https://live.support.brightcove.com/live-module/creating-and-managing-live-events-using-live-module.html",
       "oldURL": "/creating-and-managing-live-events-using-live-module"
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/live-module/creating-and-managing-live-events-using-live-module.html",
+      "newURL": "https://live.support.brightcove.com/creating-and-managing-live-events-using-live-module.html",
       "oldURL": "/creating-and-managing-live-events-using-live-module"
   },
 
@@ -90,12 +90,12 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/live-next-gen/get-started/delivering-live-streams.html",
+      "newURL": "https://live.support.brightcove.com/get-started/delivering-live-streams.html",
       "oldURL": "/delivering-live-streams"
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/get-started/delivering-live-streams.html",
+      "newURL": "https://live.support.brightcove.com/live-2-0/get-started/delivering-live-streams.html",
       "oldURL": "/delivering-live-streams"
   },
 
@@ -160,12 +160,22 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/web-conferencing/",
+      "newURL": "https://live.support.brightcove.com/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/live-2-0/",
       "oldURL": "/index"
   },
 
   {
       "newURL": "https://live.support.brightcove.com/general/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/live-api/guides/",
       "oldURL": "/index"
   },
 
@@ -185,11 +195,6 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/live-next-gen/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://live.support.brightcove.com/release-notes/",
       "oldURL": "/index"
   },
@@ -200,7 +205,27 @@
   },
 
   {
+      "newURL": "https://live.support.brightcove.com/get-started/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/web-conferencing/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/live-api/",
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://live.support.brightcove.com/live-module/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/live-api/ssai/",
       "oldURL": "/index"
   },
 
@@ -216,31 +241,6 @@
 
   {
       "newURL": "https://live.support.brightcove.com/live-api/getting-started/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://live.support.brightcove.com/live-api/guides/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://live.support.brightcove.com/live-api/ssai/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://live.support.brightcove.com/live-api/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://live.support.brightcove.com/get-started/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://live.support.brightcove.com/",
       "oldURL": "/index"
   },
 
@@ -325,12 +325,12 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/get-started/live-module-guidelines-and-best-practices.html",
+      "newURL": "https://live.support.brightcove.com/live-2-0/get-started/live-module-guidelines-and-best-practices.html",
       "oldURL": "/live-module-guidelines-and-best-practices"
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/live-next-gen/get-started/live-module-guidelines-and-best-practices.html",
+      "newURL": "https://live.support.brightcove.com/get-started/live-module-guidelines-and-best-practices.html",
       "oldURL": "/live-module-guidelines-and-best-practices"
   },
 
@@ -532,6 +532,11 @@
   {
       "newURL": "https://live.support.brightcove.com/get-started/step-step-live-srt.html",
       "oldURL": "/step-step-live-srt"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/live-2-0/get-started/step-step-using-live-module-open-broadcaster-software-obs.html",
+      "oldURL": "/step-step-using-live-module-open-broadcaster-software-obs"
   },
 
   {

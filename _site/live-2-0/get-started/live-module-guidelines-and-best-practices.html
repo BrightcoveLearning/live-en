@@ -7,7 +7,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="With Brightcove Live, you can easily set up live events and deliver multi-bitrate streams to the web, iOS, and Android devices. This topic outlines a series of best practices and recommendations to help ensure a high quality, stable live streaming experience.">
+        <meta name="description" content="With Brightcove Live, you can easily set up live events / channels and deliver multi-bitrate streams to the web, iOS, and Android devices. This topic outlines a series of best practices and recommendations to help ensure a high quality, stable live streaming experience.">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -271,7 +271,7 @@
               
               
               
-              <li class="nav-item"><a class="nav-link" href="/general/supported-encoders-live-events.html">Supported Encoders for Live Events</a></li>
+              <li class="nav-item"><a class="nav-link" href="/general/supported-encoders-live-events.html">Supported Encoders for Live Events / Channels</a></li>
               
               
               
@@ -302,7 +302,7 @@
                   
                   
                   
-                  <li class="nav-item"><a class="nav-link" href="/live-module/creating-and-managing-live-events-using-live-module.html">Creating and Managing Live Events</a></li>
+                  <li class="nav-item"><a class="nav-link" href="https://studio.support.brightcove.com/live/live-2-0/migrating-2-0.html#channel">Creating new Channels</a></li>
                   
                   
                   
@@ -890,7 +890,7 @@
       
 <article class="bcls-article">
   <h1>Brightcove Live: Best Practices</h1>
-  <summary>With Brightcove Live, you can easily set up live events and deliver multi-bitrate streams to the web, iOS, and Android devices. This topic outlines a series of best practices and recommendations to help ensure a high quality, stable live streaming experience.</summary>
+  <summary>With Brightcove Live, you can easily set up live events / channels and deliver multi-bitrate streams to the web, iOS, and Android devices. This topic outlines a series of best practices and recommendations to help ensure a high quality, stable live streaming experience.</summary>
   <section class="bcls-section">
     <p>Brightcove Live provides a robust service for creating live streaming events or 24/7 live linear streams. This guide outlines best practices for optimizing your live streams</p>
   </section>
@@ -925,7 +925,7 @@
         </tr>
         <tr>
           <td>Profiles</td>
-          <td> The different profiles (baseline, main, high) compress the data in ascending amounts (baseline: lowest, high: highest). Greater compression improves the rate of transmission, but also requires greater CPU resources to decode the data. Unless the encoder is highly constrained in available resources baseline profile should be avoided. On the other hand, using high profile at high bitrates is more likely to cause skipped frames due to the increased decode CPU resources required.
+          <td> The different profiles (main, high) compress the data in ascending amounts (high: highest). Greater compression improves the rate of transmission, but also requires greater CPU resources to decode the data. Using high profile at high bitrates is more likely to cause skipped frames due to the increased decode CPU resources required.
             <p>Also see <a href="#gop_structure">GOP structure</a> below.</p></td>
         </tr>
         <tr>
@@ -950,7 +950,8 @@
     <ul>
       <li>Protocol: <code translate="No">rtmp</code>, <code translate="No">rtp</code>, or <code translate="No">srt</code> (all except <code translate="No">rtmp</code> are for MPEG2-TS inputs)<sup><strong><a href="#note1-1">[1-1]</a></strong></sup></li>
       <li>Resolution: Maximum 1920x1080</li>
-      <li>Recommended: 30 fps, Maximum: 60 fps. Note: Higher frame rates require higher input bitrate to maintain quality of the source feed</li>
+      <li>Recommended: 25, 30, 50 fps, Maximum: 60 fps. Note: Higher frame rates require higher input bitrate to maintain quality of the source feed. A HFR ingest profile is recommended.</li>
+      <li>29.97/59.94 and other decimal values in fps should be avoided to prevent synch issues.</li>
       <li>The max input bitrate that can ingest is set at 50Mbps. And the max output bitrate is 25Mbps.</li>
       <li>Set your encoder to Constant Bitrate (CBR). Variable Bitrate (VBR) feeds can be problematic for  the live streaming pipeline</li>
       <li>Video Codecs: h.264, HEVC</li>
@@ -987,7 +988,7 @@
           <li>If it takes longer to upload the video than real time then this can result in input drift (the time that the video is received is substantially later than when it was sent)</li>
         </ol>
       </li>
-      <li> Transcoder overload resulting in skip frames: while we do everything to make sure our transcoders have enough overhead sometimes sudden spikes in either content complexity, network hiccups/ catchups or other interruptions to our transcoders can cause skip frames. The more complex the input is then the more likely it is that skipped frames will be encountered. There is also a known issue where changes from a still image for an extended duration e.g. longer than 5 minutes and a sudden change to action content can cause an overload. </li>
+      <li> Transcoder overload resulting in skip frames: while we do everything to make sure our transcoders have enough overhead sometimes sudden spikes in either content complexity, network hiccups/catchups or other interruptions to our transcoders can cause skip frames. The more complex the input is then the more likely it is that skipped frames will be encountered. There is also a known issue where changes from a still image for an extended duration e.g. longer than 5 minutes and a sudden change to action content can cause an overload. </li>
       <li>Encoder sending variable frame durations: It is recommended to use integer frame rates (such as 30fps) as this ensures consistent keyframe distribution and segment size.</li>
       <li>Encoder sending keyframes that are not a consistent duration apart, the keyframe rate should be a minimum of 2x the frame rate in seconds. For example, for a frame rate of 30fps the keyframe interval should be 60 frames which is 2 seconds and should be a maximum interval of once per segment - for example, if you have a 6 second segment then the maximum interval would be 180 frames at 30 fps.</li>
       <aside class="bcls-aside bcls-aside--warning language-editable">The encoder settings should not be modified during a live event. Making changes to the encoder settings while the live jobs are active is not a supported practice, and live job reactivation/recreation is required after making the changes.</aside>
@@ -1012,7 +1013,7 @@
           <td><ul>
               <li>Resolution: 360p</li>
               <li>Bitrate: 1 MBPS</li>
-              <li>Profile: Baseline</li>
+              <li>Profile: Main</li>
             </ul></td>
         </tr>
         <tr>
@@ -1066,7 +1067,7 @@
       </tbody>
     </table>
   </section>
-  <section class="bcls-section">
+  <!-- <section class="bcls-section">
     <h2 id="transmux_live_jobs">Transmux Live jobs</h2>
     <p>Set the insertion of key frames so that it matches the request segmentation settings. For example, if the frame rate is 25 frames per second and the desire is for a 6 second segment then set the keyframe interval to be at least once every 300 frames.</p>
     <p>Test the encoder settings/output with desired target devices. This is particularly important if using a broadcast contribution encoder that may have advanced settings that result in a stream that may not be compatible with all consumer devices. It is also a good idea to avoid particularly advanced settings - it is hard to say what these are exactly as there are so many possible encoders and options. But a general top rate profile should be something like:</p>
@@ -1076,7 +1077,7 @@
       <li>B frames: 2</li>
       <li>8bit 4:2:0 color</li>
     </ul>
-  </section>
+  </section> -->
   <section class="bcls-section">
     <h2 id="verification">Verification and testing</h2>
     <p>Ideally you should start with the lowest possible settings on your most complex (most changing content) and test with their content by increasing the various settings until the output is acceptable. This is because generally the higher the settings the more likely issues are to be encountered in either the network or transcoding.</p>
@@ -1111,13 +1112,13 @@
   <section class="bcls-section">
     <h2 id="gop_structure">GOP structure</h2>
     <p>The Group of Pictures (GOP) structure of the video is dependent first on the profile that is used as:</p>
-    <ol>
-      <li><strong>Baseline</strong> profile only supports I and P frames and CAVLC entropy encoding</li>
+    <ul>
+      <!-- <li><strong>Baseline</strong> profile only supports I and P frames and CAVLC entropy encoding</li> -->
       <li><strong>Main</strong> and <strong>High</strong> support I, B and P frames and CABAC entropy encoding</li>
-    </ol>
+    </ul>
     <aside class="bcls-aside bcls-aside--information language-editable">Note that support for I/B/P frames depend on the H264 profile of the <strong>ingest profile</strong> of the live job, <strong>not</strong> the input source (live feed).</aside>
     <p>Main and High profiles generally result in better compression at better quality but also require additional computation to encode and decode, as such may be more susceptible to skipped frames. In addition, as these profiles use B (bi-directional) frames, they induce some delay in the encoding process.</p>
-    <p>Baseline profile requires less CPU to encode and decode, but as it offers less compression, it requires a higher bitrate to maintain quality and as such is more susceptible to network issues.</p>
+    <!-- <p>Baseline profile requires less CPU to encode and decode, but as it offers less compression, it requires a higher bitrate to maintain quality and as such is more susceptible to network issues.</p> -->
     <h3>Notes on frame types and their likely impact on performance:</h3>
     <ol>
       <li><strong>I frames</strong>: uses the most bandwidth. Best added for complete scene changes or at the segment boundaries - i.e. the more the content changes the more of these you need (shorter GOP length)</li>
@@ -1153,28 +1154,29 @@
     <ol>
       <li><strong>SRT</strong> - provides a good combination of speed of transport (UDP) with some control and error resilience. Not available on all encoders, though there are tools that can translate from local RTP such as srt-transmit.</li>
       <li><strong>RTMP</strong> - being TCP based, it provides a good level of error resilience, downsides are that this comes with a substantial overhead. Note that not all features such as multiple audio tracks are available with RTMP.</li>
-      <li><strong>RTP-FEC</strong> - provides fast UDP based transport with some error resilience</li>
+      <!-- <li><strong>RTP-FEC</strong> - provides fast UDP based transport with some error resilience</li> -->
       <li><strong>RTP</strong> - provides fast transport and advanced features with no error resilience</li>
     </ol>
     <aside class="bcls-aside bcls-aside--information">Note: if you use RTMP, please consider disabling slices if possible as they may result in parts of a frame arriving out of order.</aside>
   </section>
   <section class="bcls-section">
     <h2 id="Certified_encoders">Supported encoders</h2>
-    <p>See <a href="/general/supported-encoders-live-events.html">Supported Encoders for Live Events</a> for list of encoders known to work with Live. Note that other encoders may also work, but have not been tested.</p>
+    <p>See <a href="/general/supported-encoders-live-events.html">Supported Encoders for Live Events / Channels</a> for list of encoders known to work with Live. Note that other encoders may also work, but have not been tested.</p>
   </section>
   <section class="bcls-section">
     <h2 id="Supported_CDNs">Supported CDNs</h2>
     <ul>
       <li>Akamai</li>
       <li>Amazon CloudFront</li>
+      <li>Fastly</li>
     </ul>
-    <aside class="bcls-aside bcls-aside--information">The CDNs above are officially supported, but other file-based CDNs should work.</aside>
+    <aside class="bcls-aside bcls-aside--information">The CDNs above are officially supported, but other file-based CDNs should work. BYO CDN is not currently supported.</aside>
   </section>
   <section class="bcls-section">
     <h2 id="retries">Retries</h2>
     <p>We recommend enabling retries for the RTMP connection from the encoder. A large number of retry attempts with a 5-second retry interval will mitigate any intermittent connectivity issues between the encoder and the entry point.</p>
   </section>
-  <section class="bcls-section">
+  <!-- <section class="bcls-section">
     <h2 id="job_settings">Job settings (Live API only)</h2>
     <p>Recommended job settings</p>
     <table class="bcls-table">
@@ -1194,7 +1196,7 @@
         </tr>
       </tbody>
     </table>
-  </section>
+  </section> -->
   <section class="bcls-section">
     <h2 id="Start_a_live_stream_recommendations">Start a live stream recommendations</h2>
     <p>A job must be activated before the encoder connection. Also, activating a job after starting the stream from the encoder is not a supported procedure and may cause unexpected behavior.</p>
@@ -1202,13 +1204,13 @@
   <section class="bcls-section">
     <h2 id="update-player">Updating the Player Version</h2>
     <p>Ensuring that you are using the latest version of the Brightcove Player is crucial for maintaining optimal performance, security, and access to the latest features. New releases often include bug fixes, performance improvements, and new functionalities that can enhance the live streaming experience.</p>
-    <aside class="bcls-aside bcls-aside--tip">Note: Before deploying a new player version across all live events, thoroughly test it in a staging environment.</aside>
+    <aside class="bcls-aside bcls-aside--tip">Note: Before deploying a new player version across all live channels, thoroughly test it in a staging environment.</aside>
     <h3>Best Practices for Updating the Player</h3>
     <ul>
       <li>Regularly check the <a href="https://player.support.brightcove.com/release-notes/brightcove-player-release-notes.html">Brightcove Player Release Notes</a> to stay informed about the latest player versions.</li>
       <li>Ensure you have backups of your current player settings and configurations.</li>
       <li>Implement the new player version in a staging environment and test all functionalities, including customizations and integrations.</li>
-      <li>Starting with a few low-risk live events to monitor performance before a full-scale deployment.</li>
+      <li>Starting with a few low-risk live channel to monitor performance before a full-scale deployment.</li>
       <li>Gather feedback from end-users and stakeholders regarding the new player version.</li>
     </ul>
   </section>
@@ -1324,7 +1326,7 @@
   <section class="bcls-section">
     <h2 id="FAQ">FAQ</h2>
     <dl>
-      <details>
+      <!-- <details>
         <summary>How soon do you have to start streaming after creating a live job?</summary>
      In Brightcove Live, there are two conditions when the state transitions from <code translate="No">waiting </code> to <code translate="No">finishing </code>:
         <ol>
@@ -1334,7 +1336,7 @@
         <p>If the <code translate="No">event_length </code> is greater than 30 minutes, the job will terminate in 30 minutes. If the <code translate="No">event_length </code> is less than 30 minutes, the job will terminate in <code translate="No">event_length </code>.</p>
         <p>For example, if the <code translate="No">event_length </code> is 60 minutes, then, the live job will terminate in 30 minutes. If the <code translate="No">event_length </code> is 15 minutes, then, the live job will terminate in 15 minutes</p>
         <p>The <code translate="No">reconnect_time </code> has no effect for waiting state.</p>
-      </details>
+      </details> -->
       <details>
         <summary>What are the limitations on concurrent live job_settings?</summary>
         <p>A maximum of 5 active <strong>waiting, unstarted</strong> jobs is allowed at any time.</p>
@@ -1351,10 +1353,10 @@
         <summary>Can Brightcove Live push 1080p quality provided the input bandwidth is sufficient?</summary>
         Yes, 1080p input is enabled for all accounts.
         </details>
-        <details>
+        <!-- <details>
           <summary>Is DRM available?</summary>
         Yes! Contact your Customer Success Manager if you are interested in adding DRM support to your live account.
-        </details>
+        </details> -->
     <section class="BCL-subsection">
       <h3>For further help</h3>
       <p>If you need further help getting your live event to work, you can <a href="https://supportportal.brightcove.com/s/createrecord/Create_a_new_case">contact us</a>. To make sure you get the fastest response possible, below is a list of what Brightcove Support will need to solve the problem.</p>

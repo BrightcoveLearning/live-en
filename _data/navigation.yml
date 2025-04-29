@@ -20,6 +20,18 @@
     - name: 'Step-by-Step: Streaming an SRT Live Event'
       url: /get-started/step-step-live-srt.html
 - section:
+  name: Live 2.0
+  url: /live-2-0/index.html
+  icon: fa-solid fa-satellite-dish
+  description: Learn how to use the nex generation of Live.
+  docs:
+    - name: Quick Start from Live 1.0 to Live 2.0
+      url: migrating-2-0.html
+    - name: Delivering Live Streams
+      url: delivering-live-streams.html
+    - name: 'Brightcove Live: Best Practices'
+      url: live-module-guidelines-and-best-practices.html
+- section:
   name: General Information
   url: /general/index.html
   icon: fa-solid fa-circle-info

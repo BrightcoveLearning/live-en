@@ -90,12 +90,12 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/live-2-0/delivering-live-streams.html",
+      "newURL": "https://live.support.brightcove.com/get-started/delivering-live-streams.html",
       "oldURL": "/delivering-live-streams"
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/get-started/delivering-live-streams.html",
+      "newURL": "https://live.support.brightcove.com/live-2-0/delivering-live-streams.html",
       "oldURL": "/delivering-live-streams"
   },
 
@@ -170,42 +170,7 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/live-api/ssai/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://live.support.brightcove.com/web-conferencing/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://live.support.brightcove.com/support/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://live.support.brightcove.com/admin/general/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://live.support.brightcove.com/general/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://live.support.brightcove.com/live-api/guides/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://live.support.brightcove.com/live-api/getting-started/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://live.support.brightcove.com/",
+      "newURL": "https://live.support.brightcove.com/release-notes/",
       "oldURL": "/index"
   },
 
@@ -220,17 +185,7 @@
   },
 
   {
-      "newURL": "https://live.support.brightcove.com/release-notes/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://live.support.brightcove.com/admin/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://live.support.brightcove.com/live-2-0/",
       "oldURL": "/index"
   },
 
@@ -240,7 +195,52 @@
   },
 
   {
+      "newURL": "https://live.support.brightcove.com/live-api/getting-started/",
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://live.support.brightcove.com/get-started/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/admin/general/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/general/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/live-api/guides/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/live-api/ssai/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/support/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/live-2-0/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/web-conferencing/",
       "oldURL": "/index"
   },
 
@@ -562,6 +562,11 @@
   {
       "newURL": "https://live.support.brightcove.com/general/supported-encoders-live-events.html",
       "oldURL": "/supported-encoders-live-events"
+  },
+
+  {
+      "newURL": "https://live.support.brightcove.com/live-2-0/using-live-module-obs.html",
+      "oldURL": "/using-live-module-obs"
   },
 
   {

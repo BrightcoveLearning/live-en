@@ -23,16 +23,16 @@
   name: Live 2.0
   url: /live-2-0/index.html
   icon: fa-solid fa-satellite-dish
-  description: Learn how to use the nex generation of Live.
+  description: Learn how to use the next generation of Live.
   docs:
     - name: Quick Start from Live 1.0 to Live 2.0
-      url: migrating-2-0.html
+      url: /live-2-0/migrating-2-0.html
     - name: Delivering Live Streams
-      url: delivering-live-streams.html
+      url: /live-2-0/delivering-live-streams.html
     - name: 'Brightcove Live: Best Practices'
-      url: live-module-guidelines-and-best-practices.html
+      url: /live-2-0/live-module-guidelines-and-best-practices.html
     - name: 'Step-by-Step: Using the Live Module with Open Broadcaster Software (OBS)'
-      url: step-step-using-live-module-open-broadcaster-software-obs.html
+      url: /live-2-0/step-step-using-live-module-open-broadcaster-software-obs.html
 - section:
   name: General Information
   url: /general/index.html

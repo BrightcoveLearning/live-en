@@ -31,6 +31,8 @@
       url: delivering-live-streams.html
     - name: 'Brightcove Live: Best Practices'
       url: live-module-guidelines-and-best-practices.html
+    - name: 'Step-by-Step: Using the Live Module with Open Broadcaster Software (OBS)'
+      url: step-step-using-live-module-open-broadcaster-software-obs.html
 - section:
   name: General Information
   url: /general/index.html
